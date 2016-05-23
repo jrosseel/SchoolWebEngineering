@@ -143,11 +143,10 @@
     <RelationshipRole1 id="rel12#role23" name="TransactionToOffer" maxCard="1"/>
     <RelationshipRole2 id="rel12#role24" name="OfferToTransaction" maxCard="N"/>
   </Relationship>
-  <Entity gr:x="925" gr:y="470" id="ent1" name="Request" duration="persistent" attributeOrder="ent1#att7 ent1#att14 ent1#att52 ent1#att53">
+  <Entity gr:x="935" gr:y="480" id="ent1" name="Request" duration="persistent" attributeOrder="ent1#att7 ent1#att14 ent1#att52">
     <Attribute id="ent1#att7" key="true" name="oid" type="integer"/>
     <Attribute id="ent1#att14" name="amount" type="integer" key="false"/>
-    <Attribute id="ent1#att52" name="requestedDate" type="timestamp" key="false"/>
-    <Attribute id="ent1#att53" name="accepted" type="boolean"/>
+    <Attribute id="ent1#att52" name="requestedOn" type="timestamp" key="false"/>
   </Entity>
   <Relationship id="rel13" name="HomelessPerson_Request" sourceEntity="ent4" targetEntity="ent1">
     <RelationshipRole1 id="rel13#role25" name="HomelessPersonToRequest" maxCard="N"/>
@@ -165,9 +164,9 @@
     <RelationshipRole1 id="rel1#role1" name="AngelToOffer" maxCard="N"/>
     <RelationshipRole2 id="rel1#role2" name="OfferToAngel" maxCard="1"/>
   </Relationship>
-  <Entity gr:x="945" gr:y="325" id="ent6" name="Notification" duration="persistent" attributeOrder="ent6#att35 ent6#att48 ent6#att49">
+  <Entity gr:x="950" gr:y="325" id="ent6" name="Notification" duration="persistent" attributeOrder="ent6#att35 ent6#att48 ent6#att49">
     <Attribute id="ent6#att35" key="true" name="oid" type="integer"/>
-    <Attribute id="ent6#att49" name="seenDate" type="timestamp"/>
+    <Attribute id="ent6#att49" name="seenOn" type="timestamp"/>
     <Attribute id="ent6#att48" name="seen" type="boolean"/>
   </Entity>
   <Relationship id="rel16" name="Angel_Notification" sourceEntity="ent3" targetEntity="ent6">

@@ -1,10 +1,10 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
   <Entity id="User" name="User" duration="persistent" gr:x="535" gr:y="105" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att16">
     <Attribute name="oid" id="userOID" type="integer" key="true"/>
-    <Attribute name="name" id="userName" type="string" key="false"/>
-    <Attribute name="password" id="password" type="password" key="false"/>
-    <Attribute name="email" id="email" type="string" key="false"/>
-    <Attribute id="User#att16" name="userType" type="integer" key="false"/>
+    <Attribute name="userName" id="userName" type="string"/>
+    <Attribute name="password" id="password" type="password"/>
+    <Attribute name="email" id="email" type="string"/>
+    <Attribute id="User#att16" name="userType" type="integer"/>
   </Entity>
   <Entity id="Group" name="Group" duration="persistent" gr:x="775" gr:y="135" gr:hideAttributes="false" attributeOrder="groupOID groupName">
     <Attribute name="oid" id="groupOID" type="integer" key="true"/>
@@ -57,7 +57,7 @@
     <RelationshipRole1 id="rel2#role3" name="UserToUserProfile" maxCard="1"/>
     <RelationshipRole2 id="rel2#role4" name="UserProfileToUser" maxCard="1"/>
   </Relationship>
-  <Entity gr:x="185" gr:y="440" id="ent5" name="Address" duration="persistent" attributeOrder="ent5#att8 ent5#att22 ent5#att23 ent5#att24 ent5#att25 ent5#att26 ent5#att27">
+  <Entity gr:x="185" gr:y="430" id="ent5" name="Address" duration="persistent" attributeOrder="ent5#att8 ent5#att22 ent5#att23 ent5#att24 ent5#att25 ent5#att26 ent5#att27">
     <Attribute id="ent5#att8" key="true" name="oid" type="integer"/>
     <Attribute id="ent5#att22" name="street" type="string"/>
     <Attribute id="ent5#att23" name="hnumber" type="string"/>
@@ -70,20 +70,21 @@
     <RelationshipRole1 id="rel3#role5" name="AngelToAddress" maxCard="1"/>
     <RelationshipRole2 id="rel3#role6" name="AddressToAngel" maxCard="N"/>
   </Relationship>
-  <Entity gr:x="580" gr:y="665" id="ent8" name="Offer" duration="persistent" attributeOrder="ent8#att28 ent8#att29 ent8#att30 ent8#att36 ent8#att41 ent8#att42 ent8#att50">
+  <Entity gr:x="580" gr:y="665" id="ent8" name="Offer" duration="persistent" attributeOrder="ent8#att28 ent8#att29 ent8#att30 ent8#att36 ent8#att41 ent8#att42 ent8#att49 ent8#att50">
     <Attribute id="ent8#att28" key="true" name="oid" type="integer"/>
     <Attribute id="ent8#att29" name="isRemoved" type="boolean"/>
     <Attribute id="ent8#att30" name="removedReason" type="string"/>
     <Attribute id="ent8#att36" name="amount" type="integer"/>
     <Attribute id="ent8#att41" name="description" type="string"/>
     <Attribute id="ent8#att42" name="expiryDate" type="date"/>
+    <Attribute id="ent8#att49" name="deliveryDate" type="timestamp"/>
     <Attribute id="ent8#att50" name="creationDate" type="timestamp"/>
   </Entity>
-  <Entity gr:x="965" gr:y="715" id="ent9" name="OfferType" duration="persistent" attributeOrder="ent9#att31 ent9#att32">
+  <Entity gr:x="965" gr:y="695" id="ent9" name="OfferType" duration="persistent" attributeOrder="ent9#att31 ent9#att32">
     <Attribute id="ent9#att31" key="true" name="oid" type="integer"/>
     <Attribute id="ent9#att32" name="name" type="string"/>
   </Entity>
-  <Entity gr:x="965" gr:y="615" id="ent10" name="OfferCategory" duration="persistent" attributeOrder="ent10#att33 ent10#att34">
+  <Entity gr:x="965" gr:y="595" id="ent10" name="OfferCategory" duration="persistent" attributeOrder="ent10#att33 ent10#att34">
     <Attribute id="ent10#att33" key="true" name="oid" type="integer"/>
     <Attribute id="ent10#att34" name="name" type="string"/>
   </Entity>
@@ -95,7 +96,7 @@
     <RelationshipRole1 id="rel5#role9" name="OfferToType" maxCard="N"/>
     <RelationshipRole2 id="rel5#role10" name="OfferTypeToOffer" maxCard="N"/>
   </Relationship>
-  <Entity gr:x="355" gr:y="680" id="ent11" name="Picture" duration="persistent" attributeOrder="ent11#att37 ent11#att38 ent11#att39 ent11#att40">
+  <Entity gr:x="290" gr:y="685" id="ent11" name="Picture" duration="persistent" attributeOrder="ent11#att37 ent11#att38 ent11#att39 ent11#att40">
     <Attribute id="ent11#att37" key="true" name="oid" type="integer"/>
     <Attribute id="ent11#att38" name="description" type="string"/>
     <Attribute id="ent11#att39" name="fileLoc" type="string"/>
@@ -117,13 +118,13 @@
     <RelationshipRole1 id="rel8#role15" name="OfferToDeliveryMethod" maxCard="1"/>
     <RelationshipRole2 id="rel8#role16" name="DeliveryMethodToOffer" maxCard="N"/>
   </Relationship>
-  <Entity gr:x="470" gr:y="845" id="ent13" name="Rating" duration="persistent" attributeOrder="ent13#att45 ent13#att46 ent13#att47">
+  <Entity gr:x="575" gr:y="895" id="ent13" name="Rating" duration="persistent" attributeOrder="ent13#att45 ent13#att46 ent13#att47">
     <Attribute id="ent13#att45" key="true" name="oid" type="integer"/>
     <Attribute id="ent13#att46" name="score" type="integer"/>
     <Attribute id="ent13#att47" name="comment" type="string"/>
   </Entity>
   <Relationship id="rel9" name="Transaction_Rating" sourceEntity="ent14" targetEntity="ent13">
-    <RelationshipRole1 id="rel9#role17" name="TransactionToRating" maxCard="1"/>
+    <RelationshipRole1 id="rel9#role17" name="TransactionToRating" maxCard="N"/>
     <RelationshipRole2 id="rel9#role18" name="RatingToOffer" maxCard="1"/>
   </Relationship>
   <Relationship id="rel11" name="Offer_PickupAddress" sourceEntity="ent8" targetEntity="ent5">
@@ -142,40 +143,5 @@
   <Relationship id="rel12" name="Transaction_Offer" sourceEntity="ent14" targetEntity="ent8">
     <RelationshipRole1 id="rel12#role23" name="TransactionToOffer" maxCard="1"/>
     <RelationshipRole2 id="rel12#role24" name="OfferToTransaction" maxCard="N"/>
-  </Relationship>
-  <Entity gr:x="925" gr:y="470" id="ent1" name="Request" duration="persistent" attributeOrder="ent1#att7 ent1#att14 ent1#att52 ent1#att53">
-    <Attribute id="ent1#att7" key="true" name="oid" type="integer"/>
-    <Attribute id="ent1#att14" name="amount" type="integer" key="false"/>
-    <Attribute id="ent1#att52" name="requestedDate" type="timestamp" key="false"/>
-    <Attribute id="ent1#att53" name="accepted" type="boolean"/>
-  </Entity>
-  <Relationship id="rel13" name="HomelessPerson_Request" sourceEntity="ent4" targetEntity="ent1">
-    <RelationshipRole1 id="rel13#role25" name="HomelessPersonToRequest" maxCard="N"/>
-    <RelationshipRole2 id="rel13#role26" name="RequestToHomelessPerson" maxCard="1"/>
-  </Relationship>
-  <Relationship id="rel14" name="Offer_Request" sourceEntity="ent8" targetEntity="ent1">
-    <RelationshipRole1 id="rel14#role27" name="OfferToRequest" maxCard="N"/>
-    <RelationshipRole2 id="rel14#role28" name="RequestToOffer" maxCard="1"/>
-  </Relationship>
-  <Relationship id="rel15" name="Transaction_HomelessPerson" sourceEntity="ent14" targetEntity="ent4" gr:bendpoints="45,-207,-460,158">
-    <RelationshipRole1 id="rel15#role29" name="TransactionToHomelessPerson" maxCard="1"/>
-    <RelationshipRole2 id="rel15#role30" name="HomelessPersonToTransaction" maxCard="N"/>
-  </Relationship>
-  <Relationship id="rel1" name="Angel_Offer" sourceEntity="ent3" targetEntity="ent8">
-    <RelationshipRole1 id="rel1#role1" name="AngelToOffer" maxCard="N"/>
-    <RelationshipRole2 id="rel1#role2" name="OfferToAngel" maxCard="1"/>
-  </Relationship>
-  <Entity gr:x="945" gr:y="325" id="ent6" name="Notification" duration="persistent" attributeOrder="ent6#att35 ent6#att48 ent6#att49">
-    <Attribute id="ent6#att35" key="true" name="oid" type="integer"/>
-    <Attribute id="ent6#att49" name="seenDate" type="timestamp"/>
-    <Attribute id="ent6#att48" name="seen" type="boolean"/>
-  </Entity>
-  <Relationship id="rel16" name="Angel_Notification" sourceEntity="ent3" targetEntity="ent6">
-    <RelationshipRole1 id="rel16#role31" name="AngelToNotification" maxCard="N"/>
-    <RelationshipRole2 id="rel16#role32" name="NotificationToAngel" maxCard="1"/>
-  </Relationship>
-  <Relationship id="rel17" name="Notification_Request" sourceEntity="ent6" targetEntity="ent1">
-    <RelationshipRole1 id="rel17#role33" name="NotificationToRequest" maxCard="1"/>
-    <RelationshipRole2 id="rel17#role34" name="RequestToNotification" maxCard="1"/>
   </Relationship>
 </DataModel>
