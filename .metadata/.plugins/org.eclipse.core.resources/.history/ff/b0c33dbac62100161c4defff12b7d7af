@@ -1,0 +1,134 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page12" name="Home" gr:x="35" gr:y="310">
+  <ContentUnits>
+    <MultiMessageUnit id="sv2#page12#mssu2" name="Welcome" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">&lt;div&gt;
+	&lt;h3&gt;Welcome!&lt;/h3&gt;
+	&lt;p&gt;
+		Welcome to HomelessAngel. The website that connects the homeless to angels. Angels are altruistic people that have things to give away to the homeless.
+	&lt;/p&gt;
+	&lt;div style="display: block; width: 100%;"&gt;
+		&lt;div &lt;div style="width: 600px"&gt;
+			&lt;h3&gt;Welcome!&lt;/h3&gt;
+			&lt;p&gt;
+				Welcome to HomelessAngel. The website that connects the homeless to angels. Angels are altruistic people that have things to give away to the homeless.
+			&lt;/p&gt;
+			&lt;div style="display: block; width: 100%;"&gt;
+				&lt;div style="width: 50%; float: left; padding: 5px 15px;"&gt;
+					&lt;h2 style="text-align: center;"&gt;ANGELS&lt;/h2&gt;
+					&lt;p&gt;
+						Have something spare to share? Join HomelessAngel as an angel and help someone out by donating some of your things.
+					&lt;/p&gt;
+					&lt;h3&gt;How does it work?&lt;/h3&gt;
+					&lt;p&gt;
+						&lt;ul&gt;
+							&lt;li&gt;Create a listing for something you have to offer.&lt;/li&gt;
+							&lt;li&gt;When a homeless person is interested in your offer, you will receive a notification.&lt;/li&gt;
+							&lt;li&gt;You can accept or decline the request. When you accept, pickup or delivery arrangements can be made.&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/p&gt;
+				&lt;/div&gt;
+				&lt;div style="width: 50%; float: left; padding: 5px 15px;"&gt;
+					bla
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;&gt;
+			&lt;h2 style="text-align: center;"&gt;ANGELS&lt;/h2&gt;
+			&lt;p&gt;
+				Have something spare to share? Join HomelessAngel as an angel and help someone out by donating some of your things.
+			&lt;/p&gt;
+			&lt;h3&gt;How does it work?&lt;/h3&gt;
+			&lt;p&gt;
+				&lt;ul&gt;
+					&lt;li&gt;Create a listing for something you have to offer.&lt;/li&gt;
+					&lt;li&gt;When a homeless person is interested in your offer, you will receive a notification.&lt;/li&gt;
+					&lt;li&gt;You can accept or decline the request. When you accept, pickup or delivery arrangements can be made.&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div style="width: 50%;"&gt;
+			bla
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</Message>
+    </MultiMessageUnit>
+    <EntryUnit gr:x="5" gr:y="75" id="sv2#page12#enu1" name="Login" linkOrder="sv2#page12#enu1#ln2">
+      <Field id="sv2#page12#enu1#fld1" name="Username" type="string" modifiable="true"/>
+      <Field id="sv2#page12#enu1#fld2" name="Password" type="password" modifiable="true" hidden="false"/>
+      <Link id="sv2#page12#enu1#ln2" name="Login" to="sv2#miu1" type="normal" validate="true">
+        <LinkParameter id="sv2#page12#enu1#ln2#par3" name="Password_Password" source="sv2#page12#enu1#fld2" target="sv2#miu1.mov1#opm1#icu1#icp1"/>
+        <LinkParameter id="sv2#page12#enu1#ln2#par4" name="Email_Username" source="sv2#page12#enu1#fld1" target="sv2#miu1.mov1#opm1#icu1#icp2"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit id="sv2#page12#mssu5" name="Error Message" gr:x="5" gr:y="155"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page12#mssu2">
+          <layout:LayoutParameter name="contentType" value="text/html" type="unit"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page12#mssu5"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page12#enu1">
+          <layout:Field field="sv2#page12#enu1#fld1"/>
+          <layout:Field field="sv2#page12#enu1#fld2"/>
+          <layout:Link link="sv2#page12#enu1#ln2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

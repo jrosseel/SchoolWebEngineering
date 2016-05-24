@@ -1,0 +1,5 @@
+#Tue May 24 19:25:43 CEST 2016
+__DEFAULT__=false
+org.eclipse.sdk.Eclipse.master=true
+org.eclipse.help.ui.localSearch.master=true
+expression=relationship ?

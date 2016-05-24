@@ -11,6 +11,15 @@
 		<item value="630" key="DIALOG_X_ORIGIN"/>
 		<item value="1|.SF NS Text|13.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
+	<section name="DialogBounds_SearchInProjectDialog">
+		<item value="553" key="DIALOG_WIDTH"/>
+		<item value="166" key="DIALOG_Y_ORIGIN"/>
+		<item value="486" key="DIALOG_HEIGHT"/>
+		<item value="658" key="DIALOG_X_ORIGIN"/>
+		<item value="1|.SF NS Text|13.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="com.webratio.ide.ui.dialogs.SearchInProjectDialog">
+	</section>
 	<section name="DatabaseMissingJarsDialog.FileDialog">
 	</section>
 	<section name="com.webratio.ide.ui.grid.views.GridViewPage.Settings">

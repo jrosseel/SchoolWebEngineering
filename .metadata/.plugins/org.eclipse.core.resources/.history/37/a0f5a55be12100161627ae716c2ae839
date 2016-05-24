@@ -1,0 +1,230 @@
+<DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
+  <Entity id="User" name="User" duration="persistent" gr:x="535" gr:y="80" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att16" db:database="db1" db:table="user">
+    <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="name" id="userName" type="string" key="false" db:column="name"/>
+    <Attribute name="password" id="password" type="password" key="false" db:column="password"/>
+    <Attribute name="email" id="email" type="string" key="false" db:column="email"/>
+    <Attribute id="User#att16" name="userType" type="integer" key="false" db:column="usertype"/>
+  </Entity>
+  <Entity id="Group" name="Group" duration="persistent" gr:x="775" gr:y="135" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
+    <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
+  </Entity>
+  <Entity id="Module" name="Module" duration="persistent" gr:x="1005" gr:y="125" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db1" db:table="module">
+    <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
+    <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
+  </Entity>
+  <Relationship id="User2Group_Group2User" name="User_Group" sourceEntity="User" targetEntity="Group" db:database="db1" db:table="user_group">
+    <RelationshipRole1 id="User2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Group2User" name="users" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="User2DefaultGroup_DefaultGroup2User" name="User_DefaultGroup" sourceEntity="User" targetEntity="Group" gr:bendpoints="109,56,-116,56" db:database="db1" db:table="user">
+    <RelationshipRole1 id="User2DefaultGroup" name="defaultGroup" maxCard="1">
+      <db:JoinColumn attribute="userOID" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultGroup2User" name="defaultUsers" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Group2DefaultModule_DefaultModule2Group" name="Group_DefaultModule" sourceEntity="Group" targetEntity="Module" db:database="db1" db:table="group">
+    <RelationshipRole1 id="Group2DefaultModule" name="defaultModule" maxCard="1">
+      <db:JoinColumn attribute="groupOID" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultModule2Group" name="defaultGroups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="Group2Module_Module2Group" name="Group_Module" sourceEntity="Group" targetEntity="Module" gr:bendpoints="110,41,-115,41" db:database="db1" db:table="group_module">
+    <RelationshipRole1 id="Group2Module" name="modules" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Module2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <db:Database id="db1" name="homelessangel_db" type="MySQL" url="jdbc:mysql://localhost:3306/homelessangel_db" username="homelessangel_admin" password="admin" cryptedPassword="false" connectionCount="5">
+  </db:Database>
+  <Entity gr:x="510" gr:y="265" id="ent2" name="UserProfile" duration="persistent" attributeOrder="ent2#att2 ent2#att6 ent2#att18 ent2#att19 ent2#att20 ent2#att21 ent2#att55" db:database="db1" db:table="userprofile">
+    <Attribute id="ent2#att2" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent2#att6" name="birthDate" type="date" db:column="birthdate"/>
+    <Attribute id="ent2#att18" name="isDisabled" type="boolean" db:column="isdisabled"/>
+    <Attribute id="ent2#att19" name="disabledReason" type="boolean" db:column="disabledreason"/>
+    <Attribute id="ent2#att20" name="isCancelled" type="boolean" db:column="iscancelled"/>
+    <Attribute id="ent2#att21" name="cancellationDate" type="timestamp" db:column="cancellationdate"/>
+    <Attribute id="ent2#att55" name="disabledDate" type="timestamp" db:column="disableddate"/>
+  </Entity>
+  <Entity gr:x="410" gr:y="490" id="ent3" name="Angel" duration="persistent" attributeOrder="ent3#att4 ent3#att9 ent3#att10" db:database="db1" db:table="angel">
+    <Attribute id="ent3#att4" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent3#att9" name="profession" type="string" db:column="profession"/>
+    <Attribute id="ent3#att10" name="isAnomynous" type="boolean" db:column="isanomynous"/>
+    <Generalization superEntity="ent2"/>
+  </Entity>
+  <Entity gr:x="680" gr:y="470" id="ent4" name="HomelessPerson" duration="persistent" attributeOrder="ent4#att5 ent4#att11 ent4#att12 ent4#att13" db:database="db1" db:table="homelessperson">
+    <Attribute id="ent4#att5" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent4#att11" name="nickName" type="string" db:column="nickname"/>
+    <Attribute id="ent4#att12" name="locatedInCity" type="string" db:column="locatedincity"/>
+    <Attribute id="ent4#att13" name="yearsOnStreet" type="integer" db:column="yearsonstreet"/>
+    <Generalization superEntity="ent2"/>
+  </Entity>
+  <Entity gr:x="180" gr:y="450" id="ent5" name="Address" duration="persistent" attributeOrder="ent5#att8 ent5#att22 ent5#att23 ent5#att24 ent5#att25 ent5#att26 ent5#att27" db:database="db1" db:table="address">
+    <Attribute id="ent5#att8" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent5#att22" name="street" type="string" db:column="street"/>
+    <Attribute id="ent5#att23" name="hnumber" type="string" db:column="hnumber"/>
+    <Attribute id="ent5#att24" name="postalcode" type="string" db:column="postalcode"/>
+    <Attribute id="ent5#att25" name="city" type="string" db:column="city"/>
+    <Attribute id="ent5#att26" name="country" type="string" db:column="country"/>
+    <Attribute id="ent5#att27" name="bus" type="string" db:column="bus"/>
+  </Entity>
+  <Entity gr:x="605" gr:y="645" id="ent8" name="Offer" duration="persistent" attributeOrder="ent8#att28 ent8#att29 ent8#att30 ent8#att36 ent8#att41 ent8#att42 ent8#att50" db:database="db1" db:table="offer">
+    <Attribute id="ent8#att28" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent8#att29" name="isRemoved" type="boolean" db:column="isremoved"/>
+    <Attribute id="ent8#att30" name="removedReason" type="string" db:column="removedreason"/>
+    <Attribute id="ent8#att36" name="amount" type="integer" db:column="amount"/>
+    <Attribute id="ent8#att41" name="description" type="string" db:column="description"/>
+    <Attribute id="ent8#att42" name="expiryDate" type="date" db:column="expirydate"/>
+    <Attribute id="ent8#att50" name="creationDate" type="timestamp" db:column="creationdate"/>
+  </Entity>
+  <Entity gr:x="965" gr:y="715" id="ent9" name="OfferType" duration="persistent" attributeOrder="ent9#att31 ent9#att32" db:database="db1" db:table="offertype">
+    <Attribute id="ent9#att31" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent9#att32" name="name" type="string" db:column="name"/>
+  </Entity>
+  <Entity gr:x="965" gr:y="615" id="ent10" name="OfferCategory" duration="persistent" attributeOrder="ent10#att33 ent10#att34" db:database="db1" db:table="offercategory">
+    <Attribute id="ent10#att33" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent10#att34" name="name" type="string" db:column="name"/>
+  </Entity>
+  <Relationship id="rel5" name="Offer_OfferType" sourceEntity="ent8" targetEntity="ent9" db:database="db1" db:table="offer_offertype">
+    <RelationshipRole1 id="rel5#role9" name="OfferToType" maxCard="1">
+      <db:JoinColumn attribute="ent8#att28" name="offer_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel5#role10" name="OfferTypeToOffer" maxCard="N">
+      <db:JoinColumn attribute="ent9#att31" name="offertype_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="355" gr:y="680" id="ent11" name="Picture" duration="persistent" attributeOrder="ent11#att37 ent11#att38 ent11#att39 ent11#att40" db:database="db1" db:table="picture">
+    <Attribute id="ent11#att37" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent11#att38" name="description" type="string" db:column="description"/>
+    <Attribute id="ent11#att39" name="fileLoc" type="string" db:column="fileloc"/>
+    <Attribute id="ent11#att40" name="title" type="string" db:column="title"/>
+  </Entity>
+  <Relationship id="rel6" name="Offer_Picture" sourceEntity="ent8" targetEntity="ent11" db:database="db1" db:table="picture">
+    <RelationshipRole1 id="rel6#role11" name="OfferToPicture" maxCard="N">
+      <db:JoinColumn attribute="ent8#att28" name="offer_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel6#role12" name="PictureToOffer" maxCard="1">
+      <db:JoinColumn attribute="ent11#att37" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="965" gr:y="805" id="ent12" name="DeliveryMethod" duration="persistent" attributeOrder="ent12#att43 ent12#att44" db:database="db1" db:table="deliverymethod">
+    <Attribute id="ent12#att43" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent12#att44" name="name" type="string" db:column="name"/>
+  </Entity>
+  <Relationship id="rel8" name="Offer_DeliveryMethod" sourceEntity="ent8" targetEntity="ent12" db:database="db1" db:table="offer">
+    <RelationshipRole1 id="rel8#role15" name="OfferToDeliveryMethod" maxCard="1">
+      <db:JoinColumn attribute="ent8#att28" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel8#role16" name="DeliveryMethodToOffer" maxCard="N">
+      <db:JoinColumn attribute="ent12#att43" name="deliverymethod_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="290" gr:y="900" id="ent13" name="Rating" duration="persistent" attributeOrder="ent13#att45 ent13#att46 ent13#att47" db:database="db1" db:table="rating">
+    <Attribute id="ent13#att45" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent13#att46" name="score" type="integer" db:column="score"/>
+    <Attribute id="ent13#att47" name="comment" type="string" db:column="comment"/>
+  </Entity>
+  <Relationship id="rel9" name="Transaction_Rating" sourceEntity="ent14" targetEntity="ent13" db:database="db1" db:table="rating">
+    <RelationshipRole1 id="rel9#role17" name="TransactionToRating" maxCard="1">
+      <db:JoinColumn attribute="ent14#att51" name="transaction_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel9#role18" name="RatingToOffer" maxCard="1">
+      <db:JoinColumn attribute="ent13#att45" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel11" name="Offer_PickupAddress" sourceEntity="ent8" targetEntity="ent5" db:database="db1" db:table="offer">
+    <RelationshipRole1 id="rel11#role21" name="OfferToPickupAddress" maxCard="1">
+      <db:JoinColumn attribute="ent8#att28" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel11#role22" name="DeliveryAddressToOffer" maxCard="N">
+      <db:JoinColumn attribute="ent5#att8" name="address_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="575" gr:y="890" id="ent14" name="Transaction" duration="persistent" attributeOrder="ent14#att51 ent14#att3 ent14#att56 ent14#att58" db:database="db1" db:table="transaction">
+    <Attribute id="ent14#att51" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent14#att3" name="deliveryDate" type="timestamp" db:column="deliverydate"/>
+    <Attribute id="ent14#att56" name="isCompleted" type="boolean" db:column="iscompleted"/>
+    <Attribute id="ent14#att58" name="requestedDate" type="timestamp" db:column="requesteddate"/>
+  </Entity>
+  <Entity gr:x="925" gr:y="470" id="ent1" name="Request" duration="persistent" attributeOrder="ent1#att7 ent1#att14 ent1#att53 ent1#att57" db:database="db1" db:table="request">
+    <Attribute id="ent1#att7" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent1#att14" name="amount" type="integer" key="false" db:column="amount"/>
+    <Attribute id="ent1#att53" name="isAccepted" type="boolean" db:column="isaccepted"/>
+    <Attribute id="ent1#att57" name="requestedOn" type="timestamp" db:column="requestedon"/>
+  </Entity>
+  <Relationship id="rel14" name="Offer_Request" sourceEntity="ent8" targetEntity="ent1" db:database="db1" db:table="request">
+    <RelationshipRole1 id="rel14#role27" name="OfferToRequest" maxCard="N">
+      <db:JoinColumn attribute="ent8#att28" name="offer_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel14#role28" name="RequestToOffer" maxCard="1">
+      <db:JoinColumn attribute="ent1#att7" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Entity gr:x="1035" gr:y="285" id="ent6" name="Notification" duration="persistent" attributeOrder="ent6#att35 ent6#att48 ent6#att49 ent6#att59 ent6#att60" db:database="db1" db:table="notification">
+    <Attribute id="ent6#att35" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent6#att49" name="seenDate" type="timestamp" db:column="seendate"/>
+    <Attribute id="ent6#att48" name="seen" type="boolean" db:column="seen"/>
+    <Attribute id="ent6#att59" name="description" type="string" db:column="description"/>
+    <Attribute id="ent6#att60" name="notificationType" type="integer" db:column="notificationtype"/>
+  </Entity>
+  <Relationship id="rel22" name="Request_Transaction" sourceEntity="ent1" targetEntity="ent14" gr:bendpoints="-124,131,216,-289;-143,416,197,-4" db:database="db1" db:table="request">
+    <RelationshipRole1 id="rel22#role43" name="RequestToTransaction" maxCard="1">
+      <db:JoinColumn attribute="ent1#att7" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel22#role44" name="TransactionToRequest" maxCard="1">
+      <db:JoinColumn attribute="ent14#att51" name="transaction_oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel26" name="Notification_Request" sourceEntity="ent6" targetEntity="ent1" db:database="db1" db:table="request">
+    <RelationshipRole1 id="rel26#role51" name="NotificationToRequest" maxCard="1">
+      <db:JoinColumn attribute="ent6#att35" name="notification_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel26#role52" name="RequestToNotification" maxCard="1">
+      <db:JoinColumn attribute="ent1#att7" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel10" name="Transaction_Address" sourceEntity="ent14" targetEntity="ent5" gr:bendpoints="-415,-125,10,285">
+    <RelationshipRole1 id="rel10#role19" name="TransactionToAddress" maxCard="1"/>
+    <RelationshipRole2 id="rel10#role20" name="AddressToTransaction" maxCard="N"/>
+  </Relationship>
+  <Relationship id="rel2" name="User_UserProfile" sourceEntity="User" targetEntity="ent2">
+    <RelationshipRole1 id="rel2#role3" name="UserToUserProfile" maxCard="1"/>
+    <RelationshipRole2 id="rel2#role4" name="UserProfileToUser" maxCard="1"/>
+  </Relationship>
+  <Relationship id="rel7" name="Offer_Angel" sourceEntity="ent8" targetEntity="ent3">
+    <RelationshipRole1 id="rel7#role13" name="OfferToAngel" maxCard="1"/>
+    <RelationshipRole2 id="rel7#role14" name="AngelToOffer" maxCard="N"/>
+  </Relationship>
+  <Relationship id="rel12" name="HomelessPerson_Request" sourceEntity="ent4" targetEntity="ent1">
+    <RelationshipRole1 id="rel12#role23" name="HomelessPersonToRequest" maxCard="N"/>
+    <RelationshipRole2 id="rel12#role24" name="RequestToHomelessPerson" maxCard="1"/>
+  </Relationship>
+  <Relationship id="rel13" name="UserProfile_Notification" sourceEntity="ent2" targetEntity="ent6">
+    <RelationshipRole1 id="rel13#role25" name="UserProfileToNotification" maxCard="N"/>
+    <RelationshipRole2 id="rel13#role26" name="NotificationToUserProfile" maxCard="1"/>
+  </Relationship>
+  <Relationship id="rel15" name="UserProfile_Picture" sourceEntity="ent2" targetEntity="ent11" gr:bendpoints="-235,105,-45,-280;-235,292,-45,-93">
+    <RelationshipRole1 id="rel15#role29" name="UserProfileToPicture" maxCard="1"/>
+    <RelationshipRole2 id="rel15#role30" name="PictureToUserProfile" maxCard="1"/>
+  </Relationship>
+  <Relationship id="rel16" name="Angel_Address" sourceEntity="ent3" targetEntity="ent5">
+    <RelationshipRole1 id="rel16#role31" name="AngelToAddress" maxCard="1"/>
+    <RelationshipRole2 id="rel16#role32" name="AddressToAngel" maxCard="N"/>
+  </Relationship>
+  <Relationship id="rel17" name="Offer_OfferCategory" sourceEntity="ent8" targetEntity="ent10">
+    <RelationshipRole1 id="rel17#role33" name="OfferToOfferCategory" maxCard="1"/>
+    <RelationshipRole2 id="rel17#role34" name="OfferCategoryToOffer" maxCard="N"/>
+  </Relationship>
+</DataModel>

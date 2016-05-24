@@ -1,80 +1,71 @@
-[24 May 2016 12:30:16] DEBUG Executing SQL script
-[24 May 2016 12:30:16] INFO ================================================================================
-[24 May 2016 12:30:16] INFO outputPath= '/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/HomelessAngel/.Temp~/SQL.xml'
-[24 May 2016 12:30:16] INFO onError= 'abort'
-[24 May 2016 12:30:16] INFO statementSeparator= ';'
-[24 May 2016 12:30:16] INFO derby.system.home= '/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/.metadata/.plugins/com.webratio.commons.db/derby'
-[24 May 2016 12:30:16] INFO password= 'admin'
-[24 May 2016 12:30:16] INFO url= 'jdbc:mysql://localhost:3306/homelessangel_db'
-[24 May 2016 12:30:16] INFO username= 'homelessangel_admin'
-[24 May 2016 12:30:16] INFO autoCommit= 'false'
-[24 May 2016 12:30:16] INFO outputLogPath= '/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/HomelessAngel/.Temp~/SQL.xml.log'
-[24 May 2016 12:30:16] INFO driverClass= 'com.mysql.jdbc.Driver'
-[24 May 2016 12:30:16] INFO encoding= ''
-[24 May 2016 12:30:16] INFO eventSocketPort= '49935'
-[24 May 2016 12:30:16] INFO sqlScript= '/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/HomelessAngel/DBScripts/HomelessangelDb_160524_122942.sql'
-[24 May 2016 12:30:16] INFO ================================================================================
-[24 May 2016 12:30:16] INFO Connecting to the Database...
-[24 May 2016 12:30:16] INFO Database connection estabilished
-[24 May 2016 12:30:16] INFO transaction isolation: 4
-[24 May 2016 12:30:16] DEBUG ================================================================================
-[24 May 2016 12:30:16] DEBUG Executing SQL script file: /Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/HomelessAngel/DBScripts/HomelessangelDb_160524_122942.sql
-[24 May 2016 12:30:16] DEBUG Executing statement:  create table `group` ( `oid`  integer  not null, `groupname`  varchar(255), primary key (`oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `module` ( `oid`  integer  not null, `moduleid`  varchar(255), `modulename`  varchar(255), primary key (`oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `user` ( `oid`  integer  not null, `email`  varchar(255), `password`  varchar(255), `usertype`  integer, `name`  varchar(255), primary key (`oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `request` ( `oid`  integer  not null, `amount`  integer, `isaccepted`  bit, `requestedon`  datetime, primary key (`oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `offercategory` ( `oid`  integer  not null, `name`  varchar(255), primary key (`oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `picture` ( `oid`  integer  not null, `description`  varchar(255), `fileloc`  varchar(255), `title`  varchar(255), primary key (`oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `deliverymethod` ( `oid`  integer  not null, `name`  varchar(255), primary key (`oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `rating` ( `oid`  integer  not null, `score`  integer, `comment`  varchar(255), primary key (`oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `transaction` ( `oid`  integer  not null, `deliverydate`  datetime, `iscompleted`  bit, `requesteddate`  datetime, primary key (`oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `userprofile` ( `oid`  integer  not null, `isdisabled`  bit, `disabledreason`  bit, `iscancelled`  bit, `cancellationdate`  datetime, `disableddate`  datetime, `birthdate`  date, primary key (`oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `angel` ( `userprofile_oid`  integer  not null, `oid`  integer  not null, `isanomynous`  bit, `profession`  varchar(255), primary key (`userprofile_oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `homelessperson` ( `userprofile_oid`  integer  not null, `oid`  integer  not null, `nickname`  varchar(255), `locatedincity`  varchar(255), `yearsonstreet`  integer, primary key (`userprofile_oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `address` ( `oid`  integer  not null, `street`  varchar(255), `hnumber`  varchar(255), `postalcode`  varchar(255), `city`  varchar(255), `country`  varchar(255), `bus`  varchar(255), primary key (`oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `notification` ( `oid`  integer  not null, `seen`  bit, `seendate`  datetime, `description`  varchar(255), `notificationtype`  integer, primary key (`oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `offer` ( `oid`  integer  not null, `isremoved`  bit, `removedreason`  varchar(255), `amount`  integer, `description`  varchar(255), `expirydate`  date, `creationdate`  datetime, primary key (`oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `offertype` ( `oid`  integer  not null, `name`  varchar(255), primary key (`oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:    alter table `group`  add column  `module_oid`  integer
-[24 May 2016 12:30:16] DEBUG Executing statement:  alter table `group`   add index fk_group_module (`module_oid`), add constraint fk_group_module foreign key (`module_oid`) references `module` (`oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:  create index `idx_group_module` on `group`(`module_oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `group_module` ( `group_oid`  integer not null, `module_oid`  integer not null, primary key (`group_oid`, `module_oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_group (`group_oid`), add constraint fk_group_module_group foreign key (`group_oid`) references `group` (`oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_module (`module_oid`), add constraint fk_group_module_module foreign key (`module_oid`) references `module` (`oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:  create index `idx_group_module_group` on `group_module`(`group_oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:  create index `idx_group_module_module` on `group_module`(`module_oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:    alter table `user`  add column  `group_oid`  integer
-[24 May 2016 12:30:16] DEBUG Executing statement:  alter table `user`   add index fk_user_group (`group_oid`), add constraint fk_user_group foreign key (`group_oid`) references `group` (`oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:  create index `idx_user_group` on `user`(`group_oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:    create table `user_group` ( `user_oid`  integer not null, `group_oid`  integer not null, primary key (`user_oid`, `group_oid`) )
-[24 May 2016 12:30:16] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_user (`user_oid`), add constraint fk_user_group_user foreign key (`user_oid`) references `user` (`oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_group (`group_oid`), add constraint fk_user_group_group foreign key (`group_oid`) references `group` (`oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:  create index `idx_user_group_user` on `user_group`(`user_oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:  create index `idx_user_group_group` on `user_group`(`group_oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:    alter table `offer`  add column  `angel_oid`  integer
-[24 May 2016 12:30:16] DEBUG Executing statement:  alter table `offer`   add index fk_offer_angel (`angel_oid`), add constraint fk_offer_angel foreign key (`angel_oid`) references `angel` (`userprofile_oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:  create index `idx_offer_angel` on `offer`(`angel_oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:    alter table `offer`  add column  `address_oid`  integer
-[24 May 2016 12:30:16] DEBUG Executing statement:  alter table `offer`   add index fk_offer_address (`address_oid`), add constraint fk_offer_address foreign key (`address_oid`) references `address` (`oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:  create index `idx_offer_address` on `offer`(`address_oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:    alter table `request`  add column  `homelessperson_oid`  integer
-[24 May 2016 12:30:16] DEBUG Executing statement:  alter table `request`   add index fk_request_homelessperson (`homelessperson_oid`), add constraint fk_request_homelessperson foreign key (`homelessperson_oid`) references `homelessperson` (`userprofile_oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:  create index `idx_request_homelessperson` on `request`(`homelessperson_oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:    alter table `request`  add column  `offer_oid`  integer
-[24 May 2016 12:30:16] DEBUG Executing statement:  alter table `request`   add index fk_request_offer (`offer_oid`), add constraint fk_request_offer foreign key (`offer_oid`) references `offer` (`oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:  create index `idx_request_offer` on `request`(`offer_oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:    alter table `picture`  add column  `userprofile_oid`  integer
-[24 May 2016 12:30:16] DEBUG Executing statement:  alter table `picture`   add index fk_picture_userprofile (`userprofile_oid`), add constraint fk_picture_userprofile foreign key (`userprofile_oid`) references `userprofile` (`oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:  create index `idx_picture_userprofile` on `picture`(`userprofile_oid`)
-[24 May 2016 12:30:16] DEBUG Executing statement:    alter table `userprofile`  add column  `user_oid`  integer
-[24 May 2016 12:30:16] DEBUG Executing statement:  alter table `userprofile`   add index fk_userprofile_user (`user_oid`), add constraint fk_userprofile_user foreign key (`user_oid`) references `user` (`oid`)
-[24 May 2016 12:30:17] DEBUG Executing statement:  create index `idx_userprofile_user` on `userprofile`(`user_oid`)
-[24 May 2016 12:30:17] DEBUG Executing statement:    alter table `request`  add column  `transaction_oid`  integer
-[24 May 2016 12:30:17] DEBUG Executing statement:  alter table `request`   add index fk_request_transaction (`transaction_oid`), add constraint fk_request_transaction foreign key (`transaction_oid`) references `transaction` (`oid`)
-[24 May 2016 12:30:17] DEBUG Executing statement:  create index `idx_request_transaction` on `request`(`transaction_oid`)
-[24 May 2016 12:30:17] DEBUG Executing statement:    alter table `notification`  add column  `oid`  integer
-[24 May 2016 12:30:17] ERROR Could not execute statement:    alter table `notification`  add column  `oid`  integer
-com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Duplicate column name 'oid'
+[24 May 2016 21:03:13] DEBUG Executing SQL script
+[24 May 2016 21:03:13] INFO ================================================================================
+[24 May 2016 21:03:13] INFO outputPath= '/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/HomelessAngel/.Temp~/SQL.xml'
+[24 May 2016 21:03:13] INFO onError= 'abort'
+[24 May 2016 21:03:13] INFO statementSeparator= ';'
+[24 May 2016 21:03:13] INFO derby.system.home= '/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/.metadata/.plugins/com.webratio.commons.db/derby'
+[24 May 2016 21:03:13] INFO password= 'admin'
+[24 May 2016 21:03:13] INFO url= 'jdbc:mysql://localhost:3306/homelessangel_db'
+[24 May 2016 21:03:13] INFO username= 'homelessangel_admin'
+[24 May 2016 21:03:13] INFO autoCommit= 'false'
+[24 May 2016 21:03:13] INFO outputLogPath= '/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/HomelessAngel/.Temp~/SQL.xml.log'
+[24 May 2016 21:03:13] INFO driverClass= 'com.mysql.jdbc.Driver'
+[24 May 2016 21:03:13] INFO encoding= ''
+[24 May 2016 21:03:13] INFO eventSocketPort= '60141'
+[24 May 2016 21:03:13] INFO sqlScript= '/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/HomelessAngel/DBScripts/HomelessangelDb_160524_205903.sql'
+[24 May 2016 21:03:13] INFO ================================================================================
+[24 May 2016 21:03:13] INFO Connecting to the Database...
+[24 May 2016 21:03:14] INFO Database connection estabilished
+[24 May 2016 21:03:14] INFO transaction isolation: 4
+[24 May 2016 21:03:14] DEBUG ================================================================================
+[24 May 2016 21:03:14] DEBUG Executing SQL script file: /Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/HomelessAngel/DBScripts/HomelessangelDb_160524_205903.sql
+[24 May 2016 21:03:14] DEBUG Executing statement:  create table `group` ( `oid`  integer  not null, `groupname`  varchar(255), primary key (`oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `module` ( `oid`  integer  not null, `moduleid`  varchar(255), `modulename`  varchar(255), primary key (`oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `user` ( `oid`  integer  not null, `email`  varchar(255), `password`  varchar(255), `usertype`  integer, `name`  varchar(255), primary key (`oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `request` ( `oid`  integer  not null, `amount`  integer, `isaccepted`  bit, `requestedon`  datetime, primary key (`oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `offercategory` ( `oid`  integer  not null, `name`  varchar(255), primary key (`oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `picture` ( `oid`  integer  not null, `description`  varchar(255), `fileloc`  varchar(255), `title`  varchar(255), primary key (`oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `deliverymethod` ( `oid`  integer  not null, `name`  varchar(255), primary key (`oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `rating` ( `oid`  integer  not null, `score`  integer, `comment`  varchar(255), primary key (`oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `transaction` ( `oid`  integer  not null, `deliverydate`  datetime, `iscompleted`  bit, `requesteddate`  datetime, primary key (`oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `userprofile` ( `oid`  integer  not null, `isdisabled`  bit, `disabledreason`  bit, `iscancelled`  bit, `cancellationdate`  datetime, `disableddate`  datetime, `birthdate`  date, primary key (`oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `angel` ( `oid`  integer  not null, `isanomynous`  bit, `profession`  varchar(255) )
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `homelessperson` ( `oid`  integer  not null, `nickname`  varchar(255), `locatedincity`  varchar(255), `yearsonstreet`  integer )
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `address` ( `oid`  integer  not null, `street`  varchar(255), `hnumber`  varchar(255), `postalcode`  varchar(255), `city`  varchar(255), `country`  varchar(255), `bus`  varchar(255), primary key (`oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `notification` ( `oid`  integer  not null, `seen`  bit, `seendate`  datetime, `description`  varchar(255), `notificationtype`  integer, primary key (`oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `offer` ( `oid`  integer  not null, `isremoved`  bit, `removedreason`  varchar(255), `amount`  integer, `description`  varchar(255), `expirydate`  date, `creationdate`  datetime, primary key (`oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `offertype` ( `oid`  integer  not null, `name`  varchar(255), primary key (`oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:    alter table `group`  add column  `module_oid`  integer
+[24 May 2016 21:03:14] DEBUG Executing statement:  alter table `group`   add index fk_group_module (`module_oid`), add constraint fk_group_module foreign key (`module_oid`) references `module` (`oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:  create index `idx_group_module` on `group`(`module_oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `group_module` ( `group_oid`  integer not null, `module_oid`  integer not null, primary key (`group_oid`, `module_oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_group (`group_oid`), add constraint fk_group_module_group foreign key (`group_oid`) references `group` (`oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_module (`module_oid`), add constraint fk_group_module_module foreign key (`module_oid`) references `module` (`oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:  create index `idx_group_module_group` on `group_module`(`group_oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:  create index `idx_group_module_module` on `group_module`(`module_oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:    alter table `user`  add column  `group_oid`  integer
+[24 May 2016 21:03:14] DEBUG Executing statement:  alter table `user`   add index fk_user_group (`group_oid`), add constraint fk_user_group foreign key (`group_oid`) references `group` (`oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:  create index `idx_user_group` on `user`(`group_oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:    create table `user_group` ( `user_oid`  integer not null, `group_oid`  integer not null, primary key (`user_oid`, `group_oid`) )
+[24 May 2016 21:03:14] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_user (`user_oid`), add constraint fk_user_group_user foreign key (`user_oid`) references `user` (`oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_group (`group_oid`), add constraint fk_user_group_group foreign key (`group_oid`) references `group` (`oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:  create index `idx_user_group_user` on `user_group`(`user_oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:  create index `idx_user_group_group` on `user_group`(`group_oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:    alter table `offer`  add column  `address_oid`  integer
+[24 May 2016 21:03:14] DEBUG Executing statement:  alter table `offer`   add index fk_offer_address (`address_oid`), add constraint fk_offer_address foreign key (`address_oid`) references `address` (`oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:  create index `idx_offer_address` on `offer`(`address_oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:    alter table `request`  add column  `offer_oid`  integer
+[24 May 2016 21:03:14] DEBUG Executing statement:  alter table `request`   add index fk_request_offer (`offer_oid`), add constraint fk_request_offer foreign key (`offer_oid`) references `offer` (`oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:  create index `idx_request_offer` on `request`(`offer_oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:    alter table `request`  add column  `notification_oid`  integer
+[24 May 2016 21:03:14] DEBUG Executing statement:  alter table `request`   add index fk_request_notification (`notification_oid`), add constraint fk_request_notification foreign key (`notification_oid`) references `notification` (`oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:  create index `idx_request_notification` on `request`(`notification_oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:    alter table `picture`  add column  `offer_oid`  integer
+[24 May 2016 21:03:14] DEBUG Executing statement:  alter table `picture`   add index fk_picture_offer (`offer_oid`), add constraint fk_picture_offer foreign key (`offer_oid`) references `offer` (`oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:  create index `idx_picture_offer` on `picture`(`offer_oid`)
+[24 May 2016 21:03:14] DEBUG Executing statement:    alter table `angel`   add index fk_angel_userprofile ('oid'), add constraint fk_angel_userprofile foreign key ('oid') references `userprofile` ('oid')
+[24 May 2016 21:03:14] ERROR Could not execute statement:    alter table `angel`   add index fk_angel_userprofile ('oid'), add constraint fk_angel_userprofile foreign key ('oid') references `userprofile` ('oid')
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''oid'), add constraint fk_angel_userprofile foreign key ('oid') references `user' at line 1
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
@@ -93,9 +84,9 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Duplicate column name
 	at com.webratio.commons.db.utils.DBUtils.execute(DBUtils.java:523)
 	at com.webratio.commons.db.utils.DBUtils.executeScriptFiles(DBUtils.java:442)
 	at com.webratio.commons.db.utils.DBUtils.main(DBUtils.java:257)
-[24 May 2016 12:30:17] DEBUG Performing roolback...
-[24 May 2016 12:30:17] WARN NOTE: The rollback affects the DDL instructions only if supported by the current database
-[24 May 2016 12:30:17] DEBUG Rollback successfully executed
-[24 May 2016 12:30:17] ERROR SQL SCRIPT EXECUTION FAILED
-[24 May 2016 12:30:17] INFO Database connection closed
-[24 May 2016 12:30:17] DEBUG Total time: 1083 milliseconds
+[24 May 2016 21:03:14] DEBUG Performing roolback...
+[24 May 2016 21:03:14] WARN NOTE: The rollback affects the DDL instructions only if supported by the current database
+[24 May 2016 21:03:14] DEBUG Rollback successfully executed
+[24 May 2016 21:03:14] ERROR SQL SCRIPT EXECUTION FAILED
+[24 May 2016 21:03:14] INFO Database connection closed
+[24 May 2016 21:03:14] DEBUG Total time: 1183 milliseconds

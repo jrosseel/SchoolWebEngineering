@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<DBError statementIndex="53">
-  <ErrorMessage>com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Duplicate column name 'oid'</ErrorMessage>
-  <Comment> Notification_UserProfile [rel25]</Comment>
-  <Statement>   alter table `notification`  add column  `oid`  integer</Statement>
-  <ErrorMessage>com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Duplicate column name 'oid'</ErrorMessage>
-  <StackTrace>com.webratio.commons.db.DBException: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Duplicate column name 'oid'
+<DBError statementIndex="44">
+  <ErrorMessage>com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''oid'), add constraint fk_angel_userprofile foreign key ('oid') references `user' at line 1</ErrorMessage>
+  <Comment> GEN FK: Angel --&gt; UserProfile</Comment>
+  <Statement>   alter table `angel`   add index fk_angel_userprofile ('oid'), add constraint fk_angel_userprofile foreign key ('oid') references `userprofile` ('oid')</Statement>
+  <ErrorMessage>com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''oid'), add constraint fk_angel_userprofile foreign key ('oid') references `user' at line 1</ErrorMessage>
+  <StackTrace>com.webratio.commons.db.DBException: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''oid'), add constraint fk_angel_userprofile foreign key ('oid') references `user' at line 1
 	at com.webratio.commons.db.utils.DBUtils.execute(DBUtils.java:546)
 	at com.webratio.commons.db.utils.DBUtils.executeScriptFiles(DBUtils.java:442)
 	at com.webratio.commons.db.utils.DBUtils.main(DBUtils.java:257)
-Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Duplicate column name 'oid'
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''oid'), add constraint fk_angel_userprofile foreign key ('oid') references `user' at line 1
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)

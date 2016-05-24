@@ -96,22 +96,18 @@ create table `userprofile` (
 
 -- Angel [ent3]
 create table `angel` (
-   `userprofile_oid`  integer  not null,
    `oid`  integer  not null,
    `isanomynous`  bit,
-   `profession`  varchar(255),
-  primary key (`userprofile_oid`)
+   `profession`  varchar(255)
 );
 
 
 -- HomelessPerson [ent4]
 create table `homelessperson` (
-   `userprofile_oid`  integer  not null,
    `oid`  integer  not null,
    `nickname`  varchar(255),
    `locatedincity`  varchar(255),
-   `yearsonstreet`  integer,
-  primary key (`userprofile_oid`)
+   `yearsonstreet`  integer
 );
 
 
@@ -196,22 +192,10 @@ create index `idx_user_group_user` on `user_group`(`user_oid`);
 create index `idx_user_group_group` on `user_group`(`group_oid`);
 
 
--- Angel_Offer [rel1]
-alter table `offer`  add column  `angel_oid`  integer;
-alter table `offer`   add index fk_offer_angel (`angel_oid`), add constraint fk_offer_angel foreign key (`angel_oid`) references `angel` (`userprofile_oid`);
-create index `idx_offer_angel` on `offer`(`angel_oid`);
-
-
 -- Offer_PickupAddress [rel11]
 alter table `offer`  add column  `address_oid`  integer;
 alter table `offer`   add index fk_offer_address (`address_oid`), add constraint fk_offer_address foreign key (`address_oid`) references `address` (`oid`);
 create index `idx_offer_address` on `offer`(`address_oid`);
-
-
--- HomelessPerson_Request [rel13]
-alter table `request`  add column  `homelessperson_oid`  integer;
-alter table `request`   add index fk_request_homelessperson (`homelessperson_oid`), add constraint fk_request_homelessperson foreign key (`homelessperson_oid`) references `homelessperson` (`userprofile_oid`);
-create index `idx_request_homelessperson` on `request`(`homelessperson_oid`);
 
 
 -- Offer_Request [rel14]
@@ -220,52 +204,10 @@ alter table `request`   add index fk_request_offer (`offer_oid`), add constraint
 create index `idx_request_offer` on `request`(`offer_oid`);
 
 
--- UserProfile_Picture [rel18]
-alter table `picture`  add column  `userprofile_oid`  integer;
-alter table `picture`   add index fk_picture_userprofile (`userprofile_oid`), add constraint fk_picture_userprofile foreign key (`userprofile_oid`) references `userprofile` (`oid`);
-create index `idx_picture_userprofile` on `picture`(`userprofile_oid`);
-
-
--- User_UserProfile [rel2]
-alter table `userprofile`  add column  `user_oid`  integer;
-alter table `userprofile`   add index fk_userprofile_user (`user_oid`), add constraint fk_userprofile_user foreign key (`user_oid`) references `user` (`oid`);
-create index `idx_userprofile_user` on `userprofile`(`user_oid`);
-
-
--- Request_Transaction [rel22]
-alter table `request`  add column  `transaction_oid`  integer;
-alter table `request`   add index fk_request_transaction (`transaction_oid`), add constraint fk_request_transaction foreign key (`transaction_oid`) references `transaction` (`oid`);
-create index `idx_request_transaction` on `request`(`transaction_oid`);
-
-
--- Notification_UserProfile [rel25]
-alter table `notification`  add column  `oid`  integer;
-alter table `userprofile`   add index fk_notification_userprofile (`oid`), add constraint fk_notification_userprofile foreign key (`oid`) references `userprofile` (`oid`);
-create index `idx_notification_userprofile` on `userprofile`(`oid`);
-
-
 -- Notification_Request [rel26]
 alter table `request`  add column  `notification_oid`  integer;
 alter table `request`   add index fk_request_notification (`notification_oid`), add constraint fk_request_notification foreign key (`notification_oid`) references `notification` (`oid`);
 create index `idx_request_notification` on `request`(`notification_oid`);
-
-
--- Angel_Address [rel3]
-alter table `angel`  add column  `address_oid`  integer;
-alter table `angel`   add index fk_angel_address (`address_oid`), add constraint fk_angel_address foreign key (`address_oid`) references `address` (`oid`);
-create index `idx_angel_address` on `angel`(`address_oid`);
-
-
--- Offer_OfferCategory [rel4]
-alter table `offer`  add column  `offercategory_oid`  integer;
-alter table `offer_offercategory`   add index fk_offer_offercategory (`offercategory_oid`), add constraint fk_offer_offercategory foreign key (`offercategory_oid`) references `offercategory` (`oid`);
-create index `idx_offer_offercategory` on `offer_offercategory`(`offercategory_oid`);
-
-
--- Offer_OfferType [rel5]
-alter table `offer`  add column  `offertype_oid`  integer;
-alter table `offer_offertype`   add index fk_offer_offertype (`offertype_oid`), add constraint fk_offer_offertype foreign key (`offertype_oid`) references `offertype` (`oid`);
-create index `idx_offer_offertype` on `offer_offertype`(`offertype_oid`);
 
 
 -- Offer_Picture [rel6]
@@ -274,43 +216,11 @@ alter table `picture`   add index fk_picture_offer (`offer_oid`), add constraint
 create index `idx_picture_offer` on `picture`(`offer_oid`);
 
 
--- Offer_DeliveryMethod [rel8]
-alter table `offer`  add column  `deliverymethod_oid`  integer;
-alter table `offer`   add index fk_offer_deliverymethod (`deliverymethod_oid`), add constraint fk_offer_deliverymethod foreign key (`deliverymethod_oid`) references `deliverymethod` (`oid`);
-create index `idx_offer_deliverymethod` on `offer`(`deliverymethod_oid`);
-
-
--- Transaction_Rating [rel9]
-alter table `rating`  add column  `transaction_oid`  integer;
-alter table `rating`   add index fk_rating_transaction (`transaction_oid`), add constraint fk_rating_transaction foreign key (`transaction_oid`) references `transaction` (`oid`);
-create index `idx_rating_transaction` on `rating`(`transaction_oid`);
-
-
 -- GEN FK: Angel --> UserProfile
-alter table `angel`   add index fk_angel_userprofile (`userprofile_oid`), add constraint fk_angel_userprofile foreign key (`userprofile_oid`) references `userprofile` (`oid`);
+alter table `angel`   add index fk_angel_userprofile (`oid`), add constraint fk_angel_userprofile foreign key (`oid`) references `userprofile` (`oid`);
 
 
 -- GEN FK: HomelessPerson --> UserProfile
-alter table `homelessperson`   add index fk_homelessperson_userprofile (`userprofile_oid`), add constraint fk_homelessperson_userprofile foreign key (`userprofile_oid`) references `userprofile` (`oid`);
-
-
--- Angel.avgRating [ent3#att15]
-create view `angel_avgrating_view` as
-select AL1.`userprofile_oid` as `userprofile_oid`, avg(AL4.`score`) as `der_attr`
-from  `angel` AL1 
-               left outer join `offer` AL2 on AL1.`userprofile_oid`=AL2.`angel_oid`
-               left outer join `request` AL3 on AL2.`oid`=AL3.`offer_oid`
-               left outer join `rating` AL4 on AL3.`transaction_oid`=AL4.`transaction_oid`
-group by AL1.`userprofile_oid`;
-
-
--- Angel.amtOfItemsGivenAway [ent3#att54]
-create view `angel_amtofitemsgivenaway_view` as
-select AL1.`userprofile_oid` as `userprofile_oid`, sum(AL3.`amount`) as `der_attr`
-from  `angel` AL1 
-               left outer join `offer` AL2 on AL1.`userprofile_oid`=AL2.`angel_oid`
-               left outer join `request` AL3 on AL2.`oid`=AL3.`offer_oid`
-where AL3.`isaccepted` = '1'
-group by AL1.`userprofile_oid`;
+alter table `homelessperson`   add index fk_homelessperson_userprofile (`oid`), add constraint fk_homelessperson_userprofile foreign key (`oid`) references `userprofile` (`oid`);
 
 
