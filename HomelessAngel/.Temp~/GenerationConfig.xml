@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration>
+  <Properties>
+    <Property name="ajaxActivated">true</Property>
+    <Property name="applicationServer">Tomcat</Property>
+    <Property name="cloudDeploy">false</Property>
+    <Property name="commonsLibDir">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.commons.libs_7.2.11.201512290414/lib</Property>
+    <Property name="dbConfigPath">/var/folders/rv/60_8qk7x3c9fl3sxphvkjgd80000gn/T/WRDBConfig7958542841293182244.xml</Property>
+    <Property name="defaultEncoding"></Property>
+    <Property name="deployCorePluginDir">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/configuration/org.eclipse.osgi/bundles/49/1/.cp</Property>
+    <Property name="derbySystemHome">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/.metadata/.plugins/com.webratio.commons.db/derby</Property>
+    <Property name="enterpriseProjectDir"></Property>
+    <Property name="eventSocketPort">50179</Property>
+    <Property name="excludedProjects" type="list"></Property>
+    <Property name="generationTime">201605241250</Property>
+    <Property name="helpersPluginDir">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.generator.helpers_7.2.11.201512290414</Property>
+    <Property name="i18nBundleKeysFile" type="file"></Property>
+    <Property name="i18nExtraBundleFile" type="file"></Property>
+    <Property name="localDeploy">true</Property>
+    <Property name="lockDir">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/HomelessAngel/.Temp~</Property>
+    <Property name="normalizeDescriptors">false</Property>
+    <Property name="outputPath">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/Tomcat/webapps/HomelessAngel</Property>
+    <Property name="phases">All</Property>
+    <Property name="projectDir">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/HomelessAngel</Property>
+    <Property name="projectName">HomelessAngel</Property>
+    <Property name="projectPath">/var/folders/rv/60_8qk7x3c9fl3sxphvkjgd80000gn/T/Project1424127448518480097.wr</Property>
+    <Property name="projectType">WEBPROJECT</Property>
+    <Property name="rootModuleName"></Property>
+    <Property name="uiPluginDir">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.ide.ui_7.2.11.201512290414</Property>
+    <Property name="webappPluginDir">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.generator.webapp_7.2.11.201512290414</Property>
+    <Property name="wrBuildId">201512290414</Property>
+    <Property name="wrGenerateOldValidationRules">false</Property>
+    <Property name="wrModelStatistics">pages=6|units=1</Property>
+    <Property name="wrVersion">7.2.11</Property>
+  </Properties>
+  <Plugins>
+    <Plugin id="com.webratio.commons.libs" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.commons.libs_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.commons.transform" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.commons.transform_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.debug" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.debug_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.json" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.json_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.lib.apache.commons.codec" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.lib.apache.commons.codec_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.lib.apache.commons.collections" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.lib.apache.commons.collections_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.lib.apache.commons.httpclient" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.lib.apache.commons.httpclient_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.lib.apache.commons.lang" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.lib.apache.commons.lang_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.lib.apache.commons.logging" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.lib.apache.commons.logging_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.lib.dom4j" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.lib.dom4j_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.lib.javassist" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.lib.javassist_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.rtx.extras" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.rtx.extras_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.rtx" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.rtx_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.struts13" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.struts13_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.units.content" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.content_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.controlflow" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.controlflow_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.module" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.module_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.operation" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.operation_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.session" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.session_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.utility" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.utility_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.validation" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.validation_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.units.ws" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.units.ws_7.2.11.201512290414" type="components"/>
+    <Plugin id="com.webratio.ws" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.ws_7.2.11.201512290414"/>
+    <Plugin id="com.webratio.xsd" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.xsd_7.2.11.201512290414"/>
+  </Plugins>
+  <Styles>
+    <Style name="Excel" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/Excel_7.2.11.201512290414"/>
+    <Style name="Multiflex" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/Multiflex_7.2.11.201512290414"/>
+    <Style name="Reports" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/Reports_7.2.11.201512290414"/>
+    <Style name="WebRatio" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/WebRatio_7.2.11.201512290414"/>
+    <Style name="WRDefault" path="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/WRDefault_7.2.11.201512290414"/>
+  </Styles>
+  <FileEncodings/>
+</Configuration>

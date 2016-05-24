@@ -3,8 +3,18 @@
 	<section name="com.webratio.ide.ui.dialogs.EditEntityDialog">
 		<item value="898" key="DIALOG_WIDTH"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
-		<item value="271" key="DIALOG_X_ORIGIN"/>
 		<item value="764" key="DIALOG_HEIGHT"/>
+		<item value="271" key="DIALOG_X_ORIGIN"/>
 		<item value="1|.SF NS Text|13.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="DialogBounds_ExceptionDialog">
+		<item value="595" key="DIALOG_WIDTH"/>
+		<item value="726" key="DIALOG_WIDTH.DETAILS"/>
+		<item value="357" key="DIALOG_X_ORIGIN.DETAILS"/>
+		<item value="337" key="DIALOG_Y_ORIGIN"/>
+		<item value="122" key="DIALOG_HEIGHT"/>
+		<item value="423" key="DIALOG_X_ORIGIN"/>
+		<item value="582" key="DIALOG_HEIGHT.DETAILS"/>
+		<item value="30" key="DIALOG_Y_ORIGIN.DETAILS"/>
 	</section>
 </section>
