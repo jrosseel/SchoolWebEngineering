@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page10" name="View Offers" landmark="true" gr:x="665" gr:y="240" customURLName="viewoffers">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page10" name="View Offers" landmark="true" gr:x="670" gr:y="455" customURLName="viewoffers">
   <ContentUnits/>
   <layout:Grid containerType="grid">
     <layout:Row>

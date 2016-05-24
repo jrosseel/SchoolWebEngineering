@@ -6,11 +6,11 @@
     <Attribute name="email" id="email" type="string" key="false" db:column="email"/>
     <Attribute id="User#att16" name="userType" type="integer" key="false" db:column="usertype"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="775" gr:y="135" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
+  <Entity id="Group" name="Group" duration="persistent" gr:x="775" gr:y="110" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="1005" gr:y="125" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db1" db:table="module">
+  <Entity id="Module" name="Module" duration="persistent" gr:x="1005" gr:y="100" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db1" db:table="module">
     <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
     <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
@@ -58,8 +58,7 @@
     <Attribute id="ent2#att21" name="cancellationDate" type="timestamp" db:column="cancellationdate"/>
     <Attribute id="ent2#att55" name="disabledDate" type="timestamp" db:column="disableddate"/>
   </Entity>
-  <Entity gr:x="410" gr:y="470" id="ent3" name="Angel" duration="persistent" attributeOrder="ent3#att4 ent3#att9 ent3#att10 ent3#att1 ent3#att15" db:database="db1" db:table="angel">
-    <Attribute id="ent3#att4" key="true" name="oid" type="integer" db:column="oid"/>
+  <Entity gr:x="410" gr:y="470" id="ent3" name="Angel" duration="persistent" attributeOrder="ent3#att9 ent3#att10 ent3#att1 ent3#att15" db:database="db1" db:table="angel">
     <Attribute id="ent3#att9" name="profession" type="string" db:column="profession"/>
     <Attribute id="ent3#att10" name="isAnomynous" type="boolean" db:column="isanomynous"/>
     <Generalization superEntity="ent2">
@@ -71,15 +70,16 @@
     <Attribute id="ent3#att15" name="amtOfItemsGivenAway" type="integer" derivationQuery="calculated::sum(Self.rel7#role14(as Var1).rel14#role27(as Var2).ent1#att14) where Var2.ent1#att53 = true" db:table="angel_amtofitemsgivenaway_view" db:column="der_attr" storageType="file">
       <db:JoinColumn attribute="ent2#att2" name="userprofile_oid"/>
     </Attribute>
+    <Attribute id="ent3#att17" name="angeloid" db:column="angeloid" type="integer" key="false"/>
   </Entity>
-  <Entity gr:x="680" gr:y="470" id="ent4" name="HomelessPerson" duration="persistent" attributeOrder="ent4#att5 ent4#att11 ent4#att12 ent4#att13" db:database="db1" db:table="homelessperson">
-    <Attribute id="ent4#att5" key="true" name="oid" type="integer" db:column="oid"/>
+  <Entity gr:x="680" gr:y="470" id="ent4" name="HomelessPerson" duration="persistent" attributeOrder="ent4#att11 ent4#att12 ent4#att13" db:database="db1" db:table="homelessperson">
     <Attribute id="ent4#att11" name="nickName" type="string" db:column="nickname"/>
     <Attribute id="ent4#att12" name="locatedInCity" type="string" db:column="locatedincity"/>
     <Attribute id="ent4#att13" name="yearsOnStreet" type="integer" db:column="yearsonstreet"/>
     <Generalization superEntity="ent2">
       <db:JoinColumn attribute="ent2#att2" name="userprofile_oid"/>
     </Generalization>
+    <Attribute id="ent4#att52" name="homelesspersonoid" db:column="homelesspersonoid" type="integer" key="false"/>
   </Entity>
   <Entity gr:x="180" gr:y="450" id="ent5" name="Address" duration="persistent" attributeOrder="ent5#att8 ent5#att22 ent5#att23 ent5#att24 ent5#att25 ent5#att26 ent5#att27" db:database="db1" db:table="address">
     <Attribute id="ent5#att8" key="true" name="oid" type="integer" db:column="oid"/>
@@ -144,7 +144,7 @@
     <Attribute id="ent14#att56" name="isCompleted" type="boolean" db:column="iscompleted"/>
     <Attribute id="ent14#att58" name="requestedDate" type="timestamp" db:column="requesteddate"/>
   </Entity>
-  <Entity gr:x="925" gr:y="470" id="ent1" name="Request" duration="persistent" attributeOrder="ent1#att7 ent1#att14 ent1#att53 ent1#att57" db:database="db1" db:table="request">
+  <Entity gr:x="990" gr:y="470" id="ent1" name="Request" duration="persistent" attributeOrder="ent1#att7 ent1#att14 ent1#att53 ent1#att57" db:database="db1" db:table="request">
     <Attribute id="ent1#att7" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent1#att14" name="amount" type="integer" key="false" db:column="amount"/>
     <Attribute id="ent1#att53" name="isAccepted" type="boolean" db:column="isaccepted"/>

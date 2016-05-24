@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page8" name="Donate" landmark="true" gr:x="665" gr:y="135" customURLName="donate">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page8" name="Donate" landmark="true" gr:x="500" gr:y="470" customURLName="donate">
   <ContentUnits/>
   <layout:Grid containerType="grid">
     <layout:Row>

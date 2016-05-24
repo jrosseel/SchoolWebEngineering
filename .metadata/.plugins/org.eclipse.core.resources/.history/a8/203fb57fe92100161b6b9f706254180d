@@ -1,0 +1,122 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page9" name="Register" landmark="true" gr:x="245" gr:y="80" customURLName="register">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="60" id="sv2#page9#mssu1" name="Choose role" linkOrder="sv2#page9#mssu1#ln1 sv2#page9#mssu1#ln3">
+      <Message xml:space="preserve">Angels are people that want to make a difference, and offer something to the homeless. This could range from different kind of goods (food, clothes, shoes, sleeping place, lunch at restaurant, etc.) or services (legal service, medical service, hairdressing, education, etc.).</Message>
+      <Link id="sv2#page9#mssu1#ln1" name="Register as Angel" to="sv2#page9#page1" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#page9#mssu1#ln3" name="Register as Homeless" to="sv2#page9#page2" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page9#mssu1">
+          <layout:Link link="sv2#page9#mssu1#ln1"/>
+          <layout:Link link="sv2#page9#mssu1#ln3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:SubPage pageId="sv2#page9#page1">
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="12">
+                <layout:Unit unitId="sv2#page9#page1#enu3">
+                  <layout:Field field="sv2#page9#page1#enu3#fld8"/>
+                  <layout:Field field="sv2#page9#page1#enu3#fld9"/>
+                  <layout:Field field="sv2#page9#page1#enu3#fld10"/>
+                  <layout:Field field="sv2#page9#page1#enu3#fld11"/>
+                  <layout:Field field="sv2#page9#page1#enu3#fld12"/>
+                </layout:Unit>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:SubPage>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:SubPage pageId="sv2#page9#page2">
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="12">
+                <layout:Unit unitId="sv2#page9#page2#enu4"/>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:SubPage>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Page gr:x="160" gr:y="0" id="sv2#page9#page1" name="Register Angel">
+    <ContentUnits>
+      <EntryUnit gr:x="0" gr:y="0" id="sv2#page9#page1#enu3" name="Enter Angel Details" entity="User" fieldOrder="sv2#page9#page1#enu3#fld8 sv2#page9#page1#enu3#fld9 sv2#page9#page1#enu3#fld10 sv2#page9#page1#enu3#fld11 sv2#page9#page1#enu3#fld12">
+        <Field id="sv2#page9#page1#enu3#fld8" name="name" type="string" modifiable="true" attribute="userName"/>
+        <Field id="sv2#page9#page1#enu3#fld9" name="password" type="password" modifiable="true" attribute="password"/>
+        <Field id="sv2#page9#page1#enu3#fld10" name="email" type="string" modifiable="true" attribute="email"/>
+        <Field id="sv2#page9#page1#enu3#fld12" name="profession" type="string" modifiable="true"/>
+        <Field id="sv2#page9#page1#enu3#fld11" name="birthdate" type="date" modifiable="true"/>
+      </EntryUnit>
+    </ContentUnits>
+  </Page>
+  <Page id="sv2#page9#page2" name="Register Homeless" gr:x="160" gr:y="155">
+    <ContentUnits>
+      <EntryUnit gr:x="0" gr:y="0" id="sv2#page9#page2#enu4" name="Enter Homeless Details"/>
+    </ContentUnits>
+  </Page>
+</Page>

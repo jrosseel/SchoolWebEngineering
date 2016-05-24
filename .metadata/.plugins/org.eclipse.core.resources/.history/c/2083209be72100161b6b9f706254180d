@@ -1,0 +1,37 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page9" name="Register" landmark="true" gr:x="165" gr:y="55" customURLName="register">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#page9#enu2" name="Enter User Details" entity="ent3">
+      <Field id="sv2#page9#enu2#fld3" name="profession" type="string" modifiable="true" attribute="ent3#att9"/>
+      <Field id="sv2#page9#enu2#fld4" name="isAnomynous" type="boolean" modifiable="true" attribute="ent3#att10"/>
+      <Field id="sv2#page9#enu2#fld5" name="birthDate" type="date" modifiable="true" attribute="ent2#att6"/>
+      <SelectionField id="sv2#page9#enu2#sfld1" name="AngelToAddress" type="string" role="rel16#role31"/>
+      <SelectionField id="sv2#page9#enu2#sfld2" name="UserProfileToPicture" type="string" role="rel15#role29"/>
+      <SelectionField id="sv2#page9#enu2#sfld3" name="UserProfileToUser" type="string" role="rel2#role4"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page9#enu2">
+          <layout:Field field="sv2#page9#enu2#fld3"/>
+          <layout:Field field="sv2#page9#enu2#fld4"/>
+          <layout:Field field="sv2#page9#enu2#fld5"/>
+          <layout:Field field="sv2#page9#enu2#sfld1"/>
+          <layout:Field field="sv2#page9#enu2#sfld2"/>
+          <layout:Field field="sv2#page9#enu2#sfld3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
