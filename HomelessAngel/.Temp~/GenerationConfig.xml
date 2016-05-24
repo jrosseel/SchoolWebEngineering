@@ -6,14 +6,14 @@
     <Property name="applicationServer">Tomcat</Property>
     <Property name="cloudDeploy">false</Property>
     <Property name="commonsLibDir">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.commons.libs_7.2.11.201512290414/lib</Property>
-    <Property name="dbConfigPath">/var/folders/rv/60_8qk7x3c9fl3sxphvkjgd80000gn/T/WRDBConfig7958542841293182244.xml</Property>
+    <Property name="dbConfigPath">/var/folders/rv/60_8qk7x3c9fl3sxphvkjgd80000gn/T/WRDBConfig3881874534578228013.xml</Property>
     <Property name="defaultEncoding"></Property>
     <Property name="deployCorePluginDir">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/configuration/org.eclipse.osgi/bundles/49/1/.cp</Property>
     <Property name="derbySystemHome">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/.metadata/.plugins/com.webratio.commons.db/derby</Property>
     <Property name="enterpriseProjectDir"></Property>
-    <Property name="eventSocketPort">50179</Property>
+    <Property name="eventSocketPort">56324</Property>
     <Property name="excludedProjects" type="list"></Property>
-    <Property name="generationTime">201605241250</Property>
+    <Property name="generationTime">201605241617</Property>
     <Property name="helpersPluginDir">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.generator.helpers_7.2.11.201512290414</Property>
     <Property name="i18nBundleKeysFile" type="file"></Property>
     <Property name="i18nExtraBundleFile" type="file"></Property>
@@ -24,14 +24,14 @@
     <Property name="phases">All</Property>
     <Property name="projectDir">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/HomelessAngel</Property>
     <Property name="projectName">HomelessAngel</Property>
-    <Property name="projectPath">/var/folders/rv/60_8qk7x3c9fl3sxphvkjgd80000gn/T/Project1424127448518480097.wr</Property>
+    <Property name="projectPath">/var/folders/rv/60_8qk7x3c9fl3sxphvkjgd80000gn/T/Project8959403495475775465.wr</Property>
     <Property name="projectType">WEBPROJECT</Property>
     <Property name="rootModuleName"></Property>
     <Property name="uiPluginDir">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.ide.ui_7.2.11.201512290414</Property>
     <Property name="webappPluginDir">/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/WebRatio/plugins/com.webratio.generator.webapp_7.2.11.201512290414</Property>
     <Property name="wrBuildId">201512290414</Property>
     <Property name="wrGenerateOldValidationRules">false</Property>
-    <Property name="wrModelStatistics">pages=6|units=1</Property>
+    <Property name="wrModelStatistics">pages=11|units=14</Property>
     <Property name="wrVersion">7.2.11</Property>
   </Properties>
   <Plugins>

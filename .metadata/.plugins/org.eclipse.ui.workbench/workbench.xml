@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="44" version="2.0">
+<workbench progressCount="48" version="2.0">
 <workbenchAdvisor/>
-<window height="769" maximized="true" width="1217" x="62" y="90">
+<window height="818" maximized="true" width="1381" x="16" y="41">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="205"/>
@@ -60,9 +60,6 @@
 <viewState/>
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems"/>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
-</view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1463823644097">
 <customFilters userDefinedPatternsEnabled="false">
@@ -92,17 +89,22 @@
 </customFilters>
 </viewState>
 </view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
 <view id="com.webratio.eclipse.cloud.ui.views.CloudServicesView" partName="Cloud Accounts">
 <viewState/>
 </view>
 <view id="com.webratio.bpm.ui.views.BPMDocumentationView" partName="Documentation"/>
-<view id="com.webratio.ide.ui.views.WRAerialView" partName="Overview"/>
+<view id="com.webratio.ide.ui.views.WRAerialView" partName="Overview">
+<viewState/>
+</view>
 <view id="com.webratio.bpm.ui.explorer.views.BPMExplorerView" partName="BPMN Explorer"/>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
 </views>
-<perspectives activePart="com.webratio.ide.ui.views.GenerationErrorsView" activePerspective="com.webratio.ide.ui.WRPerspective">
+<perspectives activePart="com.webratio.ide.ui.editors.WebProjectEditor" activePerspective="com.webratio.ide.ui.WRPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.webratio.bpm.ui.BPMPerspectiveFactory" id="com.webratio.bpm.ui.BPMPerspective" label="BPMN"/>
 <alwaysOnActionSet id="com.webratio.bpm.ui.actionSet2"/>
@@ -253,11 +255,12 @@
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.20783766" ratioLeft="297" ratioRight="1132" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.49263722" ratioLeft="368" ratioRight="379" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="com.webratio.ide.ui.views.GenerationErrorsView" appearance="2" expanded="2">
+<info part="org.eclipse.ui.editorss" ratio="0.2463261" ratioLeft="352" ratioRight="1077" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.78313255" ratioLeft="585" ratioRight="162" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.webratio.ide.ui.grid.views.GridView" appearance="2" expanded="2">
 <page content="com.webratio.ide.ui.grid.views.GridView" label="Layout"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="com.webratio.ide.ui.views.GenerationErrorsView" label="Generation Errors"/>
@@ -289,155 +292,155 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.webratio.ide.ui.editors.WebProjectEditor" path="/HomelessAngel/Model.wr"/>
 </editors>
-<item historyLabel="HomelessAngel &gt; seen" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent6#att48&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile &gt; Logout" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20#miu3&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Domain Model" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; rel24" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;rel24&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile &gt; Welcome" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20#mssu6&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Domain Model" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile &gt; Get1" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20#gtu3&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Notification_UserProfile" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;rel25&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile &gt; Angel User Profile" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20#dau2&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Domain Model" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Notification" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent6&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile &gt; Get1" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20#gtu3&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent6#att59&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Notification" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent6&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile &gt; Angel User Profile" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20#dau2&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent6#att60&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Notification_Request" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;rel26&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile &gt; Get1" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20#gtu3&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Domain Model" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile &gt; Flow5" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20#gtu3#ln5&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Notification" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent6&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile &gt; Angel User Profile" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20#dau2&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Address" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent5&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent3&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Domain Model" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Visitor" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Offer" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent8&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile &gt; Angel User Profile" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20#dau2&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Domain Model" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Offer" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent8&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile &gt; Angel User Profile" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20#dau2&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Domain Model" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel User Profile" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3#page20&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; User" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;User&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv3&apos;)" GRAPHEDITOR_PATH="id(&apos;sv3&apos;)" LOCATIONS="id(&apos;sv3&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject" GRAPHEDITOR_PATH="/WebProject" LOCATIONS="/WebProject" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent3&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Welcome" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Visitor" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Visitor &gt; Login" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#miu1&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Welcome" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home &gt; Password" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12#enu1#fld2&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page2&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Welcome" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home &gt; Username" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12#enu1#fld1&apos;)" PROPERTY_TAB_ID=""/>
 </item>
 <item historyLabel="HomelessAngel &gt; Home" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1&apos;)" PROPERTY_TAB_ID=""/>
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Welcome" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent3&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Domain Model" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Welcome" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject" GRAPHEDITOR_PATH="/WebProject" LOCATIONS="id(&apos;ent3&apos;)" PROPERTY_TAB_ID=""/>
 </item>
 <item historyLabel="HomelessAngel" index="0">
 <position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject" GRAPHEDITOR_PATH="/WebProject" LOCATIONS="/WebProject" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; homelessangel_db" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject" GRAPHEDITOR_PATH="/WebProject" LOCATIONS="id(&apos;db1&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Web Model" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject" GRAPHEDITOR_PATH="/WebProject" LOCATIONS="/WebProject/WebModel" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home &gt; Error Message" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12#mssu5&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Welcome" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject" GRAPHEDITOR_PATH="/WebProject" LOCATIONS="id(&apos;sv1&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Domain Model" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject" GRAPHEDITOR_PATH="/WebProject" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home &gt; Error Message" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12#mssu5&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Domain Model" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home &gt; Error Message" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)/layout:Grid/layout:Row[3]/layout:Cell[1]/layout:Unit" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; homelessangel_db" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;db1&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home &gt; Error Message" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)/layout:Grid/layout:Row[2]/layout:Cell[1]/layout:Unit" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Domain Model" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; homelessangel_db" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;db1&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Angel" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;ent3&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Metadata" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;db1&apos;)/temp:DBMetaData" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; homelessangel_db" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;db1&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home &gt; Error Message" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12#mssu5&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Domain Model" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home &gt; Welcome" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12#mssu2&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; homelessangel_db" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;db1&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Metadata" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;db1&apos;)/temp:DBMetaData" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Visitor" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; homelessangel_db" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;db1&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home &gt; Welcome" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12#mssu2&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Domain Model" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; homelessangel_db" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="id(&apos;db1&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home &gt; Welcome" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12#mssu2&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Domain Model" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Welcome" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Visitor" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Home &gt; Welcome" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)/layout:Grid/layout:Row[1]/layout:Cell[1]/layout:Unit" PROPERTY_TAB_ID=""/>
 </item>
 <item active="true" historyLabel="HomelessAngel &gt; Home" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv1&apos;)" GRAPHEDITOR_PATH="id(&apos;sv1&apos;)" LOCATIONS="id(&apos;sv1#page1&apos;)" PROPERTY_TAB_ID=""/>
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)" PROPERTY_TAB_ID=""/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -445,13 +448,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-<trimItem IMemento.internal.id="leftBottom"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>

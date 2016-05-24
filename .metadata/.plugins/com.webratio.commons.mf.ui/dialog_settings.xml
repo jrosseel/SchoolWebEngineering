@@ -7,6 +7,15 @@
 		<item value="271" key="DIALOG_X_ORIGIN"/>
 		<item value="1|.SF NS Text|13.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
+	<section name="com.webratio.ide.ui.dialogs.EditSubUnitsDialog">
+		<item value="1920" key="DIALOG_WIDTH"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="1016" key="DIALOG_HEIGHT"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="1|.SF NS Text|13.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="com.webratio.ide.ui.properties.items.EntityPropertyItem$2.DialogSettings">
+	</section>
 	<section name="DialogBounds_ExceptionDialog">
 		<item value="595" key="DIALOG_WIDTH"/>
 		<item value="726" key="DIALOG_WIDTH.DETAILS"/>

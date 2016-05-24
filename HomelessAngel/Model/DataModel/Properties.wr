@@ -47,8 +47,7 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="homelessangel_db" type="MySQL" url="jdbc:mysql://localhost:3306/homelessangel_db" username="homelessangel_admin" password="admin" cryptedPassword="false" connectionCount="5">
-  </db:Database>
+  <db:Database id="db1" name="homelessangel_db" type="MySQL" url="jdbc:mysql://localhost:3306/homelessangel_db" username="homelessangel_admin" password="admin" cryptedPassword="false" connectionCount="5"/>
   <Entity gr:x="515" gr:y="265" id="ent2" name="UserProfile" duration="persistent" attributeOrder="ent2#att2 ent2#att6 ent2#att18 ent2#att19 ent2#att20 ent2#att21 ent2#att55" db:database="db1" db:table="userprofile">
     <Attribute id="ent2#att2" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att6" name="birthDate" type="date" db:column="birthdate"/>
