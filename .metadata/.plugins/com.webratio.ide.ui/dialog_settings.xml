@@ -4,23 +4,36 @@
 	</section>
 	<section name="DBSyncPlugin">
 	</section>
+	<section name="com.webratio.ide.ui.views.WRLogView.Settings">
+		<item value="false" key="TOGGLE_SYNC_LOG_FILE"/>
+		<item value="true" key="TOGGLE_TABLE_VIEWER"/>
+		<section name="com.webratio.ide.ui.viewers.WRLogTableViewer.Settings">
+			<item value="" key="GROUPS_VALUE"/>
+			<item value="0" key="SCALE_LEVEL_FILTER_VALUE"/>
+			<item value="2016-05-24T22:03:03" key="ENDING_DATE_FILTER_ID.DATE"/>
+			<item value="false" key="USE_CUSTOM_CONFIG_FILE"/>
+			<item value="false" key="STARTING_DATE_FILTER_ID.ENABLED"/>
+			<item value="2016-05-24T22:03:03" key="STARTING_DATE_FILTER_ID.DATE"/>
+			<item value="false" key="ENDING_DATE_FILTER_ID.ENABLED"/>
+		</section>
+	</section>
 	<section name="DialogBounds_CouplingDialog">
 		<item value="660" key="DIALOG_WIDTH"/>
 		<item value="86" key="DIALOG_Y_ORIGIN"/>
-		<item value="634" key="DIALOG_HEIGHT"/>
 		<item value="630" key="DIALOG_X_ORIGIN"/>
+		<item value="634" key="DIALOG_HEIGHT"/>
 		<item value="1|.SF NS Text|13.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="DialogBounds_SearchInProjectDialog">
 		<item value="553" key="DIALOG_WIDTH"/>
 		<item value="166" key="DIALOG_Y_ORIGIN"/>
-		<item value="486" key="DIALOG_HEIGHT"/>
 		<item value="658" key="DIALOG_X_ORIGIN"/>
+		<item value="486" key="DIALOG_HEIGHT"/>
 		<item value="1|.SF NS Text|13.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
-	<section name="com.webratio.ide.ui.dialogs.SearchInProjectDialog">
-	</section>
 	<section name="DatabaseMissingJarsDialog.FileDialog">
+	</section>
+	<section name="com.webratio.ide.ui.dialogs.SearchInProjectDialog">
 	</section>
 	<section name="com.webratio.ide.ui.grid.views.GridViewPage.Settings">
 		<item value="NONE" key="AUTO_HORIZONTAL_FIT_PREFERENCE"/>
