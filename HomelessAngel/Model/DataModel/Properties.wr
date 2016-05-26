@@ -158,12 +158,13 @@
       <db:JoinColumn attribute="ent1#att7" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="990" gr:y="285" id="ent6" name="Notification" duration="persistent" attributeOrder="ent6#att35 ent6#att48 ent6#att49 ent6#att59 ent6#att60" db:database="db1" db:table="notification">
+  <Entity gr:x="990" gr:y="250" id="ent6" name="Notification" duration="persistent" attributeOrder="ent6#att35 ent6#att48 ent6#att49 ent6#att59 ent6#att60 ent6#att54" db:database="db1" db:table="notification">
     <Attribute id="ent6#att35" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent6#att49" name="seenDate" type="timestamp" db:column="seendate"/>
     <Attribute id="ent6#att48" name="seen" type="boolean" db:column="seen"/>
     <Attribute id="ent6#att59" name="description" type="string" db:column="description"/>
     <Attribute id="ent6#att60" name="notificationType" type="integer" db:column="notificationtype"/>
+    <Attribute id="ent6#att54" name="type" type="string" db:column="type"/>
   </Entity>
   <Relationship id="rel26" name="Notification_Request" sourceEntity="ent6" targetEntity="ent1" db:database="db1" db:table="request">
     <RelationshipRole1 id="rel26#role51" name="NotificationToRequest" maxCard="1">
@@ -261,7 +262,7 @@
       <db:JoinColumn attribute="ent14#att51" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel4" name="Address_UserProfile" sourceEntity="ent5" targetEntity="ent2" gr:bendpoints="0,-185,-365,0" db:database="db1" db:table="userprofile">
+  <Relationship id="rel4" name="Address_UserProfile" sourceEntity="ent5" targetEntity="ent2" gr:bendpoints="2,-182,-343,3" db:database="db1" db:table="userprofile">
     <RelationshipRole1 id="rel4#role7" name="AddressToUserProfile" maxCard="1">
       <db:JoinColumn attribute="ent5#att8" name="address_oid"/>
     </RelationshipRole1>

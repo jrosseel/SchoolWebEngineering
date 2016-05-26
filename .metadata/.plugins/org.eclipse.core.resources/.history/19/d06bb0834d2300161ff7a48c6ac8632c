@@ -1,0 +1,49 @@
+<ContentModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="470" gr:y="345" id="mov1#ctm2" name="Confirm Cancel User">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="440" gr:y="90" id="mov1#ctm2#mssu15" name="Confirm Cancel Account" linkOrder="mov1#ctm2#mssu15#ln50">
+      <Message xml:space="preserve">Are you sure you want to cancel your account?</Message>
+      <Link id="mov1#ctm2#mssu15#ln50" name="Flow50" to="mov1#ctm2#miu11" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiMessageUnit>
+    <ModuleInstanceUnit gr:x="660" gr:y="85" id="mov1#ctm2#miu11" action="true" moduleId="mov1#opm10"/>
+    <InputCollectorUnit gr:x="105" gr:y="90" id="mov1#ctm2#icu11">
+      <InputCollectorParameter id="mov1#ctm2#icu11#icp40" name="userprofile_oid"/>
+      <Link id="mov1#ctm2#icu11#ln52" name="Flow52" to="mov1#ctm2#miu11" type="transport" validate="true" gr:bendpoints="210,40,-325,50;419,39,-116,49">
+        <LinkParameter id="mov1#ctm2#icu11#ln52#par108" name="userprofile_oid_userprofile_oid" source="mov1#ctm2#icu11#icp40" target="mov1#ctm2#miu11.mov1#opm10#icu10#icp39"/>
+      </Link>
+    </InputCollectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#ctm2#mssu15">
+          <layout:Link link="mov1#ctm2#mssu15#ln50"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</ContentModule>

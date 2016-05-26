@@ -1,0 +1,49 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="855" gr:y="615" id="sv3#page24" name="Cancel User Account">
+  <ContentUnits>
+    <ModuleInstanceUnit gr:x="230" gr:y="85" id="sv3#page24#miu14" action="true" moduleId="mov1#opm10"/>
+    <MultiMessageUnit id="sv3#page24#mssu16" name="Confirm Cancel Account" gr:x="0" gr:y="0" linkOrder="sv3#page24#mssu16#ln61 sv3#page24#mssu16#ln63">
+      <Message xml:space="preserve">Are you sure you want to cancel your account?</Message>
+      <Link id="sv3#page24#mssu16#ln61" name="Confirm" to="sv3#page24#miu14" type="normal" validate="true">
+        <LinkParameter id="sv3#page24#mssu16#ln61#par114" name="oid_PASSING_userprofile_oid" sourceLinkParameter="sv3#page20#dau4#ln62#par113" target="sv3#page24#miu14.mov1#opm10#icu10#icp39"/>
+      </Link>
+      <Link id="sv3#page24#mssu16#ln63" name="Cancel" to="sv3#page20#dau4" type="normal" validate="true" gr:bendpoints="-167,-57,438,88;-347,-64,258,81">
+        <LinkParameter id="sv3#page24#mssu16#ln63#par115" name="oid_PASSING_KeyCondition6 [oid]" sourceLinkParameter="sv3#page20#dau4#ln62#par113" target="sv3#page20#dau4#su6#kcond8.ent2#att2"/>
+      </Link>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page24#mssu16">
+          <layout:Link link="sv3#page24#mssu16#ln61"/>
+          <layout:Link link="sv3#page24#mssu16#ln63"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

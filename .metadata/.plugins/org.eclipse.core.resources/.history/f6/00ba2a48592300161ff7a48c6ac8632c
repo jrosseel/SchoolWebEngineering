@@ -1,0 +1,40 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page12" name="Home" gr:x="80" gr:y="445" landmark="true" customURLName="home">
+  <ContentUnits>
+    <MultiMessageUnit id="sv2#page12#mssu2" name="Welcome" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">&lt;h3&gt;Welcome!&lt;/h3&gt;
+&lt;p&gt;
+	Welcome to HomelessAngel. The website that connects the homeless to angels. Angels are altruistic people that have things to give away to the homeless.
+&lt;/p&gt;
+&lt;div style="display: block; width: 100%;"&gt;
+	&lt;div style="width: 40%; float: left; padding: 5px 15px;"&gt;
+		&lt;h2 style="text-align: center;"&gt;ANGEL&lt;/h2&gt;
+		&lt;p&gt;
+			Have something spare to share? Join HomelessAngel as an angel and help someone out by donating some of your things.
+		&lt;/p&gt;
+		&lt;h3&gt;How can I offer something?&lt;/h3&gt;
+		&lt;ul&gt;
+			&lt;li&gt;Register an account and log in.&lt;/li&gt;
+			&lt;li&gt;Create a listing for something you have to offer.&lt;/li&gt;
+			&lt;li&gt;When a homeless person is interested in your offer, you will receive a notification.&lt;/li&gt;
+			&lt;li&gt;You can accept or decline the request. When you accept, pickup or delivery arrangements can be made.&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div style="width: 40%; float: left; padding: 5px 15px;"&gt;
+		&lt;h2 style="text-align: center;"&gt;HOMELESS PERSON&lt;/h2&gt;
+		&lt;p&gt;
+			Living on the street? Join HomelessAngel to find what you need to get you through the day.
+		&lt;/p&gt;
+		&lt;h3&gt;How can I request an item of interest?&lt;/h3&gt;
+		&lt;ul&gt;
+			&lt;li&gt;Register an account and log in.&lt;/li&gt;
+			&lt;li&gt;Browse the &lt;a href="offerings"&gt;offerings page&lt;/a&gt; to find an item of interest.&lt;/li&gt;
+			&lt;li&gt;Inspect the item by clicking the inspect button. If you wish to request this item, press the request button.&lt;/li&gt;
+			&lt;li&gt;Once the angel has accepted your request, you will receive a notification.&lt;/li&gt;
+			&lt;li&gt;Negotiate with the angel on a place and time for pickup or delivery.&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;p&gt;
+			You can also use this website to find some general information on how to make it through the day. For this information and tips on how to make it through the day, navigate to the &lt;a href="general"&gt;information page&lt;/a&gt;.
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</Message>    </MultiMessageUnit>    <EntryUnit gr:x="5" gr:y="75" id="sv2#page12#enu1" name="Login" linkOrder="sv2#page12#enu1#ln2">      <Field id="sv2#page12#enu1#fld1" name="Username" type="string" modifiable="true"/>      <Field id="sv2#page12#enu1#fld2" name="Password" type="password" modifiable="true" hidden="false"/>      <Link id="sv2#page12#enu1#ln2" name="Login" to="sv2#miu1" type="normal" validate="true">        <LinkParameter id="sv2#page12#enu1#ln2#par3" name="Password_Password" source="sv2#page12#enu1#fld2" target="sv2#miu1.mov1#opm1#icu1#icp1"/>        <LinkParameter id="sv2#page12#enu1#ln2#par4" name="Email_Username" source="sv2#page12#enu1#fld1" target="sv2#miu1.mov1#opm1#icu1#icp2"/>      </Link>    </EntryUnit>    <MultiMessageUnit id="sv2#page12#mssu5" name="Error Message" gr:x="5" gr:y="155"/>    <MultiMessageUnit gr:x="5" gr:y="230" id="sv2#page12#mssu7" name="You have cancelled your account!" linkOrder="sv2#page12#mssu7#ln48">      <Placeholder id="sv2#page12#mssu7#ph1" name="cancelleddate"/>      <Link id="sv2#page12#mssu7#ln48" name="Reactivate" to="sv2#page27" type="normal" validate="true" gr:bendpoints="272,15,-254,135;430,-7,-96,113" automaticCoupling="true"/>      <Placeholder id="sv2#page12#mssu7#ph5" name="userprofile_oid"/>    </MultiMessageUnit>    <MultiMessageUnit gr:x="5" gr:y="300" id="sv2#page12#mssu13" name="Your account has been disabled!">      <Placeholder id="sv2#page12#mssu13#ph2" name="disableddate"/>      <Placeholder id="sv2#page12#mssu13#ph3" name="disabledreason"/>    </MultiMessageUnit>  </ContentUnits>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="9" rowspan="4">        <layout:Unit unitId="sv2#page12#mssu2">          <layout:LayoutParameter name="contentType" value="text/html" type="unit"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell colspan="3">        <layout:Unit unitId="sv2#page12#enu1">          <layout:Field field="sv2#page12#enu1#fld1"/>          <layout:Field field="sv2#page12#enu1#fld2"/>          <layout:Link link="sv2#page12#enu1#ln2"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell colspan="3">        <layout:Unit unitId="sv2#page12#mssu5"/>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell colspan="3">        <layout:Unit unitId="sv2#page12#mssu7">          <layout:LayoutParameter name="contentType" value="text/html" type="unit"/>          <layout:Link link="sv2#page12#mssu7#ln48"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell colspan="3">        <layout:Unit unitId="sv2#page12#mssu13">          <layout:LayoutParameter name="contentType" value="text/html" type="unit"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12"/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid></Page>

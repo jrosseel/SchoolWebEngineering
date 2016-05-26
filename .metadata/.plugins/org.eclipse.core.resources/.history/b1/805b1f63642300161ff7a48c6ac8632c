@@ -1,0 +1,32 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="710" gr:y="630" id="sv3#page26" name="Cancel User Account">
+  <ContentUnits>
+    <MultiMessageUnit id="sv3#page26#mssu17" name="Confirm Cancel Account" gr:x="0" gr:y="0" linkOrder="sv3#page26#mssu17#ln64 sv3#page26#mssu17#ln65">
+      <Message xml:space="preserve">Are you sure you want to cancel your account?</Message>
+      <Link id="sv3#page26#mssu17#ln64" name="Cancel" to="sv3#page20#dau4" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-238,-80,222,80;-332,-138,128,22"/>
+      <Link id="sv3#page26#mssu17#ln65" name="Confirm" to="sv3#miu15" type="normal" validate="true">
+        <LinkParameter id="sv3#page26#mssu17#ln65#par116" name="oid_PASSING_userprofile_oid" sourceLinkParameter="sv3#page20#dau4#ln62#par113" target="sv3#miu15.mov1#opm10#icu10#icp39"/>
+      </Link>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page26#mssu17">
+          <layout:Link link="sv3#page26#mssu17#ln64"/>
+          <layout:Link link="sv3#page26#mssu17#ln65"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

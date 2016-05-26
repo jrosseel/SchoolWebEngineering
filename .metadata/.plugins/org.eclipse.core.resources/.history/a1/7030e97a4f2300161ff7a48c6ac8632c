@@ -1,0 +1,43 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="840" gr:y="610" id="sv3#page24" name="Cancel User Account">
+  <ContentUnits>
+    <ModuleInstanceUnit gr:x="0" gr:y="0" id="sv3#page24#miu13" action="false" moduleId="mov1#ctm2" linkOrder="sv3#page24#miu13#ln58">
+      <Link id="sv3#page24#miu13#ln55" name="Cancel Account Confirmed" to="sv3#page24#miu14" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="217,0,-3,-90" codeRef="mov1#ctm2#ocu1"/>
+      <Link id="sv3#page24#miu13#ln58" name="Cancel Cancellation" to="sv3#page20#dau4" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="134,-109,754,36;-135,-109,485,36;-163,-67,457,78;-393,-73,227,72;-438,-119,182,26" codeRef="mov1#ctm2#ocu2"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="245" gr:y="90" id="sv3#page24#miu14" action="true" moduleId="mov1#opm10"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page24#miu13">
+          <layout:Link link="sv3#page24#miu13#ln58"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,56 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="590" gr:y="520" id="sv2#page27" name="Reactivate User">
+  <ContentUnits>
+    <EntryUnit id="sv2#page27#enu8" name="Reactivate User" gr:x="0" gr:y="0" linkOrder="sv2#page27#enu8#ln72 sv2#page27#enu8#ln75">
+      <Field id="sv2#page27#enu8#fld55" name="Username" type="string" modifiable="true"/>
+      <Field id="sv2#page27#enu8#fld56" name="Password" type="password" modifiable="true" hidden="false"/>
+      <Link id="sv2#page27#enu8#ln72" name="Cancel" to="sv2#page12" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-190,-30,330,-50"/>
+      <Link id="sv2#page27#enu8#ln75" name="Reactivate" to="sv2#miu10" type="normal" validate="true">
+        <LinkParameter id="sv2#page27#enu8#ln75#par136" name="Password_Password" source="sv2#page27#enu8#fld56" target="sv2#miu10.mov1#opm9#icu9#icp44"/>
+        <LinkParameter id="sv2#page27#enu8#ln75#par137" name="Username_Username" source="sv2#page27#enu8#fld55" target="sv2#miu10.mov1#opm9#icu9#icp59"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="110" gr:y="100" id="sv2#page27#mssu18" name="Error Message">
+      <Placeholder id="sv2#page27#mssu18#ph6" name="user_oid"/>
+      <Placeholder id="sv2#page27#mssu18#ph7" name="userprofile_oid"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page27#enu8">
+          <layout:Field field="sv2#page27#enu8#fld55"/>
+          <layout:Field field="sv2#page27#enu8#fld56"/>
+          <layout:Link link="sv2#page27#enu8#ln72"/>
+          <layout:Link link="sv2#page27#enu8#ln75"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page27#mssu18"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

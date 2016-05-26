@@ -1,0 +1,24 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="290" gr:y="285" id="mov1#opm9" name="Reactivate User">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm9#icu9" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm9#icu9#oln1" name="OKFlow1" to="mov1#opm9#mfu2">
+        <LinkParameter id="mov1#opm9#icu9#oln1#par2" name="KeyCondition10 [oid]" source="mov1#opm9#icu9#icp22" target="mov1#opm9#mfu2#su11#kcond10.ent2#att2"/>
+        <LinkParameter id="mov1#opm9#icu9#oln1#par25" name="false_isCancelled" sourceValue="false" target="mov1#opm9#mfu2.ent2#att20"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm9#icu9#icp22" name="KeyCondition10 [oid]"/>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="355" gr:y="55" id="mov1#opm9#mfu2" name="Update UserProfile" entity="ent2">
+      <Selector id="mov1#opm9#mfu2#su11" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm9#mfu2#su11#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm9#mfu2#oln4" name="OKFlow4" to="mov1#opm9#okcu7" automaticCoupling="true"/>
+      <KOLink id="mov1#opm9#mfu2#kln3" name="KOFlow3" to="mov1#opm9#kocu8">
+        <LinkParameter id="mov1#opm9#mfu2#kln3#par26" name="Reactivate User Error_Error Message" sourceValue="Reactivate User Error" target="mov1#opm9#kocu8#ocp4"/>
+      </KOLink>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="550" gr:y="60" id="mov1#opm9#okcu7" name="Reactivate User Succeeded"/>
+    <KOCollectorUnit gr:x="550" gr:y="135" id="mov1#opm9#kocu8" name="Reactivate User Failed">
+      <OutputCollectorParameter id="mov1#opm9#kocu8#ocp4" name="Error Message"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

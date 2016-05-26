@@ -1,0 +1,50 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="935" gr:y="405" id="sv3#page28" name="Manage Offers" landmark="true">
+  <ContentUnits>
+    <GetUnit gr:x="0" gr:y="0" id="sv3#page28#gtu5" name="Get5" contextParameters="UserCtxParam"/>
+    <DataUnit id="sv3#page28#dau9" name="User Details" gr:x="130" gr:y="0" entity="User">
+      <Selector id="sv3#page28#dau9#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page28#dau9#su24#kcond15" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page28#dau9#ln90" name="Flow90" to="sv3#page28#pwu5" type="transport" validate="true">
+        <LinkParameter id="sv3#page28#dau9#ln90#par213" name="UserToUserProfile.oid_AngelOffer [oid]" source="data.rel2#role3_ent2#att2" target="sv3#page28#pwu5#su26#rcond3.ent2#att2"/>
+      </Link>
+    </DataUnit>
+    <PowerIndexUnit id="sv3#page28#pwu5" name="Offers" gr:x="135" gr:y="125" sortable="true" checkable="false" useCountQuery="false" entity="ent8" displayAttributes="rel18#role35.ent9#att32 rel17#role33.ent10#att34 ent8#att41 ent8#att36 ent8#att42 rel19#role37.ent12#att44 rel11#role21.ent5#att22 rel11#role21.ent5#att23 rel11#role21.ent5#att24 rel11#role21.ent5#att25 rel11#role21.ent5#att26 rel11#role21.ent5#att27">
+      <VRules/>
+      <Selector id="sv3#page28#pwu5#su26" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page28#pwu5#su26#rcond3" name="AngelOffer" predicate="in" implied="false" role="rel7#role14"/>
+      </Selector>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page28#pwu5">
+          <layout:Attribute attribute="rel18#role35.ent9#att32"/>
+          <layout:Attribute attribute="rel17#role33.ent10#att34"/>
+          <layout:Attribute attribute="ent8#att41"/>
+          <layout:Attribute attribute="ent8#att36"/>
+          <layout:Attribute attribute="ent8#att42"/>
+          <layout:Attribute attribute="rel19#role37.ent12#att44"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att22"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att23"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att24"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att25"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att26"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

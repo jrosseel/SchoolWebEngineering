@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="395" gr:y="360" id="sv2#page3" name="Registration completed" customURLName="registrationcompleted">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="415" gr:y="370" id="sv2#page3" name="Registration completed" customURLName="registrationcompleted">
   <ContentUnits>
     <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#page3#mssu4" name="Registration completed" linkOrder="sv2#page3#mssu4#ln7">
       <Message xml:space="preserve">You have been successfully registrated!

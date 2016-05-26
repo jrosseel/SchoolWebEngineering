@@ -21,7 +21,9 @@
     </DeleteUnit>
     <ModuleInstanceUnit gr:x="880" gr:y="85" id="sv5#miu9" action="true" moduleId="mov1#opm8">
       <OKLink id="sv5#miu9#oln29" name="OKFlow29" to="sv5#page18#pwu1" automaticCoupling="true" gr:bendpoints="-181,135,139,-50"/>
-      <KOLink id="sv5#miu9#kln13" name="KOFlow13" to="sv5#page18#mssu9" automaticCoupling="true" gr:bendpoints="-135,73,145,-32"/>
+      <KOLink id="sv5#miu9#kln13" name="KOFlow13" to="sv5#page18#mssu9" gr:bendpoints="-135,73,145,-32">
+        <LinkParameter id="sv5#miu9#kln13#par1" name="Error Message_Shown Messages" source="mov1#opm8#kocu7#ocp10" target="sv5#page18#mssu9.shownMessages"/>
+      </KOLink>
     </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>

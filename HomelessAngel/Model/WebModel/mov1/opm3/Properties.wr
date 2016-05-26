@@ -2,15 +2,8 @@
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm3#icu3" gr:x="30" gr:y="60">
       <OKLink id="mov1#opm3#icu3#oln49" name="OKFlow49" to="mov1#opm3#mfu11" automaticCoupling="false">
-        <LinkParameter id="mov1#opm3#icu3#oln49#par375" name="birthDate_birthDate" source="mov1#opm3#icu3#icp38" target="mov1#opm3#mfu11.ent2#att6"/>
-        <LinkParameter id="mov1#opm3#icu3#oln49#par376" name="fullName_fullName" source="mov1#opm3#icu3#icp39" target="mov1#opm3#mfu11.ent2#att4"/>
-        <LinkParameter id="mov1#opm3#icu3#oln49#par377" name="isAnomynous_isAnomynous" source="mov1#opm3#icu3#icp40" target="mov1#opm3#mfu11.ent3#att10"/>
-        <LinkParameter id="mov1#opm3#icu3#oln49#par378" name="profession_profession" source="mov1#opm3#icu3#icp41" target="mov1#opm3#mfu11.ent3#att9"/>
-        <LinkParameter id="mov1#opm3#icu3#oln49#par380" name="KeyCondition18 [oid]_KeyCondition18 [oid]" source="mov1#opm3#icu3#icp43" target="mov1#opm3#mfu11#su18#kcond18.ent2#att2"/>
-        <LinkParameter id="mov1#opm3#icu3#oln49#par398" name="Address.oid(UserProfileToAddress)" source="mov1#opm3#icu3#icp45" target="mov1#opm3#mfu11.rel4#role8.ent5#att8"/>
-        <LinkParameter id="mov1#opm3#icu3#oln49#par399" name="Picture.oid(UserProfileToPicture)" source="mov1#opm3#icu3#icp46" target="mov1#opm3#mfu11.rel15#role29.ent11#att37"/>
-        <LinkParameter id="mov1#opm3#icu3#oln49#par400" name="User.oid(UserProfileToUser)" source="mov1#opm3#icu3#icp47" target="mov1#opm3#mfu11.rel2#role4.userOID"/>
         <LinkParameter id="mov1#opm3#icu3#oln49#par407" name="Angel Object" source="mov1#opm3#icu3#icp48" target="mov1#opm3#mfu11.entityBeans"/>
+        <LinkParameter id="mov1#opm3#icu3#oln49#par209" name="KeyCondition18 [oid]" source="mov1#opm3#icu3#icp62" target="mov1#opm3#mfu11#su18#kcond18.ent2#att2"/>
       </OKLink>
       <Link id="mov1#opm3#icu3#ln32" name="Flow32" to="mov1#opm3#mfu10" type="transport" validate="true" gr:bendpoints="200,-83,-190,-83;390,-79,0,-79">
         <LinkParameter id="mov1#opm3#icu3#ln32#par364" name="bus" source="mov1#opm3#icu3#icp32" target="mov1#opm3#mfu10.ent5#att27"/>
@@ -41,6 +34,7 @@
       <InputCollectorParameter id="mov1#opm3#icu3#icp46" name="Picture.oid(UserProfileToPicture)"/>
       <InputCollectorParameter id="mov1#opm3#icu3#icp47" name="User.oid(UserProfileToUser)"/>
       <InputCollectorParameter id="mov1#opm3#icu3#icp48" name="Angel Object"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp62" name="KeyCondition18 [oid]"/>
     </InputCollectorUnit>
     <ModifyUnit gr:x="795" gr:y="295" id="mov1#opm3#mfu9" name="Update User" entity="User">
       <Selector id="mov1#opm3#mfu9#su16" defaultPolicy="fill" booleanOperator="and">

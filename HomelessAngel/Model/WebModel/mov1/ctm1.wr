@@ -1,6 +1,6 @@
 <ContentModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="110" gr:y="280" id="mov1#ctm1" name="View People">
   <ContentUnits>
-    <IndexUnit id="mov1#ctm1#inu7" name="Angels" gr:x="105" gr:y="70" entity="ent3" displayAttributes="ent2#att4 ent3#att17 ent3#att15 ent3#att1 rel4#role8.ent5#att25"/>
+    <IndexUnit id="mov1#ctm1#inu7" name="Angels" gr:x="120" gr:y="80" entity="ent3" displayAttributes="ent2#att4 ent3#att17 ent3#att15 ent3#att1 rel4#role8.ent5#att25"/>
     <IndexUnit id="mov1#ctm1#inu8" name="Homeless Persons" gr:x="280" gr:y="85" entity="ent4" displayAttributes="ent4#att11 rel4#role8.ent5#att25"/>
   </ContentUnits>
   <layout:Grid containerType="grid">

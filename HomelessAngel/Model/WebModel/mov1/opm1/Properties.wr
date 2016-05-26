@@ -24,6 +24,7 @@
       <OutputCollectorParameter id="mov1#opm1#kocu1#ocp6" name="disableddate"/>
       <OutputCollectorParameter id="mov1#opm1#kocu1#ocp5" name="disabledreason"/>
       <OutputCollectorParameter id="mov1#opm1#kocu1#ocp9" name="type"/>
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp7" name="userprofile_oid"/>
     </KOCollectorUnit>
     <OKCollectorUnit gr:x="960" gr:y="245" id="mov1#opm1#okcu1" name="Login Succeeded"/>
     <QueryUnit gr:x="315" gr:y="90" id="mov1#opm1#qu2" name="Select User" mode="select" language="SQL" db="db1">
@@ -37,12 +38,13 @@
       <QueryOutput id="mov1#opm1#qu2#qo7" name="group_oid"/>
       <Link id="mov1#opm1#qu2#ln35" name="OKFlow10" to="mov1#opm1#qu4" type="transport">
         <LinkParameter id="mov1#opm1#qu2#ln35#par86" name="oid_user_oid" source="data[].oid" target="mov1#opm1#qu4.mov1#opm1#qu4#qi2"/>
+        <LinkParameter id="mov1#opm1#qu2#ln35#par33" name="oid_PASSING" source="data[].oid" passing="true"/>
       </Link>
       <OKLink id="mov1#opm1#qu2#oln20" name="OKFlow20" to="mov1#opm1#switch6" gr:bendpoints="-86,50,-46,-60">
         <LinkParameter id="mov1#opm1#qu2#oln20#par87" name="group_oid_Switch" source="data[].groupOid" target="mov1#opm1#switch6.switch"/>
       </OKLink>
     </QueryUnit>
-    <QueryUnit gr:x="470" gr:y="90" id="mov1#opm1#qu4" name="Select UserProfile" mode="select" language="SQL" db="db1" linkOrder="mov1#opm1#qu4#ln33">
+    <QueryUnit gr:x="470" gr:y="90" id="mov1#opm1#qu4" name="Select UserProfile" mode="select" language="SQL" db="db1">
       <QueryInput id="mov1#opm1#qu4#qi2" name="useroid" required="true" type="integer"/>
       <QueryOutput id="mov1#opm1#qu4#qo2" name="isdisabled" type="boolean"/>
       <QueryOutput id="mov1#opm1#qu4#qo3" name="disableddate" type="timestamp"/>
@@ -63,6 +65,7 @@ FROM userprofile as u WHERE user_oid=(:useroid);</QueryText>
       <Link id="mov1#opm1#qu4#ln33" name="Flow33" to="mov1#opm1#switch3" type="transport" validate="true">
         <LinkParameter id="mov1#opm1#qu4#ln33#par70" name="iscancelled_Switch" source="data[].iscancelled" target="mov1#opm1#switch3.switch"/>
         <LinkParameter id="mov1#opm1#qu4#ln33#par71" name="cancelleddate_PASSING" source="data[].cancelleddate" passing="true"/>
+        <LinkParameter id="mov1#opm1#qu4#ln33#par125" name="oid_PASSING" sourceLinkParameter="mov1#opm1#qu2#ln35#par33" passing="true"/>
       </Link>
     </QueryUnit>
     <SwitchUnit gr:x="405" gr:y="195" id="mov1#opm1#switch1" name="isDisabled">
@@ -81,6 +84,7 @@ FROM userprofile as u WHERE user_oid=(:useroid);</QueryText>
       <OKLink id="mov1#opm1#switch3#oln15" name="OKFlow15" to="mov1#opm1#kocu1" code="true">
         <LinkParameter id="mov1#opm1#switch3#oln15#par72" name="cancelleddate_PASSING_cancelleddate" sourceLinkParameter="mov1#opm1#qu4#ln33#par71" target="mov1#opm1#kocu1#ocp8"/>
         <LinkParameter id="mov1#opm1#switch3#oln15#par73" name="cancelled_type" sourceValue="cancelled" target="mov1#opm1#kocu1#ocp9"/>
+        <LinkParameter id="mov1#opm1#switch3#oln15#par126" name="oid_PASSING_userprofile_oid" sourceLinkParameter="mov1#opm1#qu4#ln33#par125" target="mov1#opm1#kocu1#ocp7"/>
       </OKLink>
       <OKLink id="mov1#opm1#switch3#oln16" name="OKFlow16" to="mov1#opm1#lgu1" automaticCoupling="true" code="false"/>
     </SwitchUnit>

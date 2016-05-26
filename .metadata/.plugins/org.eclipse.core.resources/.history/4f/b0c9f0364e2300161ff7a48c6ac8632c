@@ -1,0 +1,32 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm10" name="Cancel User" gr:x="290" gr:y="345">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm10#icu10" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm10#icu10#icp39" name="userprofile_oid"/>
+      <OKLink id="mov1#opm10#icu10#oln10" name="OKFlow25" to="mov1#opm10#tmu2" automaticCoupling="true"/>
+    </InputCollectorUnit>
+    <ModifyUnit id="mov1#opm10#mfu3" name="Update UserProfile" gr:x="505" gr:y="145" entity="ent2">
+      <Selector id="mov1#opm10#mfu3#su12" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm10#mfu3#su12#kcond11" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm10#mfu3#oln11" name="OKFlow28" to="mov1#opm10#lou2" automaticCoupling="true"/>
+      <KOLink id="mov1#opm10#mfu3#kln14" name="KOFlow11" to="mov1#opm10#kocu9" gr:bendpoints="115,-29,-160,46">
+        <LinkParameter id="mov1#opm10#mfu3#kln14#par103" name="Update UserProfile Error_Error Message" target="mov1#opm10#kocu9#ocp11" sourceValue="Update UserProfile Error"/>
+      </KOLink>
+    </ModifyUnit>
+    <TimeUnit id="mov1#opm10#tmu2" name="Get Timestamp" gr:x="315" gr:y="70">
+      <OKLink id="mov1#opm10#tmu2#oln24" name="OKFlow26" to="mov1#opm10#mfu3">
+        <LinkParameter id="mov1#opm10#tmu2#oln24#par106" name="Current/Input Timestamp_cancelledDate" source="currentTimestamp" target="mov1#opm10#mfu3.ent2#att21"/>
+        <LinkParameter id="mov1#opm10#tmu2#oln24#par107" name="true_isCancelled" sourceValue="true" target="mov1#opm10#mfu3.ent2#att20"/>
+      </OKLink>
+      <KOLink id="mov1#opm10#tmu2#kln15" name="KOFlow12" to="mov1#opm10#kocu9">
+        <LinkParameter id="mov1#opm10#tmu2#kln15#par105" name="Get TimeStamp Error_Error Message" target="mov1#opm10#kocu9#ocp11" sourceValue="Get TimeStamp Error"/>
+      </KOLink>
+    </TimeUnit>
+    <KOCollectorUnit id="mov1#opm10#kocu9" name="Cancel User Failed" gr:x="850" gr:y="60">
+      <OutputCollectorParameter id="mov1#opm10#kocu9#ocp11" name="Error Message"/>
+    </KOCollectorUnit>
+    <LogoutUnit gr:x="710" gr:y="185" id="mov1#opm10#lou2" name="Logout" siteView="sv2">
+      <KOLink id="mov1#opm10#lou2#kln16" name="KOFlow16" to="mov1#opm10#kocu9" automaticCoupling="true"/>
+    </LogoutUnit>
+  </OperationUnits>
+</OperationModule>

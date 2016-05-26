@@ -1,0 +1,28 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="875" gr:y="500" id="sv3#page26" name="Cancel User Account">
+  <ContentUnits>
+    <MultiMessageUnit id="sv3#page26#mssu17" name="Confirm Cancel Account" gr:x="23" gr:y="40" linkOrder="sv3#page26#mssu17#ln64">
+      <Message xml:space="preserve">Are you sure you want to cancel your account?</Message>
+      <Link id="sv3#page26#mssu17#ln64" name="Flow64" to="sv3#page20#dau4" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page26#mssu17">
+          <layout:Link link="sv3#page26#mssu17#ln64"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

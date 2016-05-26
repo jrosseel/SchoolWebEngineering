@@ -1,0 +1,102 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="580" gr:y="390" id="sv3#page22" name="Update Angel">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#page22#enu2" name="Update Angel" entity="ent3" fieldOrder="sv3#page22#enu2#fld31 sv3#page22#enu2#fld32 sv3#page22#enu2#fld30 sv3#page22#enu2#fld29 sv3#page22#enu2#fld26 sv3#page22#enu2#fld27 sv3#page22#enu2#fld33 sv3#page22#enu2#fld34 sv3#page22#enu2#fld35 sv3#page22#enu2#fld36 sv3#page22#enu2#fld37 sv3#page22#enu2#fld38 sv3#page22#enu2#fld39" linkOrder="sv3#page22#enu2#ln3 sv3#page22#enu2#ln38">
+      <Field id="sv3#page22#enu2#fld26" name="profession" type="string" modifiable="true" attribute="ent3#att9" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld27" name="isAnomynous" type="boolean" modifiable="true" attribute="ent3#att10" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld29" name="birthDate" type="date" modifiable="true" attribute="ent2#att6" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld30" name="fullName" type="string" modifiable="true" attribute="ent2#att4" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld38" name="country" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld37" name="postalcode" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld36" name="city" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld35" name="bus" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld34" name="housenumber" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld33" name="street" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld32" name="email" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld31" name="userName" type="string" preloaded="true">
+        <Comment xml:space="preserve">userName is can NOT be modified!</Comment>
+      </Field>
+      <Field id="sv3#page22#enu2#fld39" name="picture" type="blob" preloaded="true" modifiable="true" contentType="image"/>
+      <Link id="sv3#page22#enu2#ln3" name="Cancel" to="sv3#page20" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv3#page22#enu2#ln38" name="Save" to="sv3#miu7" type="normal" validate="true" gr:bendpoints="63,-96,8,79">
+        <LinkParameter id="sv3#page22#enu2#ln38#par385" name="bus_bus" source="sv3#page22#enu2#fld35" target="sv3#miu7.mov1#opm3#icu3#icp32"/>
+        <LinkParameter id="sv3#page22#enu2#ln38#par386" name="city_city" source="sv3#page22#enu2#fld36" target="sv3#miu7.mov1#opm3#icu3#icp33"/>
+        <LinkParameter id="sv3#page22#enu2#ln38#par387" name="country_country" source="sv3#page22#enu2#fld38" target="sv3#miu7.mov1#opm3#icu3#icp34"/>
+        <LinkParameter id="sv3#page22#enu2#ln38#par388" name="email_email" source="sv3#page22#enu2#fld32" target="sv3#miu7.mov1#opm3#icu3#icp31"/>
+        <LinkParameter id="sv3#page22#enu2#ln38#par390" name="housenumber_housenumber" source="sv3#page22#enu2#fld34" target="sv3#miu7.mov1#opm3#icu3#icp35"/>
+        <LinkParameter id="sv3#page22#enu2#ln38#par393" name="picture_picture" source="sv3#page22#enu2#fld39" target="sv3#miu7.mov1#opm3#icu3#icp42"/>
+        <LinkParameter id="sv3#page22#enu2#ln38#par394" name="postalcode_postalcode" source="sv3#page22#enu2#fld37" target="sv3#miu7.mov1#opm3#icu3#icp36"/>
+        <LinkParameter id="sv3#page22#enu2#ln38#par396" name="street_street" source="sv3#page22#enu2#fld33" target="sv3#miu7.mov1#opm3#icu3#icp37"/>
+        <LinkParameter id="sv3#page22#enu2#ln38#par404" name="UserProfileToAddress.oid_PASSING_Address.oid(UserProfileToAddress)" sourceLinkParameter="sv3#page20#dau4#ln1#par99" target="sv3#miu7.mov1#opm3#icu3#icp45"/>
+        <LinkParameter id="sv3#page22#enu2#ln38#par405" name="UserProfileToPicture.oid_PASSING_Picture.oid(UserProfileToPicture)" sourceLinkParameter="sv3#page20#dau4#ln1#par100" target="sv3#miu7.mov1#opm3#icu3#icp46"/>
+        <LinkParameter id="sv3#page22#enu2#ln38#par406" name="UserProfileToUser.oid_PASSING_User.oid(UserProfileToUser)" sourceLinkParameter="sv3#page20#dau4#ln1#par101" target="sv3#miu7.mov1#opm3#icu3#icp47"/>
+        <LinkParameter id="sv3#page22#enu2#ln38#par408" name="Angel Object_Angel Object" source="entityBean" target="sv3#miu7.mov1#opm3#icu3#icp48"/>
+        <LinkParameter id="sv3#page22#enu2#ln38#par210" name="Key [oid]_KeyCondition18 [oid]" source="key.ent2#att2" target="sv3#miu7.mov1#opm3#icu3#icp62"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="60" gr:y="95" id="sv3#page22#mssu11" name="Error Message"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page22#mssu11"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page22#enu2">
+          <layout:Field field="sv3#page22#enu2#fld31"/>
+          <layout:Field field="sv3#page22#enu2#fld32"/>
+          <layout:Field field="sv3#page22#enu2#fld30"/>
+          <layout:Field field="sv3#page22#enu2#fld29"/>
+          <layout:Field field="sv3#page22#enu2#fld26"/>
+          <layout:Field field="sv3#page22#enu2#fld27"/>
+          <layout:Field field="sv3#page22#enu2#fld33"/>
+          <layout:Field field="sv3#page22#enu2#fld34"/>
+          <layout:Field field="sv3#page22#enu2#fld35"/>
+          <layout:Field field="sv3#page22#enu2#fld36"/>
+          <layout:Field field="sv3#page22#enu2#fld37"/>
+          <layout:Field field="sv3#page22#enu2#fld38"/>
+          <layout:Field field="sv3#page22#enu2#fld39"/>
+          <layout:Link link="sv3#page22#enu2#ln3"/>
+          <layout:Link link="sv3#page22#enu2#ln38"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

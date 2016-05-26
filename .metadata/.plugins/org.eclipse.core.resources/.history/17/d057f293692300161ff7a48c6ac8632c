@@ -1,0 +1,27 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="640" gr:y="85" id="mov1#opm12" name="Mark Notification read">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm12#icu15" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm12#icu15#oln84" name="OKFlow84" to="mov1#opm12#tmu3" automaticCoupling="true"/>
+      <Link id="mov1#opm12#icu15#ln100" name="Flow100" to="mov1#opm12#mfu5" type="transport" validate="true" gr:bendpoints="221,-32,-174,-37">
+        <LinkParameter id="mov1#opm12#icu15#ln100#par235" name="KeyCondition24 [oid]" source="mov1#opm12#icu15#icp63" target="mov1#opm12#mfu5#su29#kcond24.ent6#att35"/>
+        <LinkParameter id="mov1#opm12#icu15#ln100#par236" name="true_seen" sourceValue="true" target="mov1#opm12#mfu5.ent6#att48"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm12#icu15#icp63" name="KeyCondition24 [oid]"/>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="465" gr:y="80" id="mov1#opm12#mfu5" name="Update Notification" entity="ent6">
+      <Selector id="mov1#opm12#mfu5#su29" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm12#mfu5#su29#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm12#mfu5#oln85" name="OKFlow85" to="mov1#opm12#okcu11" automaticCoupling="true"/>
+      <KOLink id="mov1#opm12#mfu5#kln46" name="KOFlow46" to="mov1#opm12#kocu11" automaticCoupling="true"/>
+    </ModifyUnit>
+    <TimeUnit gr:x="290" gr:y="95" id="mov1#opm12#tmu3" name="Get Timestamp">
+      <OKLink id="mov1#opm12#tmu3#oln83" name="OKFlow83" to="mov1#opm12#mfu5">
+        <LinkParameter id="mov1#opm12#tmu3#oln83#par237" name="Current/Input Timestamp_seenDate" source="currentTimestamp" target="mov1#opm12#mfu5.ent6#att49"/>
+      </OKLink>
+      <KOLink id="mov1#opm12#tmu3#kln47" name="KOFlow47" to="mov1#opm12#kocu11" automaticCoupling="true" gr:bendpoints="112,-73,-333,-38;228,-75,-217,-40"/>
+    </TimeUnit>
+    <OKCollectorUnit gr:x="630" gr:y="120" id="mov1#opm12#okcu11" name="Mark Notification Read Succeeded"/>
+    <KOCollectorUnit gr:x="630" gr:y="50" id="mov1#opm12#kocu11" name="Mark Notification Read Failed"/>
+  </OperationUnits>
+</OperationModule>
