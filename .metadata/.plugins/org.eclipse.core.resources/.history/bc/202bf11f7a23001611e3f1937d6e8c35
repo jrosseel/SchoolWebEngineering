@@ -1,0 +1,52 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1315" gr:y="260" id="sv2#page31" name="Offer Details">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv2#page31#dau12" name="Offer" entity="ent8">
+      <Selector id="sv2#page31#dau12#su14" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page31#dau12#su14#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page31#dau12#ln19" name="Flow19" to="sv2#page31#dau13" type="transport" validate="true" gr:bendpoints="113,-32,-7,-86">
+        <LinkParameter id="sv2#page31#dau12#ln19#par5" name="OfferToPickupAddress.oid_KeyCondition27 [oid]" source="data.rel11#role21_ent5#att8" target="sv2#page31#dau13#su15#kcond27.ent5#att8"/>
+      </Link>
+    </DataUnit>
+    <DataUnit gr:x="95" gr:y="55" id="sv2#page31#dau13" name="Pickup Address" entity="ent5">
+      <Selector id="sv2#page31#dau13#su15" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page31#dau13#su15#kcond27" name="KeyCondition27" predicate="in" implied="false"/>
+        <RelationshipRoleCondition id="sv2#page31#dau13#su15#rcond1" name="Pickup" predicate="in" implied="false" role="rel11#role21"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page31#dau12"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page31#dau13"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

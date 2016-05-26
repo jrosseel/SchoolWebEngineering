@@ -1,23 +1,47 @@
-<ContentModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="110" gr:y="280" id="mov1#ctm1" name="View People">
+<ContentModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="845" gr:y="215" id="mov1#ctm1" name="View People">
   <ContentUnits>
-    <IndexUnit id="mov1#ctm1#inu7" name="Angels" gr:x="120" gr:y="80" entity="ent3" displayAttributes="ent2#att4 ent3#att17 ent3#att15 ent3#att1 rel4#role8.ent5#att25"/>
-    <IndexUnit id="mov1#ctm1#inu8" name="Homeless Persons" gr:x="280" gr:y="85" entity="ent4" displayAttributes="ent4#att11 rel4#role8.ent5#att25"/>
+    <IndexUnit id="mov1#ctm1#inu7" name="Angels" gr:x="120" gr:y="80" entity="ent3" displayAttributes="ent3#att17 ent3#att15 ent3#att1 rel4#role8.ent5#att25" linkOrder="mov1#ctm1#inu7#ln52">
+      <Link id="mov1#ctm1#inu7#ln52" name="Details" to="mov1#ctm1#ocu3" type="normal" validate="true" automaticCoupling="false">
+        <LinkParameter id="mov1#ctm1#inu7#ln52#par194" name="oid" source="data[].ent2#att2" target="mov1#ctm1#ocu3#ocp14"/>
+      </Link>
+    </IndexUnit>
+    <IndexUnit id="mov1#ctm1#inu8" name="Homeless Persons" gr:x="120" gr:y="175" entity="ent4" displayAttributes="ent4#att11 rel4#role8.ent5#att25"/>
+    <OutputCollectorUnit gr:x="335" gr:y="80" id="mov1#ctm1#ocu3" name="Angel Details">
+      <OutputCollectorParameter id="mov1#ctm1#ocu3#ocp14" name="oid"/>
+    </OutputCollectorUnit>
+    <OutputCollectorUnit gr:x="335" gr:y="175" id="mov1#ctm1#ocu4" name="Homeless Person Details">
+      <OutputCollectorParameter id="mov1#ctm1#ocu4#ocp15" name="oid"/>
+    </OutputCollectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="mov1#ctm1#inu7">
-          <layout:Attribute attribute="ent2#att4"/>
           <layout:Attribute attribute="ent3#att17"/>
           <layout:Attribute attribute="ent3#att15"/>
           <layout:Attribute attribute="ent3#att1"/>
           <layout:Attribute attribute="rel4#role8.ent5#att25"/>
+          <layout:Link link="mov1#ctm1#inu7#ln52"/>
         </layout:Unit>
         <layout:Unit unitId="mov1#ctm1#inu8">
           <layout:Attribute attribute="ent4#att11"/>
           <layout:Attribute attribute="rel4#role8.ent5#att25"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

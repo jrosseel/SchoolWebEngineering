@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#page18" name="View People" landmark="true" customURLName="admin_people" gr:x="600" gr:y="160">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#page18" name="Manage People" landmark="true" customURLName="admin_manage_people" gr:x="600" gr:y="160">
   <ContentUnits>
     <PowerIndexUnit gr:x="0" gr:y="70" id="sv5#page18#pwu1" name="Angels" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="rel2#role4.userName rel2#role4.email ent3#att10 ent3#att1 ent3#att15 ent2#att18 ent2#att19 ent2#att20" linkOrder="sv5#page18#pwu1#ln11 sv5#page18#pwu1#ln37">
       <Link id="sv5#page18#pwu1#ln11" name="Delete" to="sv5#dlu1" type="normal" validate="true">

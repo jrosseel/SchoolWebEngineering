@@ -1,11 +1,17 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page11" name="View People" landmark="true" gr:x="965" gr:y="600" customURLName="people">
   <ContentUnits>
-    <ModuleInstanceUnit gr:x="0" gr:y="0" id="sv2#page11#miu17" moduleId="mov1#ctm1" action="false"/>
+    <ModuleInstanceUnit gr:x="0" gr:y="0" id="sv2#page11#miu17" moduleId="mov1#ctm1" action="false" linkOrder="sv2#page11#miu17#ln55">
+      <Link id="sv2#page11#miu17#ln55" name="Angel Details" to="sv2#page32#dau14" type="normal" validate="true" codeRef="mov1#ctm1#ocu3">
+        <LinkParameter id="sv2#page11#miu17#ln55#par197" name="oid_KeyCondition28 [oid]" source="mov1#ctm1#ocu3#ocp14" target="sv2#page32#dau14#su25#kcond28.ent2#att2"/>
+      </Link>
+    </ModuleInstanceUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page11#miu17"/>
+        <layout:Unit unitId="sv2#page11#miu17">
+          <layout:Link link="sv2#page11#miu17#ln55"/>
+        </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

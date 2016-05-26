@@ -1,0 +1,65 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1290" gr:y="590" id="sv2#page32" name="Angel Details" linkOrder="sv2#page32#ln61">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv2#page32#dau14" name="Angel Details" entity="ent3" displayAttributes="ent3#att17 ent3#att9 ent3#att1 ent3#att15 rel4#role8.ent5#att25 rel4#role8.ent5#att26">
+      <Selector id="sv2#page32#dau14#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page32#dau14#su25#kcond28" name="KeyCondition28" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page32#dau14#ln59" name="Flow59" to="sv2#page32#inu4" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+    <IndexUnit id="sv2#page32#inu4" name="Offers" linkOrder="sv2#page32#inu4#ln58" gr:x="15" gr:y="130" entity="ent8" displayAttributes="rel7#role13.ent3#att17 rel17#role33.ent10#att34 rel18#role35.ent9#att32 ent8#att41 rel19#role37.ent12#att44">
+      <Link id="sv2#page32#inu4#ln58" name="Details" to="sv2#page31#dau12" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="91,-5,141,455;133,-340,183,120"/>
+      <Selector id="sv2#page32#inu4#su33" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page32#inu4#su33#rcond6" name="Angel" predicate="in" implied="false" role="rel7#role14"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page32#dau14">
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att1"/>
+          <layout:Attribute attribute="ent3#att15"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att25"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att26"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page32#inu4">
+          <layout:Attribute attribute="rel7#role13.ent3#att17"/>
+          <layout:Attribute attribute="rel17#role33.ent10#att34"/>
+          <layout:Attribute attribute="rel18#role35.ent9#att32"/>
+          <layout:Attribute attribute="ent8#att41"/>
+          <layout:Attribute attribute="rel19#role37.ent12#att44"/>
+          <layout:Link link="sv2#page32#inu4#ln58"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#page32#ln61" name="Back to people" to="sv2#page11" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

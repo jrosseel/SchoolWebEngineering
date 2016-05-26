@@ -1,0 +1,85 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Angel" protected="true" landmarks="sv3#page20 sv3#page28 sv3#page16 sv3#page17 sv3#miu2 sv3#page33 sv3#page36" homePage="sv3#page20" customURLName="angel">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="100" gr:y="110" id="sv3#miu2" action="true" moduleId="mov1#opm2" landmark="true" name="Logout"/>
+    <ModuleInstanceUnit gr:x="545" gr:y="255" id="sv3#miu7" action="true" moduleId="mov1#opm3">
+      <OKLink id="sv3#miu7#oln57" name="OKFlow57" to="sv3#page20" automaticCoupling="true"/>
+      <KOLink id="sv3#miu7#kln37" name="KOFlow37" to="sv3#page22#mssu11" gr:bendpoints="49,69,44,-191">
+        <LinkParameter id="sv3#miu7#kln37#par409" name="Update Angel Error_Shown Messages" sourceValue="Update Angel Error" target="sv3#page22#mssu11.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <CreateUnit gr:x="1210" gr:y="445" id="sv3#cru1" name="Create Offer" entity="ent8">
+      <OKLink id="sv3#cru1#oln3" name="OKFlow3" to="sv3#page28#pwu5" automaticCoupling="true" gr:bendpoints="-316,29,119,54"/>
+      <KOLink id="sv3#cru1#kln4" name="KOFlow4" to="sv3#page28#mssu19"/>
+    </CreateUnit>
+    <ModuleInstanceUnit gr:x="530" gr:y="695" id="sv3#miu15" action="true" moduleId="mov1#opm10">
+      <KOLink id="sv3#miu15#kln17" name="KOFlow17" to="sv3#page20#dau4" automaticCoupling="true" gr:bendpoints="-117,-65,343,215;129,-133,-96,7"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="-170" gr:y="525" id="sv3#miu19" action="true" moduleId="mov1#opm12">
+      <OKLink id="sv3#miu19#oln86" name="OKFlow86" to="sv3#page20#pwu6" automaticCoupling="true"/>
+      <KOLink id="sv3#miu19#kln48" name="KOFlow48" to="sv3#page20#mssu20" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <SwitchUnit gr:x="-115" gr:y="610" id="sv3#switch11" name="Open Notification">
+      <Case value="1"/>
+      <Case value="2"/>
+      <OKLink id="sv3#switch11#oln87" name="OKFlow87" to="sv3#page29#dau10" code="1" gr:bendpoints="-101,6,-66,-109">
+        <LinkParameter id="sv3#switch11#oln87#par241" name="oid_PASSING_KeyCondition25 [oid]" sourceLinkParameter="sv3#page20#pwu6#ln102#par240" target="sv3#page29#dau10#su30#kcond25.ent6#att35"/>
+      </OKLink>
+      <OKLink id="sv3#switch11#oln88" name="OKFlow88" to="sv3#page30#dau11" gr:bendpoints="168,46,-2,-94" code="2">
+        <LinkParameter id="sv3#switch11#oln88#par242" name="oid_PASSING_KeyCondition25 [oid]" sourceLinkParameter="sv3#page20#pwu6#ln102#par240" target="sv3#page30#dau11#su31#kcond26.ent6#att35"/>
+      </OKLink>
+    </SwitchUnit>
+    <TimeUnit gr:x="1200" gr:y="570" id="sv3#tmu4" name="Get Timestamp" linkOrder="sv3#tmu4#ln10">
+      <Link id="sv3#tmu4#ln10" name="Flow10" to="sv3#cru1" type="transport" validate="true">
+        <LinkParameter id="sv3#tmu4#ln10#par2" name="Current/Input Timestamp_creationDate" source="currentTimestamp" target="sv3#cru1.ent8#att50"/>
+      </Link>
+    </TimeUnit>
+    <CreateUnit gr:x="1305" gr:y="685" id="sv3#cru2" name="Create Address" entity="ent5">
+      <OKLink id="sv3#cru2#oln4" name="OKFlow4" to="sv3#cru1" gr:bendpoints="37,-177,142,63">
+        <LinkParameter id="sv3#cru2#oln4#par128" name="oid_Address.oid(OfferToPickupAddress)" source="ent5#att8Array" target="sv3#cru1.rel11#role21.ent5#att8"/>
+        <LinkParameter id="sv3#cru2#oln4#par129" name="amount_PASSING_amount" sourceLinkParameter="sv3#switch8#oln1#par115" target="sv3#cru1.ent8#att36"/>
+        <LinkParameter id="sv3#cru2#oln4#par130" name="UserToUserProfile.oid_PASSING_Angel.oid(OfferToAngel)" sourceLinkParameter="sv3#switch8#oln1#par127" target="sv3#cru1.rel7#role13.ent2#att2"/>
+        <LinkParameter id="sv3#cru2#oln4#par131" name="OfferToDeliveryMethod_PASSING_DeliveryMethod.oid(OfferToDeliveryMethod)" sourceLinkParameter="sv3#switch8#oln1#par122" target="sv3#cru1.rel19#role37.ent12#att43"/>
+        <LinkParameter id="sv3#cru2#oln4#par132" name="description_PASSING_description" sourceLinkParameter="sv3#switch8#oln1#par117" target="sv3#cru1.ent8#att41"/>
+        <LinkParameter id="sv3#cru2#oln4#par133" name="expiryDate_PASSING_expiryDate" sourceLinkParameter="sv3#switch8#oln1#par119" target="sv3#cru1.ent8#att42"/>
+        <LinkParameter id="sv3#cru2#oln4#par134" name="Offer Object_PASSING_Offer Object" sourceLinkParameter="sv3#switch8#oln1#par121" target="sv3#cru1.entityBeans"/>
+        <LinkParameter id="sv3#cru2#oln4#par138" name="OfferToOfferCategory_PASSING_OfferCategory.oid(OfferToOfferCategory)" sourceLinkParameter="sv3#switch8#oln1#par123" target="sv3#cru1.rel17#role33.ent10#att33"/>
+        <LinkParameter id="sv3#cru2#oln4#par139" name="OfferToOfferType_PASSING_OfferType.oid(OfferToOfferType)" sourceLinkParameter="sv3#switch8#oln1#par124" target="sv3#cru1.rel18#role35.ent9#att31"/>
+        <LinkParameter id="sv3#cru2#oln4#par140" name="oid_oid" source="ent5#att8Array" target="sv3#cru1.ent8#att28"/>
+      </OKLink>
+    </CreateUnit>
+    <SwitchUnit gr:x="1155" gr:y="670" id="sv3#switch8" name="isPickup">
+      <OKLink id="sv3#switch8#oln1" name="OKFlow1" to="sv3#cru2" code="1">
+        <LinkParameter id="sv3#switch8#oln1#par104" name="bus_PASSING_bus" sourceLinkParameter="sv3#page28#enu9#ln93#par18" target="sv3#cru2.ent5#att27"/>
+        <LinkParameter id="sv3#switch8#oln1#par108" name="city_PASSING_city" sourceLinkParameter="sv3#page28#enu9#ln93#par20" target="sv3#cru2.ent5#att25"/>
+        <LinkParameter id="sv3#switch8#oln1#par109" name="country_PASSING_country" sourceLinkParameter="sv3#page28#enu9#ln93#par21" target="sv3#cru2.ent5#att26"/>
+        <LinkParameter id="sv3#switch8#oln1#par110" name="house number_PASSING_housenumber" sourceLinkParameter="sv3#page28#enu9#ln93#par24" target="sv3#cru2.ent5#att23"/>
+        <LinkParameter id="sv3#switch8#oln1#par111" name="postal code_PASSING_postalcode" sourceLinkParameter="sv3#page28#enu9#ln93#par43" target="sv3#cru2.ent5#att24"/>
+        <LinkParameter id="sv3#switch8#oln1#par114" name="street_PASSING_street" sourceLinkParameter="sv3#page28#enu9#ln93#par44" target="sv3#cru2.ent5#att22"/>
+        <LinkParameter id="sv3#switch8#oln1#par115" name="amount_PASSING" sourceLinkParameter="sv3#page28#enu9#ln93#par17" passing="true"/>
+        <LinkParameter id="sv3#switch8#oln1#par117" name="description_PASSING" sourceLinkParameter="sv3#page28#enu9#ln93#par22" passing="true"/>
+        <LinkParameter id="sv3#switch8#oln1#par119" name="expiryDate_PASSING" sourceLinkParameter="sv3#page28#enu9#ln93#par23" passing="true"/>
+        <LinkParameter id="sv3#switch8#oln1#par120" name="Key [oid]_PASSING" sourceLinkParameter="sv3#page28#enu9#ln93#par25" passing="true"/>
+        <LinkParameter id="sv3#switch8#oln1#par121" name="Offer Object_PASSING" sourceLinkParameter="sv3#page28#enu9#ln93#par34" passing="true"/>
+        <LinkParameter id="sv3#switch8#oln1#par122" name="OfferToDeliveryMethod_PASSING" sourceLinkParameter="sv3#page28#enu9#ln93#par40" passing="true"/>
+        <LinkParameter id="sv3#switch8#oln1#par123" name="OfferToOfferCategory_PASSING" sourceLinkParameter="sv3#page28#enu9#ln93#par41" passing="true"/>
+        <LinkParameter id="sv3#switch8#oln1#par124" name="OfferToOfferType_PASSING" sourceLinkParameter="sv3#page28#enu9#ln93#par42" passing="true"/>
+        <LinkParameter id="sv3#switch8#oln1#par127" name="UserToUserProfile.oid_PASSING" sourceLinkParameter="sv3#page28#enu9#ln93#par102" passing="true"/>
+      </OKLink>
+      <Link id="sv3#switch8#ln47" name="Flow47" to="sv3#page28#mssu19" type="transport" validate="true">
+        <LinkParameter id="sv3#switch8#ln47#par141" name="Switch_Shown Messages" source="switch" target="sv3#page28#mssu19.shownMessages"/>
+      </Link>
+      <OKLink id="sv3#switch8#oln6" name="OKFlow6" to="sv3#cru1" gr:bendpoints="138,-48,73,167;157,-127,92,88" code="2">
+        <LinkParameter id="sv3#switch8#oln6#par147" name="amount_PASSING_amount" sourceLinkParameter="sv3#page28#enu9#ln93#par17" target="sv3#cru1.ent8#att36"/>
+        <LinkParameter id="sv3#switch8#oln6#par163" name="UserToUserProfile.oid_PASSING_Angel.oid(OfferToAngel)" sourceLinkParameter="sv3#page28#enu9#ln93#par102" target="sv3#cru1.rel7#role13.ent2#att2"/>
+        <LinkParameter id="sv3#switch8#oln6#par175" name="OfferToDeliveryMethod_PASSING_DeliveryMethod.oid(OfferToDeliveryMethod)" sourceLinkParameter="sv3#page28#enu9#ln93#par40" target="sv3#cru1.rel19#role37.ent12#att43"/>
+        <LinkParameter id="sv3#switch8#oln6#par176" name="description_PASSING_description" sourceLinkParameter="sv3#page28#enu9#ln93#par22" target="sv3#cru1.ent8#att41"/>
+        <LinkParameter id="sv3#switch8#oln6#par178" name="expiryDate_PASSING_expiryDate" sourceLinkParameter="sv3#page28#enu9#ln93#par23" target="sv3#cru1.ent8#att42"/>
+        <LinkParameter id="sv3#switch8#oln6#par179" name="Offer Object_PASSING_Offer Object" sourceLinkParameter="sv3#page28#enu9#ln93#par34" target="sv3#cru1.entityBeans"/>
+        <LinkParameter id="sv3#switch8#oln6#par180" name="OfferToOfferCategory_PASSING_OfferCategory.oid(OfferToOfferCategory)" sourceLinkParameter="sv3#page28#enu9#ln93#par41" target="sv3#cru1.rel17#role33.ent10#att33"/>
+        <LinkParameter id="sv3#switch8#oln6#par181" name="OfferToOfferType_PASSING_OfferType.oid(OfferToOfferType)" sourceLinkParameter="sv3#page28#enu9#ln93#par42" target="sv3#cru1.rel18#role35.ent9#att31"/>
+      </OKLink>
+      <Case value="1"/>
+      <Case value="2"/>
+    </SwitchUnit>
+  </OperationUnits>
+</SiteView>

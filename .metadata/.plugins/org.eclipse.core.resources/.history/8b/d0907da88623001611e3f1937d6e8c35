@@ -1,0 +1,29 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page36" name="View People" landmark="true" customURLName="angel_people" gr:x="800" gr:y="100">
+  <ContentUnits>
+    <ModuleInstanceUnit id="sv3#page36#miu13" linkOrder="sv3#page36#miu13#ln79" gr:x="0" gr:y="0" moduleId="mov1#ctm1" action="false">
+      <Link id="sv3#page36#miu13#ln79" name="Angel Details" to="sv3#page34#dau15" codeRef="mov1#ctm1#ocu3" type="normal" validate="true" gr:bendpoints="142,-70,-303,-5">
+        <LinkParameter id="sv3#page36#miu13#ln79#par202" name="oid_KeyCondition28 [oid]" source="mov1#ctm1#ocu3#ocp14" target="sv3#page34#dau15#su34#kcond29.ent2#att2"/>
+      </Link>
+    </ModuleInstanceUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page36#miu13">
+          <layout:Link link="sv3#page36#miu13#ln79"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

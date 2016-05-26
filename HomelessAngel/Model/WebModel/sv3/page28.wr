@@ -27,26 +27,39 @@
       </Link>
     </SelectorUnit>
     <MultiMessageUnit id="sv3#page28#mssu19" name="Error Message" gr:x="155" gr:y="120"/>
-    <EntryUnit id="sv3#page28#enu9" name="Add Offer" linkOrder="sv3#page28#enu9#ln93" gr:x="20" gr:y="215" entity="ent8" fieldOrder="sv3#page28#enu9#sfld1 sv3#page28#enu9#sfld2 sv3#page28#enu9#fld58 sv3#page28#enu9#fld57 sv3#page28#enu9#sfld3 sv3#page28#enu9#fld59">
+    <EntryUnit id="sv3#page28#enu9" name="Add Offer" linkOrder="sv3#page28#enu9#ln93" gr:x="20" gr:y="215" entity="ent8" fieldOrder="sv3#page28#enu9#sfld1 sv3#page28#enu9#sfld2 sv3#page28#enu9#fld58 sv3#page28#enu9#fld57 sv3#page28#enu9#sfld3 sv3#page28#enu9#fld59 sv3#page28#enu9#fld60 sv3#page28#enu9#fld61 sv3#page28#enu9#fld62 sv3#page28#enu9#fld63 sv3#page28#enu9#fld64 sv3#page28#enu9#fld65">
       <Field id="sv3#page28#enu9#fld57" name="amount" type="integer" modifiable="true" attribute="ent8#att36"/>
       <Field id="sv3#page28#enu9#fld58" name="description" type="string" modifiable="true" attribute="ent8#att41"/>
       <Field id="sv3#page28#enu9#fld59" name="expiryDate" type="date" modifiable="true" attribute="ent8#att42"/>
-      <Link id="sv3#page28#enu9#ln93" name="Save" to="sv3#cru1" type="normal" validate="true">
-        <LinkParameter id="sv3#page28#enu9#ln93#par216" name="amount_amount" source="sv3#page28#enu9#fld57" target="sv3#cru1.ent8#att36"/>
-        <LinkParameter id="sv3#page28#enu9#ln93#par218" name="description_description" source="sv3#page28#enu9#fld58" target="sv3#cru1.ent8#att41"/>
-        <LinkParameter id="sv3#page28#enu9#ln93#par219" name="expiryDate_expiryDate" source="sv3#page28#enu9#fld59" target="sv3#cru1.ent8#att42"/>
-        <LinkParameter id="sv3#page28#enu9#ln93#par220" name="Offer Object_Offer Object" source="entityBean" target="sv3#cru1.entityBeans"/>
-        <LinkParameter id="sv3#page28#enu9#ln93#par221" name="OfferToOfferCategory_OfferCategory.oid(OfferToOfferCategory)" source="sv3#page28#enu9#sfld1" target="sv3#cru1.rel17#role33.ent10#att33"/>
-        <LinkParameter id="sv3#page28#enu9#ln93#par222" name="OfferToOfferType_OfferType.oid(OfferToOfferType)" source="sv3#page28#enu9#sfld2" target="sv3#cru1.rel18#role35.ent9#att31"/>
-        <LinkParameter id="sv3#page28#enu9#ln93#par223" name="amount_oid" source="sv3#page28#enu9#fld57" target="sv3#cru1.ent8#att28"/>
-        <LinkParameter id="sv3#page28#enu9#ln93#par224" name="OfferToDeliveryMethod_DeliveryMethod.oid(OfferToDeliveryMethod)" source="sv3#page28#enu9#sfld3" target="sv3#cru1.rel19#role37.ent12#att43"/>
-        <LinkParameter id="sv3#page28#enu9#ln93#par232" name="UserToUserProfile.oid_PASSING_Angel.oid(OfferToAngel)" sourceLinkParameter="sv3#page28#dau9#ln97#par231" target="sv3#cru1.rel7#role13.ent2#att2"/>
+      <Link id="sv3#page28#enu9#ln93" name="Save" to="sv3#switch8" type="normal" validate="true">
+        <LinkParameter id="sv3#page28#enu9#ln93#par16" name="OfferToDeliveryMethod_Switch" source="sv3#page28#enu9#sfld3" target="sv3#switch8.switch"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par17" name="amount_PASSING" source="sv3#page28#enu9#fld57" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par18" name="bus_PASSING" source="sv3#page28#enu9#fld62" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par20" name="city_PASSING" source="sv3#page28#enu9#fld64" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par21" name="country_PASSING" source="sv3#page28#enu9#fld65" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par22" name="description_PASSING" source="sv3#page28#enu9#fld58" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par23" name="expiryDate_PASSING" source="sv3#page28#enu9#fld59" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par24" name="house number_PASSING" source="sv3#page28#enu9#fld61" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par25" name="Key [oid]_PASSING" source="key.ent8#att28" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par34" name="Offer Object_PASSING" source="entityBean" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par40" name="OfferToDeliveryMethod_PASSING" source="sv3#page28#enu9#sfld3" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par41" name="OfferToOfferCategory_PASSING" source="sv3#page28#enu9#sfld1" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par42" name="OfferToOfferType_PASSING" source="sv3#page28#enu9#sfld2" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par43" name="postal code_PASSING" source="sv3#page28#enu9#fld63" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par44" name="street_PASSING" source="sv3#page28#enu9#fld60" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par102" name="UserToUserProfile.oid_PASSING" sourceLinkParameter="sv3#page28#dau9#ln97#par231" passing="true"/>
       </Link>
       <SelectionField id="sv3#page28#enu9#sfld1" name="OfferToOfferCategory" type="string" role="rel17#role33"/>
       <SelectionField id="sv3#page28#enu9#sfld2" name="OfferToOfferType" type="string" role="rel18#role35"/>
       <SelectionField id="sv3#page28#enu9#sfld3" name="OfferToDeliveryMethod" type="string" role="rel19#role37"/>
+      <Field id="sv3#page28#enu9#fld65" name="country" type="string" modifiable="true"/>
+      <Field id="sv3#page28#enu9#fld64" name="city" type="string" modifiable="true"/>
+      <Field id="sv3#page28#enu9#fld63" name="postal code" type="string" modifiable="true"/>
+      <Field id="sv3#page28#enu9#fld62" name="bus" type="string" modifiable="true"/>
+      <Field id="sv3#page28#enu9#fld61" name="house number" type="string" modifiable="true"/>
+      <Field id="sv3#page28#enu9#fld60" name="street" type="string" modifiable="true"/>
     </EntryUnit>
-    <SelectorUnit id="sv3#page28#seu5" name="DeliveryMethods" gr:x="220" gr:y="260" entity="ent12">
+    <SelectorUnit id="sv3#page28#seu5" name="DeliveryMethods" gr:x="205" gr:y="220" entity="ent12">
       <Link id="sv3#page28#seu5#ln94" name="Flow24" to="sv3#page28#enu9" type="transport" validate="true">
         <LinkParameter id="sv3#page28#seu5#ln94#par225" name="name_OfferToDeliveryMethod [label]" source="ent12#att44Array" target="sv3#page28#enu9#sfld3_label"/>
         <LinkParameter id="sv3#page28#seu5#ln94#par226" name="oid_OfferToDeliveryMethod [output]" source="ent12#att43Array" target="sv3#page28#enu9#sfld3_output"/>
@@ -60,6 +73,36 @@
     </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page28#enu9">
+          <layout:Link link="sv3#page28#enu9#ln93"/>
+          <layout:Field field="sv3#page28#enu9#sfld1"/>
+          <layout:Field field="sv3#page28#enu9#sfld2"/>
+          <layout:Field field="sv3#page28#enu9#fld58"/>
+          <layout:Field field="sv3#page28#enu9#fld57"/>
+          <layout:Field field="sv3#page28#enu9#sfld3"/>
+          <layout:Field field="sv3#page28#enu9#fld59"/>
+          <layout:Field field="sv3#page28#enu9#fld60"/>
+          <layout:Field field="sv3#page28#enu9#fld61"/>
+          <layout:Field field="sv3#page28#enu9#fld62"/>
+          <layout:Field field="sv3#page28#enu9#fld63"/>
+          <layout:Field field="sv3#page28#enu9#fld64"/>
+          <layout:Field field="sv3#page28#enu9#fld65"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page28#pwu5">
@@ -106,17 +149,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page28#enu9">
-          <layout:Link link="sv3#page28#enu9#ln93"/>
-          <layout:Field field="sv3#page28#enu9#sfld1"/>
-          <layout:Field field="sv3#page28#enu9#sfld2"/>
-          <layout:Field field="sv3#page28#enu9#fld58"/>
-          <layout:Field field="sv3#page28#enu9#fld57"/>
-          <layout:Field field="sv3#page28#enu9#sfld3"/>
-          <layout:Field field="sv3#page28#enu9#fld59"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

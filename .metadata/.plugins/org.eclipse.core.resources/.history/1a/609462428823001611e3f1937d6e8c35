@@ -1,0 +1,114 @@
+<ContentModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="650" gr:y="215" id="mov1#ctm3" name="View Offers">
+  <ContentUnits>
+    <IndexUnit gr:x="490" gr:y="140" id="mov1#ctm3#inu1" name="Offers" entity="ent8" linkOrder="mov1#ctm3#inu1#ln5" displayAttributes="rel7#role13.ent3#att17 rel17#role33.ent10#att34 rel18#role35.ent9#att32 ent8#att41 rel19#role37.ent12#att44">
+      <Link id="mov1#ctm3#inu1#ln5" name="Details" to="mov1#ctm3#page24#dau8" automaticCoupling="true" type="normal" validate="true"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#ctm3#inu1">
+          <layout:Link link="mov1#ctm3#inu1#ln5"/>
+          <layout:Attribute attribute="rel7#role13.ent3#att17"/>
+          <layout:Attribute attribute="rel17#role33.ent10#att34"/>
+          <layout:Attribute attribute="rel18#role35.ent9#att32"/>
+          <layout:Attribute attribute="ent8#att41"/>
+          <layout:Attribute attribute="rel19#role37.ent12#att44"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:SubPage pageId="mov1#ctm3#page24">
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="12"/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:SubPage>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#ctm3#page24#dau8">
+          <layout:Attribute attribute="rel7#role13.ent3#att17"/>
+          <layout:Attribute attribute="rel17#role33.ent10#att34"/>
+          <layout:Attribute attribute="rel18#role35.ent9#att32"/>
+          <layout:Attribute attribute="ent8#att41"/>
+          <layout:Attribute attribute="ent8#att36"/>
+          <layout:Attribute attribute="ent8#att42"/>
+          <layout:Attribute attribute="ent8#att50"/>
+          <layout:Attribute attribute="rel19#role37.ent12#att44"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Page gr:x="720" gr:y="150" id="mov1#ctm3#page24" name="Offer Details">
+    <ContentUnits>
+      <DataUnit gr:x="0" gr:y="0" id="mov1#ctm3#page24#dau8" name="Offer" entity="ent8" displayAttributes="rel7#role13.ent3#att17 rel17#role33.ent10#att34 rel18#role35.ent9#att32 ent8#att41 ent8#att36 ent8#att42 ent8#att50 rel19#role37.ent12#att44">
+        <Selector id="mov1#ctm3#page24#dau8#su13" defaultPolicy="fill" booleanOperator="and">
+          <KeyCondition id="mov1#ctm3#page24#dau8#su13#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
+        </Selector>
+        <Link id="mov1#ctm3#page24#dau8#ln6" name="All offers" to="mov1#ctm3#inu1" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="-120,20,90,65"/>
+      </DataUnit>
+    </ContentUnits>
+  </Page>
+</ContentModule>

@@ -1,4 +1,4 @@
-<ContentModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="470" gr:y="345" id="mov1#ctm2" name="Confirm Cancel User">
+<ContentModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="360" gr:y="415" id="mov1#ctm2" name="Confirm Cancel User">
   <ContentUnits>
     <MultiMessageUnit gr:x="370" gr:y="100" id="mov1#ctm2#mssu15" name="Confirm Cancel Account" linkOrder="mov1#ctm2#mssu15#ln54 mov1#ctm2#mssu15#ln57">
       <Message xml:space="preserve">Are you sure you want to cancel your account?</Message>

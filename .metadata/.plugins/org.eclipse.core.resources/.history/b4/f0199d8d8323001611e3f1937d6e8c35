@@ -1,0 +1,58 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1290" gr:y="590" id="sv2#page32" name="Angel Details">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv2#page32#dau14" name="Angel Details" entity="ent3" displayAttributes="ent3#att17 ent3#att9 ent3#att1 ent3#att15 rel4#role8.ent5#att25 rel4#role8.ent5#att26">
+      <Selector id="sv2#page32#dau14#su25" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page32#dau14#su25#kcond28" name="KeyCondition28" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page32#dau14#ln56" name="Flow56" to="sv2#page32#inu3" type="transport" validate="true">
+        <LinkParameter id="sv2#page32#dau14#ln56#par198" name="oid_Angel [oid]" source="data.ent2#att2" target="sv2#page32#inu3#su32#rcond2.ent2#att2"/>
+      </Link>
+    </DataUnit>
+    <IndexUnit gr:x="10" gr:y="145" id="sv2#page32#inu3" name="Offers" entity="ent8">
+      <Selector id="sv2#page32#inu3#su32" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#page32#inu3#su32#rcond2" name="Angel" predicate="in" implied="false" role="rel7#role14"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page32#dau14">
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att1"/>
+          <layout:Attribute attribute="ent3#att15"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att25"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att26"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page32#inu3"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

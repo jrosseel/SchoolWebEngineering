@@ -1,0 +1,66 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1275" gr:y="255" id="sv2#page31" name="Offer Details">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv2#page31#dau12" name="Offer" entity="ent8" displayAttributes="rel7#role13.ent3#att17 rel17#role33.ent10#att34 rel18#role35.ent9#att32 ent8#att41 ent8#att36 ent8#att50 ent8#att42">
+      <Selector id="sv2#page31#dau12#su14" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page31#dau12#su14#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <DataUnit gr:x="145" gr:y="10" id="sv2#page31#dau13" name="Pickup Address" entity="ent5" displayAttributes="ent5#att22 ent5#att23 ent5#att27 ent5#att24 ent5#att25 ent5#att26">
+      <Selector id="sv2#page31#dau13#su15" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page31#dau13#su15#kcond27" name="KeyCondition27" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page31#dau13#ln50" name="Flow50" to="sv2#page31#dau12" type="transport" validate="true">
+        <LinkParameter id="sv2#page31#dau13#ln50#par190" name="oid_PASSING_KeyCondition14 [oid]" sourceLinkParameter="sv2#switch9#oln30#par189" target="sv2#page31#dau12#su14#kcond14.ent8#att28"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page31#dau12">
+          <layout:Attribute attribute="rel7#role13.ent3#att17"/>
+          <layout:Attribute attribute="rel17#role33.ent10#att34"/>
+          <layout:Attribute attribute="rel18#role35.ent9#att32"/>
+          <layout:Attribute attribute="ent8#att41"/>
+          <layout:Attribute attribute="ent8#att36"/>
+          <layout:Attribute attribute="ent8#att50"/>
+          <layout:Attribute attribute="ent8#att42"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page31#dau13">
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="ent5#att27"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="ent5#att26"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

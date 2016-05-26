@@ -1,0 +1,32 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page33" name="View Offers" landmark="true" customURLName="angel_offers" gr:x="670" gr:y="-50">
+  <ContentUnits>
+    <IndexUnit id="sv3#page33#inu5" name="Offers" linkOrder="sv3#page33#inu5#ln69" gr:x="0" gr:y="0" entity="ent8" displayAttributes="rel7#role13.ent3#att17 rel17#role33.ent10#att34 rel18#role35.ent9#att32 ent8#att41 rel19#role37.ent12#att44">
+      <Link id="sv3#page33#inu5#ln69" name="Details" to="sv3#page35#dau16" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page33#inu5">
+          <layout:Attribute attribute="rel7#role13.ent3#att17"/>
+          <layout:Attribute attribute="rel17#role33.ent10#att34"/>
+          <layout:Attribute attribute="rel18#role35.ent9#att32"/>
+          <layout:Attribute attribute="ent8#att41"/>
+          <layout:Attribute attribute="rel19#role37.ent12#att44"/>
+          <layout:Link link="sv3#page33#inu5#ln69"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

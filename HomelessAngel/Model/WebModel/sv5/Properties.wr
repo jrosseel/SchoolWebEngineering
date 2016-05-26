@@ -1,6 +1,6 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv5" name="Administrator" protected="true" customURLName="administrator" landmarks="sv5#page21 sv5#page19 sv5#page18 sv5#miu4" homePage="sv5#page21">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv5" name="Administrator" protected="true" customURLName="administrator" landmarks="sv5#page21 sv5#page18 sv5#page44 sv5#page43 sv5#page45 sv5#page46 sv5#miu4" homePage="sv5#page21">
   <OperationUnits>
-    <ModuleInstanceUnit id="sv5#miu4" name="Logout" landmark="true" gr:x="465" gr:y="80" action="true" moduleId="mov1#opm2"/>
+    <ModuleInstanceUnit id="sv5#miu4" name="Logout" landmark="true" gr:x="55" gr:y="30" action="true" moduleId="mov1#opm2"/>
     <DeleteUnit gr:x="990" gr:y="230" id="sv5#dlu1" name="Delete Angel" entity="ent3">
       <Selector id="sv5#dlu1#su4" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv5#dlu1#su4#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
