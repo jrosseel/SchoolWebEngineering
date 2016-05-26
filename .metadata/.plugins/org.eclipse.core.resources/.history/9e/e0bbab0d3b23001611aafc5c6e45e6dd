@@ -1,0 +1,84 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="110" gr:y="60" id="mov1#opm1" name="Login">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm1#icu1" gr:x="30" gr:y="60" linkOrder="mov1#opm1#icu1#ln26">
+      <InputCollectorParameter id="mov1#opm1#icu1#icp1" name="Password"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp2" name="Username"/>
+      <OKLink id="mov1#opm1#icu1#oln7" name="OKFlow7" to="mov1#opm1#qu2">
+        <LinkParameter id="mov1#opm1#icu1#oln7#par27" name="Username_Username" source="mov1#opm1#icu1#icp2" target="mov1#opm1#qu2.mov1#opm1#qu2#qi1"/>
+      </OKLink>
+      <Link id="mov1#opm1#icu1#ln26" name="Flow26" to="mov1#opm1#lgu1" type="transport" validate="true" gr:bendpoints="125,185,-620,0">
+        <LinkParameter id="mov1#opm1#icu1#ln26#par45" name="Username_Username" source="mov1#opm1#icu1#icp2" target="mov1#opm1#lgu1.username"/>
+        <LinkParameter id="mov1#opm1#icu1#ln26#par46" name="Password_Password" source="mov1#opm1#icu1#icp1" target="mov1#opm1#lgu1.password"/>
+      </Link>
+    </InputCollectorUnit>
+    <LoginUnit gr:x="850" gr:y="255" id="mov1#opm1#lgu1" name="Login">
+      <KOLink id="mov1#opm1#lgu1#kln1" name="KOFlow1" to="mov1#opm1#kocu1">
+        <LinkParameter id="mov1#opm1#lgu1#kln1#par68" name="Error Message" source="errorMessage" target="mov1#opm1#kocu1#ocp1"/>
+        <LinkParameter id="mov1#opm1#lgu1#kln1#par49" name="error_type" sourceValue="error" target="mov1#opm1#kocu1#ocp9"/>
+      </KOLink>
+      <OKLink id="mov1#opm1#lgu1#oln8" name="OKFlow8" to="mov1#opm1#okcu1" automaticCoupling="true"/>
+    </LoginUnit>
+    <KOCollectorUnit gr:x="960" gr:y="60" id="mov1#opm1#kocu1" name="KO Port1">
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp1" name="Error Message"/>
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp8" name="cancelleddate"/>
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp6" name="disableddate"/>
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp5" name="disabledreason"/>
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp9" name="type"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit gr:x="960" gr:y="245" id="mov1#opm1#okcu1" name="OK Port1"/>
+    <QueryUnit gr:x="315" gr:y="90" id="mov1#opm1#qu2" name="Select User" mode="select" language="SQL" db="db1">
+      <QueryInput id="mov1#opm1#qu2#qi1" name="username" required="true" type="string"/>
+      <QueryOutput id="mov1#opm1#qu2#qo1" name="oid" type="integer"/>
+      <QueryText xml:space="preserve">SELECT u.oid FROM user as u WHERE username=(:username);</QueryText>
+      <KOLink id="mov1#opm1#qu2#kln5" name="KOFlow5" to="mov1#opm1#kocu1" gr:bendpoints="98,-72,-597,-52;517,-63,-178,-43">
+        <LinkParameter id="mov1#opm1#qu2#kln5#par36" name="Select User Error_Error Message" sourceValue="Select User Error: username not found!" target="mov1#opm1#kocu1#ocp1"/>
+        <LinkParameter id="mov1#opm1#qu2#kln5#par48" name="error_type" sourceValue="error" target="mov1#opm1#kocu1#ocp9"/>
+      </KOLink>
+      <OKLink id="mov1#opm1#qu2#oln10" name="OKFlow10" to="mov1#opm1#qu4">
+        <LinkParameter id="mov1#opm1#qu2#oln10#par44" name="oid_user_oid" source="data[].oid" target="mov1#opm1#qu4.mov1#opm1#qu4#qi2"/>
+      </OKLink>
+    </QueryUnit>
+    <QueryUnit gr:x="470" gr:y="90" id="mov1#opm1#qu4" name="Select UserProfile" mode="select" language="SQL" db="db1" linkOrder="mov1#opm1#qu4#ln33">
+      <QueryInput id="mov1#opm1#qu4#qi2" name="useroid" required="true" type="integer"/>
+      <QueryOutput id="mov1#opm1#qu4#qo2" name="isdisabled" type="boolean"/>
+      <QueryOutput id="mov1#opm1#qu4#qo3" name="disableddate" type="timestamp"/>
+      <QueryOutput id="mov1#opm1#qu4#qo4" name="disabledreason" type="string"/>
+      <QueryOutput id="mov1#opm1#qu4#qo5" name="iscancelled" type="boolean"/>
+      <QueryOutput id="mov1#opm1#qu4#qo6" name="cancelleddate" type="timestamp"/>
+      <QueryText xml:space="preserve">SELECT u.isdisabled, u.disableddate, u.disabledreason, u.iscancelled, u.cancelleddate
+FROM userprofile as u WHERE user_oid=(:useroid);</QueryText>
+      <KOLink id="mov1#opm1#qu4#kln6" name="KOFlow6" to="mov1#opm1#kocu1" gr:bendpoints="341,-9,-194,-24">
+        <LinkParameter id="mov1#opm1#qu4#kln6#par38" name="Select UserProfile Error_Error Message" sourceValue="Select UserProfile Error" target="mov1#opm1#kocu1#ocp1"/>
+        <LinkParameter id="mov1#opm1#qu4#kln6#par47" name="error_type" sourceValue="error" target="mov1#opm1#kocu1#ocp9"/>
+      </KOLink>
+      <OKLink id="mov1#opm1#qu4#oln12" name="OKFlow12" to="mov1#opm1#switch1">
+        <LinkParameter id="mov1#opm1#qu4#oln12#par50" name="isdisabled_Switch" source="data[].isdisabled" target="mov1#opm1#switch1.switch"/>
+        <LinkParameter id="mov1#opm1#qu4#oln12#par51" name="disableddate_PASSING" source="data[].disableddate" passing="true"/>
+        <LinkParameter id="mov1#opm1#qu4#oln12#par52" name="disabledreason_PASSING" source="data[].disabledreason" passing="true"/>
+      </OKLink>
+      <Link id="mov1#opm1#qu4#ln33" name="Flow33" to="mov1#opm1#switch3" type="transport" validate="true">
+        <LinkParameter id="mov1#opm1#qu4#ln33#par70" name="iscancelled_Switch" source="data[].iscancelled" target="mov1#opm1#switch3.switch"/>
+        <LinkParameter id="mov1#opm1#qu4#ln33#par71" name="cancelleddate_PASSING" source="data[].cancelleddate" passing="true"/>
+      </Link>
+    </QueryUnit>
+    <SwitchUnit gr:x="405" gr:y="195" id="mov1#opm1#switch1" name="isDisabled">
+      <Case value="true"/>
+      <Case value="false"/>
+      <OKLink id="mov1#opm1#switch1#oln13" name="OKFlow13" to="mov1#opm1#kocu1" gr:bendpoints="199,-88,-421,2" code="true">
+        <LinkParameter id="mov1#opm1#switch1#oln13#par53" name="disableddate_PASSING_disableddate" sourceLinkParameter="mov1#opm1#qu4#oln12#par51" target="mov1#opm1#kocu1#ocp6"/>
+        <LinkParameter id="mov1#opm1#switch1#oln13#par67" name="disabledreason_PASSING_disabledreason" sourceLinkParameter="mov1#opm1#qu4#oln12#par52" target="mov1#opm1#kocu1#ocp5"/>
+        <LinkParameter id="mov1#opm1#switch1#oln13#par69" name="disabled_type" sourceValue="disabled" target="mov1#opm1#kocu1#ocp9"/>
+      </OKLink>
+      <OKLink id="mov1#opm1#switch1#oln14" name="OKFlow14" to="mov1#opm1#switch3" automaticCoupling="true" code="false"/>
+    </SwitchUnit>
+    <SwitchUnit gr:x="615" gr:y="205" id="mov1#opm1#switch3" name="isCancelled">
+      <Case value="true"/>
+      <Case value="false"/>
+      <OKLink id="mov1#opm1#switch3#oln15" name="OKFlow15" to="mov1#opm1#kocu1" code="true">
+        <LinkParameter id="mov1#opm1#switch3#oln15#par72" name="cancelleddate_PASSING_cancelleddate" sourceLinkParameter="mov1#opm1#qu4#ln33#par71" target="mov1#opm1#kocu1#ocp8"/>
+        <LinkParameter id="mov1#opm1#switch3#oln15#par73" name="cancelled_type" sourceValue="cancelled" target="mov1#opm1#kocu1#ocp9"/>
+      </OKLink>
+      <OKLink id="mov1#opm1#switch3#oln16" name="OKFlow16" to="mov1#opm1#lgu1" automaticCoupling="true" code="false"/>
+    </SwitchUnit>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,36 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#page21" name="User Profile" landmark="true" customURLName="profile" gr:x="55" gr:y="230">
+  <ContentUnits>
+    <MultiMessageUnit id="sv5#page21#mssu8" name="Welcome" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">This is an Angel User Profile.</Message>
+    </MultiMessageUnit>
+    <GetUnit id="sv5#page21#gtu2" name="Get User Details" gr:x="0" gr:y="75" contextParameters="UserCtxParam">
+      <Link id="sv5#page21#gtu2#ln4" name="Flow5" to="sv5#page21#dau3" type="transport" validate="true"/>
+    </GetUnit>
+    <DataUnit id="sv5#page21#dau3" name="User Details" linkOrder="sv5#page21#dau3#ln8" gr:x="185" gr:y="65" entity="User">
+      <Link id="sv5#page21#dau3#ln8" name="Logout" to="sv5#miu4" type="normal" automaticCoupling="true" validate="true"/>
+      <Selector id="sv5#page21#dau3#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv5#page21#dau3#su3#kcond3" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#page21#dau3">
+          <layout:Link link="sv5#page21#dau3#ln8"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

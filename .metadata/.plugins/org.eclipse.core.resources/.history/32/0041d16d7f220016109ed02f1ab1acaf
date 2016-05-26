@@ -1,0 +1,61 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="85" gr:y="345" id="sv3#page20" name="User Profile" landmark="true" customURLName="profile">
+  <ContentUnits>
+    <MultiMessageUnit id="sv3#page20#mssu6" name="Welcome" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">This is an Angel User Profile.</Message>
+    </MultiMessageUnit>
+    <GetUnit id="sv3#page20#gtu3" name="Get User Details" gr:x="0" gr:y="75" contextParameters="UserCtxParam">
+      <Link id="sv3#page20#gtu3#ln5" name="Flow5" to="sv3#page20#dau2" type="transport" validate="true">
+        <LinkParameter id="sv3#page20#gtu3#ln5#par28" name="UserCtxParam.oid_KeyCondition2 [oid]" source="sv3#page20#gtu3.UserCtxParam" target="sv3#page20#dau2#su2#kcond2.ent2#att2"/>
+      </Link>
+    </GetUnit>
+    <DataUnit id="sv3#page20#dau2" entity="ent3" displayAttributes="rel2#role4.userName rel2#role4.email ent2#att6 ent3#att9 ent3#att10 ent3#att1 ent3#att15" gr:x="190" gr:y="65" name="Angel User Details" linkOrder="sv3#page20#dau2#ln3">
+      <Link id="sv3#page20#dau2#ln3" name="Logout" to="sv3#miu2" type="normal" automaticCoupling="true" validate="true"/>
+      <Selector id="sv3#page20#dau2#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page20#dau2#su2#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page20#mssu6"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page20#dau2">
+          <layout:Link link="sv3#page20#dau2#ln3"/>
+          <layout:Attribute attribute="rel2#role4.userName"/>
+          <layout:Attribute attribute="rel2#role4.email"/>
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att1"/>
+          <layout:Attribute attribute="ent3#att15"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

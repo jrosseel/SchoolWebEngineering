@@ -1,0 +1,88 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv5#page18" name="View People" landmark="true" customURLName="people" gr:x="560" gr:y="170">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="5" gr:y="55" id="sv5#page18#pwu1" name="Angels" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="rel2#role4.userName rel2#role4.email ent2#att6 ent3#att9 ent3#att10 ent3#att1 ent3#att15 ent3#att17 ent2#att18 ent2#att55 ent2#att19 ent2#att20 ent2#att21" linkOrder="sv5#page18#pwu1#ln11">
+      <Link id="sv5#page18#pwu1#ln11" name="Flow11" to="sv5#dlu1" type="normal" validate="true">
+        <LinkParameter id="sv5#page18#pwu1#ln11#par29" name="oid_KeyCondition4 [oid]" source="data[].ent2#att2" target="sv5#dlu1#su4#kcond4.ent2#att2"/>
+      </Link>
+    </PowerIndexUnit>
+    <PowerIndexUnit gr:x="0" gr:y="150" id="sv5#page18#pwu2" name="Homeless Persons" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="rel2#role4.userName rel2#role4.email ent2#att6 ent4#att11 ent4#att12 ent4#att13 ent2#att18 ent2#att55 ent2#att19 ent2#att20 ent2#att21"/>
+    <MultiMessageUnit gr:x="105" gr:y="0" id="sv5#page18#mssu9" name="Angel Error Message"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#page18#pwu1">
+          <layout:Attribute attribute="rel2#role4.userName"/>
+          <layout:Attribute attribute="rel2#role4.email"/>
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att1"/>
+          <layout:Attribute attribute="ent3#att15"/>
+          <layout:Attribute attribute="ent3#att17"/>
+          <layout:Attribute attribute="ent2#att18"/>
+          <layout:Attribute attribute="ent2#att55"/>
+          <layout:Attribute attribute="ent2#att19"/>
+          <layout:Attribute attribute="ent2#att20"/>
+          <layout:Attribute attribute="ent2#att21"/>
+          <layout:Link link="sv5#page18#pwu1#ln11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#page18#pwu2">
+          <layout:Attribute attribute="rel2#role4.userName"/>
+          <layout:Attribute attribute="rel2#role4.email"/>
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent4#att11"/>
+          <layout:Attribute attribute="ent4#att12"/>
+          <layout:Attribute attribute="ent4#att13"/>
+          <layout:Attribute attribute="ent2#att18"/>
+          <layout:Attribute attribute="ent2#att55"/>
+          <layout:Attribute attribute="ent2#att19"/>
+          <layout:Attribute attribute="ent2#att20"/>
+          <layout:Attribute attribute="ent2#att21"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#page18#mssu9"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

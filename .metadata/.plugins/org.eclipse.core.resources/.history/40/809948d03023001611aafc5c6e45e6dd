@@ -1,0 +1,25 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="110" gr:y="60" id="mov1#opm1" name="Login">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm1#icu1" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm1#icu1#oln1" name="OKFlow1" to="mov1#opm1#lgu1" automaticCoupling="false">
+        <LinkParameter id="mov1#opm1#icu1#oln1#par1" name="Password" source="mov1#opm1#icu1#icp1" target="mov1#opm1#lgu1.password"/>
+        <LinkParameter id="mov1#opm1#icu1#oln1#par2" name="Username" source="mov1#opm1#icu1#icp2" target="mov1#opm1#lgu1.username"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp1" name="Password"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp2" name="Username"/>
+    </InputCollectorUnit>
+    <LoginUnit gr:x="815" gr:y="70" id="mov1#opm1#lgu1" name="Login">
+      <KOLink id="mov1#opm1#lgu1#kln1" name="KOFlow1" to="mov1#opm1#kocu1" automaticCoupling="false">
+        <LinkParameter id="mov1#opm1#lgu1#kln1#par68" name="Error Message" source="errorMessage" target="mov1#opm1#kocu1#ocp1"/>
+      </KOLink>
+      <OKLink id="mov1#opm1#lgu1#oln8" name="OKFlow8" to="mov1#opm1#okcu1" automaticCoupling="true"/>
+    </LoginUnit>
+    <KOCollectorUnit gr:x="950" gr:y="60" id="mov1#opm1#kocu1" name="KO Port1">
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp1" name="Error Message"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit gr:x="950" gr:y="130" id="mov1#opm1#okcu1" name="OK Port1"/>
+    <QueryUnit gr:x="320" gr:y="170" id="mov1#opm1#qu1" name="isDisabled" mode="select" language="SQL" db="db1">
+      <QueryText xml:space="preserve">SELECT isdisabled, disabledreason, disableddate, iscancelled, cancelleddate FROM </QueryText>
+    </QueryUnit>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,12 @@
+
+<Warnings>
+
+ <Warning xpath="id('sv3#miu2')" rootXPath="id('sv3')" error="false" label="Logout" key="NO_OUTGOING_OK_LINKS">
+          <Message>No outgoing OK flow(s) for the operation 'Logout'</Message>
+        </Warning>
+    	<Warning xpath="id('sv3#miu2')" rootXPath="id('sv3')" error="false" label="Logout" key="NO_OUTGOING_KO_LINKS">
+          <Message>No outgoing KO flow(s) for the operation 'Logout'</Message>
+        </Warning>
+    
+
+</Warnings>

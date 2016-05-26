@@ -1,44 +1,42 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Visitor" landmarks="sv2#page10 sv2#page11 sv2#page6 sv2#page9 sv2#page8" homePage="sv2#page12">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Visitor" landmarks="sv2#page12 sv2#page10 sv2#page11 sv2#page6 sv2#page8 sv2#page9" homePage="sv2#page12" customURLName="visitor">
   <OperationUnits>
-    <ModuleInstanceUnit gr:x="260" gr:y="495" id="sv2#miu1" action="true" moduleId="mov1#opm1">
-      <KOLink id="sv2#miu1#kln3" name="KOFlow3" to="sv2#page12#mssu5">
-        <LinkParameter id="sv2#miu1#kln3#par5" name="Login Error_Shown Messages" sourceValue="Login Error" target="sv2#page12#mssu5.shownMessages"/>
+    <ModuleInstanceUnit gr:x="300" gr:y="495" id="sv2#miu1" action="true" moduleId="mov1#opm1">
+      <KOLink id="sv2#miu1#kln10" name="KOFlow10" to="sv2#switch5">
+        <LinkParameter id="sv2#miu1#kln10#par77" name="type_Switch" source="mov1#opm1#kocu1#ocp9" target="sv2#switch5.switch"/>
+        <LinkParameter id="sv2#miu1#kln10#par78" name="cancelleddate_PASSING" source="mov1#opm1#kocu1#ocp8" passing="true"/>
+        <LinkParameter id="sv2#miu1#kln10#par79" name="disableddate_PASSING" source="mov1#opm1#kocu1#ocp6" passing="true"/>
+        <LinkParameter id="sv2#miu1#kln10#par80" name="disabledreason_PASSING" source="mov1#opm1#kocu1#ocp5" passing="true"/>
+        <LinkParameter id="sv2#miu1#kln10#par81" name="Error Message_PASSING" source="mov1#opm1#kocu1#ocp1" passing="true"/>
       </KOLink>
     </ModuleInstanceUnit>
-    <CreateUnit gr:x="830" gr:y="20" id="sv2#cru2" name="Create User" entity="User">
-      <OKLink id="sv2#cru2#oln4" name="Flow7" to="sv2#cru3">
-        <LinkParameter id="sv2#cru2#oln4#par15" name="oid_User.oid(UserProfileToUser)" source="userOIDArray" target="sv2#cru3.rel2#role4.userOID"/>
-        <LinkParameter id="sv2#cru2#oln4#par23" name="birthdate_PASSING_birthDate" sourceLinkParameter="sv2#page9#page1#enu3#ln6#par20" target="sv2#cru3.ent2#att6"/>
-        <LinkParameter id="sv2#cru2#oln4#par24" name="isAnonymous_PASSING_isAnomynous" sourceLinkParameter="sv2#page9#page1#enu3#ln6#par21" target="sv2#cru3.ent3#att10"/>
-        <LinkParameter id="sv2#cru2#oln4#par26" name="profession_PASSING_profession" sourceLinkParameter="sv2#page9#page1#enu3#ln6#par25" target="sv2#cru3.ent3#att9"/>
+    <ModuleInstanceUnit gr:x="830" gr:y="50" id="sv2#miu5" action="true" moduleId="mov1#opm7">
+      <KOLink id="sv2#miu5#kln26" name="KOFlow26" to="sv2#page9#mssu3">
+        <LinkParameter id="sv2#miu5#kln26#par315" name="Error Message_Shown Messages" source="mov1#opm7#kocu3#ocp2" target="sv2#page9#mssu3.shownMessages"/>
+      </KOLink>
+      <OKLink id="sv2#miu5#oln33" name="OKFlow33" to="sv2#page3" automaticCoupling="true" gr:bendpoints="-187,299,233,-67"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="830" gr:y="250" id="sv2#miu6" action="true" moduleId="mov1#opm6">
+      <OKLink id="sv2#miu6#oln47" name="OKFlow47" to="sv2#page3" automaticCoupling="true" gr:bendpoints="-193,136,237,-30"/>
+      <KOLink id="sv2#miu6#kln32" name="KOFlow32" to="sv2#page9#mssu3">
+        <LinkParameter id="sv2#miu6#kln32#par352" name="Error Message_Shown Messages" source="mov1#opm6#kocu4#ocp3" target="sv2#page9#mssu3.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <SwitchUnit id="sv2#switch5" name="Login Failed" gr:x="295" gr:y="635">
+      <Case value="error"/>
+      <Case value="disabled"/>
+      <Case value="cancelled"/>
+      <OKLink id="sv2#switch5#oln17" name="OKFlow17" to="sv2#page12#mssu5" code="error">
+        <LinkParameter id="sv2#switch5#oln17#par82" name="Error Message_PASSING_Shown Messages" sourceLinkParameter="sv2#miu1#kln10#par81" target="sv2#page12#mssu5.shownMessages"/>
       </OKLink>
-      <KOLink id="sv2#cru2#kln5" name="KOFlow5" to="sv2#page9#mssu3">
-        <LinkParameter id="sv2#cru2#kln5#par16" name="User Create Error _Shown Messages" sourceValue="User Create Error " target="sv2#page9#mssu3.shownMessages"/>
-      </KOLink>
-    </CreateUnit>
-    <CreateUnit gr:x="1015" gr:y="115" id="sv2#cru3" name="Create Angel" entity="ent3">
-      <OKLink id="sv2#cru3#oln3" name="OKFlow3" to="sv2#page12" automaticCoupling="true" gr:bendpoints="-327,238,483,-72"/>
-      <KOLink id="sv2#cru3#kln4" name="KOFlow4" to="sv2#page9#mssu3">
-        <LinkParameter id="sv2#cru3#kln4#par17" name="Angel Create Error_Shown Messages" sourceValue="Angel Create Error" target="sv2#page9#mssu3.shownMessages"/>
-      </KOLink>
-    </CreateUnit>
-    <CreateUnit id="sv2#cru4" name="Create User" gr:x="845" gr:y="320" entity="User">
-      <KOLink id="sv2#cru4#kln6" name="KOFlow5" to="sv2#page9#mssu3">
-        <LinkParameter id="sv2#cru4#kln6#par43" name="User Create Error _Shown Messages" target="sv2#page9#mssu3.shownMessages" sourceValue="User Create Error "/>
-      </KOLink>
-      <OKLink id="sv2#cru4#oln6" name="OKFlow6" to="sv2#cru5">
-        <LinkParameter id="sv2#cru4#oln6#par62" name="birthdate_PASSING_birthDate" sourceLinkParameter="sv2#page9#page2#enu4#ln10#par49" target="sv2#cru5.ent2#att6"/>
-        <LinkParameter id="sv2#cru4#oln6#par63" name="locatedInCity_PASSING_locatedInCity" sourceLinkParameter="sv2#page9#page2#enu4#ln10#par51" target="sv2#cru5.ent4#att12"/>
-        <LinkParameter id="sv2#cru4#oln6#par64" name="nickname_PASSING_nickName" sourceLinkParameter="sv2#page9#page2#enu4#ln10#par52" target="sv2#cru5.ent4#att11"/>
-        <LinkParameter id="sv2#cru4#oln6#par65" name="oid_User.oid(UserProfileToUser)" source="userOIDArray" target="sv2#cru5.rel2#role4.userOID"/>
-        <LinkParameter id="sv2#cru4#oln6#par66" name="yearsOnStreet_PASSING_yearsOnStreet" sourceLinkParameter="sv2#page9#page2#enu4#ln10#par53" target="sv2#cru5.ent4#att13"/>
+      <OKLink id="sv2#switch5#oln18" name="OKFlow18" to="sv2#page12#mssu7" gr:bendpoints="-54,74,130,-2" code="cancelled">
+        <LinkParameter id="sv2#switch5#oln18#par83" name="cancelleddate_PASSING_cancelleddate" sourceLinkParameter="sv2#miu1#kln10#par78" target="sv2#page12#mssu7.sv2#page12#mssu7#ph1"/>
+        <LinkParameter id="sv2#switch5#oln18#par98" name="User Cancelled_Shown Messages" sourceValue="User Cancelled" target="sv2#page12#mssu7.shownMessages"/>
       </OKLink>
-    </CreateUnit>
-    <CreateUnit gr:x="1030" gr:y="225" id="sv2#cru5" name="Create Homeless Person" entity="ent4">
-      <KOLink id="sv2#cru5#kln7" name="KOFlow7" to="sv2#page9#mssu3">
-        <LinkParameter id="sv2#cru5#kln7#par67" name="Create Homeless Person Error_Shown Messages" sourceValue="Create Homeless Person Error" target="sv2#page9#mssu3.shownMessages"/>
-      </KOLink>
-      <OKLink id="sv2#cru5#oln7" name="OKFlow7" to="sv2#page12" automaticCoupling="true" gr:bendpoints="4,169,1009,-11"/>
-    </CreateUnit>
+      <OKLink id="sv2#switch5#oln19" name="OKFlow19" to="sv2#page12#mssu13" gr:bendpoints="48,50,238,-96;-18,143,172,-3" code="disabled">
+        <LinkParameter id="sv2#switch5#oln19#par84" name="disableddate_PASSING_disableddate" sourceLinkParameter="sv2#miu1#kln10#par79" target="sv2#page12#mssu13.sv2#page12#mssu13#ph2"/>
+        <LinkParameter id="sv2#switch5#oln19#par85" name="disabledreason_PASSING_disabledreason" sourceLinkParameter="sv2#miu1#kln10#par80" target="sv2#page12#mssu13.sv2#page12#mssu13#ph3"/>
+        <LinkParameter id="sv2#switch5#oln19#par97" name="User Disabled_Shown Messages" sourceValue="User Disabled" target="sv2#page12#mssu13.shownMessages"/>
+      </OKLink>
+    </SwitchUnit>
   </OperationUnits>
 </SiteView>

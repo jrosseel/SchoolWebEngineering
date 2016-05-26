@@ -1,0 +1,107 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="85" gr:y="330" id="sv3#page20" name="User Profile" landmark="true" customURLName="angel_profile">
+  <ContentUnits>
+    <MultiMessageUnit id="sv3#page20#mssu6" name="Welcome" gr:x="0" gr:y="15">
+      <Message xml:space="preserve">This is an Angel User Profile.</Message>
+    </MultiMessageUnit>
+    <GetUnit id="sv3#page20#gtu3" name="Get User Details" gr:x="0" gr:y="90" contextParameters="UserCtxParam">
+      <Link id="sv3#page20#gtu3#ln14" name="Flow14" to="sv3#page20#dau5" type="transport" validate="true">
+        <LinkParameter id="sv3#page20#gtu3#ln14#par28" name="UserCtxParam.oid_KeyCondition7 [oid]" source="sv3#page20#gtu3.UserCtxParam" target="sv3#page20#dau5#su7#kcond7.userOID"/>
+      </Link>
+    </GetUnit>
+    <DataUnit gr:x="195" gr:y="125" id="sv3#page20#dau4" name="Angel Details" entity="ent3" displayAttributes="rel2#role4.userName rel2#role4.email ent2#att4 ent2#att6 ent3#att9 ent3#att10 ent3#att1 ent3#att15 rel4#role8.ent5#att22 rel4#role8.ent5#att23 rel4#role8.ent5#att27 rel4#role8.ent5#att25 rel4#role8.ent5#att24 rel4#role8.ent5#att26 rel15#role29.ent11#att5" linkOrder="sv3#page20#dau4#ln1">
+      <Selector id="sv3#page20#dau4#su6" defaultPolicy="fill" booleanOperator="and" expression="sv3#page20#dau4#su6#kcond8">
+        <KeyCondition id="sv3#page20#dau4#su6#kcond8" predicate="in" implied="false" name="KeyCondition6"/>
+      </Selector>
+      <Link id="sv3#page20#dau4#ln1" name="Update" to="sv3#page22#enu2" type="normal" validate="true">
+        <LinkParameter id="sv3#page20#dau4#ln1#par6" name="oid_Key Condition [oid]" source="data.ent2#att2" target="sv3#page22#enu2.ent2#att2"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par13" name="birthDate_PASSING" source="data.ent2#att6" passing="true"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par14" name="fullName_PASSING" source="data.ent2#att4" passing="true"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par15" name="profession_PASSING" source="data.ent3#att9" passing="true"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par18" name="UserProfileToAddress.bus_PASSING" source="data.rel4#role8$ent5#att27" passing="true"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par22" name="UserProfileToAddress.city_PASSING" source="data.rel4#role8$ent5#att25" passing="true"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par23" name="UserProfileToAddress.country_PASSING" source="data.rel4#role8$ent5#att26" passing="true"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par24" name="UserProfileToAddress.housenumber_PASSING" source="data.rel4#role8$ent5#att23" passing="true"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par26" name="UserProfileToAddress.oid_PASSING" source="data.rel4#role8_ent5#att8" passing="true"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par27" name="UserProfileToAddress.postalcode_PASSING" source="data.rel4#role8$ent5#att24" passing="true"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par33" name="UserProfileToAddress.street_PASSING" source="data.rel4#role8$ent5#att22" passing="true"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par34" name="UserProfileToPicture.oid_PASSING" source="data.rel15#role29_ent11#att37" passing="true"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par41" name="UserProfileToUser.email_PASSING" source="data.rel2#role4$email" passing="true"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par42" name="UserProfileToUser.oid_PASSING" source="data.rel2#role4_userOID" passing="true"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par50" name="UserProfileToUser.userName_PASSING" source="data.rel2#role4$userName" passing="true"/>
+      </Link>
+    </DataUnit>
+    <DataUnit gr:x="200" gr:y="0" id="sv3#page20#dau5" name="User Details" entity="User">
+      <Selector id="sv3#page20#dau5#su7" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page20#dau5#su7#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page20#dau5#ln16" name="Flow16" to="sv3#page20#dau4" type="transport" validate="true">
+        <LinkParameter id="sv3#page20#dau5#ln16#par74" name="UserToUserProfile.oid_KeyCondition6 [oid]" source="data.rel2#role3_ent2#att2" target="sv3#page20#dau4#su6#kcond8.ent2#att2"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page20#mssu6"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page20#dau4">
+          <layout:Link link="sv3#page20#dau4#ln1"/>
+          <layout:Attribute attribute="rel2#role4.userName"/>
+          <layout:Attribute attribute="rel2#role4.email"/>
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att1"/>
+          <layout:Attribute attribute="ent3#att15"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att22"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att23"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att27"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att25"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att24"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att26"/>
+          <layout:Attribute attribute="rel15#role29.ent11#att5"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

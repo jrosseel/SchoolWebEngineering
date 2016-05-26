@@ -1,0 +1,20 @@
+
+<Warnings>
+
+<Warning xpath="id('mov1#opm7#cru12#oln36')" rootXPath="id('mov1')" key="AUTOMATIC_COUPLING_WITHOUT_EFFECT" label="OKFlow36">
+        <Message>Neither explicit nor implicit parameters' bindings could be found for the flow 'OKFlow36'</Message>
+        <Resolution 
+            class="com.webratio.ide.ui.resources.ChangeAttributeResolutionGenerator" 
+            attribute="automaticCoupling"
+            value="">Remove the 'Automatic Coupling' property</Resolution>
+      </Warning>
+    <Warning xpath="id('mov1#opm7#cru12#kln27')" rootXPath="id('mov1')" key="AUTOMATIC_COUPLING_WITHOUT_EFFECT" label="KOFlow27">
+        <Message>Neither explicit nor implicit parameters' bindings could be found for the flow 'KOFlow27'</Message>
+        <Resolution 
+            class="com.webratio.ide.ui.resources.ChangeAttributeResolutionGenerator" 
+            attribute="automaticCoupling"
+            value="">Remove the 'Automatic Coupling' property</Resolution>
+      </Warning>
+    
+
+</Warnings>

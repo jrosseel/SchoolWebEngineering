@@ -1,0 +1,93 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="495" gr:y="215" id="sv4#page23" name="Update Homeless Person">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv4#page23#enu5" name="Update Homeless Person" entity="ent4" fieldOrder="sv4#page23#enu5#fld44 sv4#page23#enu5#fld45 sv4#page23#enu5#fld43 sv4#page23#enu5#fld42 sv4#page23#enu5#fld40 sv4#page23#enu5#fld41 sv4#page23#enu5#fld46 sv4#page23#enu5#fld47 sv4#page23#enu5#fld48 sv4#page23#enu5#fld51" linkOrder="sv4#page23#enu5#ln15 sv4#page23#enu5#ln43">
+      <Field id="sv4#page23#enu5#fld40" name="nickName" type="string" modifiable="true" attribute="ent4#att11" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld41" name="yearsOnStreet" type="integer" modifiable="true" attribute="ent4#att13" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld42" name="birthDate" type="date" modifiable="true" attribute="ent2#att6" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld43" name="fullName" type="string" modifiable="true" attribute="ent2#att4" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld48" name="country" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld47" name="postalcode" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld46" name="city" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld45" name="email" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld44" name="userName" type="string" preloaded="true">
+        <Comment xml:space="preserve">userName can NOT be modified!</Comment>
+      </Field>
+      <Link id="sv4#page23#enu5#ln15" name="Cancel" to="sv4#page4" automaticCoupling="true" type="normal" validate="true"/>
+      <Field id="sv4#page23#enu5#fld51" name="picture" type="blob" contentType="image" modifiable="true" preloaded="true"/>
+      <Link id="sv4#page23#enu5#ln43" name="Update Homeless Action" to="sv4#miu8" type="normal" validate="true">
+        <LinkParameter id="sv4#page23#enu5#ln43#par419" name="UserProfileToAddress.oid_PASSING_address [oid]" sourceLinkParameter="sv4#page4#dau1#ln13#par159" target="sv4#miu8.mov1#opm4#icu4#icp54"/>
+        <LinkParameter id="sv4#page23#enu5#ln43#par420" name="city_city" source="sv4#page23#enu5#fld46" target="sv4#miu8.mov1#opm4#icu4#icp55"/>
+        <LinkParameter id="sv4#page23#enu5#ln43#par421" name="country_country" source="sv4#page23#enu5#fld48" target="sv4#miu8.mov1#opm4#icu4#icp56"/>
+        <LinkParameter id="sv4#page23#enu5#ln43#par422" name="email_email" source="sv4#page23#enu5#fld45" target="sv4#miu8.mov1#opm4#icu4#icp53"/>
+        <LinkParameter id="sv4#page23#enu5#ln43#par423" name="HomelessPerson Object_HomelessPerson Object" source="entityBean" target="sv4#miu8.mov1#opm4#icu4#icp49"/>
+        <LinkParameter id="sv4#page23#enu5#ln43#par424" name="picture_picture" source="sv4#page23#enu5#fld51" target="sv4#miu8.mov1#opm4#icu4#icp51"/>
+        <LinkParameter id="sv4#page23#enu5#ln43#par425" name="UserProfileToPicture.oid_PASSING_picture [oid]" sourceLinkParameter="sv4#page4#dau1#ln13#par160" target="sv4#miu8.mov1#opm4#icu4#icp50"/>
+        <LinkParameter id="sv4#page23#enu5#ln43#par426" name="postalcode_postalcode" source="sv4#page23#enu5#fld47" target="sv4#miu8.mov1#opm4#icu4#icp57"/>
+        <LinkParameter id="sv4#page23#enu5#ln43#par427" name="UserProfileToUser.oid_PASSING_user [oid]" sourceLinkParameter="sv4#page4#dau1#ln13#par161" target="sv4#miu8.mov1#opm4#icu4#icp52"/>
+        <LinkParameter id="sv4#page23#enu5#ln43#par430" name="Key [oid]_HomelessPerson [oid]" source="key.ent2#att2" target="sv4#miu8.mov1#opm4#icu4#icp58"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="105" gr:y="130" id="sv4#page23#mssu12" name="Error Message"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page23#mssu12"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page23#enu5">
+          <layout:Field field="sv4#page23#enu5#fld44"/>
+          <layout:Field field="sv4#page23#enu5#fld45"/>
+          <layout:Field field="sv4#page23#enu5#fld43"/>
+          <layout:Field field="sv4#page23#enu5#fld42"/>
+          <layout:Field field="sv4#page23#enu5#fld40"/>
+          <layout:Field field="sv4#page23#enu5#fld41"/>
+          <layout:Field field="sv4#page23#enu5#fld46"/>
+          <layout:Field field="sv4#page23#enu5#fld47"/>
+          <layout:Field field="sv4#page23#enu5#fld48"/>
+          <layout:Field field="sv4#page23#enu5#fld51"/>
+          <layout:Link link="sv4#page23#enu5#ln15"/>
+          <layout:Link link="sv4#page23#enu5#ln43"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

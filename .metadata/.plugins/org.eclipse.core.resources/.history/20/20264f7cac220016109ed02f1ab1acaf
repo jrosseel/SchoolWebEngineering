@@ -1,0 +1,5 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Homeless" protected="true" landmarks="sv4#page4 sv4#page13 sv4#page7 sv4#page5 sv4#miu3" homePage="sv4#page4" customURLName="homeless">
+  <OperationUnits>
+    <ModuleInstanceUnit id="sv4#miu3" landmark="true" gr:x="470" gr:y="170" action="true" moduleId="mov1#opm2" name="Logout"/>
+  </OperationUnits>
+</SiteView>

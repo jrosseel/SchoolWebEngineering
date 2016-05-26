@@ -1,0 +1,33 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page11" name="View People" landmark="true" gr:x="935" gr:y="575" customURLName="people">
+  <ContentUnits>
+    <IndexUnit id="sv2#page11#inu5" name="Angels" gr:x="0" gr:y="0" entity="ent3" displayAttributes="ent2#att4 ent3#att15 ent3#att1 rel4#role8.ent5#att25"/>
+    <IndexUnit id="sv2#page11#inu6" name="Homeless Persons" gr:x="95" gr:y="0" entity="ent4" displayAttributes="ent4#att11 rel4#role8.ent5#att25"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page11#inu5">
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Attribute attribute="ent3#att15"/>
+          <layout:Attribute attribute="ent3#att1"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att25"/>
+        </layout:Unit>
+        <layout:Unit unitId="sv2#page11#inu6">
+          <layout:Attribute attribute="ent4#att11"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att25"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

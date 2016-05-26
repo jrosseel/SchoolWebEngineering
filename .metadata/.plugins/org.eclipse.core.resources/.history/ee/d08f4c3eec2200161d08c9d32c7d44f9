@@ -1,0 +1,126 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="85" gr:y="330" id="sv3#page20" name="User Profile" landmark="true" customURLName="angel_profile">
+  <ContentUnits>
+    <GetUnit id="sv3#page20#gtu3" name="Get User Details" gr:x="0" gr:y="90" contextParameters="UserCtxParam">
+      <Link id="sv3#page20#gtu3#ln14" name="Flow14" to="sv3#page20#dau5" type="transport" validate="true">
+        <LinkParameter id="sv3#page20#gtu3#ln14#par28" name="UserCtxParam.oid_KeyCondition7 [oid]" source="sv3#page20#gtu3.UserCtxParam" target="sv3#page20#dau5#su7#kcond7.userOID"/>
+      </Link>
+    </GetUnit>
+    <DataUnit gr:x="195" gr:y="125" id="sv3#page20#dau4" name="Angel Details" entity="ent3" displayAttributes="rel2#role4.userName rel2#role4.email ent2#att4 ent2#att6 ent3#att9 ent3#att10 rel4#role8.ent5#att22 rel4#role8.ent5#att23 rel4#role8.ent5#att27 rel4#role8.ent5#att25 rel4#role8.ent5#att24 rel4#role8.ent5#att26 rel15#role29.ent11#att5 ent3#att1 ent3#att15" linkOrder="sv3#page20#dau4#ln1">
+      <Selector id="sv3#page20#dau4#su6" defaultPolicy="fill" booleanOperator="and" expression="sv3#page20#dau4#su6#kcond8">
+        <KeyCondition id="sv3#page20#dau4#su6#kcond8" predicate="in" implied="false" name="KeyCondition6"/>
+      </Selector>
+      <Link id="sv3#page20#dau4#ln1" name="Update" to="sv3#page22#enu2" type="normal" validate="true">
+        <LinkParameter id="sv3#page20#dau4#ln1#par6" name="oid_Key Condition [oid]" source="data.ent2#att2" target="sv3#page22#enu2.ent2#att2"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par54" name="birthDate_birthDate" source="data.ent2#att6" target="sv3#page22#enu2#fld29_slot"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par55" name="UserProfileToAddress.bus_bus" source="data.rel4#role8$ent5#att27" target="sv3#page22#enu2#fld35_slot"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par56" name="UserProfileToAddress.city_city" source="data.rel4#role8$ent5#att25" target="sv3#page22#enu2#fld36_slot"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par57" name="UserProfileToAddress.country_country" source="data.rel4#role8$ent5#att26" target="sv3#page22#enu2#fld38_slot"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par58" name="UserProfileToUser.email_email" source="data.rel2#role4$email" target="sv3#page22#enu2#fld32_slot"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par59" name="fullName_fullName" source="data.ent2#att4" target="sv3#page22#enu2#fld30_slot"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par60" name="UserProfileToAddress.housenumber_housenumber" source="data.rel4#role8$ent5#att23" target="sv3#page22#enu2#fld34_slot"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par61" name="isAnomynous_isAnomynous" source="data.ent3#att10" target="sv3#page22#enu2#fld27_slot"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par62" name="UserProfileToAddress.postalcode_postalcode" source="data.rel4#role8$ent5#att24" target="sv3#page22#enu2#fld37_slot"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par63" name="profession_profession" source="data.ent3#att9" target="sv3#page22#enu2#fld26_slot"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par64" name="UserProfileToAddress.street_street" source="data.rel4#role8$ent5#att22" target="sv3#page22#enu2#fld33_slot"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par65" name="UserProfileToUser.userName_userName" source="data.rel2#role4$userName" target="sv3#page22#enu2#fld31_slot"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par66" name="UserProfileToPicture.picture_picture" source="data.rel15#role29$ent11#att5" target="sv3#page22#enu2#fld39_slot"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par99" name="UserProfileToAddress.oid_PASSING" source="data.rel4#role8_ent5#att8" passing="true"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par100" name="UserProfileToPicture.oid_PASSING" source="data.rel15#role29_ent11#att37" passing="true"/>
+        <LinkParameter id="sv3#page20#dau4#ln1#par101" name="UserProfileToUser.oid_PASSING" source="data.rel2#role4_userOID" passing="true"/>
+      </Link>
+      <Link id="sv3#page20#dau4#ln5" name="Flow5" to="sv3#page20#pwu3" type="transport" validate="true" automaticCoupling="true"/>
+    </DataUnit>
+    <DataUnit gr:x="200" gr:y="0" id="sv3#page20#dau5" name="User Details" entity="User">
+      <Selector id="sv3#page20#dau5#su7" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page20#dau5#su7#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page20#dau5#ln16" name="Flow16" to="sv3#page20#dau4" type="transport" validate="true">
+        <LinkParameter id="sv3#page20#dau5#ln16#par74" name="UserToUserProfile.oid_KeyCondition6 [oid]" source="data.rel2#role3_ent2#att2" target="sv3#page20#dau4#su6#kcond8.ent2#att2"/>
+      </Link>
+    </DataUnit>
+    <PowerIndexUnit gr:x="205" gr:y="250" id="sv3#page20#pwu3" name="Offers" sortable="true" checkable="false" useCountQuery="false" entity="ent8" displayAttributes="rel18#role35.ent9#att32 rel17#role33.ent10#att34 ent8#att41 ent8#att36 ent8#att42 rel19#role37.ent12#att44 rel11#role21.ent5#att22 rel11#role21.ent5#att23 rel11#role21.ent5#att24 rel11#role21.ent5#att25 rel11#role21.ent5#att26 rel11#role21.ent5#att27">
+      <VRules/>
+      <Selector id="sv3#page20#pwu3#su9" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page20#pwu3#su9#rcond1" name="AngelOffer" predicate="in" implied="false" role="rel7#role14"/>
+      </Selector>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page20#dau4">
+          <layout:Link link="sv3#page20#dau4#ln1"/>
+          <layout:Attribute attribute="rel2#role4.userName"/>
+          <layout:Attribute attribute="rel2#role4.email"/>
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att22"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att23"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att27"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att25"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att24"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att26"/>
+          <layout:Attribute attribute="rel15#role29.ent11#att5"/>
+          <layout:Attribute attribute="ent3#att1"/>
+          <layout:Attribute attribute="ent3#att15"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page20#pwu3">
+          <layout:Attribute attribute="rel18#role35.ent9#att32"/>
+          <layout:Attribute attribute="rel17#role33.ent10#att34"/>
+          <layout:Attribute attribute="ent8#att41"/>
+          <layout:Attribute attribute="ent8#att36"/>
+          <layout:Attribute attribute="ent8#att42"/>
+          <layout:Attribute attribute="rel19#role37.ent12#att44"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att22"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att23"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att24"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att25"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att26"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

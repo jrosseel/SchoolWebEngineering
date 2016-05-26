@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="48" version="2.0">
 <workbenchAdvisor/>
-<window height="1016" width="1818" x="1" y="23">
+<window height="983" width="1920" x="0" y="23">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="205"/>
@@ -21,6 +21,8 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="152" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.webratio.ide.styles.editors.LayoutTemplateEditor" itemType="typePlaceholder" x="54" y="22"/>
+<coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.webratio.ide.ui.editors.WebProjectEditor" itemType="typeToolBarContribution" x="90" y="22"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -42,10 +44,6 @@
 </editor>
 </editors>
 <views>
-<view id="com.webratio.bpm.ui.views.BPMDocumentationView" partName="Documentation"/>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
-<viewState/>
-</view>
 <view id="com.webratio.ide.ui.grid.views.GridView" partName="Layout">
 <viewState/>
 </view>
@@ -67,16 +65,13 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<columnWidths org.eclipse.ui.ide.locationField="94" org.eclipse.ui.ide.markerType="129" org.eclipse.ui.ide.pathField="164" org.eclipse.ui.ide.resourceField="129" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
+<columnWidths org.eclipse.ui.ide.locationField="94" org.eclipse.ui.ide.markerType="129" org.eclipse.ui.ide.pathField="164" org.eclipse.ui.ide.resourceField="129" org.eclipse.ui.ide.severityAndDescriptionField="859"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
-</view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1463823644097">
@@ -107,11 +102,18 @@
 </customFilters>
 </viewState>
 </view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
 <view id="com.webratio.eclipse.cloud.ui.views.CloudServicesView" partName="Cloud Accounts">
 <viewState/>
 </view>
-<view id="com.webratio.bpm.ui.explorer.views.BPMExplorerView" partName="BPMN Explorer"/>
+<view id="com.webratio.bpm.ui.views.BPMDocumentationView" partName="Documentation"/>
 <view id="com.webratio.ide.ui.views.WRAerialView" partName="Overview">
+<viewState/>
+</view>
+<view id="com.webratio.bpm.ui.explorer.views.BPMExplorerView" partName="BPMN Explorer"/>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
 </views>
@@ -269,8 +271,8 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.2463261" ratioLeft="352" ratioRight="1077" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.71089536" ratioLeft="659" ratioRight="268" relationship="4" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.18438974" ratioLeft="352" ratioRight="1557" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.5961969" ratioLeft="533" ratioRight="361" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="com.webratio.ide.ui.grid.views.GridView" appearance="2" expanded="2">
 <page content="com.webratio.ide.ui.grid.views.GridView" label="Layout"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
@@ -304,155 +306,155 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.webratio.ide.ui.editors.WebProjectEditor" path="/HomelessAngel/Model.wr"/>
 </editors>
-<item historyLabel="HomelessAngel &gt; Register Homeless &gt; Flow9" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page9#page2#enu4#ln9&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; View People" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#page18&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; Flow7" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru2#oln4&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Administrator &gt; Disable User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#miu9&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; Create User" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru2&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Disable User &gt; Flow44" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#page25#enu7#ln44&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Disable User &gt; UserProfile" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#page25#dau2&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Disable User &gt; Flow45" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#page25#dau2#ln45&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Disable User &gt; Flow44" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#page25#enu7#ln44&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; View Offers" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#page19&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Administrator &gt; Disable User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#miu9&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Administrator" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Disable User &gt; Flow44" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#page25#enu7#ln44&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Administrator &gt; Disable User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#miu9&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Administrator &gt; OKFlow29" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#miu9#oln29&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; View People &gt; Disable" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#page18#pwu1#ln37&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Administrator &gt; OKFlow5" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#dlu1#oln5&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Administrator" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Administrator &gt; Disable User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#miu9&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Administrator &gt; KOFlow13" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#miu9#kln13&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Administrator" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Disable User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;mov1#opm8&apos;)" GRAPHEDITOR_PATH="id(&apos;mov1&apos;)" LOCATIONS="id(&apos;mov1#opm8&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Administrator" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; View People" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#page18&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Disable User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#page25&apos;)" PROPERTY_TAB_ID=""/>
 </item>
 <item historyLabel="HomelessAngel &gt; Visitor" index="0">
 <position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; Create User" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru4&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Domain Model" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="/WebProject/DataModel" GRAPHEDITOR_PATH="/WebProject/DataModel" LOCATIONS="/WebProject/DataModel" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Register Angel &gt; Flow6" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page9#page1#enu3#ln11&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; Flow7" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru4#oln5&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Homeless" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv4&apos;)" GRAPHEDITOR_PATH="id(&apos;sv4&apos;)" LOCATIONS="id(&apos;sv4&apos;)" PROPERTY_TAB_ID=""/>
 </item>
 <item historyLabel="HomelessAngel &gt; Visitor" index="0">
 <position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; Create User" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru4&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; KOFlow5" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru4#kln6&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home &gt; Error Message" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)/layout:Grid/layout:Row[1]/layout:Cell[10]/layout:Unit" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; Create User" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru4&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home &gt; Error Message" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)/layout:Grid/layout:Row[5]/layout:Cell[10]/layout:Unit" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; Create Angel" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru3&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home &gt; Login" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)/layout:Grid/layout:Row[4]/layout:Cell[10]/layout:Unit" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Home &gt; Login" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)/layout:Grid/layout:Row[1]/layout:Cell[10]/layout:Unit" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Home &gt; Error Message" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)/layout:Grid/layout:Row[5]/layout:Cell[10]/layout:Unit" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Home &gt; Error Message" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)/layout:Grid/layout:Row[4]/layout:Cell[10]/layout:Unit" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Home &gt; User Disabled" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)/layout:Grid/layout:Row[2]/layout:Cell[10]/layout:Unit" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Home &gt; User Disabled" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)/layout:Grid/layout:Row[5]/layout:Cell[10]/layout:Unit" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Home &gt; Error Message" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)/layout:Grid/layout:Row[4]/layout:Cell[10]/layout:Unit" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Home &gt; Error Message" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)/layout:Grid/layout:Row[2]/layout:Cell[10]/layout:Unit" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Home &gt; User Disabled" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)/layout:Grid/layout:Row[5]/layout:Cell[10]/layout:Unit" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Home &gt; User Disabled" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)/layout:Grid/layout:Row[4]/layout:Cell[10]/layout:Unit" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Disable User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;mov1#opm8&apos;)" GRAPHEDITOR_PATH="id(&apos;mov1&apos;)" LOCATIONS="id(&apos;mov1#opm8&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)" PROPERTY_TAB_ID=""/>
+</item>
+<item historyLabel="HomelessAngel &gt; Disable User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#page25&apos;)" PROPERTY_TAB_ID=""/>
 </item>
 <item historyLabel="HomelessAngel" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru5&apos;)" PROPERTY_TAB_ID=""/>
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#page25#enu7#ln44&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; Create User" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru4&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Disable User" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv5&apos;)" GRAPHEDITOR_PATH="id(&apos;sv5&apos;)" LOCATIONS="id(&apos;sv5#page25&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Donate" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page8&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; OKFlow6" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru4#oln6&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; Create Homeless Person" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru5&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; OKFlow6" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru4#oln6&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; Create Homeless Person" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru5&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Home" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page12&apos;)" PROPERTY_TAB_ID=""/>
 </item>
 <item historyLabel="HomelessAngel &gt; Visitor" index="0">
 <position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; OKFlow6" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru4#oln6&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Visitor &gt; OKFlow19" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#switch5#oln19&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; OKFlow3" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru3#oln3&apos;)" PROPERTY_TAB_ID=""/>
+<item historyLabel="HomelessAngel &gt; Visitor &gt; OKFlow18" index="0">
+<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#switch5#oln18&apos;)" PROPERTY_TAB_ID=""/>
 </item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; Create Homeless Person" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru5&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; KOFlow4" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru3#kln4&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; KOFlow7" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru5#kln7&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; Create Homeless Person" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru5&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; OKFlow7" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru5#oln7&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; Login" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#miu1&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; OKFlow7" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru5#oln7&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor" index="0">
+<item active="true" historyLabel="HomelessAngel &gt; Visitor" index="0">
 <position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; OKFlow3" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#cru3#oln3&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Register Homeless &gt; Flow9" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page9#page2#enu4#ln9&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Register" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page9&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Register Homeless &gt; Flow9" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page9#page2#enu4#ln9&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Register" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#page9&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Visitor &gt; Login" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;sv2&apos;)" GRAPHEDITOR_PATH="id(&apos;sv2&apos;)" LOCATIONS="id(&apos;sv2#miu1&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Login" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;mov1#opm1&apos;)" GRAPHEDITOR_PATH="id(&apos;mov1&apos;)" LOCATIONS="id(&apos;mov1#opm1&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Login &gt; Login" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;mov1#opm1&apos;)" GRAPHEDITOR_PATH="id(&apos;mov1&apos;)" LOCATIONS="id(&apos;mov1#opm1#lgu1&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Login &gt; KO Port1" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;mov1#opm1&apos;)" GRAPHEDITOR_PATH="id(&apos;mov1&apos;)" LOCATIONS="id(&apos;mov1#opm1#kocu1&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Login" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;mov1#opm1&apos;)" GRAPHEDITOR_PATH="id(&apos;mov1&apos;)" LOCATIONS="id(&apos;mov1#opm1&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Login &gt; OK Port1" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;mov1#opm1&apos;)" GRAPHEDITOR_PATH="id(&apos;mov1&apos;)" LOCATIONS="id(&apos;mov1#opm1#okcu1&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Login &gt; Login" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;mov1#opm1&apos;)" GRAPHEDITOR_PATH="id(&apos;mov1&apos;)" LOCATIONS="id(&apos;mov1#opm1#lgu1&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Login &gt; OKFlow8" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;mov1#opm1&apos;)" GRAPHEDITOR_PATH="id(&apos;mov1&apos;)" LOCATIONS="id(&apos;mov1#opm1#lgu1#oln8&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item historyLabel="HomelessAngel &gt; Login &gt; OK Port1" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;mov1#opm1&apos;)" GRAPHEDITOR_PATH="id(&apos;mov1&apos;)" LOCATIONS="id(&apos;mov1#opm1#okcu1&apos;)" PROPERTY_TAB_ID=""/>
-</item>
-<item active="true" historyLabel="HomelessAngel &gt; Login &gt; KOFlow1" index="0">
-<position CLIENTAREA_GRAPHINFO="" GRAPHEDITOR_INPUT_PATH="id(&apos;mov1#opm1&apos;)" GRAPHEDITOR_PATH="id(&apos;mov1&apos;)" LOCATIONS="id(&apos;mov1#opm1#lgu1#kln1&apos;)" PROPERTY_TAB_ID=""/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -471,11 +473,11 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Address.hbm.xml" tooltip="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/Tomcat/webapps/HomelessAngel/WEB-INF/classes/com/webratio/webapp/Address.hbm.xml">
-<persistable uri="file:/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/Tomcat/webapps/HomelessAngel/WEB-INF/classes/com/webratio/webapp/Address.hbm.xml"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.webratio.ide.ui.editors.WebProjectEditor" name="Model.wr" tooltip="HomelessAngel/Model.wr">
 <persistable path="/HomelessAngel/Model.wr"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Address.hbm.xml" tooltip="/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/Tomcat/webapps/HomelessAngel/WEB-INF/classes/com/webratio/webapp/Address.hbm.xml">
+<persistable uri="file:/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Exercises/WebRatio_Platform_University_Student_Edition_7.2.11.x64bit.MacOSX/Tomcat/webapps/HomelessAngel/WEB-INF/classes/com/webratio/webapp/Address.hbm.xml"/>
 </file>
 </mruList>
 </workbench>

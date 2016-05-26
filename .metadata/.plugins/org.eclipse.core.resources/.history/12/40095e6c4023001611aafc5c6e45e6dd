@@ -1,0 +1,75 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1125" gr:y="50" id="sv5#page25" name="Disable User">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="135" gr:y="0" id="sv5#page25#mssu14" name="Reason">
+      <Message xml:space="preserve">Please explain why you disable the user.</Message>
+    </MultiMessageUnit>
+    <EntryUnit gr:x="0" gr:y="5" id="sv5#page25#enu7" name="Enter Reason" fieldOrder="sv5#page25#enu7#fld54" linkOrder="sv5#page25#enu7#ln44">
+      <Field id="sv5#page25#enu7#fld54" name="reason" type="string" modifiable="true"/>
+      <Link id="sv5#page25#enu7#ln44" name="Flow44" to="sv5#miu9" type="normal" validate="true">
+        <LinkParameter id="sv5#page25#enu7#ln44#par94" name="reason_disabledreason" source="sv5#page25#enu7#fld54" target="sv5#miu9.mov1#opm8#icu8#icp18"/>
+        <LinkParameter id="sv5#page25#enu7#ln44#par96" name="oid_PASSING_userprofile_oid" sourceLinkParameter="sv5#page25#dau2#ln45#par95" target="sv5#miu9.mov1#opm8#icu8#icp6"/>
+      </Link>
+    </EntryUnit>
+    <DataUnit gr:x="130" gr:y="75" id="sv5#page25#dau2" name="UserProfile" entity="ent2">
+      <Selector id="sv5#page25#dau2#su10" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv5#page25#dau2#su10#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv5#page25#dau2#ln45" name="Flow45" to="sv5#page25#enu7" type="transport" validate="true" gr:bendpoints="-125,-27,-5,58">
+        <LinkParameter id="sv5#page25#dau2#ln45#par95" name="oid_PASSING" source="data.ent2#att2" passing="true"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#page25#mssu14"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#page25#enu7">
+          <layout:Field field="sv5#page25#enu7#fld54"/>
+          <layout:Link link="sv5#page25#enu7#ln44"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#page25#dau2"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

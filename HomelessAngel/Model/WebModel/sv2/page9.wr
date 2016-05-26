@@ -1,23 +1,14 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page9" name="Register" landmark="true" gr:x="230" gr:y="25" customURLName="register">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page9" name="Register" landmark="true" gr:x="255" gr:y="25" customURLName="register">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="60" id="sv2#page9#mssu1" name="Choose role" linkOrder="sv2#page9#mssu1#ln1 sv2#page9#mssu1#ln3">
+    <MultiMessageUnit gr:x="0" gr:y="45" id="sv2#page9#mssu1" name="Choose role">
       <Message xml:space="preserve">Angels are people that want to make a difference, and offer something to the homeless. This could range from different kind of goods (food, clothes, shoes, sleeping place, lunch at restaurant, etc.) or services (legal service, medical service, hairdressing, education, etc.).</Message>
-      <Link id="sv2#page9#mssu1#ln1" name="Register as Angel" to="sv2#page9#page1" type="normal" validate="true">
-        <LinkParameter id="sv2#page9#mssu1#ln1#par27" name="1_showForm" sourceValue="1" targetVariable="sv2#page9#var1"/>
-      </Link>
-      <Link id="sv2#page9#mssu1#ln3" name="Register as Homeless" to="sv2#page9#page2" type="normal" validate="true">
-        <LinkParameter id="sv2#page9#mssu1#ln3#par28" name="2_showForm" sourceValue="2" targetVariable="sv2#page9#var1"/>
-      </Link>
     </MultiMessageUnit>
-    <MultiMessageUnit gr:x="370" gr:y="90" id="sv2#page9#mssu3" name="Error Message"/>
+    <MultiMessageUnit gr:x="345" gr:y="105" id="sv2#page9#mssu3" name="Error Message"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page9#mssu1">
-          <layout:Link link="sv2#page9#mssu1#ln1"/>
-          <layout:Link link="sv2#page9#mssu1#ln3"/>
-        </layout:Unit>
+        <layout:Unit unitId="sv2#page9#mssu1"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
@@ -48,7 +39,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
+      <layout:Cell colspan="6">
         <layout:SubPage pageId="sv2#page9#page1">
           <layout:Grid containerType="grid">
             <layout:Row>
@@ -57,10 +48,18 @@
                   <layout:Field field="sv2#page9#page1#enu3#fld8"/>
                   <layout:Field field="sv2#page9#page1#enu3#fld9"/>
                   <layout:Field field="sv2#page9#page1#enu3#fld10"/>
+                  <layout:Field field="sv2#page9#page1#enu3#fld22"/>
                   <layout:Field field="sv2#page9#page1#enu3#fld11"/>
                   <layout:Field field="sv2#page9#page1#enu3#fld12"/>
                   <layout:Field field="sv2#page9#page1#enu3#fld13"/>
-                  <layout:Link link="sv2#page9#page1#enu3#ln6"/>
+                  <layout:Field field="sv2#page9#page1#enu3#fld3"/>
+                  <layout:Field field="sv2#page9#page1#enu3#fld4"/>
+                  <layout:Field field="sv2#page9#page1#enu3#fld5"/>
+                  <layout:Field field="sv2#page9#page1#enu3#fld6"/>
+                  <layout:Field field="sv2#page9#page1#enu3#fld7"/>
+                  <layout:Field field="sv2#page9#page1#enu3#fld21"/>
+                  <layout:Field field="sv2#page9#page1#enu3#fld49"/>
+                  <layout:Link link="sv2#page9#page1#enu3#ln20"/>
                 </layout:Unit>
               </layout:Cell>
               <layout:Cell/>
@@ -83,7 +82,41 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:SubPage pageId="sv2#page9#page2">
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="12">
+                <layout:Unit unitId="sv2#page9#page2#enu4">
+                  <layout:Link link="sv2#page9#page2#enu4#ln31"/>
+                  <layout:Field field="sv2#page9#page2#enu4#fld14"/>
+                  <layout:Field field="sv2#page9#page2#enu4#fld15"/>
+                  <layout:Field field="sv2#page9#page2#enu4#fld16"/>
+                  <layout:Field field="sv2#page9#page2#enu4#fld23"/>
+                  <layout:Field field="sv2#page9#page2#enu4#fld17"/>
+                  <layout:Field field="sv2#page9#page2#enu4#fld18"/>
+                  <layout:Field field="sv2#page9#page2#enu4#fld20"/>
+                  <layout:Field field="sv2#page9#page2#enu4#fld24"/>
+                  <layout:Field field="sv2#page9#page2#enu4#fld19"/>
+                  <layout:Field field="sv2#page9#page2#enu4#fld25"/>
+                  <layout:Field field="sv2#page9#page2#enu4#fld50"/>
+                </layout:Unit>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:SubPage>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -91,37 +124,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:SubPage pageId="sv2#page9#page2">
-          <layout:Grid containerType="grid">
-            <layout:Row>
-              <layout:Cell colspan="12">
-                <layout:Unit unitId="sv2#page9#page2#enu4">
-                  <layout:Field field="sv2#page9#page2#enu4#fld14"/>
-                  <layout:Field field="sv2#page9#page2#enu4#fld15"/>
-                  <layout:Field field="sv2#page9#page2#enu4#fld16"/>
-                  <layout:Field field="sv2#page9#page2#enu4#fld17"/>
-                  <layout:Field field="sv2#page9#page2#enu4#fld18"/>
-                  <layout:Field field="sv2#page9#page2#enu4#fld19"/>
-                  <layout:Field field="sv2#page9#page2#enu4#fld20"/>
-                  <layout:Link link="sv2#page9#page2#enu4#ln10"/>
-                </layout:Unit>
-              </layout:Cell>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-            </layout:Row>
-          </layout:Grid>
-        </layout:SubPage>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -149,49 +152,68 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Page gr:x="160" gr:y="0" id="sv2#page9#page1" name="Register Angel">
+  <Page gr:x="135" gr:y="0" id="sv2#page9#page1" name="Register Angel">
     <ContentUnits>
-      <EntryUnit gr:x="0" gr:y="0" id="sv2#page9#page1#enu3" name="Enter Angel Details" entity="User" fieldOrder="sv2#page9#page1#enu3#fld8 sv2#page9#page1#enu3#fld9 sv2#page9#page1#enu3#fld10 sv2#page9#page1#enu3#fld11 sv2#page9#page1#enu3#fld12 sv2#page9#page1#enu3#fld13" linkOrder="sv2#page9#page1#enu3#ln6">
-        <Field id="sv2#page9#page1#enu3#fld8" name="name" type="string" modifiable="true" attribute="userName"/>
+      <EntryUnit gr:x="0" gr:y="0" id="sv2#page9#page1#enu3" name="Enter Angel Details" entity="User" fieldOrder="sv2#page9#page1#enu3#fld8 sv2#page9#page1#enu3#fld9 sv2#page9#page1#enu3#fld10 sv2#page9#page1#enu3#fld22 sv2#page9#page1#enu3#fld11 sv2#page9#page1#enu3#fld12 sv2#page9#page1#enu3#fld13 sv2#page9#page1#enu3#fld3 sv2#page9#page1#enu3#fld4 sv2#page9#page1#enu3#fld5 sv2#page9#page1#enu3#fld6 sv2#page9#page1#enu3#fld7 sv2#page9#page1#enu3#fld21 sv2#page9#page1#enu3#fld49" linkOrder="sv2#page9#page1#enu3#ln20">
+        <Field id="sv2#page9#page1#enu3#fld8" name="user name" type="string" modifiable="true" attribute="userName"/>
         <Field id="sv2#page9#page1#enu3#fld9" name="password" type="password" modifiable="true" attribute="password"/>
         <Field id="sv2#page9#page1#enu3#fld10" name="email" type="string" modifiable="true" attribute="email"/>
         <Field id="sv2#page9#page1#enu3#fld12" name="profession" type="string" modifiable="true"/>
         <Field id="sv2#page9#page1#enu3#fld11" name="birthdate" type="date" modifiable="true"/>
-        <Link id="sv2#page9#page1#enu3#ln6" name="Flow6" to="sv2#cru2" type="normal" validate="true">
-          <LinkParameter id="sv2#page9#page1#enu3#ln6#par7" name="email_email" source="sv2#page9#page1#enu3#fld10" target="sv2#cru2.email"/>
-          <LinkParameter id="sv2#page9#page1#enu3#ln6#par8" name="name_name" source="sv2#page9#page1#enu3#fld8" target="sv2#cru2.userName"/>
-          <LinkParameter id="sv2#page9#page1#enu3#ln6#par9" name="password_password" source="sv2#page9#page1#enu3#fld9" target="sv2#cru2.password"/>
-          <LinkParameter id="sv2#page9#page1#enu3#ln6#par11" name="1_userType" sourceValue="1" target="sv2#cru2.User#att16"/>
-          <LinkParameter id="sv2#page9#page1#enu3#ln6#par20" name="birthdate_PASSING" source="sv2#page9#page1#enu3#fld11" passing="true"/>
-          <LinkParameter id="sv2#page9#page1#enu3#ln6#par21" name="isAnonymous_PASSING" source="sv2#page9#page1#enu3#fld13" passing="true"/>
-          <LinkParameter id="sv2#page9#page1#enu3#ln6#par22" name="Key [userOid]_PASSING" source="key.userOID" passing="true"/>
-          <LinkParameter id="sv2#page9#page1#enu3#ln6#par25" name="profession_PASSING" source="sv2#page9#page1#enu3#fld12" passing="true"/>
+        <Field id="sv2#page9#page1#enu3#fld13" name="is anonymous" type="boolean" modifiable="true"/>
+        <Field id="sv2#page9#page1#enu3#fld21" name="country" type="string" modifiable="true"/>
+        <Field id="sv2#page9#page1#enu3#fld7" name="city" type="string" modifiable="true"/>
+        <Field id="sv2#page9#page1#enu3#fld6" name="postal code" type="string" modifiable="true"/>
+        <Field id="sv2#page9#page1#enu3#fld5" name="bus" type="string" modifiable="true"/>
+        <Field id="sv2#page9#page1#enu3#fld4" name="house number" type="string" modifiable="true"/>
+        <Field id="sv2#page9#page1#enu3#fld3" name="street" type="string" modifiable="true"/>
+        <Field id="sv2#page9#page1#enu3#fld22" name="full name" type="string" modifiable="true"/>
+        <Field id="sv2#page9#page1#enu3#fld49" name="picture" type="blob" contentType="image" modifiable="true"/>
+        <Link id="sv2#page9#page1#enu3#ln20" name="Create Angel" to="sv2#miu5" type="normal" validate="true">
+          <LinkParameter id="sv2#page9#page1#enu3#ln20#par288" name="birthdate_birthdate" source="sv2#page9#page1#enu3#fld11" target="sv2#miu5.mov1#opm7#icu7#icp8"/>
+          <LinkParameter id="sv2#page9#page1#enu3#ln20#par289" name="bus_bus" source="sv2#page9#page1#enu3#fld5" target="sv2#miu5.mov1#opm7#icu7#icp13"/>
+          <LinkParameter id="sv2#page9#page1#enu3#ln20#par290" name="city_city" source="sv2#page9#page1#enu3#fld7" target="sv2#miu5.mov1#opm7#icu7#icp15"/>
+          <LinkParameter id="sv2#page9#page1#enu3#ln20#par291" name="country_country" source="sv2#page9#page1#enu3#fld21" target="sv2#miu5.mov1#opm7#icu7#icp16"/>
+          <LinkParameter id="sv2#page9#page1#enu3#ln20#par292" name="email_email" source="sv2#page9#page1#enu3#fld10" target="sv2#miu5.mov1#opm7#icu7#icp3"/>
+          <LinkParameter id="sv2#page9#page1#enu3#ln20#par293" name="full name_fullName" source="sv2#page9#page1#enu3#fld22" target="sv2#miu5.mov1#opm7#icu7#icp7"/>
+          <LinkParameter id="sv2#page9#page1#enu3#ln20#par294" name="house number_housenumber" source="sv2#page9#page1#enu3#fld4" target="sv2#miu5.mov1#opm7#icu7#icp12"/>
+          <LinkParameter id="sv2#page9#page1#enu3#ln20#par295" name="is anonymous_isAnonymous" source="sv2#page9#page1#enu3#fld13" target="sv2#miu5.mov1#opm7#icu7#icp10"/>
+          <LinkParameter id="sv2#page9#page1#enu3#ln20#par296" name="password_password" source="sv2#page9#page1#enu3#fld9" target="sv2#miu5.mov1#opm7#icu7#icp4"/>
+          <LinkParameter id="sv2#page9#page1#enu3#ln20#par297" name="picture_picture" source="sv2#page9#page1#enu3#fld49" target="sv2#miu5.mov1#opm7#icu7#icp17"/>
+          <LinkParameter id="sv2#page9#page1#enu3#ln20#par298" name="postal code_postalcode" source="sv2#page9#page1#enu3#fld6" target="sv2#miu5.mov1#opm7#icu7#icp14"/>
+          <LinkParameter id="sv2#page9#page1#enu3#ln20#par299" name="profession_profession" source="sv2#page9#page1#enu3#fld12" target="sv2#miu5.mov1#opm7#icu7#icp9"/>
+          <LinkParameter id="sv2#page9#page1#enu3#ln20#par300" name="street_street" source="sv2#page9#page1#enu3#fld3" target="sv2#miu5.mov1#opm7#icu7#icp11"/>
+          <LinkParameter id="sv2#page9#page1#enu3#ln20#par301" name="user name_userName" source="sv2#page9#page1#enu3#fld8" target="sv2#miu5.mov1#opm7#icu7#icp5"/>
         </Link>
-        <Field id="sv2#page9#page1#enu3#fld13" name="isAnonymous" type="boolean" modifiable="true"/>
       </EntryUnit>
     </ContentUnits>
   </Page>
-  <Page id="sv2#page9#page2" name="Register Homeless" gr:x="160" gr:y="155">
+  <Page id="sv2#page9#page2" name="Register Homeless" gr:x="20" gr:y="150">
     <ContentUnits>
-      <EntryUnit gr:x="0" gr:y="0" id="sv2#page9#page2#enu4" name="Enter Homeless Details" entity="User" fieldOrder="sv2#page9#page2#enu4#fld14 sv2#page9#page2#enu4#fld15 sv2#page9#page2#enu4#fld16 sv2#page9#page2#enu4#fld17 sv2#page9#page2#enu4#fld18 sv2#page9#page2#enu4#fld19 sv2#page9#page2#enu4#fld20" linkOrder="sv2#page9#page2#enu4#ln10">
-        <Field id="sv2#page9#page2#enu4#fld14" name="name" type="string" modifiable="true" attribute="userName"/>
+      <EntryUnit gr:x="0" gr:y="0" id="sv2#page9#page2#enu4" name="Enter Homeless Person Details" entity="User" fieldOrder="sv2#page9#page2#enu4#fld14 sv2#page9#page2#enu4#fld15 sv2#page9#page2#enu4#fld16 sv2#page9#page2#enu4#fld23 sv2#page9#page2#enu4#fld17 sv2#page9#page2#enu4#fld18 sv2#page9#page2#enu4#fld20 sv2#page9#page2#enu4#fld24 sv2#page9#page2#enu4#fld19 sv2#page9#page2#enu4#fld25 sv2#page9#page2#enu4#fld50" linkOrder="sv2#page9#page2#enu4#ln31">
+        <Field id="sv2#page9#page2#enu4#fld14" name="user name" type="string" modifiable="true" attribute="userName"/>
         <Field id="sv2#page9#page2#enu4#fld15" name="password" type="password" modifiable="true" attribute="password"/>
         <Field id="sv2#page9#page2#enu4#fld16" name="email" type="string" modifiable="true" attribute="email"/>
-        <Field id="sv2#page9#page2#enu4#fld20" name="yearsOnStreet" type="integer" modifiable="true"/>
-        <Field id="sv2#page9#page2#enu4#fld19" name="locatedInCity" type="string" modifiable="true"/>
+        <Field id="sv2#page9#page2#enu4#fld20" name="years on street" type="integer" modifiable="true"/>
+        <Field id="sv2#page9#page2#enu4#fld19" name="city" type="string" modifiable="true"/>
         <Field id="sv2#page9#page2#enu4#fld18" name="nickname" type="string" modifiable="true"/>
         <Field id="sv2#page9#page2#enu4#fld17" name="birthdate" type="date" modifiable="true"/>
-        <Link id="sv2#page9#page2#enu4#ln10" name="Flow9" to="sv2#cru4" type="normal" validate="true" gr:bendpoints="265,-75,-110,155">
-          <LinkParameter id="sv2#page9#page2#enu4#ln10#par44" name="email_email" source="sv2#page9#page2#enu4#fld16" target="sv2#cru4.email"/>
-          <LinkParameter id="sv2#page9#page2#enu4#ln10#par45" name="name_name" source="sv2#page9#page2#enu4#fld14" target="sv2#cru4.userName"/>
-          <LinkParameter id="sv2#page9#page2#enu4#ln10#par46" name="password_password" source="sv2#page9#page2#enu4#fld15" target="sv2#cru4.password"/>
-          <LinkParameter id="sv2#page9#page2#enu4#ln10#par47" name="User Object_User Object" source="entityBean" target="sv2#cru4.entityBeans"/>
-          <LinkParameter id="sv2#page9#page2#enu4#ln10#par48" name="2_userType" target="sv2#cru4.User#att16" sourceValue="2"/>
-          <LinkParameter id="sv2#page9#page2#enu4#ln10#par49" name="birthdate_PASSING" source="sv2#page9#page2#enu4#fld17" passing="true"/>
-          <LinkParameter id="sv2#page9#page2#enu4#ln10#par50" name="Key [oid]_PASSING" source="key.userOID" passing="true"/>
-          <LinkParameter id="sv2#page9#page2#enu4#ln10#par51" name="locatedInCity_PASSING" source="sv2#page9#page2#enu4#fld19" passing="true"/>
-          <LinkParameter id="sv2#page9#page2#enu4#ln10#par52" name="nickname_PASSING" source="sv2#page9#page2#enu4#fld18" passing="true"/>
-          <LinkParameter id="sv2#page9#page2#enu4#ln10#par53" name="yearsOnStreet_PASSING" source="sv2#page9#page2#enu4#fld20" passing="true"/>
+        <Field id="sv2#page9#page2#enu4#fld23" name="full name" type="string" modifiable="true"/>
+        <Field id="sv2#page9#page2#enu4#fld25" name="country" type="string" modifiable="true"/>
+        <Field id="sv2#page9#page2#enu4#fld24" name="postal code" type="string" modifiable="true"/>
+        <Field id="sv2#page9#page2#enu4#fld50" name="picture" type="blob" contentType="image" modifiable="true"/>
+        <Link id="sv2#page9#page2#enu4#ln31" name="Create HomelessPerson" to="sv2#miu6" type="normal" validate="true">
+          <LinkParameter id="sv2#page9#page2#enu4#ln31#par341" name="birthdate_birthdate" source="sv2#page9#page2#enu4#fld17" target="sv2#miu6.mov1#opm6#icu6#icp24"/>
+          <LinkParameter id="sv2#page9#page2#enu4#ln31#par342" name="city_city" source="sv2#page9#page2#enu4#fld19" target="sv2#miu6.mov1#opm6#icu6#icp27"/>
+          <LinkParameter id="sv2#page9#page2#enu4#ln31#par343" name="country_country" source="sv2#page9#page2#enu4#fld25" target="sv2#miu6.mov1#opm6#icu6#icp29"/>
+          <LinkParameter id="sv2#page9#page2#enu4#ln31#par344" name="email_email" source="sv2#page9#page2#enu4#fld16" target="sv2#miu6.mov1#opm6#icu6#icp19"/>
+          <LinkParameter id="sv2#page9#page2#enu4#ln31#par345" name="full name_fullName" source="sv2#page9#page2#enu4#fld23" target="sv2#miu6.mov1#opm6#icu6#icp23"/>
+          <LinkParameter id="sv2#page9#page2#enu4#ln31#par346" name="nickname_nickname" source="sv2#page9#page2#enu4#fld18" target="sv2#miu6.mov1#opm6#icu6#icp25"/>
+          <LinkParameter id="sv2#page9#page2#enu4#ln31#par347" name="password_password" source="sv2#page9#page2#enu4#fld15" target="sv2#miu6.mov1#opm6#icu6#icp20"/>
+          <LinkParameter id="sv2#page9#page2#enu4#ln31#par348" name="picture_picture" source="sv2#page9#page2#enu4#fld50" target="sv2#miu6.mov1#opm6#icu6#icp30"/>
+          <LinkParameter id="sv2#page9#page2#enu4#ln31#par349" name="postal code_postalcode" source="sv2#page9#page2#enu4#fld24" target="sv2#miu6.mov1#opm6#icu6#icp28"/>
+          <LinkParameter id="sv2#page9#page2#enu4#ln31#par350" name="user name_userName" source="sv2#page9#page2#enu4#fld14" target="sv2#miu6.mov1#opm6#icu6#icp21"/>
+          <LinkParameter id="sv2#page9#page2#enu4#ln31#par351" name="yearsOnStreet_yearsOnStreet" source="sv2#page9#page2#enu4#fld20" target="sv2#miu6.mov1#opm6#icu6#icp26"/>
         </Link>
       </EntryUnit>
     </ContentUnits>

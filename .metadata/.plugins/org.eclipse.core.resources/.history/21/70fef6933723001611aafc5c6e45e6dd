@@ -1,0 +1,52 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="110" gr:y="60" id="mov1#opm1" name="Login">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm1#icu1" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm1#icu1#icp1" name="Password"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp2" name="Username"/>
+      <OKLink id="mov1#opm1#icu1#oln7" name="OKFlow7" to="mov1#opm1#qu2">
+        <LinkParameter id="mov1#opm1#icu1#oln7#par27" name="Username_Username" source="mov1#opm1#icu1#icp2" target="mov1#opm1#qu2.mov1#opm1#qu2#qi1"/>
+        <LinkParameter id="mov1#opm1#icu1#oln7#par33" name="Password_PASSING" source="mov1#opm1#icu1#icp1" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln7#par34" name="Username_PASSING" source="mov1#opm1#icu1#icp2" passing="true"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <LoginUnit gr:x="815" gr:y="140" id="mov1#opm1#lgu1" name="Login">
+      <KOLink id="mov1#opm1#lgu1#kln1" name="KOFlow1" to="mov1#opm1#kocu1" automaticCoupling="false">
+        <LinkParameter id="mov1#opm1#lgu1#kln1#par68" name="Error Message" source="errorMessage" target="mov1#opm1#kocu1#ocp1"/>
+      </KOLink>
+      <OKLink id="mov1#opm1#lgu1#oln8" name="OKFlow8" to="mov1#opm1#okcu1" automaticCoupling="true"/>
+    </LoginUnit>
+    <KOCollectorUnit gr:x="950" gr:y="60" id="mov1#opm1#kocu1" name="KO Port1">
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp1" name="Error Message"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit gr:x="950" gr:y="130" id="mov1#opm1#okcu1" name="OK Port1"/>
+    <QueryUnit gr:x="330" gr:y="145" id="mov1#opm1#qu2" name="Select User" mode="select" language="SQL" db="db1">
+      <QueryInput id="mov1#opm1#qu2#qi1" name="username" required="true" type="string"/>
+      <QueryOutput id="mov1#opm1#qu2#qo1" name="oid" type="integer"/>
+      <QueryText xml:space="preserve">SELECT u.oid FROM user as u WHERE username=(:username);</QueryText>
+      <KOLink id="mov1#opm1#qu2#kln5" name="KOFlow5" to="mov1#opm1#kocu1" gr:bendpoints="6,-114,-674,-39">
+        <LinkParameter id="mov1#opm1#qu2#kln5#par36" name="Select User Error_Error Message" sourceValue="Select User Error" target="mov1#opm1#kocu1#ocp1"/>
+      </KOLink>
+      <OKLink id="mov1#opm1#qu2#oln10" name="OKFlow10" to="mov1#opm1#qu4">
+        <LinkParameter id="mov1#opm1#qu2#oln10#par40" name="Password_PASSING" sourceLinkParameter="mov1#opm1#icu1#oln7#par33" passing="true"/>
+        <LinkParameter id="mov1#opm1#qu2#oln10#par41" name="Username_PASSING" sourceLinkParameter="mov1#opm1#icu1#oln7#par34" passing="true"/>
+        <LinkParameter id="mov1#opm1#qu2#oln10#par42" name="oid_user_oid" source="data[].oid" target="mov1#opm1#qu4.mov1#opm1#qu4#qi2"/>
+      </OKLink>
+    </QueryUnit>
+    <QueryUnit gr:x="535" gr:y="145" id="mov1#opm1#qu4" name="Select UserProfile" mode="select" language="SQL" db="db1">
+      <QueryInput id="mov1#opm1#qu4#qi2" name="user_oid" required="true"/>
+      <QueryOutput id="mov1#opm1#qu4#qo2" name="isdisabled" type="boolean"/>
+      <QueryOutput id="mov1#opm1#qu4#qo3" name="disableddate" type="timestamp"/>
+      <QueryOutput id="mov1#opm1#qu4#qo4" name="disabledreason" type="string"/>
+      <QueryOutput id="mov1#opm1#qu4#qo5" name="iscancelled" type="boolean"/>
+      <QueryOutput id="mov1#opm1#qu4#qo6" name="cancelleddate" type="timestamp"/>
+      <QueryText xml:space="preserve">SELECT u.isdisabled, u.disableddate, u.disabledreason, u.iscancelled, u.cancelleddate
+FROM userprofile as u WHERE user_oid=:user_oid;</QueryText>
+      <KOLink id="mov1#opm1#qu4#kln6" name="KOFlow6" to="mov1#opm1#kocu1" gr:bendpoints="-4,-73,-464,2">
+        <LinkParameter id="mov1#opm1#qu4#kln6#par38" name="Select UserProfile Error_Error Message" sourceValue="Select UserProfile Error" target="mov1#opm1#kocu1#ocp1"/>
+      </KOLink>
+      <OKLink id="mov1#opm1#qu4#oln11" name="OKFlow11" to="mov1#opm1#kocu1" gr:bendpoints="117,-50,-343,25">
+        <LinkParameter id="mov1#opm1#qu4#oln11#par39" name="isdisabled_Error Message" source="data[].isdisabled" target="mov1#opm1#kocu1#ocp1"/>
+      </OKLink>
+    </QueryUnit>
+  </OperationUnits>
+</OperationModule>

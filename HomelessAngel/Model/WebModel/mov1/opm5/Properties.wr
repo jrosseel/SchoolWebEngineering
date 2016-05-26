@@ -1,0 +1,5 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="490" gr:y="210" id="mov1#opm5" name="Update Administrator">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm5#icu5" name="Input Collector" gr:x="30" gr:y="60"/>
+  </OperationUnits>
+</OperationModule>

@@ -1,3 +1,27 @@
-<SiteView id="sv5" name="Administrator" protected="true">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv5" name="Administrator" protected="true" customURLName="administrator" landmarks="sv5#page21 sv5#page19 sv5#page18 sv5#miu4" homePage="sv5#page21">
+  <OperationUnits>
+    <ModuleInstanceUnit id="sv5#miu4" name="Logout" landmark="true" gr:x="465" gr:y="80" action="true" moduleId="mov1#opm2"/>
+    <DeleteUnit gr:x="990" gr:y="230" id="sv5#dlu1" name="Delete Angel" entity="ent3">
+      <Selector id="sv5#dlu1#su4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv5#dlu1#su4#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv5#dlu1#oln5" name="OKFlow5" to="sv5#page18#pwu1" automaticCoupling="true" gr:bendpoints="-205,1,185,-29"/>
+      <KOLink id="sv5#dlu1#kln8" name="KOFlow8" to="sv5#page18#mssu9">
+        <LinkParameter id="sv5#dlu1#kln8#par30" name="Angel NOT deleted_Shown Messages" sourceValue="Angel NOT deleted" target="sv5#page18#mssu9.shownMessages"/>
+      </KOLink>
+    </DeleteUnit>
+    <DeleteUnit gr:x="960" gr:y="395" id="sv5#dlu2" name="Delete Homeless Person" entity="ent4">
+      <Selector id="sv5#dlu2#su5" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv5#dlu2#su5#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="sv5#dlu2#kln9" name="KOFlow9" to="sv5#page18#mssu10">
+        <LinkParameter id="sv5#dlu2#kln9#par32" name="Homeless Person NOT deleted_Shown Messages" sourceValue="Homeless Person NOT deleted" target="sv5#page18#mssu10.shownMessages"/>
+      </KOLink>
+      <OKLink id="sv5#dlu2#oln9" name="OKFlow9" to="sv5#page18#pwu2" automaticCoupling="true" gr:bendpoints="-150,34,135,29"/>
+    </DeleteUnit>
+    <ModuleInstanceUnit gr:x="880" gr:y="85" id="sv5#miu9" action="true" moduleId="mov1#opm8">
+      <OKLink id="sv5#miu9#oln29" name="OKFlow29" to="sv5#page18#pwu1" automaticCoupling="true" gr:bendpoints="-181,135,139,-50"/>
+      <KOLink id="sv5#miu9#kln13" name="KOFlow13" to="sv5#page18#mssu9" automaticCoupling="true" gr:bendpoints="-135,73,145,-32"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
 </SiteView>

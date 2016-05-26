@@ -1,0 +1,46 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1095" gr:y="60" id="sv5#page25" name="Disable User">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv5#page25#mssu14" name="Reason">
+      <Message xml:space="preserve">Please explain why you disable the user.</Message>
+    </MultiMessageUnit>
+    <EntryUnit gr:x="90" gr:y="0" id="sv5#page25#enu7" name="Enter Reason" fieldOrder="sv5#page25#enu7#fld54">
+      <Field id="sv5#page25#enu7#fld54" name="reason" type="string" modifiable="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#page25#mssu14"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv5#page25#enu7">
+          <layout:Field field="sv5#page25#enu7#fld54"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

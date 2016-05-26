@@ -1,0 +1,33 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm7" name="Create Angel" gr:x="110" gr:y="135">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm7#icu7" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm7#icu7#icp3" name="email"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp4" name="password"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp5" name="userName"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp17" name="picture"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp16" name="country"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp15" name="city"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp14" name="postalcode"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp13" name="bus"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp12" name="housenumber"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp11" name="street"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp10" name="isAnonymous"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp9" name="profession"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp8" name="birthdate"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp7" name="fullName"/>
+      <OKLink id="mov1#opm7#icu7#oln37" name="OKFlow37" to="mov1#opm7#cru12">
+        <LinkParameter id="mov1#opm7#icu7#oln37#par319" name="email_email" source="mov1#opm7#icu7#icp3" target="mov1#opm7#cru12.email"/>
+        <LinkParameter id="mov1#opm7#icu7#oln37#par320" name="password_password" source="mov1#opm7#icu7#icp4" target="mov1#opm7#cru12.password"/>
+        <LinkParameter id="mov1#opm7#icu7#oln37#par321" name="userName_userName" source="mov1#opm7#icu7#icp5" target="mov1#opm7#cru12.userName"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="960" gr:y="60" id="mov1#opm7#okcu2" name="Angel Create Succeeded"/>
+    <KOCollectorUnit gr:x="960" gr:y="240" id="mov1#opm7#kocu3" name="Angel Create Failed">
+      <OutputCollectorParameter id="mov1#opm7#kocu3#ocp2" name="Error Message"/>
+    </KOCollectorUnit>
+    <CreateUnit gr:x="375" gr:y="140" id="mov1#opm7#cru12" name="Create User" entity="User">
+      <OKLink id="mov1#opm7#cru12#oln36" name="OKFlow36" to="mov1#opm7#okcu2" automaticCoupling="true"/>
+      <KOLink id="mov1#opm7#cru12#kln27" name="KOFlow27" to="mov1#opm7#kocu3" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</OperationModule>

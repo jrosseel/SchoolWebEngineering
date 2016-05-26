@@ -1,0 +1,77 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm7" name="Create Angel" gr:x="110" gr:y="135">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm7#icu7" gr:x="30" gr:y="60" linkOrder="mov1#opm7#icu7#ln21 mov1#opm7#icu7#ln22 mov1#opm7#icu7#ln23">
+      <Link id="mov1#opm7#icu7#ln19" name="Flow19" to="mov1#opm7#cru9" type="transport" validate="true">
+        <LinkParameter id="mov1#opm7#icu7#ln19#par231" name="email" source="mov1#opm7#icu7#icp3" target="mov1#opm7#cru9.email"/>
+        <LinkParameter id="mov1#opm7#icu7#ln19#par232" name="password" source="mov1#opm7#icu7#icp4" target="mov1#opm7#cru9.password"/>
+        <LinkParameter id="mov1#opm7#icu7#ln19#par233" name="userName" source="mov1#opm7#icu7#icp5" target="mov1#opm7#cru9.userName"/>
+        <LinkParameter id="mov1#opm7#icu7#ln19#par268" name="2_Group.oid(defaultGroup)" sourceValue="2" target="mov1#opm7#cru9.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov1#opm7#icu7#ln19#par269" name="2_userType" sourceValue="2" target="mov1#opm7#cru9.User#att16"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp3" name="email"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp4" name="password"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp5" name="userName"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp17" name="picture"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp16" name="country"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp15" name="city"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp14" name="postalcode"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp13" name="bus"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp12" name="housenumber"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp11" name="street"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp10" name="isAnonymous"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp9" name="profession"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp8" name="birthdate"/>
+      <InputCollectorParameter id="mov1#opm7#icu7#icp7" name="fullName"/>
+      <Link id="mov1#opm7#icu7#ln21" name="Flow21" to="mov1#opm7#cru10" type="transport" validate="true">
+        <LinkParameter id="mov1#opm7#icu7#ln21#par302" name="bus_bus" source="mov1#opm7#icu7#icp13" target="mov1#opm7#cru10.ent5#att27"/>
+        <LinkParameter id="mov1#opm7#icu7#ln21#par303" name="city_city" source="mov1#opm7#icu7#icp15" target="mov1#opm7#cru10.ent5#att25"/>
+        <LinkParameter id="mov1#opm7#icu7#ln21#par304" name="country_country" source="mov1#opm7#icu7#icp16" target="mov1#opm7#cru10.ent5#att26"/>
+        <LinkParameter id="mov1#opm7#icu7#ln21#par305" name="housenumber_housenumber" source="mov1#opm7#icu7#icp12" target="mov1#opm7#cru10.ent5#att23"/>
+        <LinkParameter id="mov1#opm7#icu7#ln21#par306" name="postalcode_postalcode" source="mov1#opm7#icu7#icp14" target="mov1#opm7#cru10.ent5#att24"/>
+        <LinkParameter id="mov1#opm7#icu7#ln21#par307" name="street_street" source="mov1#opm7#icu7#icp11" target="mov1#opm7#cru10.ent5#att22"/>
+      </Link>
+      <Link id="mov1#opm7#icu7#ln22" name="Flow22" to="mov1#opm7#cru11" type="transport" validate="true">
+        <LinkParameter id="mov1#opm7#icu7#ln22#par308" name="picture_picture" source="mov1#opm7#icu7#icp17" target="mov1#opm7#cru11.ent11#att5"/>
+      </Link>
+      <Link id="mov1#opm7#icu7#ln23" name="Flow23" to="mov1#opm7#cru8" type="transport" validate="true" gr:bendpoints="171,-32,-304,-7">
+        <LinkParameter id="mov1#opm7#icu7#ln23#par309" name="birthdate_birthDate" source="mov1#opm7#icu7#icp8" target="mov1#opm7#cru8.ent2#att6"/>
+        <LinkParameter id="mov1#opm7#icu7#ln23#par310" name="fullName_fullName" source="mov1#opm7#icu7#icp7" target="mov1#opm7#cru8.ent2#att4"/>
+        <LinkParameter id="mov1#opm7#icu7#ln23#par311" name="profession_profession" source="mov1#opm7#icu7#icp9" target="mov1#opm7#cru8.ent3#att9"/>
+      </Link>
+    </InputCollectorUnit>
+    <CreateUnit id="mov1#opm7#cru8" name="Create Angel" gr:x="565" gr:y="130" entity="ent3">
+      <KOLink id="mov1#opm7#cru8#kln22" name="KOFlow22" to="mov1#opm7#kocu3">
+        <LinkParameter id="mov1#opm7#cru8#kln22#par272" name="Create Angel Error_Error Message" sourceValue="Create Angel Error" target="mov1#opm7#kocu3#ocp2"/>
+      </KOLink>
+      <OKLink id="mov1#opm7#cru8#oln27" name="OKFlow24" to="mov1#opm7#okcu2" automaticCoupling="true"/>
+    </CreateUnit>
+    <CreateUnit id="mov1#opm7#cru9" name="Create User" gr:x="300" gr:y="60" entity="User">
+      <KOLink id="mov1#opm7#cru9#kln24" name="KOFlow24" to="mov1#opm7#kocu3" gr:bendpoints="429,-25,-311,-205">
+        <LinkParameter id="mov1#opm7#cru9#kln24#par270" name="Create User Error_Error Message" sourceValue="Create User Error" target="mov1#opm7#kocu3#ocp2"/>
+      </KOLink>
+      <OKLink id="mov1#opm7#cru9#oln29" name="OKFlow29" to="mov1#opm7#cru8">
+        <LinkParameter id="mov1#opm7#cru9#oln29#par314" name="oid_User.oid(UserProfileToUser)" source="userOIDArray" target="mov1#opm7#cru8.rel2#role4.userOID"/>
+      </OKLink>
+    </CreateUnit>
+    <CreateUnit id="mov1#opm7#cru10" name="Create Address" gr:x="315" gr:y="200" entity="ent5">
+      <KOLink id="mov1#opm7#cru10#kln23" name="KOFlow23" to="mov1#opm7#kocu3">
+        <LinkParameter id="mov1#opm7#cru10#kln23#par271" name="Create Address Error_Error Message" sourceValue="Create Address Error" target="mov1#opm7#kocu3#ocp2"/>
+      </KOLink>
+      <OKLink id="mov1#opm7#cru10#oln28" name="OKFlow28" to="mov1#opm7#cru8">
+        <LinkParameter id="mov1#opm7#cru10#oln28#par313" name="oid_Address.oid(UserProfileToAddress)" source="ent5#att8Array" target="mov1#opm7#cru8.rel4#role8.ent5#att8"/>
+      </OKLink>
+    </CreateUnit>
+    <CreateUnit id="mov1#opm7#cru11" name="Create Picture" gr:x="300" gr:y="335" entity="ent11">
+      <KOLink id="mov1#opm7#cru11#kln21" name="KOFlow21" to="mov1#opm7#kocu3">
+        <LinkParameter id="mov1#opm7#cru11#kln21#par273" name="Create Picture Error_Error Message" sourceValue="Create Picture Error" target="mov1#opm7#kocu3#ocp2"/>
+      </KOLink>
+      <OKLink id="mov1#opm7#cru11#oln30" name="OKFlow30" to="mov1#opm7#cru8">
+        <LinkParameter id="mov1#opm7#cru11#oln30#par312" name="oid_Picture.oid(UserProfileToPicture)" source="ent11#att37Array" target="mov1#opm7#cru8.rel15#role29.ent11#att37"/>
+      </OKLink>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="960" gr:y="60" id="mov1#opm7#okcu2" name="Angel Create Succeeded"/>
+    <KOCollectorUnit gr:x="960" gr:y="240" id="mov1#opm7#kocu3" name="Angel Create Failed">
+      <OutputCollectorParameter id="mov1#opm7#kocu3#ocp2" name="Error Message"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

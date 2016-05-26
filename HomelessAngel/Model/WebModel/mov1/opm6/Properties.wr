@@ -1,0 +1,69 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm6" name="Create Homeless" gr:x="285" gr:y="135">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm6#icu6" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm6#icu6#oln42" name="OKFlow42" to="mov1#opm6#cru13">
+        <LinkParameter id="mov1#opm6#icu6#oln42#par332" name="Group.oid(defaultGroup)" target="mov1#opm6#cru13.User2DefaultGroup.groupOID" sourceValue="3"/>
+        <LinkParameter id="mov1#opm6#icu6#oln42#par333" name="email" source="mov1#opm6#icu6#icp19" target="mov1#opm6#cru13.email"/>
+        <LinkParameter id="mov1#opm6#icu6#oln42#par334" name="password" source="mov1#opm6#icu6#icp20" target="mov1#opm6#cru13.password"/>
+        <LinkParameter id="mov1#opm6#icu6#oln42#par335" name="userName" source="mov1#opm6#icu6#icp21" target="mov1#opm6#cru13.userName"/>
+        <LinkParameter id="mov1#opm6#icu6#oln42#par336" name="userType" target="mov1#opm6#cru13.User#att16" sourceValue="3"/>
+      </OKLink>
+      <Link id="mov1#opm6#icu6#ln27" name="Flow27" to="mov1#opm6#cru14" type="transport" validate="true">
+        <LinkParameter id="mov1#opm6#icu6#ln27#par353" name="city_city" source="mov1#opm6#icu6#icp27" target="mov1#opm6#cru14.ent5#att25"/>
+        <LinkParameter id="mov1#opm6#icu6#ln27#par354" name="country_country" source="mov1#opm6#icu6#icp29" target="mov1#opm6#cru14.ent5#att26"/>
+        <LinkParameter id="mov1#opm6#icu6#ln27#par355" name="postalcode_postalcode" source="mov1#opm6#icu6#icp28" target="mov1#opm6#cru14.ent5#att24"/>
+      </Link>
+      <Link id="mov1#opm6#icu6#ln28" name="Flow28" to="mov1#opm6#cru15" type="transport" validate="true" gr:bendpoints="151,184,-224,14">
+        <LinkParameter id="mov1#opm6#icu6#ln28#par356" name="birthdate_birthDate" source="mov1#opm6#icu6#icp24" target="mov1#opm6#cru15.ent2#att6"/>
+        <LinkParameter id="mov1#opm6#icu6#ln28#par357" name="fullName_fullName" source="mov1#opm6#icu6#icp23" target="mov1#opm6#cru15.ent2#att4"/>
+        <LinkParameter id="mov1#opm6#icu6#ln28#par358" name="nickname_nickName" source="mov1#opm6#icu6#icp25" target="mov1#opm6#cru15.ent4#att11"/>
+        <LinkParameter id="mov1#opm6#icu6#ln28#par359" name="yearsOnStreet_yearsOnStreet" source="mov1#opm6#icu6#icp26" target="mov1#opm6#cru15.ent4#att13"/>
+        <LinkParameter id="mov1#opm6#icu6#ln28#par361" name="FALSE_isCancelled" sourceValue="FALSE" target="mov1#opm6#cru15.ent2#att20"/>
+        <LinkParameter id="mov1#opm6#icu6#ln28#par362" name="FALSE_isDisabled" sourceValue="FALSE" target="mov1#opm6#cru15.ent2#att18"/>
+      </Link>
+      <Link id="mov1#opm6#icu6#ln29" name="Flow29" to="mov1#opm6#cru16" type="transport" validate="true" gr:bendpoints="118,170,-447,25">
+        <LinkParameter id="mov1#opm6#icu6#ln29#par360" name="picture_picture" source="mov1#opm6#icu6#icp30" target="mov1#opm6#cru16.ent11#att5"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp19" name="email"/>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp20" name="password"/>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp21" name="userName"/>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp30" name="picture"/>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp29" name="country"/>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp28" name="postalcode"/>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp27" name="city"/>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp26" name="yearsOnStreet"/>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp25" name="nickname"/>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp24" name="birthdate"/>
+      <InputCollectorParameter id="mov1#opm6#icu6#icp23" name="fullName"/>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="300" gr:y="50" id="mov1#opm6#cru13" name="Create User" entity="User" linkOrder="mov1#opm6#cru13#ln30">
+      <OKLink id="mov1#opm6#cru13#oln43" name="OKFlow43" to="mov1#opm6#cru14" automaticCoupling="true" gr:bendpoints="85,-15,20,-105"/>
+      <Link id="mov1#opm6#cru13#ln30" name="Flow30" to="mov1#opm6#cru15" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="213,73,48,-107"/>
+      <KOLink id="mov1#opm6#cru13#kln31" name="KOFlow31" to="mov1#opm6#kocu4" gr:bendpoints="459,-25,-166,-30">
+        <LinkParameter id="mov1#opm6#cru13#kln31#par340" name="Create User Error_Error Message" sourceValue="Create User Error" target="mov1#opm6#kocu4#ocp3"/>
+      </KOLink>
+    </CreateUnit>
+    <CreateUnit gr:x="355" gr:y="140" id="mov1#opm6#cru14" name="Create Address" entity="ent5">
+      <OKLink id="mov1#opm6#cru14#oln44" name="OKFlow44" to="mov1#opm6#cru15" automaticCoupling="true" gr:bendpoints="99,-3,-1,-93"/>
+      <KOLink id="mov1#opm6#cru14#kln30" name="KOFlow30" to="mov1#opm6#kocu4">
+        <LinkParameter id="mov1#opm6#cru14#kln30#par339" name="Create Address Error_Error Message" sourceValue="Create Address Error" target="mov1#opm6#kocu4#ocp3"/>
+      </KOLink>
+    </CreateUnit>
+    <CreateUnit gr:x="430" gr:y="230" id="mov1#opm6#cru15" name="Create HomelessPerson" entity="ent4">
+      <OKLink id="mov1#opm6#cru15#oln45" name="OKFlow45" to="mov1#opm6#cru16" automaticCoupling="true"/>
+      <KOLink id="mov1#opm6#cru15#kln29" name="KOFlow29" to="mov1#opm6#kocu4">
+        <LinkParameter id="mov1#opm6#cru15#kln29#par338" name="Create HomelessPerson Error_Error Message" sourceValue="Create HomelessPerson Error" target="mov1#opm6#kocu4#ocp3"/>
+      </KOLink>
+    </CreateUnit>
+    <CreateUnit gr:x="650" gr:y="285" id="mov1#opm6#cru16" name="Create Picture" entity="ent11">
+      <OKLink id="mov1#opm6#cru16#oln46" name="OKFlow46" to="mov1#opm6#okcu3" automaticCoupling="true"/>
+      <KOLink id="mov1#opm6#cru16#kln28" name="KOFlow28" to="mov1#opm6#kocu4">
+        <LinkParameter id="mov1#opm6#cru16#kln28#par337" name="Create Picture Error_Error Message" sourceValue="Create Picture Error" target="mov1#opm6#kocu4#ocp3"/>
+      </KOLink>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="865" gr:y="200" id="mov1#opm6#okcu3" name="Create HomelessPerson Succeeded"/>
+    <KOCollectorUnit gr:x="865" gr:y="55" id="mov1#opm6#kocu4" name="Create HomelessPerson Failed">
+      <OutputCollectorParameter id="mov1#opm6#kocu4#ocp3" name="Error Message"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

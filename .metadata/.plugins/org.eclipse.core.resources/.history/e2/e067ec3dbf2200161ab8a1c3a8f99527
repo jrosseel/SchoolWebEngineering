@@ -1,0 +1,51 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="550" gr:y="460" id="sv3#page22" name="Update Angel">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#page22#enu2" name="Angel" entity="ent3" fieldOrder="sv3#page22#enu2#fld31 sv3#page22#enu2#fld32 sv3#page22#enu2#fld30 sv3#page22#enu2#fld29 sv3#page22#enu2#fld26 sv3#page22#enu2#fld27 sv3#page22#enu2#fld33 sv3#page22#enu2#fld34 sv3#page22#enu2#fld35 sv3#page22#enu2#fld36 sv3#page22#enu2#fld37 sv3#page22#enu2#fld38 sv3#page22#enu2#fld39">
+      <Field id="sv3#page22#enu2#fld26" name="profession" type="string" modifiable="true" attribute="ent3#att9" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld27" name="isAnomynous" type="boolean" modifiable="true" attribute="ent3#att10" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld29" name="birthDate" type="date" modifiable="true" attribute="ent2#att6" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld30" name="fullName" type="string" modifiable="true" attribute="ent2#att4" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld38" name="country" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld37" name="postalcode" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld36" name="city" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld35" name="bus" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld34" name="housenumber" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld33" name="street" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld32" name="email" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld31" name="userName" type="string" preloaded="true"/>
+      <Field id="sv3#page22#enu2#fld39" name="picture" type="blob" preloaded="true" modifiable="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page22#enu2">
+          <layout:Field field="sv3#page22#enu2#fld31"/>
+          <layout:Field field="sv3#page22#enu2#fld32"/>
+          <layout:Field field="sv3#page22#enu2#fld30"/>
+          <layout:Field field="sv3#page22#enu2#fld29"/>
+          <layout:Field field="sv3#page22#enu2#fld26"/>
+          <layout:Field field="sv3#page22#enu2#fld27"/>
+          <layout:Field field="sv3#page22#enu2#fld33"/>
+          <layout:Field field="sv3#page22#enu2#fld34"/>
+          <layout:Field field="sv3#page22#enu2#fld35"/>
+          <layout:Field field="sv3#page22#enu2#fld36"/>
+          <layout:Field field="sv3#page22#enu2#fld37"/>
+          <layout:Field field="sv3#page22#enu2#fld38"/>
+          <layout:Field field="sv3#page22#enu2#fld39"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,36 @@
+
+<Warnings>
+
+<Warning xpath="id('sv2#page10')" rootXPath="id('sv2')" error="true" label="View Offers">
+	      <Message>The custom URL name 'offers' specified for 'View Offers' is duplicated.</Message>
+	      </Warning><Warning xpath="id('sv3#page15')" rootXPath="id('sv3')" error="true" label="View Offers">
+	      <Message>The custom URL name 'offers' specified for 'View Offers' is duplicated.</Message>
+	      </Warning><Warning xpath="id('sv5#page19')" rootXPath="id('sv5')" error="true" label="View Offers">
+	      <Message>The custom URL name 'offers' specified for 'View Offers' is duplicated.</Message>
+	      </Warning><Warning xpath="id('sv2#page8')" rootXPath="id('sv2')" error="true" label="Donate">
+	      <Message>The custom URL name 'donate' specified for 'Donate' is duplicated.</Message>
+	      </Warning><Warning xpath="id('sv3#page17')" rootXPath="id('sv3')" error="true" label="Donate">
+	      <Message>The custom URL name 'donate' specified for 'Donate' is duplicated.</Message>
+	      </Warning><Warning xpath="id('sv2#page11')" rootXPath="id('sv2')" error="true" label="View People">
+	      <Message>The custom URL name 'people' specified for 'View People' is duplicated.</Message>
+	      </Warning><Warning xpath="id('sv3#page14')" rootXPath="id('sv3')" error="true" label="View People">
+	      <Message>The custom URL name 'people' specified for 'View People' is duplicated.</Message>
+	      </Warning><Warning xpath="id('sv5#page18')" rootXPath="id('sv5')" error="true" label="View People">
+	      <Message>The custom URL name 'people' specified for 'View People' is duplicated.</Message>
+	      </Warning><Warning xpath="id('sv2#page6')" rootXPath="id('sv2')" error="true" label="View General Information">
+	      <Message>The custom URL name 'general' specified for 'View General Information' is duplicated.</Message>
+	      </Warning><Warning xpath="id('sv3#page16')" rootXPath="id('sv3')" error="true" label="View General Information">
+	      <Message>The custom URL name 'general' specified for 'View General Information' is duplicated.</Message>
+	      </Warning><Warning xpath="id('sv3#page20')" rootXPath="id('sv3')" error="true" label="User Profile">
+	      <Message>The custom URL name 'profile' specified for 'User Profile' is duplicated.</Message>
+	      </Warning><Warning xpath="id('sv5#page21')" rootXPath="id('sv5')" error="true" label="User Profile">
+	      <Message>The custom URL name 'profile' specified for 'User Profile' is duplicated.</Message>
+	      </Warning> <Warning xpath="id('sv3#miu2')" rootXPath="id('sv3')" error="false" label="Logout" key="NO_OUTGOING_OK_LINKS">
+          <Message>No outgoing OK flow(s) for the operation 'Logout'</Message>
+        </Warning>
+    	<Warning xpath="id('sv3#miu2')" rootXPath="id('sv3')" error="false" label="Logout" key="NO_OUTGOING_KO_LINKS">
+          <Message>No outgoing KO flow(s) for the operation 'Logout'</Message>
+        </Warning>
+    
+
+</Warnings>

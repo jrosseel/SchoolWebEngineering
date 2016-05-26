@@ -1,0 +1,66 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="85" gr:y="345" id="sv3#page20" name="User Profile" landmark="true" customURLName="angel_profile">
+  <ContentUnits>
+    <MultiMessageUnit id="sv3#page20#mssu6" name="Welcome" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">This is an Angel User Profile.</Message>
+    </MultiMessageUnit>
+    <GetUnit id="sv3#page20#gtu3" name="Get User Details" gr:x="0" gr:y="75" contextParameters="UserCtxParam">
+      <Link id="sv3#page20#gtu3#ln13" name="Flow13" to="sv3#page20#dau4" type="transport" validate="true">
+        <LinkParameter id="sv3#page20#gtu3#ln13#par22" name="UserCtxParam.oid_KeyCondition6 [oid]" source="sv3#page20#gtu3.UserCtxParam" target="sv3#page20#dau4#su6#kcond6.ent2#att2"/>
+      </Link>
+    </GetUnit>
+    <DataUnit gr:x="190" gr:y="65" id="sv3#page20#dau4" name="Angel Details" entity="ent3" displayAttributes="rel2#role4.userName rel2#role4.password rel2#role4.email ent2#att6 ent3#att9 ent3#att10 ent3#att1 ent3#att15 rel16#role31.ent5#att22 rel16#role31.ent5#att23 rel16#role31.ent5#att27 rel16#role31.ent5#att24 rel16#role31.ent5#att25 rel16#role31.ent5#att26">
+      <Selector id="sv3#page20#dau4#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page20#dau4#su6#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page20#mssu6"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page20#dau4">
+          <layout:Attribute attribute="rel2#role4.userName"/>
+          <layout:Attribute attribute="rel2#role4.password"/>
+          <layout:Attribute attribute="rel2#role4.email"/>
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent3#att9"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att1"/>
+          <layout:Attribute attribute="ent3#att15"/>
+          <layout:Attribute attribute="rel16#role31.ent5#att22"/>
+          <layout:Attribute attribute="rel16#role31.ent5#att23"/>
+          <layout:Attribute attribute="rel16#role31.ent5#att27"/>
+          <layout:Attribute attribute="rel16#role31.ent5#att24"/>
+          <layout:Attribute attribute="rel16#role31.ent5#att25"/>
+          <layout:Attribute attribute="rel16#role31.ent5#att26"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,39 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page4" name="Homeless Person User Profile" landmark="true" gr:x="0" gr:y="150">
+  <ContentUnits>
+    <MultiMessageUnit id="sv4#page4#mssu7" name="Welcome" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">This is an Angel User Profile.</Message>
+    </MultiMessageUnit>
+    <GetUnit id="sv4#page4#gtu1" name="Get User Details" gr:x="0" gr:y="75" contextParameters="UserCtxParam">
+      <Link id="sv4#page4#gtu1#ln9" name="Flow5" to="sv4#page4#mdu2" type="transport" validate="true"/>
+    </GetUnit>
+    <MultiDataUnit id="sv4#page4#mdu2" name="Angel User Details" linkOrder="sv4#page4#mdu2#ln11" gr:x="230" gr:y="70" entity="ent3" displayAttributes="ent2#att6 ent3#att10 ent3#att1 ent3#att15 rel2#role4.userName rel2#role4.email">
+      <Link id="sv4#page4#mdu2#ln11" name="Flow3" to="sv4#miu3" type="normal" automaticCoupling="true" validate="true"/>
+    </MultiDataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page4#mdu2">
+          <layout:Attribute attribute="ent2#att6"/>
+          <layout:Attribute attribute="ent3#att10"/>
+          <layout:Attribute attribute="ent3#att1"/>
+          <layout:Attribute attribute="ent3#att15"/>
+          <layout:Attribute attribute="rel2#role4.userName"/>
+          <layout:Attribute attribute="rel2#role4.email"/>
+          <layout:Link link="sv4#page4#mdu2#ln11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

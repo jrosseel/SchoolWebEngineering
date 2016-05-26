@@ -1,0 +1,62 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="285" gr:y="210" id="mov1#opm4" name="Update Homeless">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm4#icu4" gr:x="15" gr:y="60">
+      <OKLink id="mov1#opm4#icu4#oln58" name="OKFlow58" to="mov1#opm4#mfu13" automaticCoupling="false">
+        <LinkParameter id="mov1#opm4#icu4#oln58#par410" name="HomelessPerson Object" source="mov1#opm4#icu4#icp49" target="mov1#opm4#mfu13.entityBeans"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp49" name="HomelessPerson Object"/>
+      <Link id="mov1#opm4#icu4#ln40" name="Flow40" to="mov1#opm4#mfu14" automaticCoupling="false" type="transport" validate="true">
+        <LinkParameter id="mov1#opm4#icu4#ln40#par415" name="KeyCondition21 [oid]" source="mov1#opm4#icu4#icp54" target="mov1#opm4#mfu14#su21#kcond21.ent5#att8"/>
+        <LinkParameter id="mov1#opm4#icu4#ln40#par416" name="city" source="mov1#opm4#icu4#icp55" target="mov1#opm4#mfu14.ent5#att25"/>
+        <LinkParameter id="mov1#opm4#icu4#ln40#par417" name="country" source="mov1#opm4#icu4#icp56" target="mov1#opm4#mfu14.ent5#att26"/>
+        <LinkParameter id="mov1#opm4#icu4#ln40#par418" name="postalcode" source="mov1#opm4#icu4#icp57" target="mov1#opm4#mfu14.ent5#att24"/>
+      </Link>
+      <Link id="mov1#opm4#icu4#ln41" name="Flow41" to="mov1#opm4#mfu15" automaticCoupling="false" type="transport" validate="true" gr:bendpoints="187,211,-198,-29">
+        <LinkParameter id="mov1#opm4#icu4#ln41#par413" name="KeyCondition22 [oid]" source="mov1#opm4#icu4#icp52" target="mov1#opm4#mfu15#su22#kcond22.userOID"/>
+        <LinkParameter id="mov1#opm4#icu4#ln41#par414" name="email" source="mov1#opm4#icu4#icp53" target="mov1#opm4#mfu15.email"/>
+      </Link>
+      <Link id="mov1#opm4#icu4#ln42" name="Flow42" to="mov1#opm4#mfu16" automaticCoupling="false" type="transport" validate="true" gr:bendpoints="163,228,-387,43;452,231,-98,46">
+        <LinkParameter id="mov1#opm4#icu4#ln42#par411" name="KeyCondition23 [oid]" source="mov1#opm4#icu4#icp50" target="mov1#opm4#mfu16#su23#kcond23.ent11#att37"/>
+        <LinkParameter id="mov1#opm4#icu4#ln42#par412" name="picture" source="mov1#opm4#icu4#icp51" target="mov1#opm4#mfu16.ent11#att5"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp50" name="picture [oid]"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp51" name="picture"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp52" name="user [oid]"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp53" name="email"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp54" name="address [oid]"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp55" name="city"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp56" name="country"/>
+      <InputCollectorParameter id="mov1#opm4#icu4#icp57" name="postalcode"/>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="340" gr:y="80" id="mov1#opm4#mfu13" name="Update HomelessPerson" entity="ent4">
+      <Selector id="mov1#opm4#mfu13#su20" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm4#mfu13#su20#kcond20" name="KeyCondition20" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm4#mfu13#oln59" name="OKFlow59" to="mov1#opm4#mfu14" automaticCoupling="true"/>
+      <KOLink id="mov1#opm4#mfu13#kln39" name="KOFlow39" to="mov1#opm4#kocu6" automaticCoupling="true"/>
+    </ModifyUnit>
+    <ModifyUnit gr:x="340" gr:y="200" id="mov1#opm4#mfu14" name="Update Address" entity="ent5">
+      <Selector id="mov1#opm4#mfu14#su21" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm4#mfu14#su21#kcond21" name="KeyCondition21" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm4#mfu14#oln60" name="OKFlow60" to="mov1#opm4#mfu15" automaticCoupling="true"/>
+      <KOLink id="mov1#opm4#mfu14#kln40" name="KOFlow40" to="mov1#opm4#kocu6" automaticCoupling="true"/>
+    </ModifyUnit>
+    <ModifyUnit gr:x="485" gr:y="295" id="mov1#opm4#mfu15" name="Update User" entity="User">
+      <Selector id="mov1#opm4#mfu15#su22" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm4#mfu15#su22#kcond22" name="KeyCondition22" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm4#mfu15#oln61" name="OKFlow61" to="mov1#opm4#mfu16" automaticCoupling="true"/>
+      <KOLink id="mov1#opm4#mfu15#kln38" name="KOFlow38" to="mov1#opm4#kocu6" automaticCoupling="true"/>
+    </ModifyUnit>
+    <ModifyUnit gr:x="640" gr:y="305" id="mov1#opm4#mfu16" name="Update Picture" entity="ent11">
+      <Selector id="mov1#opm4#mfu16#su23" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm4#mfu16#su23#kcond23" name="KeyCondition23" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm4#mfu16#oln62" name="OKFlow62" to="mov1#opm4#okcu5" automaticCoupling="true"/>
+      <KOLink id="mov1#opm4#mfu16#kln41" name="KOFlow41" to="mov1#opm4#kocu6" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="850" gr:y="200" id="mov1#opm4#okcu5" name="Update Homeless Succeeded"/>
+    <KOCollectorUnit gr:x="850" gr:y="90" id="mov1#opm4#kocu6" name="Update Homeless Failed"/>
+  </OperationUnits>
+</OperationModule>

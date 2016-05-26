@@ -1,0 +1,35 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="110" gr:y="345" id="mov1#opm8" name="Disable User">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm8#icu8" gr:x="30" gr:y="60" linkOrder="mov1#opm8#icu8#ln39">
+      <InputCollectorParameter id="mov1#opm8#icu8#icp18" name="disabledreason"/>
+      <InputCollectorParameter id="mov1#opm8#icu8#icp6" name="userprofile_oid"/>
+      <OKLink id="mov1#opm8#icu8#oln25" name="OKFlow25" to="mov1#opm8#tmu1" automaticCoupling="true"/>
+      <Link id="mov1#opm8#icu8#ln39" name="Flow39" to="mov1#opm8#mfu1" type="transport" validate="true" gr:bendpoints="136,75,-314,0">
+        <LinkParameter id="mov1#opm8#icu8#ln39#par88" name="disabledreason_disabledReason" source="mov1#opm8#icu8#icp18" target="mov1#opm8#mfu1.ent2#att19"/>
+        <LinkParameter id="mov1#opm8#icu8#ln39#par89" name="true_isDisabled" sourceValue="true" target="mov1#opm8#mfu1.ent2#att18"/>
+        <LinkParameter id="mov1#opm8#icu8#ln39#par90" name="userprofile_oid_KeyCondition2 [oid]" source="mov1#opm8#icu8#icp6" target="mov1#opm8#mfu1#su2#kcond2.ent2#att2"/>
+      </Link>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="520" gr:y="130" id="mov1#opm8#mfu1" name="Update UserProfile" entity="ent2">
+      <Selector id="mov1#opm8#mfu1#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm8#mfu1#su2#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm8#mfu1#oln28" name="OKFlow28" to="mov1#opm8#okcu6" automaticCoupling="true"/>
+      <KOLink id="mov1#opm8#mfu1#kln11" name="KOFlow11" to="mov1#opm8#kocu7" gr:bendpoints="115,-29,-160,46">
+        <LinkParameter id="mov1#opm8#mfu1#kln11#par93" name="Update UserProfile Error_Error Message" sourceValue="Update UserProfile Error" target="mov1#opm8#kocu7#ocp10"/>
+      </KOLink>
+    </ModifyUnit>
+    <TimeUnit gr:x="315" gr:y="70" id="mov1#opm8#tmu1" name="Get Timestamp">
+      <OKLink id="mov1#opm8#tmu1#oln26" name="OKFlow26" to="mov1#opm8#mfu1">
+        <LinkParameter id="mov1#opm8#tmu1#oln26#par91" name="Current/Input Timestamp_disabledDate" source="currentTimestamp" target="mov1#opm8#mfu1.ent2#att55"/>
+      </OKLink>
+      <KOLink id="mov1#opm8#tmu1#kln12" name="KOFlow12" to="mov1#opm8#kocu7">
+        <LinkParameter id="mov1#opm8#tmu1#kln12#par92" name="Get TimeStamp Error_Error Message" sourceValue="Get TimeStamp Error" target="mov1#opm8#kocu7#ocp10"/>
+      </KOLink>
+    </TimeUnit>
+    <OKCollectorUnit gr:x="735" gr:y="135" id="mov1#opm8#okcu6" name="Disable User Succeeded"/>
+    <KOCollectorUnit gr:x="735" gr:y="60" id="mov1#opm8#kocu7" name="Disable User Failed">
+      <OutputCollectorParameter id="mov1#opm8#kocu7#ocp10" name="Error Message"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

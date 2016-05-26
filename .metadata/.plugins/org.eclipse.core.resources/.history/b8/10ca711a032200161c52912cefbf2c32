@@ -1,0 +1,33 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="400" gr:y="420" id="sv2#page3" name="Registration completed">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#page3#mssu4" name="Registration completed" linkOrder="sv2#page3#mssu4#ln7">
+      <Message xml:space="preserve">You have been successfully registrated!
+&lt;br&gt;
+&lt;br&gt;
+You can now use the HomelessAngel platform!
+&lt;br&gt;
+&lt;br&gt;</Message>
+      <Link id="sv2#page3#mssu4#ln7" name="Finish registration" to="sv2#page12" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page3#mssu4">
+          <layout:Link link="sv2#page3#mssu4#ln7"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

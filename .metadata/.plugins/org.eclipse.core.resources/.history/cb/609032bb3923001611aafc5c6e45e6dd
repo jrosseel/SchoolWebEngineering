@@ -1,0 +1,54 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="110" gr:y="60" id="mov1#opm1" name="Login">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm1#icu1" gr:x="30" gr:y="60" linkOrder="mov1#opm1#icu1#ln26">
+      <InputCollectorParameter id="mov1#opm1#icu1#icp1" name="Password"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp2" name="Username"/>
+      <OKLink id="mov1#opm1#icu1#oln7" name="OKFlow7" to="mov1#opm1#qu2">
+        <LinkParameter id="mov1#opm1#icu1#oln7#par27" name="Username_Username" source="mov1#opm1#icu1#icp2" target="mov1#opm1#qu2.mov1#opm1#qu2#qi1"/>
+      </OKLink>
+      <Link id="mov1#opm1#icu1#ln26" name="Flow26" to="mov1#opm1#lgu1" type="transport" validate="true" gr:bendpoints="119,187,-591,117;715,194,5,124">
+        <LinkParameter id="mov1#opm1#icu1#ln26#par45" name="Username_Username" source="mov1#opm1#icu1#icp2" target="mov1#opm1#lgu1.username"/>
+        <LinkParameter id="mov1#opm1#icu1#ln26#par46" name="Password_Password" source="mov1#opm1#icu1#icp1" target="mov1#opm1#lgu1.password"/>
+      </Link>
+    </InputCollectorUnit>
+    <LoginUnit gr:x="815" gr:y="140" id="mov1#opm1#lgu1" name="Login">
+      <KOLink id="mov1#opm1#lgu1#kln1" name="KOFlow1" to="mov1#opm1#kocu1" automaticCoupling="false">
+        <LinkParameter id="mov1#opm1#lgu1#kln1#par68" name="Error Message" source="errorMessage" target="mov1#opm1#kocu1#ocp1"/>
+      </KOLink>
+      <OKLink id="mov1#opm1#lgu1#oln8" name="OKFlow8" to="mov1#opm1#okcu1" automaticCoupling="true"/>
+    </LoginUnit>
+    <KOCollectorUnit gr:x="960" gr:y="60" id="mov1#opm1#kocu1" name="KO Port1">
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp1" name="Error Message"/>
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp8" name="cancelleddate"/>
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp7" name="iscancelled"/>
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp6" name="disableddate"/>
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp5" name="disabledreason"/>
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp4" name="isdisabled"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit gr:x="960" gr:y="210" id="mov1#opm1#okcu1" name="OK Port1"/>
+    <QueryUnit gr:x="315" gr:y="90" id="mov1#opm1#qu2" name="Select User" mode="select" language="SQL" db="db1">
+      <QueryInput id="mov1#opm1#qu2#qi1" name="username" required="true" type="string"/>
+      <QueryOutput id="mov1#opm1#qu2#qo1" name="oid" type="integer"/>
+      <QueryText xml:space="preserve">SELECT u.oid FROM user as u WHERE username=(:username);</QueryText>
+      <KOLink id="mov1#opm1#qu2#kln5" name="KOFlow5" to="mov1#opm1#kocu1" gr:bendpoints="98,-72,-597,-52;517,-63,-178,-43">
+        <LinkParameter id="mov1#opm1#qu2#kln5#par36" name="Select User Error_Error Message" sourceValue="Select User Error: username not found!" target="mov1#opm1#kocu1#ocp1"/>
+      </KOLink>
+      <OKLink id="mov1#opm1#qu2#oln10" name="OKFlow10" to="mov1#opm1#qu4">
+        <LinkParameter id="mov1#opm1#qu2#oln10#par44" name="oid_user_oid" source="data[].oid" target="mov1#opm1#qu4.mov1#opm1#qu4#qi2"/>
+      </OKLink>
+    </QueryUnit>
+    <QueryUnit gr:x="470" gr:y="90" id="mov1#opm1#qu4" name="Select UserProfile" mode="select" language="SQL" db="db1">
+      <QueryInput id="mov1#opm1#qu4#qi2" name="useroid" required="true" type="integer"/>
+      <QueryOutput id="mov1#opm1#qu4#qo2" name="isdisabled" type="boolean"/>
+      <QueryOutput id="mov1#opm1#qu4#qo3" name="disableddate" type="timestamp"/>
+      <QueryOutput id="mov1#opm1#qu4#qo4" name="disabledreason" type="string"/>
+      <QueryOutput id="mov1#opm1#qu4#qo5" name="iscancelled" type="boolean"/>
+      <QueryOutput id="mov1#opm1#qu4#qo6" name="cancelleddate" type="timestamp"/>
+      <QueryText xml:space="preserve">SELECT u.isdisabled, u.disableddate, u.disabledreason, u.iscancelled, u.cancelleddate
+FROM userprofile as u WHERE user_oid=(:useroid);</QueryText>
+      <KOLink id="mov1#opm1#qu4#kln6" name="KOFlow6" to="mov1#opm1#kocu1">
+        <LinkParameter id="mov1#opm1#qu4#kln6#par38" name="Select UserProfile Error_Error Message" sourceValue="Select UserProfile Error" target="mov1#opm1#kocu1#ocp1"/>
+      </KOLink>
+    </QueryUnit>
+  </OperationUnits>
+</OperationModule>

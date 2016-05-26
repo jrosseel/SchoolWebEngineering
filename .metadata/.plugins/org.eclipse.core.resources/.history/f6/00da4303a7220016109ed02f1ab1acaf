@@ -1,0 +1,21 @@
+
+<Warnings>
+<Warning xpath="id('ent3#att1')" rootXPath="/WebProject/DataModel" error="false" label="avgRating" key="INCOMPATIBLE_TYPE_WARNING">
+          <Message>The expected type of the attribute 'avgRating' is 'decimal', but found 'float' for the database type 'NUMERIC'</Message>
+          <Resolution 
+	          class="com.webratio.ide.ui.resources.ChangeAttributeResolutionGenerator" 
+	          attribute="type" value="decimal">Set attribute type to 'decimal'</Resolution>
+       </Warning><Warning xpath="id('ent3#att15')" rootXPath="/WebProject/DataModel" error="false" label="amtOfItemsGivenAway" key="INCOMPATIBLE_TYPE_WARNING">
+          <Message>The expected type of the attribute 'amtOfItemsGivenAway' is 'decimal', but found 'integer' for the database type 'NUMERIC'</Message>
+          <Resolution 
+	          class="com.webratio.ide.ui.resources.ChangeAttributeResolutionGenerator" 
+	          attribute="type" value="decimal">Set attribute type to 'decimal'</Resolution>
+       </Warning><Warning xpath="id('rel16')" rootXPath="/WebProject/DataModel" error="true" tab="mapping" label="AddressToAngel" key="INVALID_JOIN_COLUMN">
+            <Message>The join column 'address_oid' of the target relationship role 'AddressToAngel' is not valid</Message>
+            <Resolution 
+      			class="com.webratio.ide.ui.resources.RemoveJoinColumnResolutionGenerator"
+      			roleId="rel16#role32"
+      			columnName="address_oid">Remove the invalid join column 'address_oid'</Resolution>
+        </Warning>
+
+</Warnings>

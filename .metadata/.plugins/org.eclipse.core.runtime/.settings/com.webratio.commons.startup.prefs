@@ -1,7 +1,8 @@
-#Tue May 24 23:00:58 CEST 2016
+#Thu May 26 14:55:45 CEST 2016
 com.webratio.ide.UsageStatisticsManager.ID_PREF_NAME=0D3E7A32
+com.webratio.ide.UsageStatisticsManager.MODEL_WARNING_GENERATION_PREF_NAME=4
 PROXY_PORT=0
 eclipse.preferences.version=1
 ENABLE_USAGE_STATISTICS=DISABLED
-com.webratio.ide.UsageStatisticsManager.GENERATION_PREF_NAME=43
+com.webratio.ide.UsageStatisticsManager.GENERATION_PREF_NAME=153
 com.webratio.ide.last-build-id=201512290414

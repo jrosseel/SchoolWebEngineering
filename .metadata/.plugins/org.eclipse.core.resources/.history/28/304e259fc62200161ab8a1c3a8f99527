@@ -1,0 +1,74 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="535" gr:y="285" id="sv4#page23" name="Update Homeless Person">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv4#page23#enu5" name="Update Homeless Person" entity="ent4" fieldOrder="sv4#page23#enu5#fld44 sv4#page23#enu5#fld45 sv4#page23#enu5#fld43 sv4#page23#enu5#fld42 sv4#page23#enu5#fld40 sv4#page23#enu5#fld41 sv4#page23#enu5#fld46 sv4#page23#enu5#fld47 sv4#page23#enu5#fld48">
+      <Field id="sv4#page23#enu5#fld40" name="nickName" type="string" modifiable="true" attribute="ent4#att11" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld41" name="yearsOnStreet" type="integer" modifiable="true" attribute="ent4#att13" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld42" name="birthDate" type="date" modifiable="true" attribute="ent2#att6" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld43" name="fullName" type="string" modifiable="true" attribute="ent2#att4" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld48" name="country" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld47" name="postalcode" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld46" name="city" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld45" name="email" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv4#page23#enu5#fld44" name="userName" type="string" modifiable="true" preloaded="true"/>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="105" gr:y="130" id="sv4#page23#mssu12" name="Error Message"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page23#mssu12"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page23#enu5">
+          <layout:Field field="sv4#page23#enu5#fld44"/>
+          <layout:Field field="sv4#page23#enu5#fld45"/>
+          <layout:Field field="sv4#page23#enu5#fld43"/>
+          <layout:Field field="sv4#page23#enu5#fld42"/>
+          <layout:Field field="sv4#page23#enu5#fld40"/>
+          <layout:Field field="sv4#page23#enu5#fld41"/>
+          <layout:Field field="sv4#page23#enu5#fld46"/>
+          <layout:Field field="sv4#page23#enu5#fld47"/>
+          <layout:Field field="sv4#page23#enu5#fld48"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

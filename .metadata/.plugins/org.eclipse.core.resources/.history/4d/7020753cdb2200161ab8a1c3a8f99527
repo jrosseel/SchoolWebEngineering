@@ -1,0 +1,81 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="110" gr:y="210" id="mov1#opm3" name="Update Angel">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm3#icu3" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm3#icu3#oln49" name="OKFlow49" to="mov1#opm3#mfu11" automaticCoupling="false">
+        <LinkParameter id="mov1#opm3#icu3#oln49#par375" name="birthDate_birthDate" source="mov1#opm3#icu3#icp38" target="mov1#opm3#mfu11.ent2#att6"/>
+        <LinkParameter id="mov1#opm3#icu3#oln49#par376" name="fullName_fullName" source="mov1#opm3#icu3#icp39" target="mov1#opm3#mfu11.ent2#att4"/>
+        <LinkParameter id="mov1#opm3#icu3#oln49#par377" name="isAnomynous_isAnomynous" source="mov1#opm3#icu3#icp40" target="mov1#opm3#mfu11.ent3#att10"/>
+        <LinkParameter id="mov1#opm3#icu3#oln49#par378" name="profession_profession" source="mov1#opm3#icu3#icp41" target="mov1#opm3#mfu11.ent3#att9"/>
+        <LinkParameter id="mov1#opm3#icu3#oln49#par380" name="KeyCondition18 [oid]_KeyCondition18 [oid]" source="mov1#opm3#icu3#icp43" target="mov1#opm3#mfu11#su18#kcond18.ent2#att2"/>
+        <LinkParameter id="mov1#opm3#icu3#oln49#par398" name="Address.oid(UserProfileToAddress)" source="mov1#opm3#icu3#icp45" target="mov1#opm3#mfu11.rel4#role8.ent5#att8"/>
+        <LinkParameter id="mov1#opm3#icu3#oln49#par399" name="Picture.oid(UserProfileToPicture)" source="mov1#opm3#icu3#icp46" target="mov1#opm3#mfu11.rel15#role29.ent11#att37"/>
+        <LinkParameter id="mov1#opm3#icu3#oln49#par400" name="User.oid(UserProfileToUser)" source="mov1#opm3#icu3#icp47" target="mov1#opm3#mfu11.rel2#role4.userOID"/>
+        <LinkParameter id="mov1#opm3#icu3#oln49#par407" name="Angel Object" source="mov1#opm3#icu3#icp48" target="mov1#opm3#mfu11.entityBeans"/>
+      </OKLink>
+      <Link id="mov1#opm3#icu3#ln32" name="Flow32" to="mov1#opm3#mfu10" type="transport" validate="true" gr:bendpoints="200,-83,-190,-83;390,-79,0,-79">
+        <LinkParameter id="mov1#opm3#icu3#ln32#par364" name="bus" source="mov1#opm3#icu3#icp32" target="mov1#opm3#mfu10.ent5#att27"/>
+        <LinkParameter id="mov1#opm3#icu3#ln32#par365" name="city" source="mov1#opm3#icu3#icp33" target="mov1#opm3#mfu10.ent5#att25"/>
+        <LinkParameter id="mov1#opm3#icu3#ln32#par366" name="country" source="mov1#opm3#icu3#icp34" target="mov1#opm3#mfu10.ent5#att26"/>
+        <LinkParameter id="mov1#opm3#icu3#ln32#par367" name="housenumber" source="mov1#opm3#icu3#icp35" target="mov1#opm3#mfu10.ent5#att23"/>
+        <LinkParameter id="mov1#opm3#icu3#ln32#par368" name="postalcode" source="mov1#opm3#icu3#icp36" target="mov1#opm3#mfu10.ent5#att24"/>
+        <LinkParameter id="mov1#opm3#icu3#ln32#par369" name="street" source="mov1#opm3#icu3#icp37" target="mov1#opm3#mfu10.ent5#att22"/>
+        <LinkParameter id="mov1#opm3#icu3#ln32#par401" name="Address.oid(UserProfileToAddress)_KeyCondition17 [oid]" source="mov1#opm3#icu3#icp45" target="mov1#opm3#mfu10#su17#kcond17.ent5#att8"/>
+      </Link>
+      <Link id="mov1#opm3#icu3#ln34" name="Flow34" to="mov1#opm3#mfu12" type="transport" validate="true" gr:bendpoints="203,-125,-427,-135;583,-126,-47,-136;611,-5,-19,-95">
+        <LinkParameter id="mov1#opm3#icu3#ln34#par374" name="picture" source="mov1#opm3#icu3#icp42" target="mov1#opm3#mfu12.ent11#att5"/>
+        <LinkParameter id="mov1#opm3#icu3#ln34#par403" name="Picture.oid(UserProfileToPicture)_KeyCondition19 [oid]" source="mov1#opm3#icu3#icp46" target="mov1#opm3#mfu12#su19#kcond19.ent11#att37"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp31" name="email"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp32" name="bus"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp33" name="city"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp34" name="country"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp35" name="housenumber"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp36" name="postalcode"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp37" name="street"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp38" name="birthDate"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp39" name="fullName"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp40" name="isAnomynous"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp41" name="profession"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp42" name="picture"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp43" name="KeyCondition18 [oid]"/>
+      <Link id="mov1#opm3#icu3#ln36" name="Flow36" to="mov1#opm3#mfu9" type="transport" validate="true" gr:bendpoints="214,88,-431,-37">
+        <LinkParameter id="mov1#opm3#icu3#ln36#par381" name="email_email" source="mov1#opm3#icu3#icp31" target="mov1#opm3#mfu9.email"/>
+        <LinkParameter id="mov1#opm3#icu3#ln36#par402" name="User.oid(UserProfileToUser)_KeyCondition16 [oid]" source="mov1#opm3#icu3#icp47" target="mov1#opm3#mfu9#su16#kcond16.userOID"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp45" name="Address.oid(UserProfileToAddress)"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp46" name="Picture.oid(UserProfileToPicture)"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp47" name="User.oid(UserProfileToUser)"/>
+      <InputCollectorParameter id="mov1#opm3#icu3#icp48" name="Angel Object"/>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="795" gr:y="295" id="mov1#opm3#mfu9" name="Update User" entity="User">
+      <Selector id="mov1#opm3#mfu9#su16" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm3#mfu9#su16#kcond16" name="KeyCondition16" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm3#mfu9#oln56" name="OKFlow56" to="mov1#opm3#mfu12" automaticCoupling="true"/>
+      <KOLink id="mov1#opm3#mfu9#kln34" name="KOFlow34" to="mov1#opm3#kocu5" automaticCoupling="true" gr:bendpoints="129,-34,-121,196"/>
+    </ModifyUnit>
+    <ModifyUnit gr:x="590" gr:y="150" id="mov1#opm3#mfu10" name="Update Address" entity="ent5">
+      <Selector id="mov1#opm3#mfu10#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm3#mfu10#su17#kcond17" name="KeyCondition17" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm3#mfu10#oln54" name="OKFlow52" to="mov1#opm3#mfu9" automaticCoupling="true"/>
+      <KOLink id="mov1#opm3#mfu10#kln35" name="KOFlow35" to="mov1#opm3#kocu5" automaticCoupling="true" gr:bendpoints="142,-88,-303,-3"/>
+    </ModifyUnit>
+    <ModifyUnit gr:x="430" gr:y="155" id="mov1#opm3#mfu11" name="Update Angel" entity="ent3">
+      <Selector id="mov1#opm3#mfu11#su18" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm3#mfu11#su18#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm3#mfu11#oln55" name="OKFlow55" to="mov1#opm3#mfu10" automaticCoupling="true"/>
+      <KOLink id="mov1#opm3#mfu11#kln36" name="KOFlow36" to="mov1#opm3#kocu5" automaticCoupling="true" gr:bendpoints="35,-130,-560,-35"/>
+    </ModifyUnit>
+    <ModifyUnit gr:x="810" gr:y="145" id="mov1#opm3#mfu12" name="Update Picture" entity="ent11">
+      <Selector id="mov1#opm3#mfu12#su19" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm3#mfu12#su19#kcond19" name="KeyCondition19" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm3#mfu12#oln53" name="OKFlow53" to="mov1#opm3#okcu4" automaticCoupling="true"/>
+      <KOLink id="mov1#opm3#mfu12#kln33" name="KOFlow33" to="mov1#opm3#kocu5" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="960" gr:y="150" id="mov1#opm3#okcu4" name="Update Angel Succeeded"/>
+    <KOCollectorUnit gr:x="960" gr:y="70" id="mov1#opm3#kocu5" name="Update Angel Failed"/>
+  </OperationUnits>
+</OperationModule>

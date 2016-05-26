@@ -1,0 +1,34 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="110" gr:y="60" id="mov1#opm1" name="Login">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm1#icu1" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm1#icu1#icp1" name="Password"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp2" name="Username"/>
+      <OKLink id="mov1#opm1#icu1#oln7" name="OKFlow7" to="mov1#opm1#qu2">
+        <LinkParameter id="mov1#opm1#icu1#oln7#par27" name="Username_Username" source="mov1#opm1#icu1#icp2" target="mov1#opm1#qu2.mov1#opm1#qu2#qi1"/>
+        <LinkParameter id="mov1#opm1#icu1#oln7#par33" name="Password_PASSING" source="mov1#opm1#icu1#icp1" passing="true"/>
+        <LinkParameter id="mov1#opm1#icu1#oln7#par34" name="Username_PASSING" source="mov1#opm1#icu1#icp2" passing="true"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <LoginUnit gr:x="815" gr:y="140" id="mov1#opm1#lgu1" name="Login">
+      <KOLink id="mov1#opm1#lgu1#kln1" name="KOFlow1" to="mov1#opm1#kocu1" automaticCoupling="false">
+        <LinkParameter id="mov1#opm1#lgu1#kln1#par68" name="Error Message" source="errorMessage" target="mov1#opm1#kocu1#ocp1"/>
+      </KOLink>
+      <OKLink id="mov1#opm1#lgu1#oln8" name="OKFlow8" to="mov1#opm1#okcu1" automaticCoupling="true"/>
+    </LoginUnit>
+    <KOCollectorUnit gr:x="950" gr:y="60" id="mov1#opm1#kocu1" name="KO Port1">
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp1" name="Error Message"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit gr:x="950" gr:y="130" id="mov1#opm1#okcu1" name="OK Port1"/>
+    <QueryUnit gr:x="330" gr:y="145" id="mov1#opm1#qu2" name="Select User" mode="select" language="SQL" db="db1">
+      <QueryInput id="mov1#opm1#qu2#qi1" name="username" required="true" type="string"/>
+      <QueryOutput id="mov1#opm1#qu2#qo1" name="oid" type="integer"/>
+      <QueryText xml:space="preserve">SELECT u.oid FROM user as u WHERE u.username=(:username_input);</QueryText>
+      <KOLink id="mov1#opm1#qu2#kln5" name="KOFlow5" to="mov1#opm1#kocu1">
+        <LinkParameter id="mov1#opm1#qu2#kln5#par36" name="Select User Error_Error Message" sourceValue="Select User Error" target="mov1#opm1#kocu1#ocp1"/>
+      </KOLink>
+      <OKLink id="mov1#opm1#qu2#oln10" name="OKFlow10" to="mov1#opm1#kocu1" gr:bendpoints="264,-102,-416,-27">
+        <LinkParameter id="mov1#opm1#qu2#oln10#par35" name="user_oid_output_Error Message" source="data[].userOidOutput" target="mov1#opm1#kocu1#ocp1"/>
+      </OKLink>
+    </QueryUnit>
+  </OperationUnits>
+</OperationModule>
