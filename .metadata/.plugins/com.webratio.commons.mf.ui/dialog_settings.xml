@@ -3,42 +3,57 @@
 	<section name="com.webratio.ide.ui.dialogs.EditEntryUnitDialog">
 		<item value="1335" key="DIALOG_WIDTH"/>
 		<item value="72" key="DIALOG_Y_ORIGIN"/>
-		<item value="764" key="DIALOG_HEIGHT"/>
 		<item value="105" key="DIALOG_X_ORIGIN"/>
+		<item value="764" key="DIALOG_HEIGHT"/>
 		<item value="1|.SF NS Text|13.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="ModelDocDialog">
+		<section name="ExportImageDialog">
+			<section name="GENERATION_OPTION">
+				<item value="PNG" key="DIAGRAM_FORMAT"/>
+			</section>
+			<section name="OUTPUT">
+				<item value="" key="TARGET"/>
+			</section>
+		</section>
+		<section name="COMPANY_DOCUMENTATION">
+			<item value="" key="COMPANY"/>
+			<item value="" key="AUTHOR"/>
+			<item value="" key="LOGO"/>
+		</section>
 	</section>
 	<section name="com.webratio.ide.ui.dialogs.EditEntityDialog">
 		<item value="898" key="DIALOG_WIDTH"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
-		<item value="271" key="DIALOG_X_ORIGIN"/>
 		<item value="764" key="DIALOG_HEIGHT"/>
-		<item value="1|.SF NS Text|13.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
-	</section>
-	<section name="com.webratio.ide.ui.dialogs.EditSubUnitsDialog">
-		<item value="1440" key="DIALOG_WIDTH"/>
-		<item value="0" key="DIALOG_Y_ORIGIN"/>
-		<item value="0" key="DIALOG_X_ORIGIN"/>
-		<item value="836" key="DIALOG_HEIGHT"/>
+		<item value="271" key="DIALOG_X_ORIGIN"/>
 		<item value="1|.SF NS Text|13.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="com.webratio.ide.ui.dialogs.EditSlotsDialog">
 		<item value="737" key="DIALOG_WIDTH"/>
 		<item value="280" key="DIALOG_Y_ORIGIN"/>
-		<item value="592" key="DIALOG_X_ORIGIN"/>
 		<item value="317" key="DIALOG_HEIGHT"/>
+		<item value="592" key="DIALOG_X_ORIGIN"/>
 		<item value="1|.SF NS Text|13.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="com.webratio.ide.ui.dialogs.EditSubUnitsDialog">
+		<item value="1440" key="DIALOG_WIDTH"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="836" key="DIALOG_HEIGHT"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="1|.SF NS Text|13.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="com.webratio.ide.ui.properties.items.EntityPropertyItem$2.DialogSettings">
+		<item value="true" key="SHOW_AS_LIST_DIALOG_PROPERTY_NAME"/>
 	</section>
 	<section name="DialogBounds_ExceptionDialog">
 		<item value="595" key="DIALOG_WIDTH"/>
 		<item value="726" key="DIALOG_WIDTH.DETAILS"/>
 		<item value="357" key="DIALOG_X_ORIGIN.DETAILS"/>
 		<item value="337" key="DIALOG_Y_ORIGIN"/>
-		<item value="423" key="DIALOG_X_ORIGIN"/>
 		<item value="122" key="DIALOG_HEIGHT"/>
+		<item value="423" key="DIALOG_X_ORIGIN"/>
 		<item value="582" key="DIALOG_HEIGHT.DETAILS"/>
 		<item value="30" key="DIALOG_Y_ORIGIN.DETAILS"/>
-	</section>
-	<section name="com.webratio.ide.ui.properties.items.EntityPropertyItem$2.DialogSettings">
-		<item value="true" key="SHOW_AS_LIST_DIALOG_PROPERTY_NAME"/>
 	</section>
 </section>

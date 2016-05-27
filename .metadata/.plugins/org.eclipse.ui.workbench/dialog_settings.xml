@@ -15,4 +15,6 @@
 			<item value="com.webratio.ui.views"/>
 		</list>
 	</section>
+	<section name="ImportExportAction">
+	</section>
 </section>

@@ -1,1 +1,258 @@
-[27 May 2016 15:41:46] Database connection closed
+[27 May 2016 16:01:22] Building database metadata model
+[27 May 2016 16:01:22] Properties: {partialRefresh=false, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@2ec791b9, includeTables=true, username=jentenb116_admin, outputLogPath=/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/HomelessAngel/.Temp~/DB.xml.log, readIndexes=null, driverClass=com.mysql.jdbc.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.MySQLMetaDataProvider, outputPath=/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/HomelessAngel/.Temp~/DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=/Users/nicolascarraggi/Documents/Vub/2eMa/Web_engineering_-_Document/Assignments/3/HomelessAngel/.metadata/.plugins/com.webratio.commons.db/derby, url=jdbc:mysql://jenterosseel.com:3306/jentenb116_homelessangeldb, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=true, retrieveAllNames=false, tablesToRefresh=, eventSocketPort=52990}
+[27 May 2016 16:01:22] URL: jdbc:mysql://jenterosseel.com:3306/jentenb116_homelessangeldb
+[27 May 2016 16:01:22] Product name: MySQL
+[27 May 2016 16:01:22] Product version: 5.5.41
+[27 May 2016 16:01:22] Driver name: MySQL Connector Java
+[27 May 2016 16:01:22] Driver version: mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )
+[27 May 2016 16:01:22] Driver major version: 5
+[27 May 2016 16:01:22] Driver minor version: 1
+[27 May 2016 16:01:22] Identifier quote string: 1
+[27 May 2016 16:01:22] Retrieving schemas
+[27 May 2016 16:01:22] Retrieving [TABLE, VIEW, SYNONYM] for schema ''
+[27 May 2016 16:01:22]   Found 'address' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'angel' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'deliverymethod' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'group' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'group_module' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'homelessperson' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'module' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'notification' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'offer' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'offercategory' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'offertype' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'picture' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'rating' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'request' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'transaction' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'user' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'user_group' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'userprofile' [type = TABLE]
+[27 May 2016 16:01:22]   Found 'angel_amtofitemsgivenaway_view' [type = VIEW]
+[27 May 2016 16:01:22]   Found 'angel_avgrating_view' [type = VIEW]
+[27 May 2016 16:01:22] Retrieving columns for 'address' [type = TABLE]
+[27 May 2016 16:01:22]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: street [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: housenumber [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: postalcode [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: city [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: country [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: bus [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22] Retrieving primary keys for 'address' [type = TABLE]
+[27 May 2016 16:01:22]   Found primary key column: oid
+[27 May 2016 16:01:22] Retrieving columns for 'angel' [type = TABLE]
+[27 May 2016 16:01:22]   Found column: userprofile_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: profession [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: isanomynous [type = BIT][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: angelname [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22] Retrieving primary keys for 'angel' [type = TABLE]
+[27 May 2016 16:01:22]   Found primary key column: userprofile_oid
+[27 May 2016 16:01:22] Retrieving columns for 'deliverymethod' [type = TABLE]
+[27 May 2016 16:01:22]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22] Retrieving primary keys for 'deliverymethod' [type = TABLE]
+[27 May 2016 16:01:22]   Found primary key column: oid
+[27 May 2016 16:01:22] Retrieving columns for 'group' [type = TABLE]
+[27 May 2016 16:01:22]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: groupname [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22] Retrieving primary keys for 'group' [type = TABLE]
+[27 May 2016 16:01:22]   Found primary key column: oid
+[27 May 2016 16:01:22] Retrieving columns for 'group_module' [type = TABLE]
+[27 May 2016 16:01:22]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: module_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22] Retrieving primary keys for 'group_module' [type = TABLE]
+[27 May 2016 16:01:22]   Found primary key column: group_oid
+[27 May 2016 16:01:22]   Found primary key column: module_oid
+[27 May 2016 16:01:22] Retrieving columns for 'homelessperson' [type = TABLE]
+[27 May 2016 16:01:22]   Found column: userprofile_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: nickname [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: yearsonstreet [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22] Retrieving primary keys for 'homelessperson' [type = TABLE]
+[27 May 2016 16:01:22]   Found primary key column: userprofile_oid
+[27 May 2016 16:01:22] Retrieving columns for 'module' [type = TABLE]
+[27 May 2016 16:01:22]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: moduleid [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: modulename [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22] Retrieving primary keys for 'module' [type = TABLE]
+[27 May 2016 16:01:22]   Found primary key column: oid
+[27 May 2016 16:01:22] Retrieving columns for 'notification' [type = TABLE]
+[27 May 2016 16:01:22]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: seendate [type = DATETIME][SQL/XOPEN type = 93][size = 19][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: seen [type = BIT][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: description [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: notificationtype [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: type [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: userprofile_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22] Retrieving primary keys for 'notification' [type = TABLE]
+[27 May 2016 16:01:22]   Found primary key column: oid
+[27 May 2016 16:01:22] Retrieving columns for 'offer' [type = TABLE]
+[27 May 2016 16:01:22]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: isremoved [type = BIT][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: removedreason [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: amount [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: description [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: expirydate [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: creationdate [type = DATETIME][SQL/XOPEN type = 93][size = 19][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: address_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: offercategory_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: offertype_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: deliverymethod_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: angel_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22] Retrieving primary keys for 'offer' [type = TABLE]
+[27 May 2016 16:01:22]   Found primary key column: oid
+[27 May 2016 16:01:22] Retrieving columns for 'offercategory' [type = TABLE]
+[27 May 2016 16:01:22]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22] Retrieving primary keys for 'offercategory' [type = TABLE]
+[27 May 2016 16:01:22]   Found primary key column: oid
+[27 May 2016 16:01:22] Retrieving columns for 'offertype' [type = TABLE]
+[27 May 2016 16:01:22]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: name [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22] Retrieving primary keys for 'offertype' [type = TABLE]
+[27 May 2016 16:01:22]   Found primary key column: oid
+[27 May 2016 16:01:22] Retrieving columns for 'picture' [type = TABLE]
+[27 May 2016 16:01:22]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: description [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: fileloc [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: title [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: picture [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: userprofile_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: offer_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22] Retrieving primary keys for 'picture' [type = TABLE]
+[27 May 2016 16:01:22]   Found primary key column: oid
+[27 May 2016 16:01:22] Retrieving columns for 'rating' [type = TABLE]
+[27 May 2016 16:01:22]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: score [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:22]   Found column: comment [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:22] Retrieving primary keys for 'rating' [type = TABLE]
+[27 May 2016 16:01:22]   Found primary key column: oid
+[27 May 2016 16:01:22] Retrieving columns for 'request' [type = TABLE]
+[27 May 2016 16:01:23]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: amount [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: isaccepted [type = BIT][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: requestedon [type = DATETIME][SQL/XOPEN type = 93][size = 19][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: accepteddate [type = DATETIME][SQL/XOPEN type = 93][size = 19][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: rejecteddate [type = DATETIME][SQL/XOPEN type = 93][size = 19][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: isrejected [type = BIT][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: rejectedreason [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: homelessperson_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: offer_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: transaction_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: notification_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: notification_oid_2 [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23] Retrieving primary keys for 'request' [type = TABLE]
+[27 May 2016 16:01:23]   Found primary key column: oid
+[27 May 2016 16:01:23] Retrieving columns for 'transaction' [type = TABLE]
+[27 May 2016 16:01:23]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: deliverydate [type = DATETIME][SQL/XOPEN type = 93][size = 19][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: iscompleted [type = BIT][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: requesteddate [type = DATETIME][SQL/XOPEN type = 93][size = 19][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: notification_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: address_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: rating_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23] Retrieving primary keys for 'transaction' [type = TABLE]
+[27 May 2016 16:01:23]   Found primary key column: oid
+[27 May 2016 16:01:23] Retrieving columns for 'user' [type = TABLE]
+[27 May 2016 16:01:23]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: username [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: password [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: email [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: usertype [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23] Retrieving primary keys for 'user' [type = TABLE]
+[27 May 2016 16:01:23]   Found primary key column: oid
+[27 May 2016 16:01:23] Retrieving columns for 'user_group' [type = TABLE]
+[27 May 2016 16:01:23]   Found column: user_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: group_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23] Retrieving primary keys for 'user_group' [type = TABLE]
+[27 May 2016 16:01:23]   Found primary key column: user_oid
+[27 May 2016 16:01:23]   Found primary key column: group_oid
+[27 May 2016 16:01:23] Retrieving columns for 'userprofile' [type = TABLE]
+[27 May 2016 16:01:23]   Found column: oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: birthdate [type = DATE][SQL/XOPEN type = 91][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: isdisabled [type = BIT][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: disabledreason [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: iscancelled [type = BIT][SQL/XOPEN type = -7][size = 1][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: cancelleddate [type = DATETIME][SQL/XOPEN type = 93][size = 19][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: disableddate [type = DATETIME][SQL/XOPEN type = 93][size = 19][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: fullname [type = VARCHAR][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: user_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: address_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23] Retrieving primary keys for 'userprofile' [type = TABLE]
+[27 May 2016 16:01:23]   Found primary key column: oid
+[27 May 2016 16:01:23] Retrieving columns for 'angel_amtofitemsgivenaway_view' [type = VIEW]
+[27 May 2016 16:01:23]   Found column: userprofile_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: der_attr [type = NUMERIC][SQL/XOPEN type = 2][size = 32][dec. digits = 0]
+[27 May 2016 16:01:23] Retrieving primary keys for 'angel_amtofitemsgivenaway_view' [type = VIEW]
+[27 May 2016 16:01:23] Retrieving columns for 'angel_avgrating_view' [type = VIEW]
+[27 May 2016 16:01:23]   Found column: userprofile_oid [type = INT][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[27 May 2016 16:01:23]   Found column: der_attr [type = NUMERIC][SQL/XOPEN type = 2][size = 14][dec. digits = 4]
+[27 May 2016 16:01:23] Retrieving primary keys for 'angel_avgrating_view' [type = VIEW]
+[27 May 2016 16:01:24] Retrieving foreign keys for 'address' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving foreign keys for 'angel' [type = TABLE]
+[27 May 2016 16:01:24]   Found foreign key: column userprofile_oid references userprofile(oid)
+[27 May 2016 16:01:24] Retrieving foreign keys for 'deliverymethod' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving foreign keys for 'group' [type = TABLE]
+[27 May 2016 16:01:24]   Found foreign key: column module_oid references module(oid)
+[27 May 2016 16:01:24] Retrieving foreign keys for 'group_module' [type = TABLE]
+[27 May 2016 16:01:24]   Found foreign key: column module_oid references module(oid)
+[27 May 2016 16:01:24]   Found foreign key: column group_oid references group(oid)
+[27 May 2016 16:01:24] Retrieving foreign keys for 'homelessperson' [type = TABLE]
+[27 May 2016 16:01:24]   Found foreign key: column userprofile_oid references userprofile(oid)
+[27 May 2016 16:01:24] Retrieving foreign keys for 'module' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving foreign keys for 'notification' [type = TABLE]
+[27 May 2016 16:01:24]   Found foreign key: column userprofile_oid references userprofile(oid)
+[27 May 2016 16:01:24] Retrieving foreign keys for 'offer' [type = TABLE]
+[27 May 2016 16:01:24]   Found foreign key: column angel_oid references angel(userprofile_oid)
+[27 May 2016 16:01:24]   Found foreign key: column address_oid references address(oid)
+[27 May 2016 16:01:24]   Found foreign key: column deliverymethod_oid references deliverymethod(oid)
+[27 May 2016 16:01:24]   Found foreign key: column offercategory_oid references offercategory(oid)
+[27 May 2016 16:01:24]   Found foreign key: column offertype_oid references offertype(oid)
+[27 May 2016 16:01:24] Retrieving foreign keys for 'offercategory' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving foreign keys for 'offertype' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving foreign keys for 'picture' [type = TABLE]
+[27 May 2016 16:01:24]   Found foreign key: column offer_oid references offer(oid)
+[27 May 2016 16:01:24]   Found foreign key: column userprofile_oid references userprofile(oid)
+[27 May 2016 16:01:24] Retrieving foreign keys for 'rating' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving foreign keys for 'request' [type = TABLE]
+[27 May 2016 16:01:24]   Found foreign key: column notification_oid_2 references notification(oid)
+[27 May 2016 16:01:24]   Found foreign key: column homelessperson_oid references homelessperson(userprofile_oid)
+[27 May 2016 16:01:24]   Found foreign key: column notification_oid references notification(oid)
+[27 May 2016 16:01:24]   Found foreign key: column offer_oid references offer(oid)
+[27 May 2016 16:01:24]   Found foreign key: column transaction_oid references transaction(oid)
+[27 May 2016 16:01:24] Retrieving foreign keys for 'transaction' [type = TABLE]
+[27 May 2016 16:01:24]   Found foreign key: column rating_oid references rating(oid)
+[27 May 2016 16:01:24]   Found foreign key: column address_oid references address(oid)
+[27 May 2016 16:01:24]   Found foreign key: column notification_oid references notification(oid)
+[27 May 2016 16:01:24] Retrieving foreign keys for 'user' [type = TABLE]
+[27 May 2016 16:01:24]   Found foreign key: column group_oid references group(oid)
+[27 May 2016 16:01:24] Retrieving foreign keys for 'user_group' [type = TABLE]
+[27 May 2016 16:01:24]   Found foreign key: column group_oid references group(oid)
+[27 May 2016 16:01:24]   Found foreign key: column user_oid references user(oid)
+[27 May 2016 16:01:24] Retrieving foreign keys for 'userprofile' [type = TABLE]
+[27 May 2016 16:01:24]   Found foreign key: column address_oid references address(oid)
+[27 May 2016 16:01:24]   Found foreign key: column user_oid references user(oid)
+[27 May 2016 16:01:24] Retrieving foreign keys for 'angel_amtofitemsgivenaway_view' [type = VIEW]
+[27 May 2016 16:01:24] Retrieving foreign keys for 'angel_avgrating_view' [type = VIEW]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'address' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'angel' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'deliverymethod' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'group' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'group_module' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'homelessperson' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'module' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'notification' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'offer' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'offercategory' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'offertype' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'picture' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'rating' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'request' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'transaction' [type = TABLE]
+[27 May 2016 16:01:24] Retrieving auto-increment columns for 'user' [type = TABLE]
+[27 May 2016 16:01:25] Retrieving auto-increment columns for 'user_group' [type = TABLE]
+[27 May 2016 16:01:25] Retrieving auto-increment columns for 'userprofile' [type = TABLE]
+[27 May 2016 16:01:25] Retrieving auto-increment columns for 'angel_amtofitemsgivenaway_view' [type = VIEW]
+[27 May 2016 16:01:25] Retrieving auto-increment columns for 'angel_avgrating_view' [type = VIEW]
+[27 May 2016 16:01:25] Database connection closed

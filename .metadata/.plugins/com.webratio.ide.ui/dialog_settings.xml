@@ -19,9 +19,9 @@
 	</section>
 	<section name="DialogBounds_CouplingDialog">
 		<item value="613" key="DIALOG_WIDTH"/>
-		<item value="106" key="DIALOG_Y_ORIGIN"/>
+		<item value="97" key="DIALOG_Y_ORIGIN"/>
 		<item value="628" key="DIALOG_HEIGHT"/>
-		<item value="561" key="DIALOG_X_ORIGIN"/>
+		<item value="111" key="DIALOG_X_ORIGIN"/>
 		<item value="1|.SF NS Text|13.0|0|COCOA|1|.SFNSText-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="DialogBounds_SearchInProjectDialog">
