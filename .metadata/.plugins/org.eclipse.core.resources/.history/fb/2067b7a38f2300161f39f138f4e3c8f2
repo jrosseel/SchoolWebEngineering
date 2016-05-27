@@ -1,0 +1,11 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="225" gr:y="615" id="mov1#opm5" name="Request Offer">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm5#icu5" name="Input Collector" gr:x="30" gr:y="60"/>
+    <CreateUnit gr:x="580" gr:y="275" id="mov1#opm5#cru3" name="Create Request" entity="ent1"/>
+    <TimeUnit gr:x="580" gr:y="70" id="mov1#opm5#tmu5" name="Get Timestamp" linkOrder="mov1#opm5#tmu5#ln5">
+      <Link id="mov1#opm5#tmu5#ln5" name="Flow5" to="mov1#opm5#cru3" type="transport" validate="true">
+        <LinkParameter id="mov1#opm5#tmu5#ln5#par7" name="Current/Input Timestamp_requestedOn" source="currentTimestamp" target="mov1#opm5#cru3.ent1#att57"/>
+      </Link>
+    </TimeUnit>
+  </OperationUnits>
+</OperationModule>

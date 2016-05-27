@@ -1,0 +1,43 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page38" name="View Offers" landmark="true" customURLName="homeless_offers" gr:x="15" gr:y="-145">
+  <ContentUnits>
+    <ModuleInstanceUnit gr:x="0" gr:y="0" id="sv4#page38#miu16" action="false" moduleId="mov1#ctm3" linkOrder="sv4#page38#miu16#ln106">
+      <Link id="sv4#page38#miu16#ln106" name="Details" to="sv4#mathu3" type="normal" validate="true" codeRef="mov1#ctm3#ocu5">
+        <LinkParameter id="sv4#page38#miu16#ln106#par140" name="oid_PASSING" source="mov1#ctm3#ocu5#ocp16" passing="true"/>
+      </Link>
+    </ModuleInstanceUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page38#miu16">
+          <layout:Link link="sv4#page38#miu16#ln106"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,46 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="505" gr:y="525" id="mov1#opm13" name="Accept Request">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm13#icu12" gr:x="30" gr:y="70">
+      <OKLink id="mov1#opm13#icu12#oln79" name="OKFlow79" to="mov1#opm13#tmu7" automaticCoupling="true"/>
+      <Link id="mov1#opm13#icu12#ln87" name="Flow87" to="mov1#opm13#mfu4" type="transport" validate="true">
+        <LinkParameter id="mov1#opm13#icu12#ln87#par376" name="KeyCondition38 [oid]" source="mov1#opm13#icu12#icp75" target="mov1#opm13#mfu4#su48#kcond38.ent1#att7"/>
+        <LinkParameter id="mov1#opm13#icu12#ln87#par377" name="true_isAccepted" sourceValue="true" target="mov1#opm13#mfu4.ent1#att53"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm13#icu12#icp75" name="Request [oid]"/>
+      <Link id="mov1#opm13#icu12#ln103" name="Flow103" to="mov1#opm13#miu28" automaticCoupling="false" type="transport" validate="true" gr:bendpoints="159,-45,-281,-55;276,-45,-164,-55">
+        <LinkParameter id="mov1#opm13#icu12#ln103#par379" name="KeyCondition24 [oid]" source="mov1#opm13#icu12#icp77" target="mov1#opm13#miu28.mov1#opm12#icu15#icp63"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm13#icu12#icp77" name="Notification [oid]"/>
+      <Link id="mov1#opm13#icu12#ln117" name="Flow117" to="mov1#opm13#cru7" type="transport" validate="true" gr:bendpoints="145,180,-350,50;381,178,-114,48">
+        <LinkParameter id="mov1#opm13#icu12#ln117#par380" name="false_isCompleted" sourceValue="false" target="mov1#opm13#cru7.ent14#att56"/>
+        <LinkParameter id="mov1#opm13#icu12#ln117#par382" name="Request [oid]_Request.oid(TransactionToRequest)" source="mov1#opm13#icu12#icp75" target="mov1#opm13#cru7.rel20#role39.ent1#att7"/>
+      </Link>
+      <Link id="mov1#opm13#icu12#ln119" name="Flow118" to="mov1#opm13#cru12" type="transport" automaticCoupling="false" validate="true" gr:bendpoints="187,58,-498,-107;431,83,-254,-82">
+        <LinkParameter id="mov1#opm13#icu12#ln119#par391" name="UserProfile.oid(NotificationToUserProfile)" source="mov1#opm13#icu12#icp78" target="mov1#opm13#cru12.rel13#role26.ent2#att2"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm13#icu12#icp78" name="HomelessPerson [oid]"/>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="320" gr:y="190" id="mov1#opm13#mfu4" name="Update Request" entity="ent1">
+      <Selector id="mov1#opm13#mfu4#su48" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm13#mfu4#su48#kcond38" name="KeyCondition38" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm13#mfu4#oln81" name="OKFlow81" to="mov1#opm13#miu28" automaticCoupling="true"/>
+    </ModifyUnit>
+    <TimeUnit gr:x="325" gr:y="80" id="mov1#opm13#tmu7" name="Get Timespan">
+      <OKLink id="mov1#opm13#tmu7#oln80" name="OKFlow80" to="mov1#opm13#mfu4">
+        <LinkParameter id="mov1#opm13#tmu7#oln80#par378" name="Current/Input Timestamp_acceptedDate" source="currentTimestamp" target="mov1#opm13#mfu4.ent1#att12"/>
+      </OKLink>
+    </TimeUnit>
+    <ModuleInstanceUnit gr:x="480" gr:y="75" id="mov1#opm13#miu28" action="true" moduleId="mov1#opm12">
+      <OKLink id="mov1#opm13#miu28#oln82" name="OKFlow82" to="mov1#opm13#cru7" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <CreateUnit gr:x="530" gr:y="235" id="mov1#opm13#cru7" name="Create Transaction" entity="ent14">
+      <OKLink id="mov1#opm13#cru7#oln89" name="OKFlow89" to="mov1#opm13#cru12">
+        <LinkParameter id="mov1#opm13#cru7#oln89#par383" name="2_notificationType" sourceValue="2" target="mov1#opm13#cru12.ent6#att60"/>
+        <LinkParameter id="mov1#opm13#cru7#oln89#par384" name="oid_Transaction.oid(NotificationToTransaction)" source="ent14#att51Array" target="mov1#opm13#cru12.rel1#role1.ent14#att51"/>
+        <LinkParameter id="mov1#opm13#cru7#oln89#par389" name="transaction_type" sourceValue="transaction" target="mov1#opm13#cru12.ent6#att54"/>
+      </OKLink>
+    </CreateUnit>
+    <CreateUnit gr:x="725" gr:y="235" id="mov1#opm13#cru12" name="Create Transaction Notification" entity="ent6"/>
+  </OperationUnits>
+</OperationModule>

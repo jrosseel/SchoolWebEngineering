@@ -48,15 +48,17 @@
         <RelationshipRoleCondition id="sv3#page20#pwu6#su27#rcond4" name="Angel" predicate="in" implied="false" role="rel13#role25"/>
         <AttributesCondition id="sv3#page20#pwu6#su27#acond1" name="New notifications" predicate="null" booleanOperator="or" implied="false" attributes="ent6#att48" value="false"/>
       </Selector>
-      <Link id="sv3#page20#pwu6#ln101" name="Mark Read" to="sv3#miu19" type="normal" validate="true" gr:bendpoints="-223,-1,-3,-66">
+      <Link id="sv3#page20#pwu6#ln101" name="Mark Read" to="sv3#miu19" type="normal" validate="true" gr:bendpoints="-146,-87,100,-91">
         <LinkParameter id="sv3#page20#pwu6#ln101#par238" name="oid_KeyCondition24 [oid]" source="data[].ent6#att35" target="sv3#miu19.mov1#opm12#icu15#icp63"/>
       </Link>
       <Link id="sv3#page20#pwu6#ln102" name="Open" to="sv3#switch11" type="normal" validate="true" gr:bendpoints="-132,127,103,-33">
         <LinkParameter id="sv3#page20#pwu6#ln102#par239" name="notificationType_Switch" source="data[].ent6#att60" target="sv3#switch11.switch"/>
         <LinkParameter id="sv3#page20#pwu6#ln102#par240" name="oid_PASSING" source="data[].ent6#att35" passing="true"/>
+        <LinkParameter id="sv3#page20#pwu6#ln102#par436" name="seen_PASSING" source="data[].ent6#att48" passing="true"/>
+        <LinkParameter id="sv3#page20#pwu6#ln102#par477" name="NotificationToRequest.oid_PASSING" source="data[].rel26#role51_ent1#att7" passing="true"/>
       </Link>
     </PowerIndexUnit>
-    <MultiMessageUnit gr:x="5" gr:y="200" id="sv3#page20#mssu20" name="Error Message"/>
+    <MultiMessageUnit gr:x="40" gr:y="205" id="sv3#page20#mssu20" name="Error Message"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

@@ -1,0 +1,54 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-185" gr:y="715" id="sv3#page29" name="Notification Request">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv3#page29#dau10" name="Notification" entity="ent6" displayAttributes="ent6#att35 ent6#att48 ent6#att49 ent6#att59 ent6#att60">
+      <Selector id="sv3#page29#dau10#su30" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page29#dau10#su30#kcond25" name="KeyCondition25" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <DataUnit gr:x="75" gr:y="100" id="sv3#page29#dau7" name="Request">
+      <Selector id="sv3#page29#dau7#su47" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page29#dau7#su47#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="9">
+        <layout:Unit unitId="sv3#page29#dau7"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3">
+        <layout:Unit unitId="sv3#page29#dau10">
+          <layout:Attribute attribute="ent6#att35"/>
+          <layout:Attribute attribute="ent6#att48"/>
+          <layout:Attribute attribute="ent6#att49"/>
+          <layout:Attribute attribute="ent6#att59"/>
+          <layout:Attribute attribute="ent6#att60"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -47,7 +47,8 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="homelessangel_db" type="MySQL" url="jdbc:mysql://localhost:3306/homelessangel_db" username="homelessangel_admin" password="admin" cryptedPassword="false" connectionCount="5"/>
+  <db:Database id="db1" name="homelessangel_db" type="MySQL" url="jdbc:mysql://localhost:3306/homelessangel_db" username="homelessangel_admin" password="admin" cryptedPassword="false" connectionCount="5">
+  </db:Database>
   <Entity gr:x="510" gr:y="255" id="ent2" name="UserProfile" duration="persistent" attributeOrder="ent2#att2 ent2#att4 ent2#att6 ent2#att18 ent2#att19 ent2#att20 ent2#att21 ent2#att55" db:database="db1" db:table="userprofile">
     <Attribute id="ent2#att2" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att6" name="birthDate" type="date" db:column="birthdate"/>
@@ -97,11 +98,11 @@
     <Attribute id="ent8#att42" name="expiryDate" type="date" db:column="expirydate"/>
     <Attribute id="ent8#att50" name="creationDate" type="timestamp" db:column="creationdate"/>
   </Entity>
-  <Entity gr:x="1060" gr:y="735" id="ent9" name="OfferType" duration="persistent" attributeOrder="ent9#att31 ent9#att32" db:database="db1" db:table="offertype">
+  <Entity gr:x="1050" gr:y="755" id="ent9" name="OfferType" duration="persistent" attributeOrder="ent9#att31 ent9#att32" db:database="db1" db:table="offertype">
     <Attribute id="ent9#att31" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent9#att32" name="name" type="string" db:column="name"/>
   </Entity>
-  <Entity gr:x="1060" gr:y="635" id="ent10" name="OfferCategory" duration="persistent" attributeOrder="ent10#att33 ent10#att34" db:database="db1" db:table="offercategory">
+  <Entity gr:x="1055" gr:y="660" id="ent10" name="OfferCategory" duration="persistent" attributeOrder="ent10#att33 ent10#att34" db:database="db1" db:table="offercategory">
     <Attribute id="ent10#att33" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent10#att34" name="name" type="string" db:column="name"/>
   </Entity>
@@ -120,7 +121,7 @@
       <db:JoinColumn attribute="ent11#att37" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="1040" gr:y="825" id="ent12" name="DeliveryMethod" duration="persistent" attributeOrder="ent12#att43 ent12#att44" db:database="db1" db:table="deliverymethod">
+  <Entity gr:x="1015" gr:y="845" id="ent12" name="DeliveryMethod" duration="persistent" attributeOrder="ent12#att43 ent12#att44" db:database="db1" db:table="deliverymethod">
     <Attribute id="ent12#att43" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent12#att44" name="name" type="string" db:column="name"/>
   </Entity>
@@ -143,11 +144,15 @@
     <Attribute id="ent14#att56" name="isCompleted" type="boolean" db:column="iscompleted"/>
     <Attribute id="ent14#att58" name="requestedDate" type="timestamp" db:column="requesteddate"/>
   </Entity>
-  <Entity gr:x="990" gr:y="460" id="ent1" name="Request" duration="persistent" attributeOrder="ent1#att7 ent1#att14 ent1#att53 ent1#att57" db:database="db1" db:table="request">
+  <Entity gr:x="985" gr:y="430" id="ent1" name="Request" duration="persistent" attributeOrder="ent1#att7 ent1#att14 ent1#att53 ent1#att57 ent1#att12 ent1#att62 ent1#att61 ent1#att64" db:database="db1" db:table="request">
     <Attribute id="ent1#att7" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent1#att14" name="amount" type="integer" key="false" db:column="amount"/>
     <Attribute id="ent1#att53" name="isAccepted" type="boolean" db:column="isaccepted"/>
     <Attribute id="ent1#att57" name="requestedOn" type="timestamp" db:column="requestedon"/>
+    <Attribute id="ent1#att12" name="acceptedDate" type="timestamp" db:column="accepteddate"/>
+    <Attribute id="ent1#att61" name="rejectedDate" type="timestamp" db:column="rejecteddate"/>
+    <Attribute id="ent1#att62" name="isRejected" type="boolean" db:column="isrejected"/>
+    <Attribute id="ent1#att64" name="rejectedReason" type="string" db:column="rejectedreason"/>
   </Entity>
   <Relationship id="rel14" name="Offer_Request" sourceEntity="ent8" targetEntity="ent1" db:database="db1" db:table="request">
     <RelationshipRole1 id="rel14#role27" name="OfferToRequest" maxCard="N">
@@ -157,7 +162,7 @@
       <db:JoinColumn attribute="ent1#att7" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="990" gr:y="250" id="ent6" name="Notification" duration="persistent" attributeOrder="ent6#att35 ent6#att48 ent6#att49 ent6#att59 ent6#att60 ent6#att54" db:database="db1" db:table="notification">
+  <Entity gr:x="990" gr:y="235" id="ent6" name="Notification" duration="persistent" attributeOrder="ent6#att35 ent6#att48 ent6#att49 ent6#att59 ent6#att60 ent6#att54" db:database="db1" db:table="notification">
     <Attribute id="ent6#att35" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent6#att49" name="seenDate" type="timestamp" db:column="seendate"/>
     <Attribute id="ent6#att48" name="seen" type="boolean" db:column="seen"/>
@@ -267,6 +272,22 @@
     </RelationshipRole1>
     <RelationshipRole2 id="rel4#role8" name="UserProfileToAddress" maxCard="1">
       <db:JoinColumn attribute="ent2#att2" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel1" name="Notification_Transaction" sourceEntity="ent6" targetEntity="ent14" gr:bendpoints="-125,105,280,-515;-224,535,181,-85" db:database="db1" db:table="transaction">
+    <RelationshipRole1 id="rel1#role1" name="NotificationToTransaction" maxCard="1">
+      <db:JoinColumn attribute="ent6#att35" name="notification_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel1#role2" name="TransactionToNotification" maxCard="1">
+      <db:JoinColumn attribute="ent14#att51" name="oid"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel3" name="Notification_Rejected_Request" sourceEntity="ent6" targetEntity="ent1" gr:bendpoints="126,67,126,-148;127,142,127,-73" db:database="db1" db:table="request">
+    <RelationshipRole1 id="rel3#role5" name="NotificationToRequest_2" maxCard="1">
+      <db:JoinColumn attribute="ent6#att35" name="notification_oid_2"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel3#role6" name="RequestToNotification_2" maxCard="1">
+      <db:JoinColumn attribute="ent1#att7" name="oid"/>
     </RelationshipRole2>
   </Relationship>
 </DataModel>

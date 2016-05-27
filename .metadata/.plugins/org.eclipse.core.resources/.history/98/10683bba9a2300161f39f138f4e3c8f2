@@ -1,0 +1,56 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="295" gr:y="525" id="mov1#opm5" name="Request Offer">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm5#icu5" gr:x="30" gr:y="60" linkOrder="mov1#opm5#icu5#ln51">
+      <InputCollectorParameter id="mov1#opm5#icu5#icp38" name="Offer.oid(RequestToOffer)"/>
+      <Link id="mov1#opm5#icu5#ln6" name="Flow6" to="mov1#opm5#cru4" type="transport" validate="true">
+        <LinkParameter id="mov1#opm5#icu5#ln6#par12" name="UserProfile.oid(NotificationToUserProfile)" source="mov1#opm5#icu5#icp40" target="mov1#opm5#cru4.rel13#role26.ent2#att2"/>
+        <LinkParameter id="mov1#opm5#icu5#ln6#par13" name="A homeless person has requested one of your offered items._description" sourceValue="A homeless person has requested one of your offered items." target="mov1#opm5#cru4.ent6#att59"/>
+        <LinkParameter id="mov1#opm5#icu5#ln6#par14" name="1_notificationType" sourceValue="1" target="mov1#opm5#cru4.ent6#att60"/>
+        <LinkParameter id="mov1#opm5#icu5#ln6#par15" name="request_type" sourceValue="request" target="mov1#opm5#cru4.ent6#att54"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm5#icu5#icp40" name="UserProfile.oid(NotificationToUserProfile)"/>
+      <OKLink id="mov1#opm5#icu5#oln65" name="OKFlow65" to="mov1#opm5#seu2" automaticCoupling="true" gr:bendpoints="277,29,-143,54"/>
+      <Link id="mov1#opm5#icu5#ln51" name="Flow51" to="mov1#opm5#cru3" type="transport" validate="true">
+        <LinkParameter id="mov1#opm5#icu5#ln51#par189" name="1_amount" sourceValue="1" target="mov1#opm5#cru3.ent1#att14"/>
+        <LinkParameter id="mov1#opm5#icu5#ln51#par190" name="false_isAccepted" sourceValue="false" target="mov1#opm5#cru3.ent1#att53"/>
+        <LinkParameter id="mov1#opm5#icu5#ln51#par191" name="Offer.oid(RequestToOffer)_Offer.oid(RequestToOffer)" source="mov1#opm5#icu5#icp38" target="mov1#opm5#cru3.rel14#role28.ent8#att28"/>
+      </Link>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="455" gr:y="270" id="mov1#opm5#cru3" name="Create Request" entity="ent1">
+      <OKLink id="mov1#opm5#cru3#oln31" name="OKFlow31" to="mov1#opm5#cru4" automaticCoupling="true"/>
+      <KOLink id="mov1#opm5#cru3#kln7" name="KOFlow7" to="mov1#opm5#kocu10" gr:bendpoints="162,-59,-358,111;274,-74,-246,96">
+        <LinkParameter id="mov1#opm5#cru3#kln7#par182" name="Create Request Error_Error Message" sourceValue="Create Request Error" target="mov1#opm5#kocu10#ocp17"/>
+      </KOLink>
+    </CreateUnit>
+    <TimeUnit gr:x="630" gr:y="165" id="mov1#opm5#tmu5" name="Get Timestamp">
+      <OKLink id="mov1#opm5#tmu5#oln69" name="Flow5" to="mov1#opm5#cru3">
+        <LinkParameter id="mov1#opm5#tmu5#oln69#par193" name="Current/Input Timestamp_requestedOn" source="currentTimestamp" target="mov1#opm5#cru3.ent1#att57"/>
+        <LinkParameter id="mov1#opm5#tmu5#oln69#par196" name="oid_PASSING_HomelessPerson.oid(RequestToHomelessPerson)" sourceLinkParameter="mov1#opm5#seu2#oln35#par192" target="mov1#opm5#cru3.rel12#role24.ent2#att2"/>
+      </OKLink>
+    </TimeUnit>
+    <CreateUnit gr:x="680" gr:y="270" id="mov1#opm5#cru4" name="Create Request Notification" entity="ent6">
+      <KOLink id="mov1#opm5#cru4#kln27" name="KOFlow27" to="mov1#opm5#kocu10">
+        <LinkParameter id="mov1#opm5#cru4#kln27#par183" name="Create Notification Error_Error Message" sourceValue="Create Notification Error" target="mov1#opm5#kocu10#ocp17"/>
+      </KOLink>
+      <OKLink id="mov1#opm5#cru4#oln32" name="OKFlow32" to="mov1#opm5#okcu7" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="900" gr:y="270" id="mov1#opm5#okcu7" name="Request Offer Succeeded"/>
+    <KOCollectorUnit gr:x="900" gr:y="100" id="mov1#opm5#kocu10" name="Request Offer Failed">
+      <OutputCollectorParameter id="mov1#opm5#kocu10#ocp17" name="Error Message"/>
+    </KOCollectorUnit>
+    <GetUnit gr:x="410" gr:y="35" id="mov1#opm5#gtu4" name="Get User" contextParameters="UserCtxParam" linkOrder="mov1#opm5#gtu4#ln50">
+      <Link id="mov1#opm5#gtu4#ln50" name="Flow50" to="mov1#opm5#seu2" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <SelectorUnit gr:x="540" gr:y="30" id="mov1#opm5#seu2" name="Selector Homeless Person" entity="ent4">
+      <Selector id="mov1#opm5#seu2#su32" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm5#seu2#su32#rcond1" name="User" predicate="in" implied="false" role="rel2#role3"/>
+      </Selector>
+      <OKLink id="mov1#opm5#seu2#oln35" name="OKFlow35" to="mov1#opm5#tmu5">
+        <LinkParameter id="mov1#opm5#seu2#oln35#par192" name="oid_PASSING" source="ent2#att2Array" passing="true"/>
+      </OKLink>
+      <KOLink id="mov1#opm5#seu2#kln43" name="KOFlow43" to="mov1#opm5#kocu10" gr:bendpoints="311,-2,-119,-67">
+        <LinkParameter id="mov1#opm5#seu2#kln43#par188" name="Select Homeless Person Error_Error Message" sourceValue="Select Homeless Person Error" target="mov1#opm5#kocu10#ocp17"/>
+      </KOLink>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,114 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page39" name="Offer Details" linkOrder="sv4#page39#ln96" gr:x="570" gr:y="-150">
+  <ContentUnits>
+    <DataUnit id="sv4#page39#dau19" name="Offer" linkOrder="sv4#page39#dau19#ln89" gr:x="0" gr:y="5" entity="ent8" displayAttributes="rel7#role13.ent3#att17 rel17#role33.ent10#att34 rel18#role35.ent9#att32 ent8#att41 ent8#att36 ent8#att50 ent8#att42">
+      <Selector id="sv4#page39#dau19#su40" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#page39#dau19#su40#kcond33" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#page39#dau19#ln88" name="Flow19" to="sv4#page39#dau20" type="transport" validate="true">
+        <LinkParameter id="sv4#page39#dau19#ln88#par204" name="OfferToPickupAddress.oid_KeyCondition27 [oid]" source="data.rel11#role21_ent5#att8" target="sv4#page39#dau20#su41#kcond34.ent5#att8"/>
+      </Link>
+      <Link id="sv4#page39#dau19#ln89" name="View Angel Details" to="sv4#page37#dau18" type="normal" validate="true" gr:bendpoints="88,78,-312,-12;113,173,-102,-82">
+        <LinkParameter id="sv4#page39#dau19#ln89#par205" name="OfferToAngel.oid_KeyCondition28 [oid]" source="data.rel7#role13_ent2#att2" target="sv4#page37#dau18#su38#kcond32.ent2#att2"/>
+      </Link>
+      <Link id="sv4#page39#dau19#ln8" name="Request" to="sv4#miu11" type="transport" validate="true" gr:bendpoints="79,111,-501,36;240,163,-340,88">
+        <LinkParameter id="sv4#page39#dau19#ln8#par185" name="oid_Offer.oid(RequestToOffer)" source="data.ent8#att28" target="sv4#miu11.mov1#opm5#icu5#icp38"/>
+        <LinkParameter id="sv4#page39#dau19#ln8#par186" name="OfferToAngel.oid_UserProfile.oid(NotificationToUserProfile)" source="data.rel7#role13_ent2#att2" target="sv4#miu11.mov1#opm5#icu5#icp40"/>
+      </Link>
+      <Link id="sv4#page39#dau19#ln53" name="Flow53" to="sv4#page39#inu2" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="191,79,-139,4"/>
+    </DataUnit>
+    <DataUnit id="sv4#page39#dau20" name="Pickup Address" gr:x="150" gr:y="5" entity="ent5" displayAttributes="ent5#att22 ent5#att23 ent5#att27 ent5#att24 ent5#att25 ent5#att26">
+      <Selector id="sv4#page39#dau20#su41" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#page39#dau20#su41#kcond34" name="KeyCondition27" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <MultiMessageUnit gr:x="305" gr:y="0" id="sv4#page39#mssu6" name="Error Message"/>
+    <IndexUnit gr:x="325" gr:y="85" id="sv4#page39#inu2" name="Requests" entity="ent1">
+      <Selector id="sv4#page39#inu2#su46" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#page39#inu2#su46#rcond2" name="Offer" predicate="in" implied="false" role="rel14#role27"/>
+      </Selector>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page39#dau19">
+          <layout:Attribute attribute="rel7#role13.ent3#att17"/>
+          <layout:Attribute attribute="rel17#role33.ent10#att34"/>
+          <layout:Attribute attribute="rel18#role35.ent9#att32"/>
+          <layout:Attribute attribute="ent8#att41"/>
+          <layout:Attribute attribute="ent8#att36"/>
+          <layout:Attribute attribute="ent8#att50"/>
+          <layout:Attribute attribute="ent8#att42"/>
+          <layout:Link link="sv4#page39#dau19#ln89"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page39#dau20">
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="ent5#att27"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="ent5#att26"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page39#mssu6"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page39#inu2"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv4#page39#ln96" name="Back to all offers" to="sv4#page38" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-299,-79,156,-39"/>
+</Page>

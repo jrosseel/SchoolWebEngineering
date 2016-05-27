@@ -27,7 +27,7 @@
         <LinkParameter id="sv4#page23#enu5#ln43#par430" name="Key [oid]_HomelessPerson [oid]" source="key.ent2#att2" target="sv4#miu8.mov1#opm4#icu4#icp58"/>
       </Link>
     </EntryUnit>
-    <MultiMessageUnit gr:x="105" gr:y="130" id="sv4#page23#mssu12" name="Error Message"/>
+    <MultiMessageUnit gr:x="5" gr:y="130" id="sv4#page23#mssu12" name="Error Message"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

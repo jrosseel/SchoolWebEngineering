@@ -1,0 +1,33 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="65" gr:y="965" id="sv3#page14" name="Reject Request">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#page14#enu6" name="Reject Reason" linkOrder="sv3#page14#enu6#ln151 sv3#page14#enu6#ln152" fieldOrder="sv3#page14#enu6#fld52">
+      <Link id="sv3#page14#enu6#ln151" name="Cancel" to="sv3#page29#dau7" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-124,6,106,21"/>
+      <Field id="sv3#page14#enu6#fld52" name="Reason" type="string" modifiable="true"/>
+      <Link id="sv3#page14#enu6#ln152" name="Flow152" to="sv3#miu32" type="normal" validate="true">
+        <LinkParameter id="sv3#page14#enu6#ln152#par505" name="oid_PASSING_Request [oid]" sourceLinkParameter="sv3#page29#dau7#ln149#par504" target="sv3#miu32.mov1#opm14#icu14#icp65"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page14#enu6">
+          <layout:Field field="sv3#page14#enu6#fld52"/>
+          <layout:Link link="sv3#page14#enu6#ln151"/>
+          <layout:Link link="sv3#page14#enu6#ln152"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

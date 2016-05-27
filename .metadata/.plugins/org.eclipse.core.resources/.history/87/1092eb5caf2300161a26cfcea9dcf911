@@ -1,0 +1,271 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="810" gr:y="270" id="sv3#page28" name="Manage Offers" landmark="true">
+  <ContentUnits>
+    <GetUnit gr:x="0" gr:y="10" id="sv3#page28#gtu5" name="Get5" contextParameters="UserCtxParam">
+      <Link id="sv3#page28#gtu5#ln91" name="Flow91" to="sv3#page28#dau9" automaticCoupling="true" type="transport" validate="true"/>
+    </GetUnit>
+    <DataUnit id="sv3#page28#dau9" name="User Details" gr:x="130" gr:y="0" entity="User">
+      <Selector id="sv3#page28#dau9#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page28#dau9#su24#kcond15" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page28#dau9#ln90" name="Flow90" to="sv3#page28#pwu5" type="transport" validate="true" gr:bendpoints="-53,68,82,-42">
+        <LinkParameter id="sv3#page28#dau9#ln90#par213" name="UserToUserProfile.oid_AngelOffer [oid]" source="data.rel2#role3_ent2#att2" target="sv3#page28#pwu5#su26#rcond3.ent2#att2"/>
+      </Link>
+      <Link id="sv3#page28#dau9#ln97" name="Flow6" to="sv3#page28#enu9" type="transport" validate="true" gr:bendpoints="-44,102,76,-108;-54,164,66,-46">
+        <LinkParameter id="sv3#page28#dau9#ln97#par231" name="UserToUserProfile.oid_PASSING" source="data.rel2#role3_ent2#att2" passing="true"/>
+      </Link>
+      <Link id="sv3#page28#dau9#ln10" name="Flow10" to="sv3#page28#pwu3" type="transport" validate="true">
+        <LinkParameter id="sv3#page28#dau9#ln10#par110" name="UserToUserProfile.oid_AngelTransactions [oid]" source="data.rel2#role3_ent2#att2" target="sv3#page28#pwu3#su51#rcond10.ent2#att2"/>
+      </Link>
+      <Link id="sv3#page28#dau9#ln18" name="Flow18" to="sv3#page28#pwu4" type="transport" validate="true">
+        <LinkParameter id="sv3#page28#dau9#ln18#par111" name="UserToUserProfile.oid_Angel [oid]" source="data.rel2#role3_ent2#att2" target="sv3#page28#pwu4#su52#rcond11.ent2#att2"/>
+      </Link>
+    </DataUnit>
+    <PowerIndexUnit id="sv3#page28#pwu5" name="Offers" gr:x="0" gr:y="100" sortable="true" checkable="false" useCountQuery="false" entity="ent8" displayAttributes="ent8#att28 rel18#role35.ent9#att32 rel17#role33.ent10#att34 ent8#att41 ent8#att36 ent8#att42 rel19#role37.ent12#att44 rel11#role21.ent5#att22 rel11#role21.ent5#att23 rel11#role21.ent5#att24 rel11#role21.ent5#att25 rel11#role21.ent5#att26 rel11#role21.ent5#att27" linkOrder="sv3#page28#pwu5#ln128" customDescriptor="true">
+      <VRules/>
+      <Selector id="sv3#page28#pwu5#su26" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page28#pwu5#su26#rcond3" name="AngelOffer" predicate="in" implied="false" role="rel7#role14"/>
+      </Selector>
+      <Link id="sv3#page28#pwu5#ln128" name="Edit" to="sv3#page28#enu9" type="normal" validate="true" gr:bendpoints="-114,105,-129,-5">
+        <LinkParameter id="sv3#page28#pwu5#ln128#par463" name="oid_Key Condition [oid]" source="data[].ent8#att28" target="sv3#page28#enu9.ent8#att28"/>
+        <LinkParameter id="sv3#page28#pwu5#ln128#par464" name="OfferToDeliveryMethod.oid_OfferToDeliveryMethod - Preselection" source="data[].rel19#role37_ent12#att43" target="sv3#page28#enu9#sfld3_presel"/>
+        <LinkParameter id="sv3#page28#pwu5#ln128#par465" name="OfferToOfferCategory.oid_OfferToOfferCategory - Preselection" source="data[].rel17#role33_ent10#att33" target="sv3#page28#enu9#sfld1_presel"/>
+        <LinkParameter id="sv3#page28#pwu5#ln128#par466" name="OfferToOfferType.oid_OfferToOfferType - Preselection" source="data[].rel18#role35_ent9#att31" target="sv3#page28#enu9#sfld2_presel"/>
+        <LinkParameter id="sv3#page28#pwu5#ln128#par109" name="true_Editing" sourceValue="true" targetVariable="sv3#page28#var2"/>
+      </Link>
+    </PowerIndexUnit>
+    <SelectorUnit id="sv3#page28#seu1" name="OfferTypes" gr:x="150" gr:y="355" entity="ent9">
+      <Link id="sv3#page28#seu1#ln92" name="Flow19" to="sv3#page28#enu9" type="transport" validate="true">
+        <LinkParameter id="sv3#page28#seu1#ln92#par214" name="name_OfferToOfferType [label]" source="ent9#att32Array" target="sv3#page28#enu9#sfld2_label"/>
+        <LinkParameter id="sv3#page28#seu1#ln92#par215" name="oid_OfferToOfferType [output]" source="ent9#att31Array" target="sv3#page28#enu9#sfld2_output"/>
+      </Link>
+    </SelectorUnit>
+    <MultiMessageUnit id="sv3#page28#mssu19" name="Error Message" gr:x="260" gr:y="360"/>
+    <EntryUnit id="sv3#page28#enu9" name="Add Offer" linkOrder="sv3#page28#enu9#ln93 sv3#page28#enu9#ln49" gr:x="20" gr:y="215" entity="ent8" fieldOrder="sv3#page28#enu9#fld28 sv3#page28#enu9#sfld1 sv3#page28#enu9#sfld2 sv3#page28#enu9#fld58 sv3#page28#enu9#fld57 sv3#page28#enu9#sfld3 sv3#page28#enu9#fld59 sv3#page28#enu9#fld60 sv3#page28#enu9#fld61 sv3#page28#enu9#fld62 sv3#page28#enu9#fld63 sv3#page28#enu9#fld64 sv3#page28#enu9#fld65">
+      <Field id="sv3#page28#enu9#fld57" name="Amount" type="integer" modifiable="true" attribute="ent8#att36"/>
+      <Field id="sv3#page28#enu9#fld58" name="Description" type="string" modifiable="true" attribute="ent8#att41"/>
+      <Field id="sv3#page28#enu9#fld59" name="Expiry Date" type="date" modifiable="true" attribute="ent8#att42"/>
+      <Link id="sv3#page28#enu9#ln93" name="Save" to="sv3#miu12" type="normal" validate="true" gr:bendpoints="122,69,-303,59;249,69,-176,59">
+        <LinkParameter id="sv3#page28#enu9#ln93#par17" name="amount_PASSING" source="sv3#page28#enu9#fld57" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par18" name="bus_PASSING" source="sv3#page28#enu9#fld62" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par20" name="city_PASSING" source="sv3#page28#enu9#fld64" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par21" name="country_PASSING" source="sv3#page28#enu9#fld65" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par22" name="description_PASSING" source="sv3#page28#enu9#fld58" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par23" name="expiryDate_PASSING" source="sv3#page28#enu9#fld59" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par24" name="house number_PASSING" source="sv3#page28#enu9#fld61" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par25" name="Key [oid]_PASSING" source="key.ent8#att28" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par34" name="Offer Object_PASSING" source="entityBean" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par40" name="OfferToDeliveryMethod_PASSING" source="sv3#page28#enu9#sfld3" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par41" name="OfferToOfferCategory_PASSING" source="sv3#page28#enu9#sfld1" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par42" name="OfferToOfferType_PASSING" source="sv3#page28#enu9#sfld2" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par43" name="postal code_PASSING" source="sv3#page28#enu9#fld63" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par44" name="street_PASSING" source="sv3#page28#enu9#fld60" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par102" name="UserToUserProfile.oid_PASSING" sourceLinkParameter="sv3#page28#dau9#ln97#par231" passing="true"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par312" name="amount_amount" source="sv3#page28#enu9#fld57" target="sv3#miu12.mov1#opm11#icu11#icp64"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par313" name="UserToUserProfile.oid_PASSING_Angel.oid(OfferToAngel)" sourceLinkParameter="sv3#page28#dau9#ln97#par231" target="sv3#miu12.mov1#opm11#icu11#icp41"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par314" name="bus_bus" source="sv3#page28#enu9#fld62" target="sv3#miu12.mov1#opm11#icu11#icp69"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par316" name="city_city" source="sv3#page28#enu9#fld64" target="sv3#miu12.mov1#opm11#icu11#icp70"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par317" name="country_country" source="sv3#page28#enu9#fld65" target="sv3#miu12.mov1#opm11#icu11#icp71"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par318" name="description_description" source="sv3#page28#enu9#fld58" target="sv3#miu12.mov1#opm11#icu11#icp66"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par319" name="expiryDate_expiryDate" source="sv3#page28#enu9#fld59" target="sv3#miu12.mov1#opm11#icu11#icp67"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par320" name="house number_housenumber" source="sv3#page28#enu9#fld61" target="sv3#miu12.mov1#opm11#icu11#icp72"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par321" name="postal code_postalcode" source="sv3#page28#enu9#fld63" target="sv3#miu12.mov1#opm11#icu11#icp73"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par326" name="street_street" source="sv3#page28#enu9#fld60" target="sv3#miu12.mov1#opm11#icu11#icp74"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par363" name="OfferToDeliveryMethod_DeliveryMethod.oid(OfferToDeliveryMethod)" source="sv3#page28#enu9#sfld3" target="sv3#miu12.mov1#opm11#icu11#icp43"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par370" name="Key [oid]_Offer.oid(DeliveryAddressToOffer)" source="key.ent8#att28" target="sv3#miu12.mov1#opm11#icu11#icp68"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par371" name="OfferToOfferCategory_OfferCategory.oid(OfferToOfferCategory)" source="sv3#page28#enu9#sfld1" target="sv3#miu12.mov1#opm11#icu11#icp60"/>
+        <LinkParameter id="sv3#page28#enu9#ln93#par372" name="OfferToOfferType_OfferType.oid(OfferToOfferType)" source="sv3#page28#enu9#sfld2" target="sv3#miu12.mov1#opm11#icu11#icp61"/>
+      </Link>
+      <SelectionField id="sv3#page28#enu9#sfld1" name="Category" type="string" role="rel17#role33"/>
+      <SelectionField id="sv3#page28#enu9#sfld2" name="Type" type="string" role="rel18#role35"/>
+      <SelectionField id="sv3#page28#enu9#sfld3" name="Delivery Method" type="string" role="rel19#role37"/>
+      <Field id="sv3#page28#enu9#fld65" name="Country" type="string" modifiable="true"/>
+      <Field id="sv3#page28#enu9#fld64" name="City" type="string" modifiable="true"/>
+      <Field id="sv3#page28#enu9#fld63" name="Postal Code" type="string" modifiable="true"/>
+      <Field id="sv3#page28#enu9#fld62" name="Bus" type="string" modifiable="true"/>
+      <Field id="sv3#page28#enu9#fld61" name="House Number" type="string" modifiable="true"/>
+      <Field id="sv3#page28#enu9#fld60" name="Street" type="string" modifiable="true"/>
+      <Field id="sv3#page28#enu9#fld28" name="Offer oid" type="integer" attribute="ent8#att28"/>
+      <Link id="sv3#page28#enu9#ln49" name="print delivery" to="sv3#page28#mssu19" type="normal" validate="true"/>
+    </EntryUnit>
+    <SelectorUnit id="sv3#page28#seu5" name="DeliveryMethods" gr:x="205" gr:y="220" entity="ent12">
+      <Link id="sv3#page28#seu5#ln94" name="Flow24" to="sv3#page28#enu9" type="transport" validate="true">
+        <LinkParameter id="sv3#page28#seu5#ln94#par225" name="name_OfferToDeliveryMethod [label]" source="ent12#att44Array" target="sv3#page28#enu9#sfld3_label"/>
+        <LinkParameter id="sv3#page28#seu5#ln94#par226" name="oid_OfferToDeliveryMethod [output]" source="ent12#att43Array" target="sv3#page28#enu9#sfld3_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv3#page28#seu6" name="OfferCategories" gr:x="5" gr:y="355" entity="ent10">
+      <Link id="sv3#page28#seu6#ln95" name="Flow18" to="sv3#page28#enu9" type="transport" validate="true">
+        <LinkParameter id="sv3#page28#seu6#ln95#par227" name="name_OfferToOfferCategory [label]" source="ent10#att34Array" target="sv3#page28#enu9#sfld1_label"/>
+        <LinkParameter id="sv3#page28#seu6#ln95#par228" name="oid_OfferToOfferCategory [output]" source="ent10#att33Array" target="sv3#page28#enu9#sfld1_output"/>
+      </Link>
+    </SelectorUnit>
+    <PowerIndexUnit gr:x="15" gr:y="455" id="sv3#page28#pwu3" name="Transactions" sortable="true" checkable="false" useCountQuery="false" entity="ent14" displayAttributes="ent14#att51 ent14#att56 rel20#role39.rel12#role24.ent4#att11 rel20#role39.ent1#att14 rel20#role39.rel14#role28.ent8#att28 rel20#role39.rel14#role28.ent8#att41">
+      <Selector id="sv3#page28#pwu3#su51" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page28#pwu3#su51#rcond10" name="AngelTransactions" predicate="in" implied="false" role="rel7#role14.rel14#role27.rel20#role40"/>
+      </Selector>
+    </PowerIndexUnit>
+    <PowerIndexUnit gr:x="245" gr:y="455" id="sv3#page28#pwu4" name="Requests" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="rel12#role24.ent4#att11 ent1#att14 ent1#att57 rel14#role28.ent8#att28 rel14#role28.ent8#att41" linkOrder="sv3#page28#pwu4#ln24">
+      <Selector id="sv3#page28#pwu4#su52" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page28#pwu4#su52#rcond11" name="Angel" predicate="in" implied="false" role="rel7#role14.rel14#role27"/>
+      </Selector>
+      <Link id="sv3#page28#pwu4#ln24" name="Details" to="sv3#page29#dau7" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-146,90,1050,0;-646,149,550,59;-1026,152,170,62"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#page28#enu9">
+          <layout:Field field="sv3#page28#enu9#fld28" layout:fieldVisibilityConditionVariable="sv3#page28#var2"/>
+          <layout:Field field="sv3#page28#enu9#sfld1"/>
+          <layout:Field field="sv3#page28#enu9#sfld2"/>
+          <layout:Field field="sv3#page28#enu9#fld58"/>
+          <layout:Field field="sv3#page28#enu9#fld57"/>
+          <layout:Field field="sv3#page28#enu9#sfld3" layout:fieldDisableConditionNegated="true"/>
+          <layout:Field field="sv3#page28#enu9#fld59"/>
+          <layout:Field field="sv3#page28#enu9#fld60"/>
+          <layout:Field field="sv3#page28#enu9#fld61"/>
+          <layout:Field field="sv3#page28#enu9#fld62"/>
+          <layout:Field field="sv3#page28#enu9#fld63"/>
+          <layout:Field field="sv3#page28#enu9#fld64"/>
+          <layout:Field field="sv3#page28#enu9#fld65" layout:fieldVisibilityConditionVariable="sv3#page28#var3"/>
+          <layout:Link link="sv3#page28#enu9#ln93"/>
+          <layout:Link link="sv3#page28#enu9#ln49"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#page28#mssu19"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page28#pwu5">
+          <layout:Link link="sv3#page28#pwu5#ln128"/>
+          <layout:Attribute attribute="ent8#att28"/>
+          <layout:Attribute attribute="rel18#role35.ent9#att32"/>
+          <layout:Attribute attribute="rel17#role33.ent10#att34"/>
+          <layout:Attribute attribute="ent8#att41"/>
+          <layout:Attribute attribute="ent8#att36"/>
+          <layout:Attribute attribute="ent8#att42"/>
+          <layout:Attribute attribute="rel19#role37.ent12#att44"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att22"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att23"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att24"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att25"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att26"/>
+          <layout:Attribute attribute="rel11#role21.ent5#att27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page28#pwu4">
+          <layout:Attribute attribute="rel12#role24.ent4#att11"/>
+          <layout:Attribute attribute="ent1#att14"/>
+          <layout:Attribute attribute="ent1#att57"/>
+          <layout:Attribute attribute="rel14#role28.ent8#att28"/>
+          <layout:Attribute attribute="rel14#role28.ent8#att41"/>
+          <layout:Link link="sv3#page28#pwu4#ln24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page28#pwu3">
+          <layout:Attribute attribute="ent14#att51"/>
+          <layout:Attribute attribute="ent14#att56"/>
+          <layout:Attribute attribute="rel20#role39.rel12#role24.ent4#att11"/>
+          <layout:Attribute attribute="rel20#role39.ent1#att14"/>
+          <layout:Attribute attribute="rel20#role39.rel14#role28.ent8#att28"/>
+          <layout:Attribute attribute="rel20#role39.rel14#role28.ent8#att41"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv3#page28#var2" name="Editing" type="boolean" value="false"/>
+  <Variable id="sv3#page28#var3" name="Pickup" value="false" type="boolean"/>
+</Page>

@@ -1,0 +1,33 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="720" gr:y="525" id="mov1#opm14" name="Reject Request">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm14#icu14" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm14#icu14#oln113" name="OKFlow113" to="mov1#opm14#tmu4" automaticCoupling="false"/>
+      <InputCollectorParameter id="mov1#opm14#icu14#icp65" name="Request [oid]"/>
+      <Link id="mov1#opm14#icu14#ln150" name="Flow150" to="mov1#opm14#mfu17" type="transport" validate="true" gr:bendpoints="175,46,-280,31;313,43,-142,28">
+        <LinkParameter id="mov1#opm14#icu14#ln150#par503" name="KeyCondition50 [oid]_KeyCondition50 [oid]" source="mov1#opm14#icu14#icp65" target="mov1#opm14#mfu17#su63#kcond50.ent1#att7"/>
+        <LinkParameter id="mov1#opm14#icu14#ln150#par506" name="Reason_rejectedReason" source="mov1#opm14#icu14#icp68" target="mov1#opm14#mfu17.ent1#att64"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm14#icu14#icp68" name="Reason"/>
+      <Link id="mov1#opm14#icu14#ln153" name="Flow153" to="mov1#opm14#cru1" type="transport" validate="true" gr:bendpoints="212,69,-198,-46">
+        <LinkParameter id="mov1#opm14#icu14#ln153#par509" name="3_notificationType" sourceValue="3" target="mov1#opm14#cru1.ent6#att60"/>
+        <LinkParameter id="mov1#opm14#icu14#ln153#par510" name="Request [oid]_Request.oid(NotificationToRequest_2)" source="mov1#opm14#icu14#icp65" target="mov1#opm14#cru1.rel3#role5.ent1#att7"/>
+        <LinkParameter id="mov1#opm14#icu14#ln153#par511" name="rejected_type" sourceValue="rejected" target="mov1#opm14#cru1.ent6#att54"/>
+        <LinkParameter id="mov1#opm14#icu14#ln153#par512" name="UserProfile.oid(NotificationToUserProfile)" source="mov1#opm14#icu14#icp76" target="mov1#opm14#cru1.rel13#role26.ent2#att2"/>
+        <LinkParameter id="mov1#opm14#icu14#ln153#par513" name="Your request has been rejected._description" sourceValue="Your request has been rejected." target="mov1#opm14#cru1.ent6#att59"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm14#icu14#icp76" name="Homeless [oid]"/>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="655" gr:y="75" id="mov1#opm14#mfu17" name="Update Request" entity="ent1">
+      <Selector id="mov1#opm14#mfu17#su63" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm14#mfu17#su63#kcond50" name="KeyCondition50" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+    <TimeUnit gr:x="460" gr:y="70" id="mov1#opm14#tmu4" name="Get Timestamp">
+      <OKLink id="mov1#opm14#tmu4#oln114" name="OKFlow114" to="mov1#opm14#mfu17">
+        <LinkParameter id="mov1#opm14#tmu4#oln114#par507" name="Current/Input Timestamp_rejectedDate" source="currentTimestamp" target="mov1#opm14#mfu17.ent1#att61"/>
+      </OKLink>
+    </TimeUnit>
+    <CreateUnit gr:x="655" gr:y="195" id="mov1#opm14#cru1" name="Create Notification" entity="ent6"/>
+    <SelectorUnit gr:x="425" gr:y="205" id="mov1#opm14#seu13" name="Selector13"/>
+  </OperationUnits>
+</OperationModule>

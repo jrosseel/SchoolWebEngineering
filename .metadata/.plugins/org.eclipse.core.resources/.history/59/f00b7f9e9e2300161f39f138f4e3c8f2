@@ -1,0 +1,85 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="505" gr:y="525" id="mov1#opm13" name="Accept Request">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm13#icu12" gr:x="30" gr:y="70" linkOrder="mov1#opm13#icu12#ln120 mov1#opm13#icu12#ln121">
+      <OKLink id="mov1#opm13#icu12#oln79" name="OKFlow79" to="mov1#opm13#mathu1" automaticCoupling="true"/>
+      <Link id="mov1#opm13#icu12#ln87" name="Flow87" to="mov1#opm13#mfu4" type="transport" validate="true">
+        <LinkParameter id="mov1#opm13#icu12#ln87#par376" name="KeyCondition38 [oid]" source="mov1#opm13#icu12#icp75" target="mov1#opm13#mfu4#su48#kcond38.ent1#att7"/>
+        <LinkParameter id="mov1#opm13#icu12#ln87#par377" name="true_isAccepted" sourceValue="true" target="mov1#opm13#mfu4.ent1#att53"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm13#icu12#icp75" name="Request [oid]"/>
+      <Link id="mov1#opm13#icu12#ln103" name="Flow103" to="mov1#opm13#miu28" automaticCoupling="false" type="transport" validate="true" gr:bendpoints="160,-89,-280,-54;285,-84,-155,-49">
+        <LinkParameter id="mov1#opm13#icu12#ln103#par379" name="KeyCondition24 [oid]" source="mov1#opm13#icu12#icp77" target="mov1#opm13#miu28.mov1#opm12#icu15#icp63"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm13#icu12#icp77" name="Notification [oid]"/>
+      <Link id="mov1#opm13#icu12#ln117" name="Flow117" to="mov1#opm13#cru7" type="transport" validate="true" gr:bendpoints="116,157,-269,27;246,158,-139,28">
+        <LinkParameter id="mov1#opm13#icu12#ln117#par380" name="false_isCompleted" sourceValue="false" target="mov1#opm13#cru7.ent14#att56"/>
+        <LinkParameter id="mov1#opm13#icu12#ln117#par382" name="Request [oid]_Request.oid(TransactionToRequest)" source="mov1#opm13#icu12#icp75" target="mov1#opm13#cru7.rel20#role39.ent1#att7"/>
+      </Link>
+      <Link id="mov1#opm13#icu12#ln119" name="Flow118" to="mov1#opm13#cru12" type="transport" automaticCoupling="false" validate="true" gr:bendpoints="422,47,-248,-83">
+        <LinkParameter id="mov1#opm13#icu12#ln119#par391" name="UserProfile.oid(NotificationToUserProfile)" source="mov1#opm13#icu12#icp78" target="mov1#opm13#cru12.rel13#role26.ent2#att2"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm13#icu12#icp78" name="HomelessPerson [oid]"/>
+      <InputCollectorParameter id="mov1#opm13#icu12#icp81" name="Request Amount"/>
+      <InputCollectorParameter id="mov1#opm13#icu12#icp80" name="Offer Amount"/>
+      <InputCollectorParameter id="mov1#opm13#icu12#icp79" name="Offer [oid]"/>
+      <Link id="mov1#opm13#icu12#ln120" name="Flow120" to="mov1#opm13#mathu1" type="transport" validate="true" gr:bendpoints="146,-74,-149,-19">
+        <LinkParameter id="mov1#opm13#icu12#ln120#par398" name="Offer Amount_OfferAmount" source="mov1#opm13#icu12#icp80" target="mov1#opm13#mathu1#mathv1"/>
+        <LinkParameter id="mov1#opm13#icu12#ln120#par399" name="Request Amount_RequestAmount" source="mov1#opm13#icu12#icp81" target="mov1#opm13#mathu1#mathv2"/>
+      </Link>
+      <Link id="mov1#opm13#icu12#ln121" name="Flow121" to="mov1#opm13#mfu6" type="transport" validate="true" gr:bendpoints="122,-131,-573,-86;338,-126,-357,-81">
+        <LinkParameter id="mov1#opm13#icu12#ln121#par395" name="Offer [oid]_KeyCondition39 [oid]" source="mov1#opm13#icu12#icp79" target="mov1#opm13#mfu6#su49#kcond39.ent8#att28"/>
+      </Link>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="380" gr:y="375" id="mov1#opm13#mfu4" name="Update Request" entity="ent1">
+      <Selector id="mov1#opm13#mfu4#su48" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm13#mfu4#su48#kcond38" name="KeyCondition38" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm13#mfu4#oln81" name="OKFlow81" to="mov1#opm13#miu28" automaticCoupling="true"/>
+    </ModifyUnit>
+    <TimeUnit gr:x="385" gr:y="265" id="mov1#opm13#tmu7" name="Get Timespan">
+      <OKLink id="mov1#opm13#tmu7#oln80" name="OKFlow80" to="mov1#opm13#mfu4">
+        <LinkParameter id="mov1#opm13#tmu7#oln80#par378" name="Current/Input Timestamp_acceptedDate" source="currentTimestamp" target="mov1#opm13#mfu4.ent1#att12"/>
+      </OKLink>
+    </TimeUnit>
+    <ModuleInstanceUnit gr:x="540" gr:y="260" id="mov1#opm13#miu28" action="true" moduleId="mov1#opm12">
+      <OKLink id="mov1#opm13#miu28#oln82" name="OKFlow82" to="mov1#opm13#cru7" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <CreateUnit gr:x="535" gr:y="420" id="mov1#opm13#cru7" name="Create Transaction" entity="ent14">
+      <OKLink id="mov1#opm13#cru7#oln89" name="OKFlow89" to="mov1#opm13#cru12">
+        <LinkParameter id="mov1#opm13#cru7#oln89#par383" name="2_notificationType" sourceValue="2" target="mov1#opm13#cru12.ent6#att60"/>
+        <LinkParameter id="mov1#opm13#cru7#oln89#par384" name="oid_Transaction.oid(NotificationToTransaction)" source="ent14#att51Array" target="mov1#opm13#cru12.rel1#role1.ent14#att51"/>
+        <LinkParameter id="mov1#opm13#cru7#oln89#par389" name="transaction_type" sourceValue="transaction" target="mov1#opm13#cru12.ent6#att54"/>
+        <LinkParameter id="mov1#opm13#cru7#oln89#par392" name="Your request has been accepted!_description" sourceValue="Your request has been accepted!" target="mov1#opm13#cru12.ent6#att59"/>
+      </OKLink>
+    </CreateUnit>
+    <CreateUnit gr:x="775" gr:y="420" id="mov1#opm13#cru12" name="Create Transaction Notification" entity="ent6"/>
+    <ModifyUnit gr:x="840" gr:y="30" id="mov1#opm13#mfu6" name="Update Offer Amount" entity="ent8">
+      <Selector id="mov1#opm13#mfu6#su49" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm13#mfu6#su49#kcond39" name="KeyCondition39" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+    <MathUnit gr:x="375" gr:y="55" id="mov1#opm13#mathu1" name="Subtract Offer Amount" resultType="float" defaultExpression="OfferAmount - RequestAmount">
+      <MathVariable id="mov1#opm13#mathu1#mathv1" name="OfferAmount"/>
+      <MathVariable id="mov1#opm13#mathu1#mathv2" name="RequestAmount"/>
+      <OKLink id="mov1#opm13#mathu1#oln92" name="OKFlow92" to="mov1#opm13#mathu2">
+        <LinkParameter id="mov1#opm13#mathu1#oln92#par400" name="Result_ResultAmount" source="result" target="mov1#opm13#mathu2#mathv3"/>
+      </OKLink>
+    </MathUnit>
+    <SwitchUnit gr:x="660" gr:y="180" id="mov1#opm13#switch12" name="Switch12"/>
+    <MathUnit gr:x="590" gr:y="70" id="mov1#opm13#mathu2" name="Result not &lt; 0" resultType="float" defaultExpression="ResultAmount &gt;= 0">
+      <MathVariable id="mov1#opm13#mathu2#mathv3" name="ResultAmount"/>
+      <OKLink id="mov1#opm13#mathu2#oln93" name="OKFlow93" to="mov1#opm13#okcu9" gr:bendpoints="206,53,-234,-77">
+        <LinkParameter id="mov1#opm13#mathu2#oln93#par432" name="Result_Success Message" source="result" target="mov1#opm13#okcu9#ocp20"/>
+      </OKLink>
+      <KOLink id="mov1#opm13#mathu2#kln51" name="KOFlow51" to="mov1#opm13#kocu13" gr:bendpoints="189,108,-251,-22">
+        <LinkParameter id="mov1#opm13#mathu2#kln51#par433" name="Result_Error Message" source="result" target="mov1#opm13#kocu13#ocp19"/>
+      </KOLink>
+    </MathUnit>
+    <KOCollectorUnit gr:x="975" gr:y="250" id="mov1#opm13#kocu13" name="KO Port13">
+      <OutputCollectorParameter id="mov1#opm13#kocu13#ocp19" name="Error Message"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit gr:x="975" gr:y="150" id="mov1#opm13#okcu9" name="OK Port9">
+      <OutputCollectorParameter id="mov1#opm13#okcu9#ocp20" name="Success Message"/>
+    </OKCollectorUnit>
+  </OperationUnits>
+</OperationModule>

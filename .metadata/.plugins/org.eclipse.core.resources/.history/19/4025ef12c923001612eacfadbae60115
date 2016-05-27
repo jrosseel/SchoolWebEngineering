@@ -1,0 +1,94 @@
+<ContentModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="650" gr:y="215" id="mov1#ctm3" name="View Offers">
+  <ContentUnits>
+    <IndexUnit gr:x="325" gr:y="140" id="mov1#ctm3#inu1" name="Offers" entity="ent8" displayAttributes="rel7#role13.ent3#att17 rel17#role33.ent10#att34 rel18#role35.ent9#att32 ent8#att41 ent8#att36 rel19#role37.ent12#att44" linkOrder="mov1#ctm3#inu1#ln105">
+      <Link id="mov1#ctm3#inu1#ln105" name="Details" to="mov1#ctm3#ocu5" type="normal" validate="true">
+        <LinkParameter id="mov1#ctm3#inu1#ln105#par222" name="oid_PASSING" source="data[].ent8#att28" passing="true"/>
+        <LinkParameter id="mov1#ctm3#inu1#ln105#par230" name="oid_oid" source="data[].ent8#att28" target="mov1#ctm3#ocu5#ocp16"/>
+      </Link>
+      <Link id="mov1#ctm3#inu1#ln135" name="Flow135" to="mov1#ctm3#mathu4" type="transport" validate="true">
+        <LinkParameter id="mov1#ctm3#inu1#ln135#par229" name="amount_OfferAmount" source="data[].ent8#att36" target="mov1#ctm3#mathu4#mathv5"/>
+        <LinkParameter id="mov1#ctm3#inu1#ln135#par250" name="amount &gt; 0_Expression" target="mov1#ctm3#mathu4.expr" blank="true"/>
+      </Link>
+    </IndexUnit>
+    <OutputCollectorUnit gr:x="630" gr:y="140" id="mov1#ctm3#ocu5" name="Offer Details">
+      <OutputCollectorParameter id="mov1#ctm3#ocu5#ocp16" name="oid"/>
+      <OutputCollectorParameter id="mov1#ctm3#ocu5#ocp21" name="offeramount"/>
+      <OutputCollectorParameter id="mov1#ctm3#ocu5#ocp22" name="isRequestable"/>
+    </OutputCollectorUnit>
+    <MathUnit id="mov1#ctm3#mathu4" name="isRequestable" gr:x="460" gr:y="105" resultType="integer" defaultExpression="a &gt; 0">
+      <MathVariable id="mov1#ctm3#mathu4#mathv5" name="a"/>
+      <Link id="mov1#ctm3#mathu4#ln134" name="Flow134" to="mov1#ctm3#ocu5" type="transport" validate="true">
+        <LinkParameter id="mov1#ctm3#mathu4#ln134#par223" name="Result_isRequestable" source="result" target="mov1#ctm3#ocu5#ocp22"/>
+        <LinkParameter id="mov1#ctm3#mathu4#ln134#par249" name="Result_offeramount" source="result" target="mov1#ctm3#ocu5#ocp21"/>
+      </Link>
+    </MathUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#ctm3#inu1">
+          <layout:Attribute attribute="rel7#role13.ent3#att17"/>
+          <layout:Attribute attribute="rel17#role33.ent10#att34"/>
+          <layout:Attribute attribute="rel18#role35.ent9#att32"/>
+          <layout:Attribute attribute="ent8#att41"/>
+          <layout:Attribute attribute="ent8#att36"/>
+          <layout:Attribute attribute="rel19#role37.ent12#att44"/>
+          <layout:Link link="mov1#ctm3#inu1#ln105"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</ContentModule>

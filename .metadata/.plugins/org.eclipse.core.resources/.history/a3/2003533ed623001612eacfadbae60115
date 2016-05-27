@@ -1,0 +1,79 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-185" gr:y="715" id="sv3#page29" name="Request Notification">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv3#page29#dau10" name="Notification" entity="ent6" displayAttributes="ent6#att48 ent6#att49 ent6#att59 ent6#att54">
+      <Selector id="sv3#page29#dau10#su30" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page29#dau10#su30#kcond25" name="KeyCondition25" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page29#dau10#ln79" name="Flow79" to="sv3#page29#dau7" type="transport" validate="true" gr:bendpoints="-15,97,-80,-3">
+        <LinkParameter id="sv3#page29#dau10#ln79#par375" name="NotificationToRequest.oid_KeyCondition13 [oid]" source="data.rel26#role51_ent1#att7" target="sv3#page29#dau7#su47#kcond13.ent1#att7"/>
+      </Link>
+    </DataUnit>
+    <DataUnit gr:x="25" gr:y="110" id="sv3#page29#dau7" name="Request" entity="ent1" linkOrder="sv3#page29#dau7#ln126" displayAttributes="ent1#att14 ent1#att57 rel12#role24.ent4#att11 rel12#role24.ent4#att13 rel14#role28.ent8#att28 rel14#role28.ent8#att41 rel14#role28.ent8#att36 ent1#att12">
+      <Selector id="sv3#page29#dau7#su47" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page29#dau7#su47#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page29#dau7#ln126" name="Accept" to="sv3#miu31" type="normal" validate="true">
+        <LinkParameter id="sv3#page29#dau7#ln126#par454" name="RequestToHomelessPerson.oid_HomelessPerson [oid]" source="data.rel12#role24_ent2#att2" target="sv3#miu31.mov1#opm13#icu12#icp78"/>
+        <LinkParameter id="sv3#page29#dau7#ln126#par455" name="RequestToNotification.oid_Notification [oid]" source="data.rel26#role52_ent6#att35" target="sv3#miu31.mov1#opm13#icu12#icp77"/>
+        <LinkParameter id="sv3#page29#dau7#ln126#par456" name="RequestToOffer.oid_Offer [oid]" source="data.rel14#role28_ent8#att28" target="sv3#miu31.mov1#opm13#icu12#icp79"/>
+        <LinkParameter id="sv3#page29#dau7#ln126#par457" name="oid_Request [oid]" source="data.ent1#att7" target="sv3#miu31.mov1#opm13#icu12#icp75"/>
+        <LinkParameter id="sv3#page29#dau7#ln126#par458" name="amount_Request Amount" source="data.ent1#att14" target="sv3#miu31.mov1#opm13#icu12#icp81"/>
+      </Link>
+      <Link id="sv3#page29#dau7#ln47" name="Flow47" to="sv3#page29#dau10" type="transport" validate="true" gr:bendpoints="5,-96,70,4">
+        <LinkParameter id="sv3#page29#dau7#ln47#par114" name="RequestToNotification.oid_KeyCondition25 [oid]" source="data.rel26#role52_ent6#att35" target="sv3#page29#dau10#su30#kcond25.ent6#att35"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#page29#dau7">
+          <layout:Link link="sv3#page29#dau7#ln126" layout:linkVisibilityConditionVariable="sv3#page29#var7" layout:linkVisibilityConditionNegated="true"/>
+          <layout:Attribute attribute="ent1#att14" label="Requested Amount"/>
+          <layout:Attribute attribute="ent1#att57" label="Requested On"/>
+          <layout:Attribute attribute="rel12#role24.ent4#att11" label="Homeless Nickname"/>
+          <layout:Attribute attribute="rel12#role24.ent4#att13" label="Homeless Years On Street"/>
+          <layout:Attribute attribute="rel14#role28.ent8#att28" label="Offer Oid"/>
+          <layout:Attribute attribute="rel14#role28.ent8#att41" label="Offer Description"/>
+          <layout:Attribute attribute="rel14#role28.ent8#att36" label="Offer Amount"/>
+          <layout:Attribute attribute="ent1#att12" label="Accepted Date" layout:attributeVisibilityConditionVariable="sv3#page29#var7"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#page29#dau10">
+          <layout:Attribute attribute="ent6#att48" label="Seen" layout:attributeVisibilityConditionVariable="sv3#page29#var10"/>
+          <layout:Attribute attribute="ent6#att49" label="Seen Date" layout:attributeVisibilityConditionVariable="sv3#page29#var10"/>
+          <layout:Attribute attribute="ent6#att59" label="Description"/>
+          <layout:Attribute attribute="ent6#att54" label="Type"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv3#page29#var7" name="RequestAccepted" type="boolean" value="false"/>
+  <Variable id="sv3#page29#var9" name="OfferAmountIsEnough" type="boolean" value="true"/>
+  <Variable id="sv3#page29#var10" name="NotificationSeen" type="boolean"/>
+</Page>

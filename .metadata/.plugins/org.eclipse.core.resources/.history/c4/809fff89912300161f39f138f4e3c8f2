@@ -1,0 +1,42 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="225" gr:y="615" id="mov1#opm5" name="Request Offer">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm5#icu5" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm5#icu5#oln30" name="OKFlow30" to="mov1#opm5#cru3">
+        <LinkParameter id="mov1#opm5#icu5#oln30#par8" name="HomelessPerson.oid(RequestToHomelessPerson)" source="mov1#opm5#icu5#icp22" target="mov1#opm5#cru3.rel12#role24.ent2#att2"/>
+        <LinkParameter id="mov1#opm5#icu5#oln30#par9" name="Offer.oid(RequestToOffer)" source="mov1#opm5#icu5#icp38" target="mov1#opm5#cru3.rel14#role28.ent8#att28"/>
+        <LinkParameter id="mov1#opm5#icu5#oln30#par10" name="1_amount" sourceValue="1" target="mov1#opm5#cru3.ent1#att14"/>
+        <LinkParameter id="mov1#opm5#icu5#oln30#par11" name="false_isAccepted" sourceValue="false" target="mov1#opm5#cru3.ent1#att53"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm5#icu5#icp22" name="HomelessPerson.oid(RequestToHomelessPerson)"/>
+      <InputCollectorParameter id="mov1#opm5#icu5#icp38" name="Offer.oid(RequestToOffer)"/>
+      <Link id="mov1#opm5#icu5#ln6" name="Flow6" to="mov1#opm5#cru4" type="transport" validate="true">
+        <LinkParameter id="mov1#opm5#icu5#ln6#par12" name="UserProfile.oid(NotificationToUserProfile)" source="mov1#opm5#icu5#icp40" target="mov1#opm5#cru4.rel13#role26.ent2#att2"/>
+        <LinkParameter id="mov1#opm5#icu5#ln6#par13" name="A homeless person has requested one of your offered items._description" sourceValue="A homeless person has requested one of your offered items." target="mov1#opm5#cru4.ent6#att59"/>
+        <LinkParameter id="mov1#opm5#icu5#ln6#par14" name="1_notificationType" sourceValue="1" target="mov1#opm5#cru4.ent6#att60"/>
+        <LinkParameter id="mov1#opm5#icu5#ln6#par15" name="request_type" sourceValue="request" target="mov1#opm5#cru4.ent6#att54"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm5#icu5#icp40" name="UserProfile.oid(NotificationToUserProfile)"/>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="580" gr:y="275" id="mov1#opm5#cru3" name="Create Request" entity="ent1">
+      <OKLink id="mov1#opm5#cru3#oln31" name="OKFlow31" to="mov1#opm5#cru4" automaticCoupling="true"/>
+      <KOLink id="mov1#opm5#cru3#kln7" name="KOFlow7" to="mov1#opm5#kocu10">
+        <LinkParameter id="mov1#opm5#cru3#kln7#par182" name="Create Request Error_Error Message" sourceValue="Create Request Error" target="mov1#opm5#kocu10#ocp17"/>
+      </KOLink>
+    </CreateUnit>
+    <TimeUnit gr:x="580" gr:y="70" id="mov1#opm5#tmu5" name="Get Timestamp" linkOrder="mov1#opm5#tmu5#ln5">
+      <Link id="mov1#opm5#tmu5#ln5" name="Flow5" to="mov1#opm5#cru3" type="transport" validate="true">
+        <LinkParameter id="mov1#opm5#tmu5#ln5#par7" name="Current/Input Timestamp_requestedOn" source="currentTimestamp" target="mov1#opm5#cru3.ent1#att57"/>
+      </Link>
+    </TimeUnit>
+    <CreateUnit gr:x="775" gr:y="275" id="mov1#opm5#cru4" name="Create Notification" entity="ent6">
+      <KOLink id="mov1#opm5#cru4#kln27" name="KOFlow27" to="mov1#opm5#kocu10">
+        <LinkParameter id="mov1#opm5#cru4#kln27#par183" name="Create Notification Error_Error Message" sourceValue="Create Notification Error" target="mov1#opm5#kocu10#ocp17"/>
+      </KOLink>
+      <OKLink id="mov1#opm5#cru4#oln32" name="OKFlow32" to="mov1#opm5#okcu7" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="950" gr:y="275" id="mov1#opm5#okcu7" name="Request Offer Succeeded"/>
+    <KOCollectorUnit gr:x="950" gr:y="100" id="mov1#opm5#kocu10" name="Request Offer Failed">
+      <OutputCollectorParameter id="mov1#opm5#kocu10#ocp17" name="Error Message"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page30" name="Notification type 2" gr:x="65" gr:y="700">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page30" name="Notification type 2" gr:x="305" gr:y="800">
   <ContentUnits>
     <DataUnit id="sv3#page30#dau11" name="Notification" gr:x="0" gr:y="0" entity="ent6" displayAttributes="ent6#att35 ent6#att48 ent6#att49 ent6#att59 ent6#att60">
       <Selector id="sv3#page30#dau11#su31" defaultPolicy="fill" booleanOperator="and">

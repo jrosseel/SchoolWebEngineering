@@ -1,0 +1,25 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="720" gr:y="525" id="mov1#opm14" name="Reject Request">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm14#icu14" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm14#icu14#oln113" name="OKFlow113" to="mov1#opm14#tmu4" automaticCoupling="false"/>
+      <InputCollectorParameter id="mov1#opm14#icu14#icp65" name="Request [oid]"/>
+      <Link id="mov1#opm14#icu14#ln150" name="Flow150" to="mov1#opm14#mfu17" type="transport" validate="true" gr:bendpoints="175,46,-280,31;313,43,-142,28">
+        <LinkParameter id="mov1#opm14#icu14#ln150#par503" name="KeyCondition50 [oid]_KeyCondition50 [oid]" source="mov1#opm14#icu14#icp65" target="mov1#opm14#mfu17#su63#kcond50.ent1#att7"/>
+        <LinkParameter id="mov1#opm14#icu14#ln150#par506" name="Reason_rejectedReason" source="mov1#opm14#icu14#icp68" target="mov1#opm14#mfu17.ent1#att64"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm14#icu14#icp68" name="Reason"/>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="555" gr:y="70" id="mov1#opm14#mfu17" name="Update Request" entity="ent1">
+      <Selector id="mov1#opm14#mfu17#su63" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm14#mfu17#su63#kcond50" name="KeyCondition50" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
+    <TimeUnit gr:x="360" gr:y="65" id="mov1#opm14#tmu4" name="Get Timestamp">
+      <OKLink id="mov1#opm14#tmu4#oln114" name="OKFlow114" to="mov1#opm14#mfu17">
+        <LinkParameter id="mov1#opm14#tmu4#oln114#par507" name="Current/Input Timestamp_rejectedDate" source="currentTimestamp" target="mov1#opm14#mfu17.ent1#att61"/>
+      </OKLink>
+    </TimeUnit>
+    <CreateUnit gr:x="555" gr:y="190" id="mov1#opm14#cru1" name="Create Notification" entity="ent6"/>
+    <SelectorUnit gr:x="305" gr:y="155" id="mov1#opm14#seu13" name="Selector13"/>
+  </OperationUnits>
+</OperationModule>

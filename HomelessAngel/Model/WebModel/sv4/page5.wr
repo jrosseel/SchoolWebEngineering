@@ -1,0 +1,38 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1270" gr:y="-155" id="sv4#page5" name="Notification Request">
+  <ContentUnits>
+    <DataUnit id="sv4#page5#dau8" name="Request" gr:x="0" gr:y="0" entity="ent1" displayAttributes="rel14#role28.rel7#role13.ent3#att17 rel14#role28.ent8#att41 ent1#att14 ent1#att57 rel14#role28.ent8#att28 rel14#role28.ent8#att36 ent1#att53 ent1#att12" linkOrder="sv4#page5#dau8#ln144">
+      <Selector id="sv4#page5#dau8#su56" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#page5#dau8#su56#kcond44" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#page5#dau8#ln144" name="Back to Offer" to="sv4#page39#dau19" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-324,-71,421,-91;-616,-79,129,-99"/>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page5#dau8">
+          <layout:Link link="sv4#page5#dau8#ln144"/>
+          <layout:Attribute attribute="rel14#role28.rel7#role13.ent3#att17"/>
+          <layout:Attribute label="Offer Description" attribute="rel14#role28.ent8#att41"/>
+          <layout:Attribute label="Requested Amount" attribute="ent1#att14"/>
+          <layout:Attribute label="Requested On" attribute="ent1#att57"/>
+          <layout:Attribute label="Offer Oid" attribute="rel14#role28.ent8#att28"/>
+          <layout:Attribute label="Offer Amount" attribute="rel14#role28.ent8#att36"/>
+          <layout:Attribute attribute="ent1#att53"/>
+          <layout:Attribute label="Accepted Date" attribute="ent1#att12" layout:attributeVisibilityConditionVariable="sv3#page29#var7"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

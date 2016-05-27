@@ -1,0 +1,28 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="505" gr:y="525" id="mov1#opm13" name="Accept Request">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm13#icu12" gr:x="30" gr:y="70">
+      <OKLink id="mov1#opm13#icu12#oln79" name="OKFlow79" to="mov1#opm13#tmu7" automaticCoupling="true"/>
+      <Link id="mov1#opm13#icu12#ln87" name="Flow87" to="mov1#opm13#mfu4" type="transport" validate="true">
+        <LinkParameter id="mov1#opm13#icu12#ln87#par376" name="KeyCondition38 [oid]" source="mov1#opm13#icu12#icp75" target="mov1#opm13#mfu4#su48#kcond38.ent1#att7"/>
+        <LinkParameter id="mov1#opm13#icu12#ln87#par377" name="true_isAccepted" sourceValue="true" target="mov1#opm13#mfu4.ent1#att53"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm13#icu12#icp75" name="Request [oid]"/>
+      <Link id="mov1#opm13#icu12#ln103" name="Flow103" to="mov1#opm13#miu28" automaticCoupling="false" type="transport" validate="true" gr:bendpoints="159,-45,-281,-55;276,-45,-164,-55">
+        <LinkParameter id="mov1#opm13#icu12#ln103#par379" name="KeyCondition24 [oid]" source="mov1#opm13#icu12#icp77" target="mov1#opm13#miu28.mov1#opm12#icu15#icp63"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm13#icu12#icp77" name="Notification [oid]"/>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="320" gr:y="190" id="mov1#opm13#mfu4" name="Update Request" entity="ent1">
+      <Selector id="mov1#opm13#mfu4#su48" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm13#mfu4#su48#kcond38" name="KeyCondition38" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm13#mfu4#oln81" name="OKFlow81" to="mov1#opm13#miu28" automaticCoupling="true"/>
+    </ModifyUnit>
+    <TimeUnit gr:x="325" gr:y="80" id="mov1#opm13#tmu7" name="Get Timespan">
+      <OKLink id="mov1#opm13#tmu7#oln80" name="OKFlow80" to="mov1#opm13#mfu4">
+        <LinkParameter id="mov1#opm13#tmu7#oln80#par378" name="Current/Input Timestamp_acceptedDate" source="currentTimestamp" target="mov1#opm13#mfu4.ent1#att12"/>
+      </OKLink>
+    </TimeUnit>
+    <ModuleInstanceUnit gr:x="480" gr:y="75" id="mov1#opm13#miu28" action="true" moduleId="mov1#opm12"/>
+  </OperationUnits>
+</OperationModule>

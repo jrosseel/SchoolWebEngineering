@@ -1,0 +1,5 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="720" gr:y="525" id="mov1#opm14" name="Reject Request">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm14#icu14" name="Input Collector" gr:x="30" gr:y="60"/>
+  </OperationUnits>
+</OperationModule>

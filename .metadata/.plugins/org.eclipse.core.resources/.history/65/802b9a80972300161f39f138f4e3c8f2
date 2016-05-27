@@ -1,0 +1,33 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-130" gr:y="715" id="sv3#page29" name="Notification type 1">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv3#page29#dau10" name="Notification" entity="ent6" displayAttributes="ent6#att35 ent6#att48 ent6#att49 ent6#att59 ent6#att60">
+      <Selector id="sv3#page29#dau10#su30" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page29#dau10#su30#kcond25" name="KeyCondition25" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page29#dau10">
+          <layout:Attribute attribute="ent6#att35"/>
+          <layout:Attribute attribute="ent6#att48"/>
+          <layout:Attribute attribute="ent6#att49"/>
+          <layout:Attribute attribute="ent6#att59"/>
+          <layout:Attribute attribute="ent6#att60"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
