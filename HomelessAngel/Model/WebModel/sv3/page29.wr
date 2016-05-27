@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-175" gr:y="825" id="sv3#page29" name="Request Notification">
   <ContentUnits>
-    <DataUnit gr:x="0" gr:y="0" id="sv3#page29#dau10" name="Notification" entity="ent6" displayAttributes="ent6#att48 ent6#att49 ent6#att59 ent6#att54">
+    <DataUnit gr:x="0" gr:y="0" id="sv3#page29#dau10" name="Notification" entity="ent6" displayAttributes="ent6#att48 ent6#att49 ent6#att59 ent6#att54" linkOrder="sv3#page29#dau10#ln134">
       <Selector id="sv3#page29#dau10#su30" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page29#dau10#su30#kcond25" name="KeyCondition25" predicate="in" implied="false"/>
       </Selector>
@@ -8,8 +8,22 @@
         <LinkParameter id="sv3#page29#dau10#ln79#par375" name="NotificationToRequest.oid_KeyCondition13 [oid]" source="data.rel26#role51_ent1#att7" target="sv3#page29#dau7#su47#kcond13.ent1#att7"/>
         <LinkParameter id="sv3#page29#dau10#ln79#par516" name="seen_PASSING" source="data.ent6#att48" passing="true"/>
       </Link>
+      <Link id="sv3#page29#dau10#ln134" name="Mark Read" to="sv3#miu35" type="normal" validate="true">
+        <LinkParameter id="sv3#page29#dau10#ln134#par597" name="Data Size_PASSING" source="dataSize" passing="true"/>
+        <LinkParameter id="sv3#page29#dau10#ln134#par598" name="description_PASSING" source="data.ent6#att59" passing="true"/>
+        <LinkParameter id="sv3#page29#dau10#ln134#par599" name="NotificationToRequest.oid_PASSING" source="data.rel26#role51_ent1#att7" passing="true"/>
+        <LinkParameter id="sv3#page29#dau10#ln134#par600" name="NotificationToRequest_2.oid_PASSING" source="data.rel3#role5_ent1#att7" passing="true"/>
+        <LinkParameter id="sv3#page29#dau10#ln134#par601" name="NotificationToTransaction.oid_PASSING" source="data.rel1#role1_ent14#att51" passing="true"/>
+        <LinkParameter id="sv3#page29#dau10#ln134#par602" name="NotificationToUserProfile.oid_PASSING" source="data.rel13#role26_ent2#att2" passing="true"/>
+        <LinkParameter id="sv3#page29#dau10#ln134#par603" name="notificationType_PASSING" source="data.ent6#att60" passing="true"/>
+        <LinkParameter id="sv3#page29#dau10#ln134#par604" name="oid_PASSING" source="data.ent6#att35" passing="true"/>
+        <LinkParameter id="sv3#page29#dau10#ln134#par605" name="seen_PASSING" source="data.ent6#att48" passing="true"/>
+        <LinkParameter id="sv3#page29#dau10#ln134#par606" name="seenDate_PASSING" source="data.ent6#att49" passing="true"/>
+        <LinkParameter id="sv3#page29#dau10#ln134#par607" name="type_PASSING" source="data.ent6#att54" passing="true"/>
+        <LinkParameter id="sv3#page29#dau10#ln134#par608" name="oid_KeyCondition24 [oid]" source="data.ent6#att35" target="sv3#miu35.mov1#opm12#icu15#icp63"/>
+      </Link>
     </DataUnit>
-    <DataUnit gr:x="25" gr:y="110" id="sv3#page29#dau7" name="Request" entity="ent1" linkOrder="sv3#page29#dau7#ln126 sv3#page29#dau7#ln149" displayAttributes="ent1#att14 ent1#att57 rel12#role24.ent4#att11 rel12#role24.ent4#att13 rel14#role28.ent8#att28 rel14#role28.ent8#att41 rel14#role28.ent8#att36 ent1#att12">
+    <DataUnit gr:x="25" gr:y="110" id="sv3#page29#dau7" name="Request" entity="ent1" linkOrder="sv3#page29#dau7#ln126 sv3#page29#dau7#ln149" displayAttributes="ent1#att14 ent1#att57 rel12#role24.ent4#att11 rel12#role24.ent4#att13 rel14#role28.ent8#att28 rel14#role28.ent8#att41 rel14#role28.ent8#att36 ent1#att12 ent1#att61 ent1#att64">
       <Selector id="sv3#page29#dau7#su47" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page29#dau7#su47#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
       </Selector>
@@ -28,6 +42,8 @@
         <LinkParameter id="sv3#page29#dau7#ln149#par508" name="RequestToHomelessPerson.oid_PASSING" source="data.rel12#role24_ent2#att2" passing="true"/>
         <LinkParameter id="sv3#page29#dau7#ln149#par517" name="seen_PASSING" sourceLinkParameter="sv3#page29#dau10#ln79#par516" passing="true"/>
         <LinkParameter id="sv3#page29#dau7#ln149#par518" name="RequestToNotification.oid_PASSING" source="data.rel26#role52_ent6#att35" passing="true"/>
+        <LinkParameter id="sv3#page29#dau7#ln149#par19" name="isAccepted_PASSING" source="data.ent1#att53" passing="true"/>
+        <LinkParameter id="sv3#page29#dau7#ln149#par121" name="isRejected_PASSING" source="data.ent1#att62" passing="true"/>
       </Link>
     </DataUnit>
   </ContentUnits>
@@ -35,6 +51,8 @@
     <layout:Row>
       <layout:Cell colspan="6">
         <layout:Unit unitId="sv3#page29#dau7">
+          <layout:Link link="sv3#page29#dau7#ln126" layout:linkVisibilityCondition="sv3#page29#cexpr1"/>
+          <layout:Link link="sv3#page29#dau7#ln149" layout:linkVisibilityCondition="sv3#page29#cexpr2"/>
           <layout:Attribute attribute="ent1#att14" label="Requested Amount"/>
           <layout:Attribute attribute="ent1#att57" label="Requested On"/>
           <layout:Attribute attribute="rel12#role24.ent4#att11" label="Homeless Nickname"/>
@@ -43,8 +61,8 @@
           <layout:Attribute attribute="rel14#role28.ent8#att41" label="Offer Description"/>
           <layout:Attribute attribute="rel14#role28.ent8#att36" label="Offer Amount"/>
           <layout:Attribute attribute="ent1#att12" label="Accepted Date" layout:attributeVisibilityConditionVariable="sv3#page29#var7"/>
-          <layout:Link link="sv3#page29#dau7#ln126" layout:linkVisibilityCondition="sv3#page29#cexpr1"/>
-          <layout:Link link="sv3#page29#dau7#ln149" layout:linkVisibilityConditionVariable="sv3#page29#var11" layout:linkVisibilityConditionNegated="true"/>
+          <layout:Attribute attribute="ent1#att61" layout:attributeVisibilityConditionVariable="sv3#page29#var11"/>
+          <layout:Attribute attribute="ent1#att64" layout:attributeVisibilityConditionVariable="sv3#page29#var11"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -58,6 +76,7 @@
           <layout:Attribute attribute="ent6#att49" label="Seen Date" layout:attributeVisibilityConditionVariable="sv3#page29#var10"/>
           <layout:Attribute attribute="ent6#att59" label="Description"/>
           <layout:Attribute attribute="ent6#att54" label="Type"/>
+          <layout:Link link="sv3#page29#dau10#ln134" layout:linkVisibilityConditionVariable="sv3#page29#var10" layout:linkVisibilityConditionNegated="true"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -81,11 +100,14 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Variable id="sv3#page29#var7" name="RequestAccepted" type="boolean" value="false"/>
+  <Variable id="sv3#page29#var7" name="RequestAccepted" type="boolean"/>
   <Variable id="sv3#page29#var9" name="OfferAmountIsEnough" type="boolean" value="true"/>
   <Variable id="sv3#page29#var10" name="NotificationSeen" type="boolean"/>
   <ConditionExpression id="sv3#page29#cexpr1" name="RequestAcceptable">
     <TextValue xml:space="preserve">return (!RequestAccepted &amp;&amp; OfferAmountIsEnough)</TextValue>
   </ConditionExpression>
-  <Variable id="sv3#page29#var11" name="RequestRejected" type="boolean" value="false"/>
+  <Variable id="sv3#page29#var11" name="RequestRejected" type="boolean"/>
+  <ConditionExpression id="sv3#page29#cexpr2" name="RequestRejectable">
+    <TextValue xml:space="preserve">return (!RequestAccepted &amp;&amp; !RequestRejected)</TextValue>
+  </ConditionExpression>
 </Page>

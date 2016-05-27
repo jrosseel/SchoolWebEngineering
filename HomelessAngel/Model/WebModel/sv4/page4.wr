@@ -37,14 +37,21 @@
         <LinkParameter id="sv4#page4#dau6#ln17#par76" name="UserToUserProfile.oid_KeyCondition1 [oid]" source="data.rel2#role3_ent2#att2" target="sv4#page4#dau1#su1#kcond1.ent2#att2"/>
       </Link>
     </DataUnit>
-    <PowerIndexUnit id="sv4#page4#pwu7" name="Notifications" gr:x="10" gr:y="135" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att59 ent6#att60" linkOrder="sv4#page4#pwu7#ln146 sv4#page4#pwu7#ln147">
+    <PowerIndexUnit id="sv4#page4#pwu7" name="Notifications" gr:x="10" gr:y="135" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att59 ent6#att54 ent6#att48 rel26#role51.ent1#att12 rel26#role51.ent1#att61" linkOrder="sv4#page4#pwu7#ln146 sv4#page4#pwu7#ln147">
       <Selector id="sv4#page4#pwu7#su28" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#page4#pwu7#su28#rcond5" name="Homeless" predicate="in" implied="false" role="rel13#role25"/>
       </Selector>
       <Link id="sv4#page4#pwu7#ln146" name="Mark Read" to="sv4#miu30" type="normal" validate="true">
         <LinkParameter id="sv4#page4#pwu7#ln146#par434" name="oid_KeyCondition24 [oid]" source="data[].ent6#att35" target="sv4#miu30.mov1#opm12#icu15#icp63"/>
       </Link>
-      <Link id="sv4#page4#pwu7#ln147" name="Open" to="sv4#switch13" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv4#page4#pwu7#ln147" name="Open" to="sv4#switch13" type="normal" validate="true">
+        <LinkParameter id="sv4#page4#pwu7#ln147#par146" name="notificationType_Switch" source="data[].ent6#att60" target="sv4#switch13.switch"/>
+        <LinkParameter id="sv4#page4#pwu7#ln147#par169" name="oid_PASSING" source="data[].ent6#att35" passing="true"/>
+        <LinkParameter id="sv4#page4#pwu7#ln147#par171" name="seen_PASSING" source="data[].ent6#att48" passing="true"/>
+      </Link>
+      <Link id="sv4#page4#pwu7#ln78" name="Flow78" to="sv4#miu36" type="transport" validate="true" gr:bendpoints="490,221,-135,-204">
+        <LinkParameter id="sv4#page4#pwu7#ln78#par141" name="NotificationToRequest.oid_Request [oid]" source="data[].rel26#role51_ent1#att7" target="sv4#miu36.mov1#opm15#icu16#icp84"/>
+      </Link>
     </PowerIndexUnit>
     <MultiMessageUnit id="sv4#page4#mssu16" name="Error Message" gr:x="245" gr:y="240"/>
   </ContentUnits>
@@ -73,7 +80,10 @@
       <layout:Cell colspan="6">
         <layout:Unit unitId="sv4#page4#pwu7">
           <layout:Attribute attribute="ent6#att59"/>
-          <layout:Attribute attribute="ent6#att60"/>
+          <layout:Attribute attribute="ent6#att54"/>
+          <layout:Attribute attribute="ent6#att48"/>
+          <layout:Attribute attribute="rel26#role51.ent1#att12"/>
+          <layout:Attribute attribute="rel26#role51.ent1#att61"/>
           <layout:Link link="sv4#page4#pwu7#ln146"/>
           <layout:Link link="sv4#page4#pwu7#ln147"/>
         </layout:Unit>

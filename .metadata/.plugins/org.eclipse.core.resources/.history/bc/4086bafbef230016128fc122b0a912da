@@ -1,0 +1,100 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="65" gr:y="965" id="sv3#page14" name="Reject Request">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#page14#enu6" name="Reject Reason" linkOrder="sv3#page14#enu6#ln151 sv3#page14#enu6#ln152 sv3#page14#enu6#ln4 sv3#page14#enu6#ln78 sv3#page14#enu6#ln81" fieldOrder="sv3#page14#enu6#fld52">
+      <Link id="sv3#page14#enu6#ln151" name="Cancel" to="sv3#page29#dau7" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-124,6,106,21"/>
+      <Field id="sv3#page14#enu6#fld52" name="Reason" type="string" modifiable="true"/>
+      <Link id="sv3#page14#enu6#ln152" name="Confirm" to="sv3#miu32" type="normal" validate="true">
+        <LinkParameter id="sv3#page14#enu6#ln152#par505" name="oid_PASSING_Request [oid]" sourceLinkParameter="sv3#page29#dau7#ln149#par504" target="sv3#miu32.mov1#opm14#icu14#icp65"/>
+        <LinkParameter id="sv3#page14#enu6#ln152#par514" name="RequestToHomelessPerson.oid_PASSING_Homeless [oid]" sourceLinkParameter="sv3#page29#dau7#ln149#par508" target="sv3#miu32.mov1#opm14#icu14#icp76"/>
+        <LinkParameter id="sv3#page14#enu6#ln152#par515" name="Reason_Reason" source="sv3#page14#enu6#fld52" target="sv3#miu32.mov1#opm14#icu14#icp68"/>
+        <LinkParameter id="sv3#page14#enu6#ln152#par519" name="RequestToNotification.oid_PASSING_Notification [oid]" sourceLinkParameter="sv3#page29#dau7#ln149#par518" target="sv3#miu32.mov1#opm14#icu14#icp82"/>
+        <LinkParameter id="sv3#page14#enu6#ln152#par520" name="seen_PASSING_Seen" sourceLinkParameter="sv3#page29#dau7#ln149#par517" target="sv3#miu32.mov1#opm14#icu14#icp80"/>
+      </Link>
+      <Link id="sv3#page14#enu6#ln4" name="isAccepted" to="sv3#page14#mssu8" type="normal" validate="true">
+        <LinkParameter id="sv3#page14#enu6#ln4#par133" name="isAccepted_PASSING_Shown Messages" sourceLinkParameter="sv3#page29#dau7#ln149#par19" target="sv3#page14#mssu8.shownMessages"/>
+      </Link>
+      <Link id="sv3#page14#enu6#ln78" name="isRejected" to="sv3#page14#mssu21" type="normal" validate="true">
+        <LinkParameter id="sv3#page14#enu6#ln78#par134" name="isRejected_PASSING_Shown Messages" sourceLinkParameter="sv3#page29#dau7#ln149#par121" target="sv3#page14#mssu21.shownMessages"/>
+      </Link>
+      <Link id="sv3#page14#enu6#ln81" name="Seen" to="sv3#page14#mssu22" type="normal" validate="true">
+        <LinkParameter id="sv3#page14#enu6#ln81#par141" name="seen_PASSING_Shown Messages" sourceLinkParameter="sv3#page29#dau7#ln149#par517" target="sv3#page14#mssu22.shownMessages"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="20" gr:y="95" id="sv3#page14#mssu8" name="isAccepted"/>
+    <MultiMessageUnit gr:x="25" gr:y="150" id="sv3#page14#mssu21" name="isRejected"/>
+    <MultiMessageUnit gr:x="10" gr:y="195" id="sv3#page14#mssu22" name="Seen"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page14#enu6">
+          <layout:Field field="sv3#page14#enu6#fld52"/>
+          <layout:Link link="sv3#page14#enu6#ln151"/>
+          <layout:Link link="sv3#page14#enu6#ln152"/>
+          <layout:Link link="sv3#page14#enu6#ln4"/>
+          <layout:Link link="sv3#page14#enu6#ln78"/>
+          <layout:Link link="sv3#page14#enu6#ln81"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page14#mssu8"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page14#mssu21"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page14#mssu22"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

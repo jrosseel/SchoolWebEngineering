@@ -1,0 +1,82 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="555" gr:y="420" id="mov1#opm15" name="Get Transaction Address">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm15#icu16" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm15#icu16#oln121" name="OKFlow121" to="mov1#opm15#seu15">
+        <LinkParameter id="mov1#opm15#icu16#oln121#par562" name="Request [oid]_KeyCondition55 [oid]" source="mov1#opm15#icu16#icp84" target="mov1#opm15#seu15#su69#kcond55.ent1#att7"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm15#icu16#icp84" name="Request [oid]"/>
+      <Link id="mov1#opm15#icu16#ln159" name="Flow159" to="mov1#opm15#seu13" automaticCoupling="false" type="transport" validate="true" gr:bendpoints="130,-47,-285,-52;288,-45,-127,-50">
+        <LinkParameter id="mov1#opm15#icu16#ln159#par561" name="Pickup [oid]" source="mov1#opm15#icu16#icp86" target="mov1#opm15#seu13#su67#rcond13.ent14#att51"/>
+      </Link>
+    </InputCollectorUnit>
+    <SwitchUnit gr:x="430" gr:y="75" id="mov1#opm15#switch9" name="PickupOrDelivery">
+      <Case value="1"/>
+      <Case value="2"/>
+      <OKLink id="mov1#opm15#switch9#oln122" name="OKFlow122" to="mov1#opm15#seu13" automaticCoupling="true" code="1"/>
+      <OKLink id="mov1#opm15#switch9#oln123" name="OKFlow122" to="mov1#opm15#seu19" code="2" automaticCoupling="true"/>
+    </SwitchUnit>
+    <SelectorUnit gr:x="605" gr:y="65" id="mov1#opm15#seu13" name="Select Address" entity="ent5">
+      <Selector id="mov1#opm15#seu13#su67" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm15#seu13#su67#rcond13" name="Pickup" predicate="in" implied="false" role="rel20#role39.rel14#role28.rel11#role21"/>
+      </Selector>
+      <OKLink id="mov1#opm15#seu13#oln124" name="OKFlow124" to="mov1#opm15#okcu12">
+        <LinkParameter id="mov1#opm15#seu13#oln124#par565" name="bus" source="ent5#att27Array" target="mov1#opm15#okcu12#ocp23"/>
+        <LinkParameter id="mov1#opm15#seu13#oln124#par566" name="city" source="ent5#att25Array" target="mov1#opm15#okcu12#ocp24"/>
+        <LinkParameter id="mov1#opm15#seu13#oln124#par567" name="country" source="ent5#att26Array" target="mov1#opm15#okcu12#ocp25"/>
+        <LinkParameter id="mov1#opm15#seu13#oln124#par568" name="housenumber" source="ent5#att23Array" target="mov1#opm15#okcu12#ocp26"/>
+        <LinkParameter id="mov1#opm15#seu13#oln124#par569" name="oid" source="ent5#att8Array" target="mov1#opm15#okcu12#ocp27"/>
+        <LinkParameter id="mov1#opm15#seu13#oln124#par570" name="postalcode" source="ent5#att24Array" target="mov1#opm15#okcu12#ocp28"/>
+        <LinkParameter id="mov1#opm15#seu13#oln124#par571" name="street" source="ent5#att22Array" target="mov1#opm15#okcu12#ocp29"/>
+        <LinkParameter id="mov1#opm15#seu13#oln124#par580" name="1_DeliveryMethod [oid]" sourceValue="1" target="mov1#opm15#okcu12#ocp31"/>
+      </OKLink>
+      <KOLink id="mov1#opm15#seu13#kln25" name="KOFlow25" to="mov1#opm15#kocu15" automaticCoupling="true"/>
+    </SelectorUnit>
+    <SelectorUnit id="mov1#opm15#seu14" name="Select Address" gr:x="595" gr:y="210" entity="ent5">
+      <Selector id="mov1#opm15#seu14#su68" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm15#seu14#su68#rcond14" name="Delivery" predicate="in" implied="false" role="rel10#role19"/>
+      </Selector>
+      <OKLink id="mov1#opm15#seu14#oln125" name="OKFlow125" to="mov1#opm15#okcu12">
+        <LinkParameter id="mov1#opm15#seu14#oln125#par572" name="bus_bus" source="ent5#att27Array" target="mov1#opm15#okcu12#ocp23"/>
+        <LinkParameter id="mov1#opm15#seu14#oln125#par573" name="city_city" source="ent5#att25Array" target="mov1#opm15#okcu12#ocp24"/>
+        <LinkParameter id="mov1#opm15#seu14#oln125#par574" name="country_country" source="ent5#att26Array" target="mov1#opm15#okcu12#ocp25"/>
+        <LinkParameter id="mov1#opm15#seu14#oln125#par575" name="housenumber_housenumber" source="ent5#att23Array" target="mov1#opm15#okcu12#ocp26"/>
+        <LinkParameter id="mov1#opm15#seu14#oln125#par576" name="oid_oid" source="ent5#att8Array" target="mov1#opm15#okcu12#ocp27"/>
+        <LinkParameter id="mov1#opm15#seu14#oln125#par577" name="postalcode_postalcode" source="ent5#att24Array" target="mov1#opm15#okcu12#ocp28"/>
+        <LinkParameter id="mov1#opm15#seu14#oln125#par578" name="street_street" source="ent5#att22Array" target="mov1#opm15#okcu12#ocp29"/>
+        <LinkParameter id="mov1#opm15#seu14#oln125#par581" name="2_DeliveryMethod [oid]" sourceValue="2" target="mov1#opm15#okcu12#ocp31"/>
+      </OKLink>
+      <KOLink id="mov1#opm15#seu14#kln61" name="KOFlow61" to="mov1#opm15#kocu15" automaticCoupling="true"/>
+    </SelectorUnit>
+    <OKCollectorUnit gr:x="860" gr:y="60" id="mov1#opm15#okcu12" name="OK Port12">
+      <OutputCollectorParameter id="mov1#opm15#okcu12#ocp23" name="bus"/>
+      <OutputCollectorParameter id="mov1#opm15#okcu12#ocp24" name="city"/>
+      <OutputCollectorParameter id="mov1#opm15#okcu12#ocp25" name="country"/>
+      <OutputCollectorParameter id="mov1#opm15#okcu12#ocp26" name="housenumber"/>
+      <OutputCollectorParameter id="mov1#opm15#okcu12#ocp27" name="oid"/>
+      <OutputCollectorParameter id="mov1#opm15#okcu12#ocp28" name="postalcode"/>
+      <OutputCollectorParameter id="mov1#opm15#okcu12#ocp29" name="street"/>
+      <OutputCollectorParameter id="mov1#opm15#okcu12#ocp31" name="DeliveryMethod [oid]"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="860" gr:y="240" id="mov1#opm15#kocu15" name="KO Port15"/>
+    <SelectorUnit gr:x="275" gr:y="205" id="mov1#opm15#seu15" name="Selector Request" entity="ent1">
+      <Selector id="mov1#opm15#seu15#su69" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm15#seu15#su69#kcond55" name="KeyCondition55" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm15#seu15#oln127" name="OKFlow127" to="mov1#opm15#seu16">
+        <LinkParameter id="mov1#opm15#seu15#oln127#par563" name="RequestToOffer.oid_KeyCondition56 [oid]" source="rel14#role28_ent8#att28Array" target="mov1#opm15#seu16#su70#kcond56.ent8#att28"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit gr:x="280" gr:y="65" id="mov1#opm15#seu16" name="Selector Offer" entity="ent8" linkOrder="mov1#opm15#seu16#ln163">
+      <Selector id="mov1#opm15#seu16#su70" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm15#seu16#su70#kcond56" name="KeyCondition56" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm15#seu16#oln128" name="OKFlow128" to="mov1#opm15#switch9">
+        <LinkParameter id="mov1#opm15#seu16#oln128#par564" name="OfferToDeliveryMethod.oid_Switch" source="rel19#role37_ent12#att43Array" target="mov1#opm15#switch9.switch"/>
+      </OKLink>
+      <Link id="mov1#opm15#seu16#ln163" name="Flow163" to="mov1#opm15#okcu12" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="157,69,-478,29"/>
+    </SelectorUnit>
+    <SelectorUnit gr:x="420" gr:y="235" id="mov1#opm15#seu19" name="Selector Transaction" entity="ent14">
+      <OKLink id="mov1#opm15#seu19#oln131" name="OKFlow131" to="mov1#opm15#seu14" automaticCoupling="true"/>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,71 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page15" name="Request Rejected Notification" gr:x="170" gr:y="675" linkOrder="sv4#page15#ln129">
+  <ContentUnits>
+    <DataUnit id="sv4#page15#dau3" name="Notification" gr:x="0" gr:y="0" entity="ent6" displayAttributes="ent6#att48 ent6#att49 ent6#att59 ent6#att54">
+      <Selector id="sv4#page15#dau3#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#page15#dau3#su3#kcond3" name="KeyCondition25" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#page15#dau3#ln122" name="Flow79" to="sv4#page15#dau26" type="transport" validate="true" gr:bendpoints="-15,97,-80,-3">
+        <LinkParameter id="sv4#page15#dau3#ln122#par162" name="NotificationToRequest.oid_KeyCondition13 [oid]" source="data.rel26#role51_ent1#att7" target="sv4#page15#dau26#su53#kcond42.ent1#att7"/>
+        <LinkParameter id="sv4#page15#dau3#ln122#par163" name="seen_PASSING" source="data.ent6#att48" passing="true"/>
+      </Link>
+    </DataUnit>
+    <DataUnit id="sv4#page15#dau26" name="Request" gr:x="140" gr:y="5" entity="ent1" displayAttributes="rel14#role28.rel7#role13.ent3#att17 ent1#att14 ent1#att57 rel14#role28.ent8#att28 rel14#role28.ent8#att41 rel14#role28.ent8#att36 ent1#att61 ent1#att64">
+      <Selector id="sv4#page15#dau26#su53" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#page15#dau26#su53#kcond42" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#page15#dau26#ln127" name="Flow47" to="sv4#page15#dau3" type="transport" validate="true" gr:bendpoints="5,-96,70,4">
+        <LinkParameter id="sv4#page15#dau26#ln127#par165" name="RequestToNotification.oid_KeyCondition25 [oid]" source="data.rel26#role52_ent6#att35" target="sv4#page15#dau3#su3#kcond3.ent6#att35"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv4#page15#dau26">
+          <layout:Attribute attribute="rel14#role28.rel7#role13.ent3#att17"/>
+          <layout:Attribute label="Requested Amount" attribute="ent1#att14"/>
+          <layout:Attribute label="Requested On" attribute="ent1#att57"/>
+          <layout:Attribute label="Offer Oid" attribute="rel14#role28.ent8#att28"/>
+          <layout:Attribute label="Offer Description" attribute="rel14#role28.ent8#att41"/>
+          <layout:Attribute label="Offer Amount" attribute="rel14#role28.ent8#att36"/>
+          <layout:Attribute attribute="ent1#att61"/>
+          <layout:Attribute attribute="ent1#att64"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv4#page15#dau3">
+          <layout:Attribute label="Seen" attribute="ent6#att48" layout:attributeVisibilityConditionVariable="sv4#page15#var14"/>
+          <layout:Attribute label="Seen Date" attribute="ent6#att49" layout:attributeVisibilityConditionVariable="sv4#page15#var14"/>
+          <layout:Attribute label="Description" attribute="ent6#att59"/>
+          <layout:Attribute label="Type" attribute="ent6#att54"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv4#page15#var14" name="NotificationSeen" type="boolean"/>
+  <Link id="sv4#page15#ln129" name="Back to Notifications" to="sv4#page4#pwu7" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

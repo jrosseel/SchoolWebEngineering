@@ -1,0 +1,121 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page30" name="Transaction Details Notification" gr:x="280" gr:y="795" linkOrder="sv3#page30#ln164">
+  <ContentUnits>
+    <DataUnit id="sv3#page30#dau11" name="Notification" gr:x="25" gr:y="5" entity="ent6" displayAttributes="ent6#att48 ent6#att49 ent6#att59 ent6#att54" linkOrder="sv3#page30#dau11#ln157">
+      <Selector id="sv3#page30#dau11#su31" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page30#dau11#su31#kcond26" name="KeyCondition25" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page30#dau11#ln157" name="Mark Read" to="sv3#miu37" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="150,75,-244,31"/>
+      <Link id="sv3#page30#dau11#ln158" name="Flow158" to="sv3#page30#dau28" type="transport" validate="true" gr:bendpoints="78,-36,-76,-30">
+        <LinkParameter id="sv3#page30#dau11#ln158#par558" name="NotificationToTransaction.oid_KeyCondition53 [oid]" source="data.rel1#role1_ent14#att51" target="sv3#page30#dau28#su66#kcond53.ent14#att51"/>
+      </Link>
+    </DataUnit>
+    <DataUnit gr:x="180" gr:y="0" id="sv3#page30#dau28" name="Transaction" entity="ent14" displayAttributes="ent14#att51 ent14#att56 rel20#role39.rel12#role24.ent4#att11 ent14#att3 ent14#att58 rel20#role39.ent1#att14 rel20#role39.rel14#role28.ent8#att28 rel20#role39.rel14#role28.ent8#att41">
+      <Selector id="sv3#page30#dau28#su66" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page30#dau28#su66#kcond53" name="KeyCondition53" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page30#dau28#ln161" name="Flow161" to="sv3#miu38" automaticCoupling="true" type="transport" validate="true"/>
+    </DataUnit>
+    <DataUnit gr:x="145" gr:y="125" id="sv3#page30#dau29" name="Delivery / Pickup Address" entity="ent5" displayAttributes="ent5#att22 ent5#att23 ent5#att27 ent5#att24 ent5#att25 ent5#att26">
+      <Selector id="sv3#page30#dau29#su71" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page30#dau29#su71#kcond57" name="KeyCondition57" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <DataUnit gr:x="0" gr:y="120" id="sv3#page30#dau30" name="Delivery Method" entity="ent12" displayAttributes="ent12#att44">
+      <Selector id="sv3#page30#dau30#su72" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page30#dau30#su72#kcond58" name="KeyCondition58" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#page30#dau28">
+          <layout:Attribute attribute="ent14#att51"/>
+          <layout:Attribute attribute="ent14#att56"/>
+          <layout:Attribute attribute="rel20#role39.rel12#role24.ent4#att11"/>
+          <layout:Attribute attribute="ent14#att3"/>
+          <layout:Attribute attribute="ent14#att58"/>
+          <layout:Attribute attribute="rel20#role39.ent1#att14"/>
+          <layout:Attribute attribute="rel20#role39.rel14#role28.ent8#att28"/>
+          <layout:Attribute attribute="rel20#role39.rel14#role28.ent8#att41"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6" rowspan="3">
+        <layout:Unit unitId="sv3#page30#dau11">
+          <layout:Link link="sv3#page30#dau11#ln157" layout:linkVisibilityConditionVariable="sv3#page30#var17" layout:linkVisibilityConditionNegated="true"/>
+          <layout:Attribute attribute="ent6#att48" layout:attributeVisibilityConditionVariable="sv3#page30#var17"/>
+          <layout:Attribute attribute="ent6#att49" layout:attributeVisibilityConditionVariable="sv3#page30#var17"/>
+          <layout:Attribute attribute="ent6#att59"/>
+          <layout:Attribute attribute="ent6#att54"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#page30#dau30">
+          <layout:Attribute attribute="ent12#att44"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv3#page30#dau29">
+          <layout:Attribute attribute="ent5#att22"/>
+          <layout:Attribute attribute="ent5#att23"/>
+          <layout:Attribute attribute="ent5#att27"/>
+          <layout:Attribute attribute="ent5#att24"/>
+          <layout:Attribute attribute="ent5#att25"/>
+          <layout:Attribute attribute="ent5#att26"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv3#page30#var17" name="NotificationSeen" type="boolean"/>
+  <Link id="sv3#page30#ln164" name="Back to Notifications" to="sv3#page20#pwu6" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

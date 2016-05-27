@@ -1,0 +1,29 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="705" gr:y="430" id="mov1#opm15" name="Get Transaction Address">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm15#icu16" name="Input Collector" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm15#icu16#oln121" name="OKFlow121" to="mov1#opm15#switch9" automaticCoupling="true"/>
+    </InputCollectorUnit>
+    <SwitchUnit gr:x="280" gr:y="70" id="mov1#opm15#switch9" name="PickupOrDelivery">
+      <Case value="1"/>
+      <Case value="2"/>
+      <OKLink id="mov1#opm15#switch9#oln122" name="OKFlow122" to="mov1#opm15#seu13" automaticCoupling="true" code="1"/>
+      <OKLink id="mov1#opm15#switch9#oln123" name="OKFlow122" to="mov1#opm15#seu14" code="2" automaticCoupling="true"/>
+    </SwitchUnit>
+    <SelectorUnit gr:x="460" gr:y="60" id="mov1#opm15#seu13" name="Select Address" entity="ent5">
+      <Selector id="mov1#opm15#seu13#su67" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm15#seu13#su67#rcond13" name="Pickup" predicate="in" implied="false" role="rel20#role39.rel14#role28.rel11#role21"/>
+      </Selector>
+      <OKLink id="mov1#opm15#seu13#oln124" name="OKFlow124" to="mov1#opm15#okcu12" automaticCoupling="true"/>
+      <KOLink id="mov1#opm15#seu13#kln25" name="KOFlow25" to="mov1#opm15#kocu15" automaticCoupling="true"/>
+    </SelectorUnit>
+    <SelectorUnit id="mov1#opm15#seu14" name="Select Address" gr:x="290" gr:y="165" entity="ent5">
+      <Selector id="mov1#opm15#seu14#su68" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm15#seu14#su68#rcond14" name="Delivery" predicate="in" implied="false" role="rel10#role19"/>
+      </Selector>
+      <OKLink id="mov1#opm15#seu14#oln125" name="OKFlow125" to="mov1#opm15#okcu12" automaticCoupling="true"/>
+      <KOLink id="mov1#opm15#seu14#kln61" name="KOFlow61" to="mov1#opm15#kocu15" automaticCoupling="true"/>
+    </SelectorUnit>
+    <OKCollectorUnit gr:x="670" gr:y="115" id="mov1#opm15#okcu12" name="OK Port12"/>
+    <KOCollectorUnit gr:x="705" gr:y="225" id="mov1#opm15#kocu15" name="KO Port15"/>
+  </OperationUnits>
+</OperationModule>

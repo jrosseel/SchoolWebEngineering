@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="105" gr:y="525" id="mov1#opm11" name="Save Offer">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm11#icu11" gr:x="30" gr:y="60">
+    <InputCollectorUnit id="mov1#opm11#icu11" gr:x="30" gr:y="60" linkOrder="mov1#opm11#icu11#ln135 mov1#opm11#icu11#ln136 mov1#opm11#icu11#ln137">
       <OKLink id="mov1#opm11#icu11#oln75" name="OKFlow75" to="mov1#opm11#seu4">
         <LinkParameter id="mov1#opm11#icu11#oln75#par115" name="oid_KeyCondition41 [oid]" source="mov1#opm11#icu11#icp22" target="mov1#opm11#seu4#su13#kcond41.ent8#att28"/>
       </OKLink>
@@ -48,26 +48,47 @@
         <LinkParameter id="mov1#opm11#icu11#ln5#par104" name="OfferCategory.oid(OfferToOfferCategory)_OfferCategory.oid(OfferToOfferCategory)" source="mov1#opm11#icu11#icp60" target="mov1#opm11#mfu7.rel17#role33.ent10#att33"/>
         <LinkParameter id="mov1#opm11#icu11#ln5#par108" name="OfferType.oid(OfferToOfferType)_OfferType.oid(OfferToOfferType)" source="mov1#opm11#icu11#icp61" target="mov1#opm11#mfu7.rel18#role35.ent9#att31"/>
       </Link>
+      <InputCollectorParameter id="mov1#opm11#icu11#icp83" name="Address [oid]"/>
+      <Link id="mov1#opm11#icu11#ln135" name="Flow135" to="mov1#opm11#seu7" type="transport" validate="true" gr:bendpoints="203,-207,-662,-47;757,-196,-108,-36">
+        <LinkParameter id="mov1#opm11#icu11#ln135#par177" name="Address [oid]_KeyCondition43 [oid]" source="mov1#opm11#icu11#icp83" target="mov1#opm11#seu7#su54#kcond43.ent5#att8"/>
+      </Link>
+      <Link id="mov1#opm11#icu11#ln136" name="Flow136" to="mov1#opm11#mfu8" type="transport" validate="true" gr:bendpoints="296,-73,-544,-33;728,-72,-112,-32">
+        <LinkParameter id="mov1#opm11#icu11#ln136#par180" name="bus_bus" source="mov1#opm11#icu11#icp69" target="mov1#opm11#mfu8.ent5#att27"/>
+        <LinkParameter id="mov1#opm11#icu11#ln136#par184" name="city_city" source="mov1#opm11#icu11#icp70" target="mov1#opm11#mfu8.ent5#att25"/>
+        <LinkParameter id="mov1#opm11#icu11#ln136#par187" name="country_country" source="mov1#opm11#icu11#icp71" target="mov1#opm11#mfu8.ent5#att26"/>
+        <LinkParameter id="mov1#opm11#icu11#ln136#par201" name="housenumber_housenumber" source="mov1#opm11#icu11#icp72" target="mov1#opm11#mfu8.ent5#att23"/>
+        <LinkParameter id="mov1#opm11#icu11#ln136#par202" name="postalcode_postalcode" source="mov1#opm11#icu11#icp73" target="mov1#opm11#mfu8.ent5#att24"/>
+        <LinkParameter id="mov1#opm11#icu11#ln136#par212" name="street_street" source="mov1#opm11#icu11#icp74" target="mov1#opm11#mfu8.ent5#att22"/>
+      </Link>
+      <Link id="mov1#opm11#icu11#ln137" name="Flow137" to="mov1#opm11#cru2" type="transport" validate="true" gr:bendpoints="301,164,-449,69;609,155,-141,60">
+        <LinkParameter id="mov1#opm11#icu11#ln137#par220" name="oid_Offer.oid(DeliveryAddressToOffer)" source="mov1#opm11#icu11#icp22" target="mov1#opm11#cru2.rel11#role22.ent8#att28"/>
+        <LinkParameter id="mov1#opm11#icu11#ln137#par221" name="bus_bus" source="mov1#opm11#icu11#icp69" target="mov1#opm11#cru2.ent5#att27"/>
+        <LinkParameter id="mov1#opm11#icu11#ln137#par222" name="city_city" source="mov1#opm11#icu11#icp70" target="mov1#opm11#cru2.ent5#att25"/>
+        <LinkParameter id="mov1#opm11#icu11#ln137#par223" name="country_country" source="mov1#opm11#icu11#icp71" target="mov1#opm11#cru2.ent5#att26"/>
+        <LinkParameter id="mov1#opm11#icu11#ln137#par224" name="housenumber_housenumber" source="mov1#opm11#icu11#icp72" target="mov1#opm11#cru2.ent5#att23"/>
+        <LinkParameter id="mov1#opm11#icu11#ln137#par229" name="postalcode_postalcode" source="mov1#opm11#icu11#icp73" target="mov1#opm11#cru2.ent5#att24"/>
+        <LinkParameter id="mov1#opm11#icu11#ln137#par230" name="street_street" source="mov1#opm11#icu11#icp74" target="mov1#opm11#cru2.ent5#att22"/>
+      </Link>
     </InputCollectorUnit>
-    <TimeUnit id="mov1#opm11#tmu6" name="Get Timestamp" gr:x="655" gr:y="175">
+    <TimeUnit id="mov1#opm11#tmu6" name="Get Timestamp" gr:x="495" gr:y="165">
       <Link id="mov1#opm11#tmu6#ln56" name="Flow10" to="mov1#opm11#cru6" type="transport" validate="true">
         <LinkParameter id="mov1#opm11#tmu6#ln56#par198" name="Current/Input Timestamp_creationDate" source="currentTimestamp" target="mov1#opm11#cru6.ent8#att50"/>
       </Link>
       <OKLink id="mov1#opm11#tmu6#oln76" name="OKFlow76" to="mov1#opm11#switch10" automaticCoupling="true"/>
     </TimeUnit>
-    <CreateUnit id="mov1#opm11#cru5" name="Create Address" gr:x="870" gr:y="270" entity="ent5">
+    <CreateUnit id="mov1#opm11#cru5" name="Create Address" gr:x="665" gr:y="265" entity="ent5">
       <OKLink id="mov1#opm11#cru5#oln70" name="OKFlow4" to="mov1#opm11#cru6" automaticCoupling="true"/>
       <KOLink id="mov1#opm11#cru5#kln45" name="KOFlow45" to="mov1#opm11#kocu12">
         <LinkParameter id="mov1#opm11#cru5#kln45#par286" name="Create Address Error_Error Message" sourceValue="Create Address Error" target="mov1#opm11#kocu12#ocp18"/>
       </KOLink>
     </CreateUnit>
-    <CreateUnit id="mov1#opm11#cru6" name="Create Offer" gr:x="875" gr:y="150" entity="ent8">
+    <CreateUnit id="mov1#opm11#cru6" name="Create Offer" gr:x="670" gr:y="155" entity="ent8">
       <OKLink id="mov1#opm11#cru6#oln77" name="OKFlow77" to="mov1#opm11#okcu8" automaticCoupling="true"/>
       <KOLink id="mov1#opm11#cru6#kln49" name="KOFlow49" to="mov1#opm11#kocu12">
         <LinkParameter id="mov1#opm11#cru6#kln49#par287" name="Create Offer Error_Error Message" sourceValue="Create Offer Error" target="mov1#opm11#kocu12#ocp18"/>
       </KOLink>
     </CreateUnit>
-    <SwitchUnit id="mov1#opm11#switch10" name="isPickup" gr:x="675" gr:y="280">
+    <SwitchUnit id="mov1#opm11#switch10" name="isPickup" gr:x="510" gr:y="260">
       <OKLink id="mov1#opm11#switch10#oln71" name="OKFlow1" to="mov1#opm11#cru5" code="1" automaticCoupling="true"/>
       <OKLink id="mov1#opm11#switch10#oln72" name="OKFlow6" to="mov1#opm11#cru6" code="2" gr:bendpoints="105,-57,-80,103" automaticCoupling="true"/>
       <Case value="1"/>
@@ -81,11 +102,11 @@
       <KOLink id="mov1#opm11#inn1#kln4" name="KOFlow4" to="mov1#opm11#tmu6" automaticCoupling="true"/>
       <OKLink id="mov1#opm11#inn1#oln1" name="OKFlow1" to="mov1#opm11#mfu7" automaticCoupling="true"/>
     </IsNotNullUnit>
-    <ModifyUnit gr:x="865" gr:y="40" id="mov1#opm11#mfu7" name="Update Offer" entity="ent8">
+    <ModifyUnit gr:x="800" gr:y="30" id="mov1#opm11#mfu7" name="Update Offer" entity="ent8">
       <Selector id="mov1#opm11#mfu7#su9" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#opm11#mfu7#su9#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="mov1#opm11#mfu7#oln3" name="OKFlow3" to="mov1#opm11#okcu8" automaticCoupling="true"/>
+      <OKLink id="mov1#opm11#mfu7#oln3" name="OKFlow3" to="mov1#opm11#seu7" automaticCoupling="true"/>
       <KOLink id="mov1#opm11#mfu7#kln52" name="KOFlow52" to="mov1#opm11#kocu12">
         <LinkParameter id="mov1#opm11#mfu7#kln52#par2" name="Update Offer Error_Error Message" sourceValue="Update Offer Error" target="mov1#opm11#kocu12#ocp18"/>
       </KOLink>
@@ -98,5 +119,26 @@
         <LinkParameter id="mov1#opm11#seu4#oln34#par117" name="oid_Input" source="ent8#att28Array" target="mov1#opm11#inn1.isnotnull"/>
       </OKLink>
     </SelectorUnit>
+    <SelectorUnit gr:x="1020" gr:y="15" id="mov1#opm11#seu7" name="Selector Address" entity="ent5">
+      <Selector id="mov1#opm11#seu7#su54" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm11#seu7#su54#kcond43" name="KeyCondition43" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm11#seu7#oln91" name="OKFlow91" to="mov1#opm11#inn2" gr:bendpoints="-151,58,54,-67">
+        <LinkParameter id="mov1#opm11#seu7#oln91#par178" name="oid_Input" source="ent5#att8Array" target="mov1#opm11#inn2.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="820" gr:y="155" id="mov1#opm11#inn2" name="Address Exists?">
+      <OKLink id="mov1#opm11#inn2#oln94" name="OKFlow94" to="mov1#opm11#mfu8" automaticCoupling="true"/>
+      <KOLink id="mov1#opm11#inn2#kln20" name="KOFlow20" to="mov1#opm11#cru2" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <ModifyUnit gr:x="1000" gr:y="130" id="mov1#opm11#mfu8" name="Update Address" entity="ent5">
+      <Selector id="mov1#opm11#mfu8#su64" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm11#mfu8#su64#kcond51" name="KeyCondition51" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm11#mfu8#oln102" name="OKFlow102" to="mov1#opm11#okcu8" automaticCoupling="true"/>
+    </ModifyUnit>
+    <CreateUnit id="mov1#opm11#cru2" name="Create Address" gr:x="910" gr:y="267" entity="ent5">
+      <OKLink id="mov1#opm11#cru2#oln103" name="OKFlow103" to="mov1#opm11#okcu8" automaticCoupling="true" gr:bendpoints="170,-75,-160,105"/>
+    </CreateUnit>
   </OperationUnits>
 </OperationModule>

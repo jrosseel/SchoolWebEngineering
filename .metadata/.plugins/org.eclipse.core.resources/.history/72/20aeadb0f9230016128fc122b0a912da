@@ -1,0 +1,130 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Angel" protected="true" landmarks="sv3#page20 sv3#page28 sv3#page33 sv3#page36 sv3#page16 sv3#page17 sv3#miu2" homePage="sv3#page20" customURLName="angel">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="100" gr:y="115" id="sv3#miu2" action="true" moduleId="mov1#opm2" landmark="true" name="Logout"/>
+    <ModuleInstanceUnit gr:x="545" gr:y="255" id="sv3#miu7" action="true" moduleId="mov1#opm3">
+      <OKLink id="sv3#miu7#oln57" name="OKFlow57" to="sv3#page20" automaticCoupling="true"/>
+      <KOLink id="sv3#miu7#kln37" name="KOFlow37" to="sv3#page22#mssu11" gr:bendpoints="49,69,44,-191">
+        <LinkParameter id="sv3#miu7#kln37#par409" name="Update Angel Error_Shown Messages" sourceValue="Update Angel Error" target="sv3#page22#mssu11.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="505" gr:y="705" id="sv3#miu15" action="true" moduleId="mov1#opm10">
+      <KOLink id="sv3#miu15#kln17" name="KOFlow17" to="sv3#page20#dau4" automaticCoupling="true" gr:bendpoints="-117,-65,343,215;129,-133,-96,7"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="-195" gr:y="470" id="sv3#miu19" action="true" moduleId="mov1#opm12">
+      <OKLink id="sv3#miu19#oln86" name="OKFlow86" to="sv3#page20#pwu6" automaticCoupling="true"/>
+      <KOLink id="sv3#miu19#kln48" name="KOFlow48" to="sv3#page20#mssu20" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <SwitchUnit gr:x="-60" gr:y="645" id="sv3#switch11" name="Open Notification">
+      <OKLink id="sv3#switch11#oln87" name="OKFlow87" to="sv3#seu11" code="1" gr:bendpoints="-2,-69,128,1">
+        <LinkParameter id="sv3#switch11#oln87#par478" name="oid_PASSING" sourceLinkParameter="sv3#page20#pwu6#ln102#par240" passing="true"/>
+        <LinkParameter id="sv3#switch11#oln87#par480" name="NotificationToRequest.oid_PASSING_KeyCondition48 [oid]" sourceLinkParameter="sv3#page20#pwu6#ln102#par477" target="sv3#seu11#su61#kcond48.ent1#att7"/>
+        <LinkParameter id="sv3#switch11#oln87#par481" name="seen_PASSING" sourceLinkParameter="sv3#page20#pwu6#ln102#par436" passing="true"/>
+      </OKLink>
+      <OKLink id="sv3#switch11#oln88" name="OKFlow88" to="sv3#page30#dau11" code="4">
+        <LinkParameter id="sv3#switch11#oln88#par242" name="oid_PASSING_KeyCondition25 [oid]" sourceLinkParameter="sv3#page20#pwu6#ln102#par240" target="sv3#page30#dau11#su31#kcond26.ent6#att35"/>
+        <LinkParameter id="sv3#switch11#oln88#par555" name="seen_PASSING_NotificationSeen" sourceLinkParameter="sv3#page20#pwu6#ln102#par436" targetVariable="sv3#page30#var17"/>
+      </OKLink>
+      <Case value="1"/>
+      <Case value="4"/>
+    </SwitchUnit>
+    <ModuleInstanceUnit gr:x="1230" gr:y="535" id="sv3#miu12" action="true" moduleId="mov1#opm11">
+      <OKLink id="sv3#miu12#oln78" name="OKFlow3" to="sv3#page28#pwu5" gr:bendpoints="-114,-55,326,65;-222,-82,222,38;-333,-56,107,64">
+        <LinkParameter id="sv3#miu12#oln78#par122" name="false_Editing" sourceValue="false" targetVariable="sv3#page28#var2"/>
+      </OKLink>
+      <KOLink id="sv3#miu12#kln50" name="KOFlow4" to="sv3#page28#mssu19" gr:bendpoints="-44,125,126,0">
+        <LinkParameter id="sv3#miu12#kln50#par373" name="Error Message_Shown Messages" source="mov1#opm11#kocu12#ocp18" target="sv3#page28#mssu19.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="50" gr:y="860" id="sv3#miu31" action="true" moduleId="mov1#opm13">
+      <OKLink id="sv3#miu31#oln100" name="OKFlow100" to="sv3#page20#pwu6" automaticCoupling="true" gr:bendpoints="-67,-209,-87,186"/>
+      <KOLink id="sv3#miu31#kln60" name="KOFlow60" to="sv3#page20#mssu20" gr:bendpoints="-13,-187,-28,113">
+        <LinkParameter id="sv3#miu31#kln60#par462" name="Error Message_Shown Messages" source="mov1#opm13#kocu13#ocp19" target="sv3#page20#mssu20.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <SwitchUnit gr:x="650" gr:y="610" id="sv3#switch8" name="isPickup">
+      <Case/>
+      <Case value="1"/>
+      <Case value="2"/>
+      <OKLink id="sv3#switch8#oln4" name="OKFlow4" to="sv3#page28#enu9" gr:bendpoints="103,-25,-102,55">
+        <LinkParameter id="sv3#switch8#oln4#par127" name="false_Pickup" sourceValue="false" targetVariable="sv3#page28#var3"/>
+      </OKLink>
+      <OKLink id="sv3#switch8#oln6" name="isPickup" to="sv3#page28#enu9" gr:bendpoints="52,-59,-152,21" code="1">
+        <LinkParameter id="sv3#switch8#oln6#par124" name="true_Pickup" sourceValue="true" targetVariable="sv3#page28#var3"/>
+      </OKLink>
+      <OKLink id="sv3#switch8#oln30" name="OKFlow30" to="sv3#page28#enu9" code="2" gr:bendpoints="87,21,-117,101">
+        <LinkParameter id="sv3#switch8#oln30#par128" name="false_Pickup" sourceValue="false" targetVariable="sv3#page28#var3"/>
+      </OKLink>
+    </SwitchUnit>
+    <MathUnit gr:x="515" gr:y="1010" id="sv3#mathu6" name="Offer Amount &gt; 0" resultType="boolean" defaultExpression="a &gt; 0">
+      <OKLink id="sv3#mathu6#oln105" name="OKFlow105" to="sv3#page29#dau7" gr:bendpoints="-122,38,554,68;-267,52,363,62;-530,47,146,77">
+        <LinkParameter id="sv3#mathu6#oln105#par257" name="Result_OfferAmountIsEnough" source="result" targetVariable="sv3#page29#var9"/>
+        <LinkParameter id="sv3#mathu6#oln105#par474" name="oid_PASSING_KeyCondition13 [oid]" sourceLinkParameter="sv3#seu10#oln109#par467" target="sv3#page29#dau7#su47#kcond13.ent1#att7"/>
+        <LinkParameter id="sv3#mathu6#oln105#par475" name="seen_PASSING_NotificationSeen" sourceLinkParameter="sv3#seu10#oln109#par468" targetVariable="sv3#page29#var10"/>
+        <LinkParameter id="sv3#mathu6#oln105#par476" name="isAccepted_PASSING_RequestAccepted" sourceLinkParameter="sv3#seu10#oln109#par443" targetVariable="sv3#page29#var7"/>
+        <LinkParameter id="sv3#mathu6#oln105#par501" name="isRejected_PASSING_RequestRejected" sourceLinkParameter="sv3#seu10#oln109#par500" targetVariable="sv3#page29#var11"/>
+      </OKLink>
+      <MathVariable id="sv3#mathu6#mathv7" name="a"/>
+    </MathUnit>
+    <SelectorUnit gr:x="840" gr:y="985" id="sv3#seu10" name="Select Notification" entity="ent6">
+      <Selector id="sv3#seu10#su60" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#seu10#su60#kcond47" name="KeyCondition47" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#seu10#oln109" name="OKFlow109" to="sv3#mathu6">
+        <LinkParameter id="sv3#seu10#oln109#par443" name="isAccepted_PASSING" sourceLinkParameter="sv3#page28#pwu4#ln24#par258" passing="true"/>
+        <LinkParameter id="sv3#seu10#oln109#par467" name="oid_PASSING" sourceLinkParameter="sv3#page28#pwu4#ln24#par255" passing="true"/>
+        <LinkParameter id="sv3#seu10#oln109#par468" name="seen_PASSING" source="ent6#att48Array" passing="true"/>
+        <LinkParameter id="sv3#seu10#oln109#par469" name="RequestToOffer.amount_PASSING_a" sourceLinkParameter="sv3#page28#pwu4#ln24#par442" target="sv3#mathu6#mathv7"/>
+        <LinkParameter id="sv3#seu10#oln109#par500" name="isRejected_PASSING" sourceLinkParameter="sv3#page28#pwu4#ln24#par499" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <ModuleInstanceUnit gr:x="260" gr:y="995" id="sv3#miu32" action="true" moduleId="mov1#opm14">
+      <KOLink id="sv3#miu32#kln69" name="KOFlow69" to="sv3#page20#mssu20" automaticCoupling="true" gr:bendpoints="-83,-59,77,371"/>
+      <OKLink id="sv3#miu32#oln120" name="OKFlow120" to="sv3#page20#pwu6" automaticCoupling="true" gr:bendpoints="-75,-103,115,427;-154,-275,36,255;-76,-446,114,84"/>
+    </ModuleInstanceUnit>
+    <SelectorUnit gr:x="-190" gr:y="545" id="sv3#seu11" name="Selector Request" entity="ent1">
+      <Selector id="sv3#seu11#su61" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#seu11#su61#kcond48" name="KeyCondition48" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#seu11#oln110" name="OKFlow110" to="sv3#seu12">
+        <LinkParameter id="sv3#seu11#oln110#par482" name="RequestToOffer.oid_KeyCondition49 [oid]" source="rel14#role28_ent8#att28Array" target="sv3#seu12#su62#kcond49.ent8#att28"/>
+        <LinkParameter id="sv3#seu11#oln110#par483" name="oid_PASSING" sourceLinkParameter="sv3#switch11#oln87#par478" passing="true"/>
+        <LinkParameter id="sv3#seu11#oln110#par484" name="seen_PASSING" sourceLinkParameter="sv3#switch11#oln87#par481" passing="true"/>
+        <LinkParameter id="sv3#seu11#oln110#par493" name="isAccepted_PASSING" source="ent1#att53Array" passing="true"/>
+        <LinkParameter id="sv3#seu11#oln110#par494" name="isRejected_PASSING" source="ent1#att62Array" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit gr:x="-185" gr:y="690" id="sv3#seu12" name="Selector Offer" entity="ent8">
+      <Selector id="sv3#seu12#su62" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#seu12#su62#kcond49" name="KeyCondition49" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#seu12#oln112" name="OKFlow112" to="sv3#mathu7" gr:bendpoints="0,72,-134,36">
+        <LinkParameter id="sv3#seu12#oln112#par489" name="amount_a" source="ent8#att36Array" target="sv3#mathu7#mathv8"/>
+        <LinkParameter id="sv3#seu12#oln112#par490" name="oid_PASSING" sourceLinkParameter="sv3#seu11#oln110#par483" passing="true"/>
+        <LinkParameter id="sv3#seu12#oln112#par491" name="seen_PASSING" sourceLinkParameter="sv3#seu11#oln110#par484" passing="true"/>
+        <LinkParameter id="sv3#seu12#oln112#par495" name="isAccepted_PASSING" sourceLinkParameter="sv3#seu11#oln110#par493" passing="true"/>
+        <LinkParameter id="sv3#seu12#oln112#par496" name="isRejected_PASSING" sourceLinkParameter="sv3#seu11#oln110#par494" passing="true"/>
+      </OKLink>
+    </SelectorUnit>
+    <MathUnit id="sv3#mathu7" name="Offer Amount &gt; 0" gr:x="-60" gr:y="735" resultType="boolean" defaultExpression="a &gt; 0">
+      <OKLink id="sv3#mathu7#oln111" name="OKFlow105" to="sv3#page29#dau10" gr:bendpoints="37,100,151,-34">
+        <LinkParameter id="sv3#mathu7#oln111#par485" name="Result_OfferAmountIsEnough" source="result" targetVariable="sv3#page29#var9"/>
+        <LinkParameter id="sv3#mathu7#oln111#par487" name="seen_PASSING_NotificationSeen" sourceLinkParameter="sv3#seu12#oln112#par491" targetVariable="sv3#page29#var10"/>
+        <LinkParameter id="sv3#mathu7#oln111#par492" name="oid_PASSING_KeyCondition25 [oid]" sourceLinkParameter="sv3#seu12#oln112#par490" target="sv3#page29#dau10#su30#kcond25.ent6#att35"/>
+        <LinkParameter id="sv3#mathu7#oln111#par497" name="isAccepted_PASSING_RequestAccepted" sourceLinkParameter="sv3#seu12#oln112#par495" targetVariable="sv3#page29#var7"/>
+        <LinkParameter id="sv3#mathu7#oln111#par498" name="isRejected_PASSING_RequestRejected" sourceLinkParameter="sv3#seu12#oln112#par496" targetVariable="sv3#page29#var11"/>
+      </OKLink>
+      <MathVariable id="sv3#mathu7#mathv8" name="a"/>
+    </MathUnit>
+    <ModuleInstanceUnit id="sv3#miu35" gr:x="-445" gr:y="890" action="true" moduleId="mov1#opm12">
+      <OKLink id="sv3#miu35#oln90" name="OKFlow90" to="sv3#page29#dau10" gr:bendpoints="144,1,-71,21">
+        <LinkParameter id="sv3#miu35#oln90#par176" name="true_NotificationSeen" sourceValue="true" targetVariable="sv3#page29#var10"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv3#miu37" gr:x="645" gr:y="890" action="true" moduleId="mov1#opm12">
+      <OKLink id="sv3#miu37#oln104" name="OKFlow90" to="sv3#page30#dau11" gr:bendpoints="144,1,-71,21">
+        <LinkParameter id="sv3#miu37#oln104#par557" name="true_NotificationSeen" sourceValue="true" targetVariable="sv3#page30#var17"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="615" gr:y="800" id="sv3#miu38" action="true"/>
+  </OperationUnits>
+</SiteView>

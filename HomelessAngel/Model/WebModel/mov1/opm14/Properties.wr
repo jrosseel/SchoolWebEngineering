@@ -6,6 +6,7 @@
       <Link id="mov1#opm14#icu14#ln150" name="Flow150" to="mov1#opm14#mfu17" type="transport" validate="true" gr:bendpoints="175,46,-280,31;313,43,-142,28">
         <LinkParameter id="mov1#opm14#icu14#ln150#par503" name="KeyCondition50 [oid]_KeyCondition50 [oid]" source="mov1#opm14#icu14#icp65" target="mov1#opm14#mfu17#su63#kcond50.ent1#att7"/>
         <LinkParameter id="mov1#opm14#icu14#ln150#par506" name="Reason_rejectedReason" source="mov1#opm14#icu14#icp68" target="mov1#opm14#mfu17.ent1#att64"/>
+        <LinkParameter id="mov1#opm14#icu14#ln150#par611" name="true_isRejected" sourceValue="true" target="mov1#opm14#mfu17.ent1#att62"/>
       </Link>
       <InputCollectorParameter id="mov1#opm14#icu14#icp68" name="Reason"/>
       <Link id="mov1#opm14#icu14#ln153" name="Flow153" to="mov1#opm14#cru1" type="transport" validate="true" gr:bendpoints="212,69,-198,-46">

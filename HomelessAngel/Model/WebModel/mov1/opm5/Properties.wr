@@ -1,23 +1,27 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="295" gr:y="525" id="mov1#opm5" name="Request Offer">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm5#icu5" gr:x="30" gr:y="60" linkOrder="mov1#opm5#icu5#ln51">
-      <InputCollectorParameter id="mov1#opm5#icu5#icp38" name="Offer.oid(RequestToOffer)"/>
+    <InputCollectorUnit id="mov1#opm5#icu5" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm5#icu5#icp38" name="Offer [oid]"/>
       <Link id="mov1#opm5#icu5#ln6" name="Flow6" to="mov1#opm5#cru4" type="transport" validate="true">
         <LinkParameter id="mov1#opm5#icu5#ln6#par12" name="UserProfile.oid(NotificationToUserProfile)" source="mov1#opm5#icu5#icp40" target="mov1#opm5#cru4.rel13#role26.ent2#att2"/>
         <LinkParameter id="mov1#opm5#icu5#ln6#par13" name="A homeless person has requested one of your offered items._description" sourceValue="A homeless person has requested one of your offered items." target="mov1#opm5#cru4.ent6#att59"/>
         <LinkParameter id="mov1#opm5#icu5#ln6#par14" name="1_notificationType" sourceValue="1" target="mov1#opm5#cru4.ent6#att60"/>
         <LinkParameter id="mov1#opm5#icu5#ln6#par15" name="request_type" sourceValue="request" target="mov1#opm5#cru4.ent6#att54"/>
+        <LinkParameter id="mov1#opm5#icu5#ln6#par144" name="false_seen" sourceValue="false" target="mov1#opm5#cru4.ent6#att48"/>
       </Link>
-      <InputCollectorParameter id="mov1#opm5#icu5#icp40" name="UserProfile.oid(NotificationToUserProfile)"/>
+      <InputCollectorParameter id="mov1#opm5#icu5#icp40" name="Angel [oid]"/>
       <OKLink id="mov1#opm5#icu5#oln65" name="OKFlow65" to="mov1#opm5#seu2" automaticCoupling="true" gr:bendpoints="277,29,-143,54"/>
       <Link id="mov1#opm5#icu5#ln51" name="Flow51" to="mov1#opm5#cru3" type="transport" validate="true">
         <LinkParameter id="mov1#opm5#icu5#ln51#par189" name="1_amount" sourceValue="1" target="mov1#opm5#cru3.ent1#att14"/>
         <LinkParameter id="mov1#opm5#icu5#ln51#par190" name="false_isAccepted" sourceValue="false" target="mov1#opm5#cru3.ent1#att53"/>
         <LinkParameter id="mov1#opm5#icu5#ln51#par191" name="Offer.oid(RequestToOffer)_Offer.oid(RequestToOffer)" source="mov1#opm5#icu5#icp38" target="mov1#opm5#cru3.rel14#role28.ent8#att28"/>
+        <LinkParameter id="mov1#opm5#icu5#ln51#par142" name="false_isRejected" sourceValue="false" target="mov1#opm5#cru3.ent1#att62"/>
       </Link>
     </InputCollectorUnit>
     <CreateUnit gr:x="455" gr:y="270" id="mov1#opm5#cru3" name="Create Request" entity="ent1">
-      <OKLink id="mov1#opm5#cru3#oln31" name="OKFlow31" to="mov1#opm5#cru4" automaticCoupling="true"/>
+      <OKLink id="mov1#opm5#cru3#oln31" name="OKFlow31" to="mov1#opm5#cru4">
+        <LinkParameter id="mov1#opm5#cru3#oln31#par145" name="oid_Request.oid(NotificationToRequest)" source="ent1#att7Array" target="mov1#opm5#cru4.rel26#role51.ent1#att7"/>
+      </OKLink>
       <KOLink id="mov1#opm5#cru3#kln7" name="KOFlow7" to="mov1#opm5#kocu10" gr:bendpoints="162,-59,-358,111;274,-74,-246,96">
         <LinkParameter id="mov1#opm5#cru3#kln7#par182" name="Create Request Error_Error Message" sourceValue="Create Request Error" target="mov1#opm5#kocu10#ocp17"/>
       </KOLink>

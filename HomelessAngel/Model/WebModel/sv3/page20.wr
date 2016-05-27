@@ -1,11 +1,11 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="90" gr:y="330" id="sv3#page20" name="User Profile" landmark="true" customURLName="angel_profile">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-80" gr:y="390" id="sv3#page20" name="User Profile" landmark="true" customURLName="angel_profile">
   <ContentUnits>
-    <GetUnit id="sv3#page20#gtu3" name="Get User Details" gr:x="0" gr:y="0" contextParameters="UserCtxParam">
+    <GetUnit id="sv3#page20#gtu3" name="Get User Details" gr:x="50" gr:y="0" contextParameters="UserCtxParam">
       <Link id="sv3#page20#gtu3#ln14" name="Flow14" to="sv3#page20#dau5" type="transport" validate="true">
         <LinkParameter id="sv3#page20#gtu3#ln14#par28" name="UserCtxParam.oid_KeyCondition7 [oid]" source="sv3#page20#gtu3.UserCtxParam" target="sv3#page20#dau5#su7#kcond7.userOID"/>
       </Link>
     </GetUnit>
-    <DataUnit gr:x="190" gr:y="125" id="sv3#page20#dau4" name="Angel Details" entity="ent3" displayAttributes="rel2#role4.userName rel2#role4.email ent2#att4 ent2#att6 ent3#att9 ent3#att10 rel4#role8.ent5#att22 rel4#role8.ent5#att23 rel4#role8.ent5#att27 rel4#role8.ent5#att25 rel4#role8.ent5#att24 rel4#role8.ent5#att26 rel15#role29.ent11#att5 ent3#att1 ent3#att15" linkOrder="sv3#page20#dau4#ln1 sv3#page20#dau4#ln62">
+    <DataUnit gr:x="240" gr:y="125" id="sv3#page20#dau4" name="Angel Details" entity="ent3" displayAttributes="rel2#role4.userName rel2#role4.email ent2#att4 ent2#att6 ent3#att9 ent3#att10 rel4#role8.ent5#att22 rel4#role8.ent5#att23 rel4#role8.ent5#att27 rel4#role8.ent5#att25 rel4#role8.ent5#att24 rel4#role8.ent5#att26 rel15#role29.ent11#att5 ent3#att1 ent3#att15" linkOrder="sv3#page20#dau4#ln1 sv3#page20#dau4#ln62">
       <Selector id="sv3#page20#dau4#su6" defaultPolicy="fill" booleanOperator="and" expression="sv3#page20#dau4#su6#kcond8">
         <KeyCondition id="sv3#page20#dau4#su6#kcond8" predicate="in" implied="false" name="KeyCondition6"/>
       </Selector>
@@ -32,10 +32,10 @@
         <LinkParameter id="sv3#page20#dau4#ln62#par113" name="oid_PASSING" source="data.ent2#att2" passing="true"/>
       </Link>
       <Link id="sv3#page20#dau4#ln98" name="Flow98" to="sv3#page20#pwu6" type="transport" validate="true" gr:bendpoints="-77,-30,103,-25">
-        <LinkParameter id="sv3#page20#dau4#ln98#par233" name="oid_Angel [oid]" source="data.ent2#att2" target="sv3#page20#pwu6#su27#rcond4.ent2#att2"/>
+        <LinkParameter id="sv3#page20#dau4#ln98#par610" name="oid_Angel [oid]" source="data.ent2#att2" target="sv3#page20#pwu6#su27#rcond16.ent2#att2"/>
       </Link>
     </DataUnit>
-    <DataUnit gr:x="195" gr:y="0" id="sv3#page20#dau5" name="User Details" entity="User">
+    <DataUnit gr:x="245" gr:y="0" id="sv3#page20#dau5" name="User Details" entity="User">
       <Selector id="sv3#page20#dau5#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page20#dau5#su7#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
       </Selector>
@@ -43,10 +43,9 @@
         <LinkParameter id="sv3#page20#dau5#ln16#par74" name="UserToUserProfile.oid_KeyCondition6 [oid]" source="data.rel2#role3_ent2#att2" target="sv3#page20#dau4#su6#kcond8.ent2#att2"/>
       </Link>
     </DataUnit>
-    <PowerIndexUnit gr:x="0" gr:y="85" id="sv3#page20#pwu6" name="Notifications" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att59 ent6#att54" linkOrder="sv3#page20#pwu6#ln101 sv3#page20#pwu6#ln102">
+    <PowerIndexUnit gr:x="0" gr:y="85" id="sv3#page20#pwu6" name="Notifications" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att59 ent6#att54 rel26#role51.rel14#role28.ent8#att41 rel26#role51.ent1#att57 ent6#att48" linkOrder="sv3#page20#pwu6#ln101 sv3#page20#pwu6#ln102">
       <Selector id="sv3#page20#pwu6#su27" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv3#page20#pwu6#su27#rcond4" name="Angel" predicate="in" implied="false" role="rel13#role25"/>
-        <AttributesCondition id="sv3#page20#pwu6#su27#acond1" name="New notifications" predicate="null" booleanOperator="or" implied="false" attributes="ent6#att48" value="false"/>
+        <RelationshipRoleCondition id="sv3#page20#pwu6#su27#rcond16" name="Angel" predicate="in" implied="false" role="rel13#role25"/>
       </Selector>
       <Link id="sv3#page20#pwu6#ln101" name="Mark Read" to="sv3#miu19" type="normal" validate="true" gr:bendpoints="-146,-87,100,-91">
         <LinkParameter id="sv3#page20#pwu6#ln101#par238" name="oid_KeyCondition24 [oid]" source="data[].ent6#att35" target="sv3#miu19.mov1#opm12#icu15#icp63"/>
@@ -57,8 +56,9 @@
         <LinkParameter id="sv3#page20#pwu6#ln102#par436" name="seen_PASSING" source="data[].ent6#att48" passing="true"/>
         <LinkParameter id="sv3#page20#pwu6#ln102#par477" name="NotificationToRequest.oid_PASSING" source="data[].rel26#role51_ent1#att7" passing="true"/>
       </Link>
+      <PreSelector id="sv3#page20#pwu6#su74" booleanOperator="and"/>
     </PowerIndexUnit>
-    <MultiMessageUnit gr:x="40" gr:y="205" id="sv3#page20#mssu20" name="Error Message"/>
+    <MultiMessageUnit gr:x="90" gr:y="205" id="sv3#page20#mssu20" name="Error Message"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -94,6 +94,9 @@
           <layout:Link link="sv3#page20#pwu6#ln102"/>
           <layout:Attribute attribute="ent6#att59"/>
           <layout:Attribute attribute="ent6#att54"/>
+          <layout:Attribute attribute="rel26#role51.rel14#role28.ent8#att41"/>
+          <layout:Attribute attribute="rel26#role51.ent1#att57"/>
+          <layout:Attribute attribute="ent6#att48"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

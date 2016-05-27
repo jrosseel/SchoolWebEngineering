@@ -34,6 +34,14 @@
         <LinkParameter id="sv3#page28#pwu5#ln128#par465" name="OfferToOfferCategory.oid_OfferToOfferCategory - Preselection" source="data[].rel17#role33_ent10#att33" target="sv3#page28#enu9#sfld1_presel"/>
         <LinkParameter id="sv3#page28#pwu5#ln128#par466" name="OfferToOfferType.oid_OfferToOfferType - Preselection" source="data[].rel18#role35_ent9#att31" target="sv3#page28#enu9#sfld2_presel"/>
         <LinkParameter id="sv3#page28#pwu5#ln128#par109" name="true_Editing" sourceValue="true" targetVariable="sv3#page28#var2"/>
+        <LinkParameter id="sv3#page28#pwu5#ln128#par232" name="true_Pickup" sourceValue="true" targetVariable="sv3#page28#var3"/>
+        <LinkParameter id="sv3#page28#pwu5#ln128#par241" name="OfferToPickupAddress.bus_PASSING" source="data[].rel11#role21$ent5#att27" passing="true"/>
+        <LinkParameter id="sv3#page28#pwu5#ln128#par243" name="OfferToPickupAddress.city_PASSING" source="data[].rel11#role21$ent5#att25" passing="true"/>
+        <LinkParameter id="sv3#page28#pwu5#ln128#par244" name="OfferToPickupAddress.country_PASSING" source="data[].rel11#role21$ent5#att26" passing="true"/>
+        <LinkParameter id="sv3#page28#pwu5#ln128#par245" name="OfferToPickupAddress.housenumber_PASSING" source="data[].rel11#role21$ent5#att23" passing="true"/>
+        <LinkParameter id="sv3#page28#pwu5#ln128#par246" name="OfferToPickupAddress.oid_PASSING" source="data[].rel11#role21_ent5#att8" passing="true"/>
+        <LinkParameter id="sv3#page28#pwu5#ln128#par247" name="OfferToPickupAddress.postalcode_PASSING" source="data[].rel11#role21$ent5#att24" passing="true"/>
+        <LinkParameter id="sv3#page28#pwu5#ln128#par248" name="OfferToPickupAddress.street_PASSING" source="data[].rel11#role21$ent5#att22" passing="true"/>
       </Link>
     </PowerIndexUnit>
     <SelectorUnit id="sv3#page28#seu1" name="OfferTypes" gr:x="150" gr:y="355" entity="ent9">
@@ -90,6 +98,7 @@
       <Link id="sv3#page28#enu9#ln118" name="isPickup" to="sv3#switch8" type="normal" validate="true">
         <LinkParameter id="sv3#page28#enu9#ln118#par120" name="Delivery Method_Switch" source="sv3#page28#enu9#sfld3" target="sv3#switch8.switch"/>
       </Link>
+      <Field id="sv3#page28#enu9#fld53" name="Address oid" type="integer" modifiable="true" hidden="true"/>
     </EntryUnit>
     <SelectorUnit id="sv3#page28#seu5" name="DeliveryMethods" gr:x="205" gr:y="220" entity="ent12">
       <Link id="sv3#page28#seu5#ln94" name="Flow24" to="sv3#page28#enu9" type="transport" validate="true">
@@ -103,12 +112,15 @@
         <LinkParameter id="sv3#page28#seu6#ln95#par228" name="oid_OfferToOfferCategory [output]" source="ent10#att33Array" target="sv3#page28#enu9#sfld1_output"/>
       </Link>
     </SelectorUnit>
-    <PowerIndexUnit gr:x="15" gr:y="455" id="sv3#page28#pwu3" name="Transactions" sortable="true" checkable="false" useCountQuery="false" entity="ent14" displayAttributes="ent14#att51 ent14#att56 rel20#role39.rel12#role24.ent4#att11 rel20#role39.ent1#att14 rel20#role39.rel14#role28.ent8#att28 rel20#role39.rel14#role28.ent8#att41">
+    <PowerIndexUnit gr:x="15" gr:y="455" id="sv3#page28#pwu3" name="Transactions" sortable="true" checkable="false" useCountQuery="false" entity="ent14" displayAttributes="ent14#att51 ent14#att56 rel20#role39.rel12#role24.ent4#att11 rel20#role39.ent1#att14 rel20#role39.rel14#role28.ent8#att28 rel20#role39.rel14#role28.ent8#att41" linkOrder="sv3#page28#pwu3#ln165">
       <Selector id="sv3#page28#pwu3#su51" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#page28#pwu3#su51#rcond10" name="AngelTransactions" predicate="in" implied="false" role="rel7#role14.rel14#role27.rel20#role40"/>
       </Selector>
+      <Link id="sv3#page28#pwu3#ln165" name="Details" to="sv3#seu17" type="normal" validate="true">
+        <LinkParameter id="sv3#page28#pwu3#ln165#par594" name="TransactionToNotification.oid_KeyCondition47 [oid]" source="data[].rel1#role2_ent6#att35" target="sv3#seu17#su73#kcond59.ent6#att35"/>
+      </Link>
     </PowerIndexUnit>
-    <PowerIndexUnit gr:x="245" gr:y="455" id="sv3#page28#pwu4" name="Requests" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="rel12#role24.ent4#att11 ent1#att14 ent1#att57 rel14#role28.ent8#att28 rel14#role28.ent8#att41 ent1#att53 ent1#att12   rel14#role28.ent8#att36" linkOrder="sv3#page28#pwu4#ln24">
+    <PowerIndexUnit gr:x="245" gr:y="455" id="sv3#page28#pwu4" name="Requests" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="rel12#role24.ent4#att11 ent1#att14 ent1#att57 rel14#role28.ent8#att28 rel14#role28.ent8#att41 rel14#role28.ent8#att36 ent1#att53 ent1#att12 ent1#att62 ent1#att61 ent1#att64" linkOrder="sv3#page28#pwu4#ln24">
       <Selector id="sv3#page28#pwu4#su52" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#page28#pwu4#su52#rcond11" name="Angel" predicate="in" implied="false" role="rel7#role14.rel14#role27"/>
       </Selector>
@@ -191,15 +203,18 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page28#pwu4">
-          <layout:Link link="sv3#page28#pwu4#ln24"/>
           <layout:Attribute attribute="rel12#role24.ent4#att11"/>
           <layout:Attribute attribute="ent1#att14"/>
           <layout:Attribute attribute="ent1#att57"/>
           <layout:Attribute attribute="rel14#role28.ent8#att28"/>
           <layout:Attribute attribute="rel14#role28.ent8#att41"/>
+          <layout:Attribute attribute="rel14#role28.ent8#att36"/>
           <layout:Attribute attribute="ent1#att53"/>
           <layout:Attribute attribute="ent1#att12"/>
-          <layout:Attribute attribute="rel14#role28.ent8#att36"/>
+          <layout:Attribute attribute="ent1#att62"/>
+          <layout:Attribute attribute="ent1#att61"/>
+          <layout:Attribute attribute="ent1#att64"/>
+          <layout:Link link="sv3#page28#pwu4#ln24"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -223,6 +238,7 @@
           <layout:Attribute attribute="rel20#role39.ent1#att14"/>
           <layout:Attribute attribute="rel20#role39.rel14#role28.ent8#att28"/>
           <layout:Attribute attribute="rel20#role39.rel14#role28.ent8#att41"/>
+          <layout:Link link="sv3#page28#pwu3#ln165"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
